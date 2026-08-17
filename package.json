@@ -47,9 +47,9 @@
     "postinstall": "npx crawlee install-playwright-browsers",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down",
-    "migration:generate": "NODE_OPTIONS=\"--import tsx\" typeorm migration:generate -d src/persistence/data-source.ts",
-    "migration:run": "NODE_OPTIONS=\"--import tsx\" typeorm migration:run -d src/persistence/data-source.ts",
-    "migration:revert": "NODE_OPTIONS=\"--import tsx\" typeorm migration:revert -d src/persistence/data-source.ts"
+    "migration:generate": "node --env-file-if-exists=.env --import tsx node_modules/typeorm/cli.js migration:generate -d src/persistence/data-source.ts",
+    "migration:run": "node --env-file-if-exists=.env --import tsx node_modules/typeorm/cli.js migration:run -d src/persistence/data-source.ts",
+    "migration:revert": "node --env-file-if-exists=.env --import tsx node_modules/typeorm/cli.js migration:revert -d src/persistence/data-source.ts"
   },
   "lint-staged": {
     "*.{ts,js,mjs,cjs}": [
