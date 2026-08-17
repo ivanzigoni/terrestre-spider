@@ -5,6 +5,7 @@ import { loadStartUrls } from '../../config/search-urls.js';
 import { AppDataSource } from '../../persistence/data-source.js';
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { loadIntoPostgres } from '../../persistence/load.js';
+import { SAME_DOMAIN_DELAY_SECS } from '../shared/crawler-defaults.js';
 import { openFreshDataset, openFreshRequestQueue } from '../shared/storage.js';
 import { createOlxRouter } from './routes.js';
 
@@ -18,6 +19,7 @@ export async function runOlx(): Promise<void> {
     requestHandler: createOlxRouter(dataset),
     requestQueue,
     headless: true,
+    sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
   });
 
   await crawler.run(startUrls);

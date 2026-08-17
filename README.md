@@ -24,6 +24,9 @@ Para rodar uma fonte isolada: `npx tsx src/sources/olx/main.ts` (também vale pa
 - **Orquestrador** (`src/main.ts`): roda as 4 fontes em sequência — não em paralelo, pensando na
   instância de produção (Postgres + API + crawler na mesma máquina, RAM limitada para múltiplos
   browsers headless simultâneos).
+- **Pacing** (`src/sources/shared/crawler-defaults.ts`): `sameDomainDelaySecs` dá um intervalo
+  mínimo entre requests pro mesmo domínio (default do Crawlee é 0s) — relevante para rodar o
+  crawler diariamente sem se parecer com tráfego automatizado em rajada.
 - **Config de busca** (`src/config/search-urls.json`): URLs de busca por fonte, versionadas —
   substitui o `config.json` + presets pessoais do app antigo (olx-rent-crawler).
 - **Discovery** (`src/discovery/`): sonda sites candidatos (bloqueio anti-bot, dados
