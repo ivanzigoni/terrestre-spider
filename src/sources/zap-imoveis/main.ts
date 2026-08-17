@@ -5,24 +5,35 @@ import { loadStartUrls } from '../../config/search-urls.js';
 import { AppDataSource } from '../../persistence/data-source.js';
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { loadIntoPostgres } from '../../persistence/load.js';
-import { SAME_DOMAIN_DELAY_SECS } from '../shared/crawler-defaults.js';
+import {
+  MAX_REQUESTS_PER_CRAWL,
+  SAME_DOMAIN_DELAY_SECS,
+} from '../shared/crawler-defaults.js';
 import { openFreshDataset, openFreshRequestQueue } from '../shared/storage.js';
 import { createZapImoveisRouter } from './routes.js';
 
 export async function runZapImoveis(): Promise<void> {
-  const startUrls = await loadStartUrls(OrigemAnuncio.ZAP_IMOVEIS);
+  const entries = await loadStartUrls(OrigemAnuncio.ZAP_IMOVEIS);
   const dataset = await openFreshDataset(OrigemAnuncio.ZAP_IMOVEIS);
-  const requestQueue = await openFreshRequestQueue(OrigemAnuncio.ZAP_IMOVEIS);
 
-  const crawler = new PlaywrightCrawler({
-    httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
-    requestHandler: createZapImoveisRouter(dataset),
-    requestQueue,
-    headless: true,
-    sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
-  });
-
-  await crawler.run(startUrls);
+  // Um crawler por URL de busca (aluguel, venda) — o teto de páginas
+  // (maxRequestsPerCrawl) vale por URL, não somado entre elas.
+  for (const entry of entries) {
+    const requestQueue = await openFreshRequestQueue(
+      `${OrigemAnuncio.ZAP_IMOVEIS}-${entry.transactionType}`,
+    );
+    const crawler = new PlaywrightCrawler({
+      httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
+      requestHandler: createZapImoveisRouter(dataset),
+      requestQueue,
+      headless: true,
+      sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
+      maxRequestsPerCrawl: MAX_REQUESTS_PER_CRAWL,
+    });
+    await crawler.run([
+      { url: entry.url, userData: { transactionType: entry.transactionType } },
+    ]);
+  }
 
   if (!AppDataSource.isInitialized) {
     await AppDataSource.initialize();

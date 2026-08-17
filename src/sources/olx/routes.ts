@@ -2,6 +2,7 @@ import { createCheerioRouter, type Dataset } from 'crawlee';
 
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
+import { getTransactionType } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = 'section.olx-adcard';
 
@@ -9,6 +10,7 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
   const router = createCheerioRouter();
 
   router.addDefaultHandler(async ({ $, request, enqueueLinks, log }) => {
+    const transactionType = getTransactionType(request.userData);
     const items: RawListingItem[] = [];
 
     $(CARD_SELECTOR).each((_, card) => {
@@ -17,11 +19,19 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
       const href = linkEl.attr('href');
       const link =
         href !== undefined ? new URL(href, request.loadedUrl).toString() : '';
+      if (link === '') return;
+
       const titleAttr = linkEl.attr('title');
       const title =
         titleAttr !== undefined && titleAttr !== ''
           ? titleAttr
           : linkEl.text().trim();
+
+      // A categoria (ex.: "imoveis", "terrenos") é o único sinal de tipo que a OLX
+      // serve no HTML puro — o rótulo mais específico ("Apartamento", "Casa") só
+      // existe no DOM depois da hidratação, que o CheerioCrawler não executa.
+      const propertyType =
+        new URL(link).pathname.split('/').filter(Boolean)[1] ?? null;
 
       let bedrooms = 0;
       let bathrooms = 0;
@@ -65,10 +75,10 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
       const datePostedText =
         datePostedTextRaw === '' ? null : datePostedTextRaw;
 
-      if (link === '') return;
-
       items.push({
         origin: OrigemAnuncio.OLX,
+        transactionType,
+        propertyType,
         link,
         title,
         bedrooms,
@@ -105,6 +115,7 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
     if (nextHrefAttr !== undefined) {
       await enqueueLinks({
         urls: [new URL(nextHrefAttr, request.loadedUrl).toString()],
+        userData: { transactionType },
       });
     }
   });

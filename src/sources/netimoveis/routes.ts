@@ -2,6 +2,7 @@ import { createPlaywrightRouter, type Dataset } from 'crawlee';
 
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
+import { getTransactionType } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = 'div.row.imoveis article.card-imovel';
 // Netimóveis pagina via clique em JS (sem href estável no botão), mas a URL de busca
@@ -13,16 +14,20 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
   const router = createPlaywrightRouter();
 
   router.addDefaultHandler(async ({ page, request, enqueueLinks, log }) => {
+    const transactionType = getTransactionType(request.userData);
+
     await page
       .waitForSelector(CARD_SELECTOR, { timeout: 10_000 })
       .catch(() => undefined);
 
     const items = await page.$$eval(
       CARD_SELECTOR,
-      (cards, origin) =>
+      (cards, { origin, transactionType: itemTransactionType }) =>
         cards.map((card) => {
           const linkEl = card.querySelector<HTMLAnchorElement>('a.link-imovel');
           const link = linkEl?.href ?? '';
+          const propertyType =
+            link !== '' ? new URL(link).searchParams.get('tipoUrl') : null;
 
           const title = (
             card.querySelector<HTMLElement>('section.imovel-info h2')
@@ -83,6 +88,8 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
 
           const item: RawListingItem = {
             origin,
+            transactionType: itemTransactionType,
+            propertyType,
             link,
             title,
             bedrooms,
@@ -98,7 +105,7 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
           };
           return item;
         }),
-      OrigemAnuncio.NETIMOVEIS,
+      { origin: OrigemAnuncio.NETIMOVEIS, transactionType },
     );
 
     const validItems = items.filter((item) => item.link !== '');
@@ -118,7 +125,10 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
       const currentUrl = new URL(request.loadedUrl);
       const currentPage = Number(currentUrl.searchParams.get('pagina') ?? '1');
       currentUrl.searchParams.set('pagina', String(currentPage + 1));
-      await enqueueLinks({ urls: [currentUrl.toString()] });
+      await enqueueLinks({
+        urls: [currentUrl.toString()],
+        userData: { transactionType },
+      });
     }
   });
 

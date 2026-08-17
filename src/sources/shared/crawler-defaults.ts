@@ -5,3 +5,11 @@
  * Relevante para rodar o crawler diariamente sem levar bloqueio de IP.
  */
 export const SAME_DOMAIN_DELAY_SECS = 3;
+
+/**
+ * Teto de páginas por URL de busca (aluguel e venda contam separado). Sem isso,
+ * uma busca citywide sem filtro de bairro pode ter 100+ páginas — os sites
+ * ordenam por mais recente primeiro, então um teto ainda captura o que mudou
+ * desde a última execução, só não alcança anúncios mais antigos.
+ */
+export const MAX_REQUESTS_PER_CRAWL = 20;

@@ -1,18 +1,26 @@
 import { describe, expect, it } from 'vitest';
 
 import { OrigemAnuncio } from '../persistence/enums/origem-anuncio.enum.js';
+import { TipoTransacao } from '../persistence/enums/tipo-transacao.enum.js';
 import { loadStartUrls } from './search-urls.js';
 
 describe('loadStartUrls', () => {
   it.each(Object.values(OrigemAnuncio))(
-    'retorna ao menos uma URL de busca para a fonte "%s"',
+    'retorna URLs de aluguel e venda para a fonte "%s"',
     async (fonte) => {
-      const urls = await loadStartUrls(fonte);
+      const entries = await loadStartUrls(fonte);
 
-      expect(Array.isArray(urls)).toBe(true);
-      expect(urls.length).toBeGreaterThan(0);
-      for (const url of urls) {
-        expect(() => new URL(url)).not.toThrow();
+      expect(Array.isArray(entries)).toBe(true);
+      expect(entries.length).toBeGreaterThan(0);
+
+      const tiposEncontrados = new Set(
+        entries.map((entry) => entry.transactionType),
+      );
+      expect(tiposEncontrados.has(TipoTransacao.ALUGUEL)).toBe(true);
+      expect(tiposEncontrados.has(TipoTransacao.VENDA)).toBe(true);
+
+      for (const entry of entries) {
+        expect(() => new URL(entry.url)).not.toThrow();
       }
     },
   );

@@ -8,6 +8,7 @@ import {
 } from 'typeorm';
 
 import { OrigemAnuncio } from '../enums/origem-anuncio.enum.js';
+import { TipoTransacao } from '../enums/tipo-transacao.enum.js';
 import { ObservacaoPreco } from './observacao-preco.entity.js';
 
 @Entity('imoveis')
@@ -38,6 +39,14 @@ export class Imovel {
 
   @Column({ type: 'enum', enum: OrigemAnuncio })
   declare origin: OrigemAnuncio;
+
+  @Column({ type: 'enum', enum: TipoTransacao, name: 'transaction_type' })
+  declare transactionType: TipoTransacao;
+
+  // Vocabulário de cada site, sem normalizar entre fontes — granularidade varia
+  // (ex.: OLX só distingue "imoveis" de "terrenos" no HTML servido, sem JS).
+  @Column({ type: 'text', nullable: true, name: 'property_type' })
+  declare propertyType: string | null;
 
   @Column({ type: 'text', nullable: true, name: 'date_posted_text' })
   declare datePostedText: string | null;

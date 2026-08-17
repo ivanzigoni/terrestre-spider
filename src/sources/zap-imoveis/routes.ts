@@ -2,6 +2,7 @@ import { createPlaywrightRouter, type Dataset } from 'crawlee';
 
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
+import { getTransactionType } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = 'li[data-cy="rp-property-cd"] > a';
 const NEXT_LINK_SELECTOR = 'a[aria-label="próxima página"]';
@@ -9,16 +10,35 @@ const NEXT_LINK_SELECTOR = 'a[aria-label="próxima página"]';
 export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
   const router = createPlaywrightRouter();
 
-  router.addDefaultHandler(async ({ page, enqueueLinks, log }) => {
+  router.addDefaultHandler(async ({ page, request, enqueueLinks, log }) => {
+    const transactionType = getTransactionType(request.userData);
+
     await page
       .waitForSelector(CARD_SELECTOR, { timeout: 10_000 })
       .catch(() => undefined);
 
     const items = await page.$$eval(
       CARD_SELECTOR,
-      (anchors, origin) =>
+      (anchors, { origin, transactionType: itemTransactionType }) =>
+        // eslint-disable-next-line sonarjs/cognitive-complexity
         (anchors as HTMLAnchorElement[]).map((anchor) => {
           const link = anchor.href;
+
+          // URL do anúncio: /imovel/<transacao>-<tipo>-.../ — o tipo é o segundo
+          // segmento do slug (ex.: "venda-casa-4-quartos-..." -> "casa"). Alguns
+          // cards não têm href (ex.: lançamentos) — link fica '' e é descartado
+          // depois pelo filtro de validItems, então pulamos o parsing aqui.
+          let propertyType: string | null = null;
+          if (link !== '') {
+            const pathSegments = new URL(link).pathname
+              .split('/')
+              .filter(Boolean);
+            const imovelIndex = pathSegments.indexOf('imovel');
+            const slug =
+              imovelIndex !== -1 ? pathSegments[imovelIndex + 1] : undefined;
+            const slugParts = slug !== undefined ? slug.split('-') : [];
+            propertyType = slugParts[1] ?? null;
+          }
 
           const titleEl = anchor.querySelector<HTMLElement>(
             'h2[data-cy="rp-cardProperty-location-txt"]',
@@ -91,6 +111,8 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
 
           const item: RawListingItem = {
             origin,
+            transactionType: itemTransactionType,
+            propertyType,
             link,
             title,
             bedrooms,
@@ -106,7 +128,7 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
           };
           return item;
         }),
-      OrigemAnuncio.ZAP_IMOVEIS,
+      { origin: OrigemAnuncio.ZAP_IMOVEIS, transactionType },
     );
 
     const validItems = items.filter((item) => item.link !== '');
@@ -125,7 +147,7 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
     }, NEXT_LINK_SELECTOR);
 
     if (nextHref !== null) {
-      await enqueueLinks({ urls: [nextHref] });
+      await enqueueLinks({ urls: [nextHref], userData: { transactionType } });
     }
   });
 

@@ -4,7 +4,21 @@ import type { DataSource } from 'typeorm';
 
 import { Imovel } from './entities/imovel.entity.js';
 import { ObservacaoPreco } from './entities/observacao-preco.entity.js';
+import { TipoTransacao } from './enums/tipo-transacao.enum.js';
 import type { RawListingItem } from './raw-listing-item.js';
+
+// Para venda, somar iptu/condominio ao preço não representa nada de real (preço de
+// compra + custo mensal recorrente); totalPrice só faz sentido como "custo total" no
+// aluguel. Em ambos os casos iptu/condominio continuam gravados, só não entram na soma.
+function calcularTotalPrice(
+  item: Pick<
+    RawListingItem,
+    'transactionType' | 'price' | 'iptu' | 'condominio'
+  >,
+): number {
+  if (item.transactionType === TipoTransacao.VENDA) return item.price;
+  return item.price + item.iptu + item.condominio;
+}
 
 /**
  * Lê o Dataset inteiro já populado pela fase Extract e upserta em `imoveis`
@@ -20,7 +34,7 @@ export async function loadIntoPostgres(
   let atualizados = 0;
 
   await dataset.forEach(async (item) => {
-    const totalPrice = item.price + item.iptu + item.condominio;
+    const totalPrice = calcularTotalPrice(item);
 
     await dataSource.transaction(async (manager) => {
       const imovelRepository = manager.getRepository(Imovel);
@@ -40,6 +54,8 @@ export async function loadIntoPostgres(
       imovel.area = item.area;
       imovel.location = item.location;
       imovel.origin = item.origin;
+      imovel.transactionType = item.transactionType;
+      imovel.propertyType = item.propertyType;
       imovel.datePostedText = item.datePostedText;
       imovel.currentPrice = item.price;
       imovel.currentIptu = item.iptu;
