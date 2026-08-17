@@ -1,5 +1,5 @@
 import { Browser, ImpitHttpClient } from '@crawlee/impit-client';
-import { PlaywrightCrawler } from 'crawlee';
+import { CheerioCrawler } from 'crawlee';
 
 import { loadStartUrls } from '../../config/search-urls.js';
 import { AppDataSource } from '../../persistence/data-source.js';
@@ -14,11 +14,10 @@ export async function runOlx(): Promise<void> {
   const dataset = await openFreshDataset(OrigemAnuncio.OLX);
   const requestQueue = await openFreshRequestQueue(OrigemAnuncio.OLX);
 
-  const crawler = new PlaywrightCrawler({
+  const crawler = new CheerioCrawler({
     httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
     requestHandler: createOlxRouter(dataset),
     requestQueue,
-    headless: true,
     sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
   });
 
