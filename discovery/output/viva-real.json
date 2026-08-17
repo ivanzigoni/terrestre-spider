@@ -1,0 +1,100 @@
+{
+  "nome": "Viva Real",
+  "urlSolicitada": "https://www.vivareal.com.br/",
+  "urlFinal": "https://www.vivareal.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 403,
+    "disallowedForTargetPath": null,
+    "contentSample": null
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 0,
+    "jsonLdSample": null,
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.vivareal.com.br/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.vivareal.com.br/cdn-cgi/challenge-platform/h/g/jsd/oneshot/aae2b9a1c261/0.7490018484936095:1786917914:GUz-sH7wT9SEWe-GEXDTwrHS0qEcXYCvrUMI989TBjo/a2c41a1e8c822c68",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.vivareal.com.br/cdn-cgi/challenge-platform/h/g/jsd/oneshot/aae2b9a1c261/0.7490018484936095:1786917914:GUz-sH7wT9SEWe-GEXDTwrHS0qEcXYCvrUMI989TBjo/a2c41a1e8c822c68",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://get.geojs.io/v1/ip/geo.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://sdk.iad-07.braze.com/api/v3/data/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://disclaimer-api.goadopt.io/api/tag/get-consent",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&ae=g&auid=308136314.1786921719&en=page_view&dl=https%3A%2F%2Fwww.vivareal.com.br%2F&scrsrc=www.googletagmanager.com&rnd=1157656773.1786921719&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He68c1h1v895916766za20gzb894795928zd894795928xea&gcs=G111&gcd=13v3v3v3v5l1&dma=0&tag_exp=115938465~115938468~118131810~118897920~118897930~119527020~120385422&tft=1786921718543&tfd=1085&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=308136314.1786921719&gtm=45He68c1h1v895916766za20gzb894795928zd894795928xea&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/998762157/?random=1786921718753&cv=11&fst=1786921718753&fmt=8&bg=ffffff&guid=ON&async=1&en=listing_id&gtm=45be68c1h1v9179590802z8895916766za20gzb895916766zd894795928xea&gcd=13v3v3v3v5l1&dma=0&tag_exp=115616986~115938465~115938468~118131810~118897920~118897930~119367802~119367810~119527019~120125304~120213116~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.vivareal.com.br%2F&rcb=16&frm=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=308136314.1786921719&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&data=event%3Dlisting_id&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=16&frm=0&apvc=0&ae=g&auid=308136314.1786921719&tid=AW-998762157&en=listing_id&dl=https%3A%2F%2Fwww.vivareal.com.br%2F&scrsrc=www.googletagmanager.com&rnd=1157656773.1786921719&navt=n&npa=0&_tu=CA&gtm=45be68c1h1v9179590802z8895916766za20gzb895916766zd894795928xea&gcs=G111&gcd=13v3v3v3v5l1&dma=0&tag_exp=115616986~115938465~115938468~118131810~118897920~118897930~119367802~119367810~119527019~120125304~120213116~120385423&tft=1786921718789&tfd=1331&tids=AW-998762157&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://sdk.iad-07.braze.com/api/v3/feature_flags/sync",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://gum.criteo.com/sid/json?origin=onetag&domain=vivareal.com.br&sn=ChromeSyncframe&so=undefined&topUrl=www.vivareal.com.br",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://mug.criteo.com/sid?cpp=QXL4XHxpdGFpVXFtQU9hd1grZ0hwc1E1ejRxSlhFOW04aU1VTXZpZnJkamVDRVhWOG8vNWxydFJzdmVsVXZ3eit3MndkRS94ZkhOWVNsNm44MTNScVgxaldnM3g2QUVrWU5sd0pzdVY2ZmJPOTBWdnpFOUgvalZnVEt1dkZwTURuRWpDbjdnUU5aSmN3TUVpK3Q4ZDhTbG1XZ2EyY0c1bnVreWs1VjU3Nk9nN0Q4UHpmTkdSakRjNGtSTVFWeTY0VGw3R3NydGVDUndiYjFjQ0ZpVm9RVm9vZmhOMmYvd000SlBiTFdJMDNvYXlpMlZ3a2tNb01TckNIZTFodGtzaDBSZ09aZkxrMjVGcU11cnV3a0ZXY2dKcHZ1Z0lmeDFrVHlBSjNmSWZtZDZkMVVFcz18&cppv=2",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [],
+  "titulo": "",
+  "bodyTextSample": "This page couldn’t load\n\nReload to try again, or go back.\n\nReload\nBack\nControle sua privacidade\nAdOpt\nNosso site usa cookies para melhorar a navegação.\nPolítica de Privacidade - Política de Cookies - Termos de uso\nEditar preferências\nAceitar",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/viva-real.png",
+  "erro": null,
+  "timestamp": "2026-08-16T23:08:37.342Z"
+}

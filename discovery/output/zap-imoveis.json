@@ -1,0 +1,239 @@
+{
+  "nome": "ZAP Imóveis",
+  "urlSolicitada": "https://www.zapimoveis.com.br/",
+  "urlFinal": "https://www.zapimoveis.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 403,
+    "disallowedForTargetPath": null,
+    "contentSample": null
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 1,
+    "jsonLdSample": "{\"@context\":\"https://schema.org/\",\"@type\":\"Organization\",\"legalName\":\"BOM NEGOCIO ATIVIDADES DE INTERNET LTDA\",\"foundingDate\":\"2000\",\"url\":\"https://www.zapimoveis.com.br\",\"contactPoint\":{\"@type\":\"ContactPoint\",\"contactType\":\"customer service\",\"email\":\"atendimento@olxbr.com\",\"telephone\":\"+55114861-1799\"},\"logo\":\"https://cdn-zap-ssr-prod.zapimoveis.com.br/_next/public/assets/images/zap-logo.svg\",\"name\":\"Zap Imóveis\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Avenida Paulista , 1106 - Bela Vista\",\"addressLocality\":\"São Paulo\",\"addressRegion\":\"SP\",\"postalCode\":\"01310-914\",\"addressCountry\":\"BR\"},\"founders\":{\"@type\":\"Person\",\"name\":\"Roberto Nascimento\"},\"sameAs\":[\"https://twitter.com/zapimoveis\",\"https://www.instagram.com/zapimoveis\",\"https://www.facebook.com/zapimoveis\",\"https://www.youtube.com/ZAPImoveis\",\"https://br.pinterest.com/zapimoveis\",\"https://www.linkedin.com/company/grupoolx\"],\"description\":\"Encontre casas, apartamentos, terrenos e imoveis para compra, venda e aluguel. A",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.zapimoveis.com.br/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.zapimoveis.com.br/cdn-cgi/challenge-platform/h/g/jsd/oneshot/aae2b9a1c261/0.7490018484936095:1786917914:GUz-sH7wT9SEWe-GEXDTwrHS0qEcXYCvrUMI989TBjo/a2c41a4f0ecc1fb4",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://get.geojs.io/v1/ip/geo.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://glue-api.zapimoveis.com.br/v1/banners/",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.zapimoveis.com.br/blog/wp-json/wp/v2/posts?per_page=4&page=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.track.zapimoveis.com.br/data/v4/zap-vivareal.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.track.zapimoveis.com.br/data/v4/zap-vivareal.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.track.zapimoveis.com.br/data/v4/zap-vivareal.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://sdk.iad-07.braze.com/api/v3/data/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://disclaimer-api.goadopt.io/api/tag/get-consent",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=15&frm=0&apvc=1&ae=g&auid=1844137846.1786921726&dt=Apartamentos%2C%20Casas%20e%20Im%C3%B3veis%20a%20Venda%20e%20para%20Alugar%20-%20ZAP%20Im%C3%B3veis&en=page_view&dl=https%3A%2F%2Fwww.zapimoveis.com.br%2F&scrsrc=www.googletagmanager.com&rnd=933726444.1786921726&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He68c1v896140809za20gzb894111912zd894111912xea&gcs=G111&gcd=13v3v3v3v5l1&dma=0&tag_exp=115938465~115938469~118897920~118897930~119527019~120385423&tft=1786921726275&tfd=1052&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1844137846.1786921726&gtm=45He68c1v896140809za20gzb894111912zd894111912xea&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/measurement/conversion?random=1786921726367&cv=11&tid=G-W39KX3CBHX&fst=1786921726367&fmt=8&en=session_start&gtm=45je68c1v9166197098z8896140809za200zb894111912zd894111912xec&gcs=G111&gcd=13v3v3v3v5l1&dma=0&tag_exp=115616986~115938465~115938468~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.zapimoveis.com.br%2F&gacid=388137121.1786921726&frm=0&tiba=Apartamentos%2C%20Casas%20e%20Im%C3%B3veis%20a%20Venda%20e%20para%20Alugar%20-%20ZAP%20Im%C3%B3veis&npa=0&pscdl=noapi&auid=1844137846.1786921726&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&rcb=0",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-W39KX3CBHX&gtm=45je68c1v9166197098z8896140809za200zb894111912zd894111912&_p=1786921725744&_gaz=1&gcs=G111&gcd=13v3v3v3v5l1&npa=0&dma=0&_eu=EAAAAGAC&_prs=ok&are=1&cid=388137121.1786921726&frm=0&ir=1&pscdl=noapi&rcb=0&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786921726&sct=1&seg=0&dl=https%3A%2F%2Fwww.zapimoveis.com.br%2F&dt=Apartamentos%2C%20Casas%20e%20Im%C3%B3veis%20a%20Venda%20e%20para%20Alugar%20-%20ZAP%20Im%C3%B3veis&en=page_view&_fv=1&_nsi=1&_ss=2&ep.page_name=%2Fhomepage&ep.vertical=real-estate&ep.brand=zapimoveis&ep.costumer_type=b2c&ep.main_category=imoveis&ep.main_category_id=1000&ep.journey_type=buyer&ep.content_group=home&ep.ab_testing_name=lp-b2b_new-lp.login-v2_on.sanity-zap_enabled.zchat-web_control.vitrine_control.version_portal-webapp&ep.ab_testing_variation_name=new-lp%2Con%2Cenabled%2Ccontrol%2Ccontrol%2Cportal-webapp&ep.ab_testing_experience_name=lp-b2b%2Clogin-v2%2Csanity-zap%2Czchat-web%2Cvitrine%2Cversion&ep.user_agent=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F120.0.0.0%20Safari%2F537.36&up.anonymous_id=95f68bba-d7f9-4d03-b7fa-597963debc18&tfd=1167",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-ZBYP2KJ7L9&gtm=45je68c1v9166197098z8896140809za200zb894111912zd894111912&_p=1786921725744&gcs=G111&gcd=13v3v3v3v5l1&npa=0&dma=0&_eu=EA&are=1&cid=388137121.1786921726&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=0&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=115616986~115938465~115938468~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786921726&sct=1&seg=0&dl=https%3A%2F%2Fwww.zapimoveis.com.br%2F&dt=Apartamentos%2C%20Casas%20e%20Im%C3%B3veis%20a%20Venda%20e%20para%20Alugar%20-%20ZAP%20Im%C3%B3veis&en=page_view&_fv=1&_ss=1&ep.page_name=%2Fhomepage&ep.vertical=real-estate&ep.brand=zapimoveis&ep.costumer_type=b2c&ep.main_category=imoveis&ep.main_category_id=1000&ep.journey_type=buyer&ep.content_group=home&ep.ab_testing_name=lp-b2b_new-lp.login-v2_on.sanity-zap_enabled.zchat-web_control.vitrine_control.version_portal-webapp&ep.ab_testing_variation_name=new-lp%2Con%2Cenabled%2Ccontrol%2Ccontrol%2Cportal-webapp&ep.ab_testing_experience_name=lp-b2b%2Clogin-v2%2Csanity-zap%2Czchat-web%2Cvitrine%2Cversion&up.anonymous_id=95f68bba-d7f9-4d03-b7fa-597963debc18&tfd=1173",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://sdk.iad-07.braze.com/api/v3/feature_flags/sync",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ads.mythad.com/rest/n/adintl/gray/getGrayInfo",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.google.com/measurement/1p-conversion/?random=1285974969&cv=11&tid=G-W39KX3CBHX&fst=1786921726367&fmt=8&en=session_start&gtm=45je68c1v9166197098z8896140809za200zb894111912zd894111912xec&gcs=G111&gcd=13v3v3v3v5l1&dma=0&tag_exp=115616986~115938465~115938468~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.zapimoveis.com.br%2F&gacid=388137121.1786921726&frm=0&tiba=Apartamentos%2C%20Casas%20e%20Im%C3%B3veis%20a%20Venda%20e%20para%20Alugar%20-%20ZAP%20Im%C3%B3veis&npa=0&pscdl=noapi&auid=1844137846.1786921726&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&rcb=0&ct_cookie_present=false&crd=CLTesQII8t-xAgit4bECCK_hsQIIobixAgixwbECCLDBsQIIscOxAgiKxbECCMLJsQII1-ixAgi0xrECCJPasQII29yxAgiH27ECCNPFsQII68yxAgjtzrECCNXPsQII9NqxAgiR67ECCMnjsQIIl9SxAgjJ27ECCM3msQIIseGxAgiz4bECCKbdsQIIgNuxAgjL4bEC&cerd=Chjr370tpqe-LYOwvi24sr4tg76-LfnPvi0&fsk=ChAI8L-F1AYQheagoumz0fEfEiwALO7GPwd3l5qLRgXM4srzkT7OfCjcI6stnX6MNhAsR3dQsl0FcHrQt1LH8BoCvmw&pscrd=IhMI-IT-laKmlgMVhlHdAh3EzS-QOh5odHRwczovL3d3dy56YXBpbW92ZWlzLmNvbS5ici9CVkNoQUk4TC1GMUFZUV83R3o3LXZfOFlaNEVpd0E4VWh4dktZbUVjVkFZb3JIY3lkYUhHWkJBTFF2RFdXcHhsNE9kVW1vUWFSSThXa2FOclpJcWFtbWlnegwICWIICAAQABgAIAA",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://ct.pinterest.com/user/?tid=2614408854246&cb=1786921726724&dep=2%2CPAGE_LOAD",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ct.pinterest.com/user/?event=pagevisit&tid=2614408854246&cb=1786921726726&dep=5%2CEVENT_TAGS_ABSENT",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ct.pinterest.com/user/?event=pagevisit&tid=2613358090933&cb=1786921726727&dep=5%2CEVENT_TAGS_ABSENT",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ct.pinterest.com/v3/?tid=2614408854246&event=init&ad=%7B%22loc%22%3A%22https%3A%2F%2Fwww.zapimoveis.com.br%2F%22%2C%22ref%22%3A%22%22%2C%22if%22%3Afalse%2C%22sh%22%3A720%2C%22sw%22%3A1280%2C%22mh%22%3A%2223a223e8%22%2C%22is_eu%22%3Atrue%2C%22architecture%22%3A%22x86%22%2C%22bitness%22%3A%2264%22%2C%22brands%22%3A%5B%7B%22brand%22%3A%22Not%3DA%3FBrand%22%2C%22version%22%3A%2299%22%7D%2C%7B%22brand%22%3A%22HeadlessChrome%22%2C%22version%22%3A%22151%22%7D%2C%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%22151%22%7D%5D%2C%22mobile%22%3Afalse%2C%22model%22%3A%22%22%2C%22platform%22%3A%22Windows%22%2C%22platformVersion%22%3A%2210.0%22%2C%22uaFullVersion%22%3A%22151.0.7922.34%22%7D&cb=1786921726728",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://ct.pinterest.com/v3/?tid=2613358090933&event=init&ad=%7B%22loc%22%3A%22https%3A%2F%2Fwww.zapimoveis.com.br%2F%22%2C%22ref%22%3A%22%22%2C%22if%22%3Afalse%2C%22sh%22%3A720%2C%22sw%22%3A1280%2C%22mh%22%3A%2223a223e8%22%2C%22is_eu%22%3Atrue%2C%22architecture%22%3A%22x86%22%2C%22bitness%22%3A%2264%22%2C%22brands%22%3A%5B%7B%22brand%22%3A%22Not%3DA%3FBrand%22%2C%22version%22%3A%2299%22%7D%2C%7B%22brand%22%3A%22HeadlessChrome%22%2C%22version%22%3A%22151%22%7D%2C%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%22151%22%7D%5D%2C%22mobile%22%3Afalse%2C%22model%22%3A%22%22%2C%22platform%22%3A%22Windows%22%2C%22platformVersion%22%3A%2210.0%22%2C%22uaFullVersion%22%3A%22151.0.7922.34%22%7D&cb=1786921726729",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/activity;src=14127850;type=zapk10;cat=zap_a0;rcb=4;ord=1034723613775;npa=0;auiddc=1844137846.1786921726;u1=www.zapimoveis.com.br;u2=%2F;u3=https%3A%2F%2Fwww.zapimoveis.com.br%2F;u4=undefined;u5=b2c;u6=%2Fzapimoveis%2Fhomepage;u7=homepage;u8=false;u10=undefined;u11=undefined;u13=undefined;u15=undefined;u16=undefined;u17=undefined;u18=undefined;u19=undefined;u20=undefined;u21=undefined;u22=undefined;u23=undefined;u24=undefined;u25=undefined;u26=undefined;uaa=x86;uab=64;uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34;uamb=0;uam=;uap=Windows;uapv=10.0;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe68c1v9190766502z8896140809za20gzb896140809zd894111912xea;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=3;tag_exp=115938465~115938468~118395333~118897920~118897930~119367802~119367810~119527019~120213116~120385423;epver=2;dc_random=1786921726_qhKJpzdSXxQGRqiB8M4ncJOl9e1vfWdglw;~oref=https%3A%2F%2Fwww.zapimoveis.com.br%2F?",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.googleadservices.com/pagead/conversion/791223751/?random=1786921726831&cv=11&fst=1786921726831&fmt=7&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be68c1v9179603766z8896140809za20gzb896140809zd894111912xea&gcs=G111&gcd=13v3v3v3v5l1&dma=0&tag_exp=115616986~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120125305~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.zapimoveis.com.br%2F&rcb=3&label=Gz7yCN-FqpsZEMe7pPkC&capi=1&frm=0&tiba=Apartamentos%2C%20Casas%20e%20Im%C3%B3veis%20a%20Venda%20e%20para%20Alugar%20-%20ZAP%20Im%C3%B3veis&bttype=purchase&value=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1844137846.1786921726&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&ec_mode=a&oid=2080939175.1786921727&oidsrc=3&ecsid2=1965329524.1786921727&_tu=CBA&gcl_ctr=1~0~0~0&category=acrcp_v1_512&em=tv.1&emd=tvd.1&ept=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://g169eb4a343838-azc7jkc56q-uc.a.run.app/events/1dd7435ddb868d28f31cce1923a91c68cd003c322c483f6dfdb5fdf92ec0c7b2",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://ct.pinterest.com/v3/?event=pagevisit&tid=2614408854246&cb=1786921726912&dep=5%2CEVENT_TAGS_ABSENT&pd=%7B%22pin_unauth%22%3A%22dWlkPVpXVmlZV1kwWkRrdFltRmxPQzAwTVRJeUxUazBaak10WlRWbE5EWTBOVEF5TXpFdw%22%7D&ad=%7B%22loc%22%3A%22https%3A%2F%2Fwww.zapimoveis.com.br%2F%22%2C%22ref%22%3A%22%22%2C%22if%22%3Afalse%2C%22sh%22%3A720%2C%22sw%22%3A1280%2C%22mh%22%3A%2223a223e8%22%2C%22is_eu%22%3Afalse%2C%22is_restricted_region%22%3Atrue%2C%22architecture%22%3A%22x86%22%2C%22bitness%22%3A%2264%22%2C%22brands%22%3A%5B%7B%22brand%22%3A%22Not%3DA%3FBrand%22%2C%22version%22%3A%2299%22%7D%2C%7B%22brand%22%3A%22HeadlessChrome%22%2C%22version%22%3A%22151%22%7D%2C%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%22151%22%7D%5D%2C%22mobile%22%3Afalse%2C%22model%22%3A%22%22%2C%22platform%22%3A%22Windows%22%2C%22platformVersion%22%3A%2210.0%22%2C%22uaFullVersion%22%3A%22151.0.7922.34%22%7D",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://ct.pinterest.com/v3/?event=pagevisit&tid=2613358090933&cb=1786921726913&dep=5%2CEVENT_TAGS_ABSENT&pd=%7B%22pin_unauth%22%3A%22dWlkPVpXVmlZV1kwWkRrdFltRmxPQzAwTVRJeUxUazBaak10WlRWbE5EWTBOVEF5TXpFdw%22%7D&ad=%7B%22loc%22%3A%22https%3A%2F%2Fwww.zapimoveis.com.br%2F%22%2C%22ref%22%3A%22%22%2C%22if%22%3Afalse%2C%22sh%22%3A720%2C%22sw%22%3A1280%2C%22mh%22%3A%2223a223e8%22%2C%22is_eu%22%3Afalse%2C%22is_restricted_region%22%3Atrue%2C%22architecture%22%3A%22x86%22%2C%22bitness%22%3A%2264%22%2C%22brands%22%3A%5B%7B%22brand%22%3A%22Not%3DA%3FBrand%22%2C%22version%22%3A%2299%22%7D%2C%7B%22brand%22%3A%22HeadlessChrome%22%2C%22version%22%3A%22151%22%7D%2C%7B%22brand%22%3A%22Chromium%22%2C%22version%22%3A%22151%22%7D%5D%2C%22mobile%22%3Afalse%2C%22model%22%3A%22%22%2C%22platform%22%3A%22Windows%22%2C%22platformVersion%22%3A%2210.0%22%2C%22uaFullVersion%22%3A%22151.0.7922.34%22%7D",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/791223751/?random=1336963348&cv=11&fst=1786921726831&fmt=8&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be68c1v9179603766z8896140809za20gzb896140809zd894111912xea&gcs=G111&gcd=13v3v3v3v5l1&dma=0&tag_exp=115616986~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120125305~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.zapimoveis.com.br%2F&rcb=3&label=Gz7yCN-FqpsZEMe7pPkC&capi=1&frm=0&tiba=Apartamentos%2C%20Casas%20e%20Im%C3%B3veis%20a%20Venda%20e%20para%20Alugar%20-%20ZAP%20Im%C3%B3veis&value=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1844137846.1786921726&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&ec_mode=a&oidsrc=3&ecsid2=1965329524.1786921727&_tu=CBA&gcl_ctr=1~0~0~0&category=acrcp_v1_512&em=tv.1&emd=tvd.1&ept=5&ct_cookie_present=false&eoid=CkUKEQjwv4XUBhCW3vWl1bjx6qABEjAAtjodT8kHpz97dtK8ADv2X2K0lMQwtgRY8ngWDgKT96vwjU_4paqMszOP7tYfSZzw_wcB&crd=CLTesQII8t-xAgit4bECCK_hsQIIobixAgixwbECCLDBsQIIscOxAgiKxbECCMLJsQII1-ixAgi0xrECCJPasQII29yxAgiH27ECCNPFsQII68yxAgjtzrECCNXPsQII9NqxAgiS67ECCMnjsQIIl9SxAgjJ27ECCM3msQII1OaxAgix4bECCLPhsQIIpt2xAgiA27ECCM3hsQJKGXRyaWdnZXI7bmF2aWdhdGlvbi1zb3VyY2VaAwoBAWIDCgED&cerd=Chjs370t24m-Laanvi3_r74tubK-Lffavi0&eitems=ChAI8L-F1AYQwaT7prWT5NkdEh0AlCyfRmxQ-PDwrTsxpsUE7XsSgaOFpTpSsshwKQ&fsk=ChAI8L-F1AYQheagoumz0fEfEiwALO7GP-D5ddtbgF89oFUGclIBP8jaT_i1iApVEjrMKOKKv_gLRyWauU69ohoCAzw&pscrd=IhMI2vuclqKmlgMVV0-4BB2THyHjOh5odHRwczovL3d3dy56YXBpbW92ZWlzLmNvbS5ici9CVkNoQUk4TC1GMUFZUV83R3o3LXZfOFlaNEVpd0E4VWh4dkVMVHFLVkdQNnJDSnRDTGpaMm1GeGJpNGlRajU2b0g0Q2RmVnNLd1gwWm13cFdzaWFfbENBegwICWIICAAQABgAIAA",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json&tc=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.google.com/pagead/1p-conversion/791223751/?random=1336963348&cv=11&fst=1786921726831&fmt=8&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be68c1v9179603766z8896140809za20gzb896140809zd894111912xea&gcs=G111&gcd=13v3v3v3v5l1&dma=0&tag_exp=115616986~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120125305~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.zapimoveis.com.br%2F&rcb=3&label=Gz7yCN-FqpsZEMe7pPkC&capi=1&frm=0&tiba=Apartamentos%2C%20Casas%20e%20Im%C3%B3veis%20a%20Venda%20e%20para%20Alugar%20-%20ZAP%20Im%C3%B3veis&value=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1844137846.1786921726&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&ec_mode=a&oidsrc=3&ecsid2=1965329524.1786921727&_tu=CBA&gcl_ctr=1~0~0~0&category=acrcp_v1_512&em=tv.1&emd=tvd.1&ept=5&ct_cookie_present=false&eoid=CkUKEQjwv4XUBhCW3vWl1bjx6qABEjAAtjodT8kHpz97dtK8ADv2X2K0lMQwtgRY8ngWDgKT96vwjU_4paqMszOP7tYfSZzw_wcB&crd=CLTesQII8t-xAgit4bECCK_hsQIIobixAgixwbECCLDBsQIIscOxAgiKxbECCMLJsQII1-ixAgi0xrECCJPasQII29yxAgiH27ECCNPFsQII68yxAgjtzrECCNXPsQII9NqxAgiS67ECCMnjsQIIl9SxAgjJ27ECCM3msQII1OaxAgix4bECCLPhsQIIpt2xAgiA27ECCM3hsQJKGXRyaWdnZXI7bmF2aWdhdGlvbi1zb3VyY2VaAwoBAWIDCgED&cerd=Chjs370t24m-Laanvi3_r74tubK-Lffavi0&fsk=ChAI8L-F1AYQheagoumz0fEfEiwALO7GP-D5ddtbgF89oFUGclIBP8jaT_i1iApVEjrMKOKKv_gLRyWauU69ohoCAzw&pscrd=IhMI2vuclqKmlgMVV0-4BB2THyHjOh5odHRwczovL3d3dy56YXBpbW92ZWlzLmNvbS5ici9CVkNoQUk4TC1GMUFZUV83R3o3LXZfOFlaNEVpd0E4VWh4dkVMVHFLVkdQNnJDSnRDTGpaMm1GeGJpNGlRajU2b0g0Q2RmVnNLd1gwWm13cFdzaWFfbENBegwICWIICAAQABgAIAA&is_vtc=1&cid=CAQS6wEAEQoqgVeQuP6roYGNg6yluVdZsWg1hvVaGq5lh5bs3XsAVXsRTbdwuuy3e7yb3dkT62ndCvS_ugCf91yoj4DazsO4sQbvZB7R_w_xOV5dI98BIBdyRi42EYeNSqn8MhVtAC31-uCaPzFl7VT6suqLjJlk6hPNPTZSqX8tA6tvphuQXJp1wtvQn-wIZezHtcuCiFw406TAqat7NLFuB2N5F8lLSoMPn9J8NOeD0UHFOFdw8vDTXS6JWYTSWB0b5H6oDvJaAdqogT9WP2xwcKJ18BUAWQh2_jcjP0waoL0i2YK4QPi7L9jsXCZy&eitems=ChAI8L-F1AYQwaT7prWT5NkdEh0AlCyfRrQfe3uzYwMpcPcUBbb9tg4JEekmbftIIQ&random=2320208032",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.google.com.br/pagead/1p-conversion/791223751/?random=1336963348&cv=11&fst=1786921726831&fmt=8&bg=ffffff&guid=ON&async=1&en=conversion&gtm=45be68c1v9179603766z8896140809za20gzb896140809zd894111912xea&gcs=G111&gcd=13v3v3v3v5l1&dma=0&tag_exp=115616986~115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~120125305~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.zapimoveis.com.br%2F&rcb=3&label=Gz7yCN-FqpsZEMe7pPkC&capi=1&frm=0&tiba=Apartamentos%2C%20Casas%20e%20Im%C3%B3veis%20a%20Venda%20e%20para%20Alugar%20-%20ZAP%20Im%C3%B3veis&value=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1844137846.1786921726&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&ec_mode=a&oidsrc=3&ecsid2=1965329524.1786921727&_tu=CBA&gcl_ctr=1~0~0~0&category=acrcp_v1_512&em=tv.1&emd=tvd.1&ept=5&ct_cookie_present=false&eoid=CkUKEQjwv4XUBhCW3vWl1bjx6qABEjAAtjodT8kHpz97dtK8ADv2X2K0lMQwtgRY8ngWDgKT96vwjU_4paqMszOP7tYfSZzw_wcB&crd=CLTesQII8t-xAgit4bECCK_hsQIIobixAgixwbECCLDBsQIIscOxAgiKxbECCMLJsQII1-ixAgi0xrECCJPasQII29yxAgiH27ECCNPFsQII68yxAgjtzrECCNXPsQII9NqxAgiS67ECCMnjsQIIl9SxAgjJ27ECCM3msQII1OaxAgix4bECCLPhsQIIpt2xAgiA27ECCM3hsQJKGXRyaWdnZXI7bmF2aWdhdGlvbi1zb3VyY2VaAwoBAWIDCgED&cerd=Chjs370t24m-Laanvi3_r74tubK-Lffavi0&fsk=ChAI8L-F1AYQheagoumz0fEfEiwALO7GP-D5ddtbgF89oFUGclIBP8jaT_i1iApVEjrMKOKKv_gLRyWauU69ohoCAzw&is_vtc=1&cid=CAQS6wEAEQoqgVeQuP6roYGNg6yluVdZsWg1hvVaGq5lh5bs3XsAVXsRTbdwuuy3e7yb3dkT62ndCvS_ugCf91yoj4DazsO4sQbvZB7R_w_xOV5dI98BIBdyRi42EYeNSqn8MhVtAC31-uCaPzFl7VT6suqLjJlk6hPNPTZSqX8tA6tvphuQXJp1wtvQn-wIZezHtcuCiFw406TAqat7NLFuB2N5F8lLSoMPn9J8NOeD0UHFOFdw8vDTXS6JWYTSWB0b5H6oDvJaAdqogT9WP2xwcKJ18BUAWQh2_jcjP0waoL0i2YK4QPi7L9jsXCZy&eitems=ChAI8L-F1AYQwaT7prWT5NkdEh0AlCyfRrQfe3uzYwMpcPcUBbb9tg4JEekmbftIIQ&random=2320208032&ipr=y&pscrd=IhMI2vuclqKmlgMVV0-4BB2THyHjOh5odHRwczovL3d3dy56YXBpbW92ZWlzLmNvbS5ici9CVkNoQUk4TC1GMUFZUV83R3o3LXZfOFlaNEVpd0E4VWh4dkVMVHFLVkdQNnJDSnRDTGpaMm1GeGJpNGlRajU2b0g0Q2RmVnNLd1gwWm13cFdzaWFfbENBegwICWIICAAQABgAIACCAQlwAYgBAeIBAQI",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://gum.criteo.com/sid/json?origin=onetag&domain=zapimoveis.com.br&sn=ChromeSyncframe&so=undefined&topUrl=www.zapimoveis.com.br",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://ad.doubleclick.net/activity;dc_pre=CIvAlJaippYDFaFK3QIdmf0txA;src=14127850;type=zapk10;cat=zap_a0;rcb=4;ord=1034723613775;npa=0;auiddc=1844137846.1786921726;u1=www.zapimoveis.com.br;u2=%2F;u3=https%3A%2F%2Fwww.zapimoveis.com.br%2F;u4=undefined;u5=b2c;u6=%2Fzapimoveis%2Fhomepage;u7=homepage;u8=false;u10=undefined;u11=undefined;u13=undefined;u15=undefined;u16=undefined;u17=undefined;u18=undefined;u19=undefined;u20=undefined;u21=undefined;u22=undefined;u23=undefined;u24=undefined;u25=undefined;u26=undefined;uaa=x86;uab=64;uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34;uamb=0;uam=;uap=Windows;uapv=10.0;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe68c1v9190766502z8896140809za20gzb896140809zd894111912xea;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=3;tag_exp=115938465~115938468~118395333~118897920~118897930~119367802~119367810~119527019~120213116~120385423;epver=2;dc_random=1786921726_qhKJpzdSXxQGRqiB8M4ncJOl9e1vfWdglw;~oref=https%3A%2F%2Fwww.zapimoveis.com.br%2F?",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.google.com/gmp/conversion/_dc_unique_id=2345325809395145566;_dc_ptd=ChAI8L-F1AYQ0LHw_NGl5oVFEh8A9r6aP2kgp_5rFCpKd8cIqnG1ztW7nURcop8fR0A6;_dc_time=1786921726;dc_pre=CIvAlJaippYDFaFK3QIdmf0txA;src=14127850;type=zapk10;cat=zap_a0;rcb=4;ord=1034723613775;npa=0;auiddc=1844137846.1786921726;u1=www.zapimoveis.com.br;u2=%2F;u3=https%3A%2F%2Fwww.zapimoveis.com.br%2F;u4=undefined;u5=b2c;u6=%2Fzapimoveis%2Fhomepage;u7=homepage;u8=false;u10=undefined;u11=undefined;u13=undefined;u15=undefined;u16=undefined;u17=undefined;u18=undefined;u19=undefined;u20=undefined;u21=undefined;u22=undefined;u23=undefined;u24=undefined;u25=undefined;u26=undefined;uaa=x86;uab=64;uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34;uamb=0;uam=;uap=Windows;uapv=10.0;uaw=0;pscdl=noapi;frm=0;_tu=KFA;gtm=45fe68c1v9190766502z8896140809za20gzb896140809zd894111912xea;gcs=G111;gcd=13v3v3v3v5l1;dma=0;dc_fmt=3;tag_exp=115938465~115938468~118395333~118897920~118897930~119367802~119367810~119527019~120213116~120385423;epver=2;dc_random=1786921726_qhKJpzdSXxQGRqiB8M4ncJOl9e1vfWdglw;~oref=https%3A%2F%2Fwww.zapimoveis.com.br%2F?",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://logsdk.kwai-pro.com/rest/wd/common/log/collect/radar?v=3.10.28&kpn=ksib.fe.pixel",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://logsdk.kwai-pro.com/rest/wd/common/log/collect/radar?v=3.10.28&kpn=ksib.fe.pixel",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ads.mythad.com/rest/n/adintl/ad/getPixelConfig?pixelId=266675679118322&pageId=pageId-1786921727573-6796107858684",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://mug.criteo.com/sid?cpp=sK27_XxraXlBeThOTDI0aEVSYlJWa3BQQloxN2wvRkJSYXhGN2kzQnc4aW96YjlVamxUUDlONGM0SE51ZGZhSkZLeFZmcy9QUW1ma0JhU3Fic3kzbFlmVW9OQ0RoZ3BYakJlUE9jRnlHSHd5Q2tpMWNwQ00vamhIaUFIRlRZREhqa1RVSktiMXN6b2ZkOWZDTldUWWtURmJiZDVBZFhsOFhJYXBZYU9WTzlMVXRLRnc5WlF3OUF2bm1sQ200SGIwTFI1cXdZamtZNnpKOThmVVFKMFFRRXFPc1hTYTRFcERZNVdRdmNzV2xlRWlTMmhEZ21Cc0ZmOWtoQnl4ZlhOclVLM08wZVZrNmZrTExVOHJKellNcTcxN01TenVVQmFaOFFWbWhZUEhFZitMMkZQdz18&cppv=2",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [
+    "Failed to load resource: the server responded with a status of 403 ()",
+    "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+    "Framing 'https://www.google.com/' violates the following report-only Content Security Policy directive: \"frame-ancestors 'self'\". The violation has been logged, but no further action has been taken.\n"
+  ],
+  "titulo": "Apartamentos, Casas e Imóveis a Venda e para Alugar - ZAP Imóveis",
+  "bodyTextSample": "Pular para o conteúdo principal\nAlugar\nComprar\nAnunciar\nCriar conta\nEntrar\n\nEncontre o imóvel ideal para você. Só no Zap você encontra 7 milhões de opções.\n\nComprar\nAlugar\nImóvel novo\nOnde deseja morar?\n\nTipo de imóvel\n\nTodos os imóveis\nBuscar\nEncontre o imóvel ideal para seu estilo de vida\nFestival Da Mudança\n\nEncontre sua casa dos sonhos no Festival Da Mudança.\n\nLançamentos pra você\n\nSaia do aluguel com um imóvel de lançamento. Da planta ao pronto pra morar, você confere aqui.\n\nAluguel a partir de R$2 mil\n\nMilhares de opções em todo o Brasil para alugar o lugar que faz sentido pra você.\n\nPara comprar a partir de R$150 mil\n\nMilhões de opções à venda para encontrar o imóvel que combina com a sua vida.\n\nOpções de 2 quartos\n\nQuer mais de 1 quarto? Seja para fazer de home office ou pra ter mais espaço pra família, no Zap você encontra.\n\nPUBLICIDADE\n\nPUBLICIDADE\n\nExplore por bairros mais populares do Brasil\nInformações de serviços e mobilidade, história do bairro e muito mais.\n\nBairros de ",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/zap-imoveis.png",
+  "erro": null,
+  "timestamp": "2026-08-16T23:08:45.081Z"
+}

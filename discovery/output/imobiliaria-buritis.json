@@ -1,0 +1,113 @@
+{
+  "nome": "Imobiliária Buritis",
+  "urlSolicitada": "https://www.imobiliariaburitis.com.br/",
+  "urlFinal": "https://www.imobiliariaburitis.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\n\nDisallow: /imovel-nao-encontrado/\nDisallow: /obrigado-imovel-ideal/\nDisallow: /contato-obrigado/\nDisallow: /agendar-obrigado/\nDisallow: /fale-com-corretor-obrigado/\n\nSitemap: https://www.imobiliariaburitis.com.br/sitemap.xml\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 1,
+    "jsonLdSample": "\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Organization\",\n    \"name\": \"Imobiliária Buritis\",\n    \"description\": \"Compre, venda e Alugue imóveis em Belo Horizonte e região\",\n    \"address\": {\n      \"@type\": \"PostalAddress\",\n      \"addressCountry\": {\n        \"@type\": \"Country\",\n        \"name\": \"BR\"\n      },\n      \"addressLocality\": \"Belo Horizonte\",\n      \"addressRegion\": \"mg\"\n    },\n    \"brand\": {\n      \"@type\": \"Brand\",\n      \"logo\": \"https://www.imobiliariaburitis.com.br/assets/images/logo-link.png\"\n    },\n    \"URL\": \"https://www.imobiliariaburitis.com.br/\"\n  }\n",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&ae=g&auid=339862537.1786921659&dt=Especialistas%20no%20Buritis%20e%20regi%C3%A3o.%20O%20im%C3%B3vel%20que%20voc%C3%AA%20procura%20est%C3%A1%20aqui.&en=page_view&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2F&scrsrc=www.googletagmanager.com&rnd=358898788.1786921659&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He68c1v871029822za200zd871029822xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119527019~120385422&tft=1786921658534&tfd=1227&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=339862537.1786921659&gtm=45He68c1v871029822za200zd871029822xea&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1132371477&t=pageview&_s=1&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2F&ul=en-us&dt=Especialistas%20no%20Buritis%20e%20regi%C3%A3o.%20O%20im%C3%B3vel%20que%20voc%C3%AA%20procura%20est%C3%A1%20aqui.&sr=1280x720&vp=1280x720&_u=YEBAAEABAAAAACAAI~&jid=1214370653&gjid=136477856&cid=5040680.1786921659&tid=UA-79362085-1&_gid=848132846.1786921659&_r=1&_slc=1&gtm=45He68c1n81TMCH5HHv871029822za200zd871029822&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119527019~120385422&z=1716669549",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/880141072/?random=1786921658805&cv=11&fst=1786921658805&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68c1v887901520z8871029822za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527019~120213116~120385422&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2F&rcb=18&frm=0&tiba=Especialistas%20no%20Buritis%20e%20regi%C3%A3o.%20O%20im%C3%B3vel%20que%20voc%C3%AA%20procura%20est%C3%A1%20aqui.&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=339862537.1786921659&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/880141072/?random=1786921658827&cv=11&fst=1786921658827&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be68c1v887901520z8871029822za20gzb871029822zd871029822xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527019~120213116~120385422&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2F&rcb=18&frm=0&tiba=Especialistas%20no%20Buritis%20e%20regi%C3%A3o.%20O%20im%C3%B3vel%20que%20voc%C3%AA%20procura%20est%C3%A1%20aqui.&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=339862537.1786921659&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=0&auid=339862537.1786921659&dt=Especialistas%20no%20Buritis%20e%20regi%C3%A3o.%20O%20im%C3%B3vel%20que%20voc%C3%AA%20procura%20est%C3%A1%20aqui.&tid=AW-880141072&en=page_view&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2F&scrsrc=www.googletagmanager.com&rnd=358898788.1786921659&navt=n&npa=0&gtm=45be68c1v887901520z8871029822za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527019~120213116~120385422&tft=1786921658831&tfd=1525&tids=AW-880141072&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=0&ae=g&auid=339862537.1786921659&dt=Especialistas%20no%20Buritis%20e%20regi%C3%A3o.%20O%20im%C3%B3vel%20que%20voc%C3%AA%20procura%20est%C3%A1%20aqui.&tid=AW-880141072&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2F&scrsrc=www.googletagmanager.com&rnd=358898788.1786921659&navt=n&npa=0&_tu=CA&gtm=45be68c1v887901520z8871029822za20gzb871029822zd871029822xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~118395333~118897920~118897930~119367802~119367810~119527019~120213116~120385422&tft=1786921658832&tfd=1525&tids=AW-880141072&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-FNPKQ1FE0K&gtm=45je68c1v871172569z8871029822za20gzb871029822zd871029822&_p=1786921658173&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AgAAAGAC&are=1&cid=5040680.1786921659&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938466~115938469~118395334~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786921658&sct=1&seg=0&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2F&dt=Especialistas%20no%20Buritis%20e%20regi%C3%A3o.%20O%20im%C3%B3vel%20que%20voc%C3%AA%20procura%20est%C3%A1%20aqui.&en=page_view&_fv=1&_ss=1&tfd=1591",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/measurement/conversion?random=1786921658900&cv=11&tid=G-FNPKQ1FE0K&fst=1786921658900&fmt=8&en=encontrar_um_agente&gtm=45je68c1v871172569za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938469~118395334~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1280&u_h=720&hl=en&gl=us&url=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2F&gacid=5040680.1786921659&frm=0&tiba=Especialistas%20no%20Buritis%20e%20regi%C3%A3o.%20O%20im%C3%B3vel%20que%20voc%C3%AA%20procura%20est%C3%A1%20aqui.&value=0&currency_code=USD&npa=0&pscdl=noapi&auid=339862537.1786921659&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&rcb=2",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-FNPKQ1FE0K&gtm=45je68c1v871172569za20gzb871029822zd871029822&_p=1786921658173&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAgAAGQC&_prs=ok&are=1&cid=5040680.1786921659&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938466~115938469~118395334~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786921658&sct=1&seg=0&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2F&dt=Especialistas%20no%20Buritis%20e%20regi%C3%A3o.%20O%20im%C3%B3vel%20que%20voc%C3%AA%20procura%20est%C3%A1%20aqui.&cu=USD&en=encontrar_um_agente&_c=1&epn.value=0&_et=5&tfd=1606",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-favoritos",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/get-condominios",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-tipos-disponiveis",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-cidades-disponiveis",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-destaques",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [
+    "Failed to load resource: the server responded with a status of 410 ()",
+    "Failed to load resource: the server responded with a status of 410 ()"
+  ],
+  "titulo": "Especialistas no Buritis e região. O imóvel que você procura está aqui.",
+  "bodyTextSample": "Usamos cookies para personalizar conteúdos e melhorar a sua experiência. Para ver nossa política de cookies Clique aqui\nAceito\nCOMPRAR\nALUGAR\nANUNCIAR MEU IMÓVEL\nFAVORITOS\nEspecialistas no Buritis e região. O imóvel que você procura está aqui.\nCOMPRAR\nALUGAR\nLANÇAMENTOS\nTIPO\n0 Selecionados\nCIDADE\nCidade\nBelo Horizonte\nCapitólio\nCONTAGEM\nJABOTICATUBAS\nLAGOA SANTA\nNão informado\nNOVA LIMA\nRio Acima\nSETE LAGOAS\nBAIRROS\n0 Selecionados\nQUARTOS\nQuartos\n1 Quarto\n2 Quartos\n3 Quartos\n4+ Quartos\nVALOR\nCONDOMÍNIOS\nTodos\nBUSCAR IMÓVEIS\nBUSCAR POR CÓDIGO\nSeparamos alguns imóveis para você\nPara tornar sua navegação mais fácil, selecionamos alguns filtros de imóveis que podem te interessar\nApartamentos\nCasa\nAceita Permuta\nImóveis com Piscina\nLoja\nAlugar\n1\nImóveis em Destaque\nVeja abaixo nossas principais oportunidades\nCOMPRAR\nALUGAR\nSUPER DESTAQUE\nNOVO\n< < < <\n‹\nPrevious\n›\nNext\nJardim América | Belo Horizonte\nCódigo. 34661\nCódigo. 34661\nCobertura à venda no Jardim América\nR$ 590.000,00\n154,85 m²\nÁrea ",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/imobiliaria-buritis.png",
+  "erro": null,
+  "timestamp": "2026-08-16T23:07:37.122Z"
+}

@@ -1,0 +1,186 @@
+{
+  "nome": "QuintoAndar",
+  "urlSolicitada": "https://www.quintoandar.com.br/",
+  "urlFinal": "https://www.quintoandar.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: atlassian-bot\nAllow: /ajuda*\n\nUser-agent: *\nAllow: /\n\nDisallow: *cdmx\n\nDisallow: /equipe\nDisallow: /favoritos\nDisallow: /inquilino\nDisallow: /parceiros\nDisallow: /busca\nDisallow: /pdf\nDisallow: /auth\nDisallow: /twa\nDisallow: /visitas/*\nDisallow: /visita/*\nDisallow: /alertas\nDisallow: /classificado*\nDisallow: */indisponivel*\nDisallow: /meu-quinto-preco/*\nDisallow: /meu-quinto-preco\nDisallow: /area-qpreco/*\nDisallow: /area-qpreco\n\nDisallow: /imovel/*?detalhes=\nDisallow: /imovel/*/agendar\nDisallow: /imovel/*/descricao\nDisallow: /imovel/*/detalhes-condominio\nDisallow: /imovel/*/detalhes-imovel\nDisallow: /imovel/*/furniture\n\nDisallow: /imovel/*/comprar?detalhes=\nDisallow: /imovel/*/comprar/agendar\nDisallow: /imovel/*/comprar/descricao\nDisallow: /imovel/*/comprar/detalhes-condominio\nDisallow: /imovel/*/comprar/detalhes-imovel\nDisallow: /imovel/*/comprar/furniture\n\nDisallow: /propostas/alugar?imovel=\nDisallow: /propostas/comprar?imovel=\n\nDisallow: */offer\n\nDisallow: /recomendacoes/*\n\nDisallow: /alugar/imovel/*?filters=true$\nDisallow: /comprar/imovel/*?filters=true$\n\n# Alternate page with proper canonical tag issue\nDisallow: *-brasil?filters=true$\nDisallow: *-brasil?map=true$\nDisallow: /alugar/imovel/*?redirect*\nDisallow: /alugar/imovel/*?search_id=*\nDisallow: /comprar/imovel/*?redirect*\nDisallow: /comprar/imovel/*?search_id=*\n\n# Agent search tracking parameters\nDisallow: /alugar/imovel/*?portfolio_ref=*\nDisallow: /comprar/imovel/*?portfolio_ref=*\nDisallow: /imovel/*?portfolio_ref=*\nDisallow: /classificado/*?portfolio_ref=*\nDisallow: /imovel/*?agent_search_mode=*\nDisallow: /classificado/*?agent_search_mode=*\n\n# regions-pwa preview environment\nDisallow: /regioes-atendidas/preview*\n\n# Stale POIs\nDisallow: */imovel/academia-\nDisallow: */imovel/banco-\nDisallow: */imovel/bar-\nDisallow: */imovel/boteco-\nDisallow: */imovel/bradesco-\nDisallow: */imovel/burger-\nDisallow: */imovel/cafe-\nDisallow: */imovel/caixa-\nDisallow: */imovel/cantina-\nDisallow: */imovel/cartorio-\nDis"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 2,
+    "jsonLdSample": "{\"@context\":\"https://schema.org\",\"@type\":[\"Organization\",\"WebSite\",\"RealEstateAgent\"],\"name\":\"QuintoAndar\",\"url\":\"https://www.quintoandar.com.br\",\"description\":\"Encontre imóveis para alugar e comprar, agendamento de visitas online e contrato digital. Aluguel sem fiador e apoio em toda a compra de imóvel. Anuncie grátis!\",\"logo\":\"https://cozy-assets.quintoandar.com.br/cozy-static/v3/latest/default/logo/QuintoAndar/default/complete.pt-BR.svg\",\"sameAs\":[\"https://www.facebook.com/quintoandar.com.br\",\"https://www.instagram.com/quintoandar\",\"https://www.linkedin.com/company/quintoandar-com-br\",\"https://www.tiktok.com/@quintoandar\",\"https://x.com/quintoandar\",\"https://www.youtube.com/@QuintoAndarBrasil\",\"https://www.wikidata.org/wiki/Q56350351\"],\"foundingDate\":\"2013\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Rua Girassol, 555, Torre B\",\"addressLocality\":\"São Paulo\",\"addressRegion\":\"SP\",\"postalCode\":\"05433-001\",\"addressCountry\":\"BR\"},\"contactPoint\":{\"@type\":\"ContactPoint\",\"email\":\"at",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": true,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "GET",
+      "url": "https://cdn-lib.quintoandar.com.br/cookie-banner/config/scripts-table-quintoandar-com-br.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://o105464.ingest.sentry.io/api/6200094/envelope/?sentry_key=588948a2a3b541049f0b5f34739b83b2&sentry_version=7&sentry_client=sentry.javascript.react%2F7.120.4",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://customer.iad-03.braze.com/api/v3/data/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://xp-spec.quintoandar.com.br/customer-facing/configuration-files/configcat-proxy/beakman-key/config_v6.json?sdk=ConfigCat-JS/a-9.5.0",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://xp-spec.quintoandar.com.br/customer-facing/configuration-files/configcat-proxy/beakman-key/config_v6.json?sdk=ConfigCat-UnifiedJS-Browser/a-1.0.2",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.quintoandar.com.br/?_rsc=tXyZJ52UQVBCVsD3",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn-lib.quintoandar.com.br/cookie-banner/config/cookie-manager.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://xp-spec.quintoandar.com.br/customer-facing/configuration-files/configcat-proxy/beakman-key/config_v6.json?sdk=ConfigCat-UnifiedJS-Browser/a-1.0.2",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.quintoandar.com.br/braze-blocklist_4.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://customer.iad-03.braze.com/api/v3/content_cards/sync",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn-lib.quintoandar.com.br/cookie-banner/config/cookies-table-quintoandar-com-br.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://event-gateway.quintoandar.com.br/event/batch",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://event-gateway.quintoandar.com.br/event/batch",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://tracking.quintoandar.com.br/g/collect?v=2&tid=G-E2JVTQ7D7Q&gtm=45je68c1v871821103z877843112za20gzb77843112zd77843112&_p=1786921709349&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1996826194&_fplc=0&are=1&cid=997695325.1786921711&ec_mode=c&frm=0&ngs=1&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=BR-MG&sst.etld=google.com.br&sst.tft=1786921709349&sst.lpc=156863035&sst.navt=n&sst.ude=0&sst.sw_exp=1&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~119527019~120213116~120385423&sid=1786921710&sct=1&seg=0&dl=https%3A%2F%2Fwww.quintoandar.com.br%2F&dt=Abra%20as%20portas%20para%20um%20novo%20morar%20-%20QuintoAndar&_tu=BA&en=PageView&_fv=1&_nsi=1&_ss=1&gap.sstd=6&ep.page%20path=%2F&ep.user_data._tag_mode=MANUAL&tfd=1964&richsstsse",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/928881125/?random=218186902&fst=1786921711150&cv=10&fmt=8&bg=ffffff&guid=ON&u_w=1280&u_h=720&gtm=45j91e68a1v871821103z877843112z99178667982za20gzb77843112zd77843112&url=https%3A%2F%2Fwww.quintoandar.com.br%2F&tiba=Abra%20as%20portas%20para%20um%20novo%20morar%20-%20QuintoAndar&data=listing_pagetype%3Dhome%3Bevent%3Dhome_page_viewed&auid=1441022414.1786921711&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&rcb=3&dma=0&npa=0&gcd=13l3l3l3l1l1&pscdl=noapi&_is_sw=f15s0t2&tag_exp=115938466~115938468~117215459~118032361~118897920~118897930~119367802~119367810~119527019~120213116~120385423&_tu=BA&gap.sstd=6&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/928881125/?random=1157241101&fst=1786921711154&cv=10&fmt=8&bg=ffffff&guid=ON&u_w=1280&u_h=720&gtm=45j91e68a1v871821103z877843112z99178667982za20gzb77843112zd77843112&url=https%3A%2F%2Fwww.quintoandar.com.br%2F&tiba=Abra%20as%20portas%20para%20um%20novo%20morar%20-%20QuintoAndar&data=listing_pagetype%3Dhome_sales%3Bevent%3Dhome_page_viewed&auid=1441022414.1786921711&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&rcb=3&dma=0&npa=0&gcd=13l3l3l3l1l1&pscdl=noapi&_is_sw=f15s0t2&tag_exp=115938466~115938468~117215459~118032361~118897920~118897930~119367802~119367810~119527019~120213116~120385423&_tu=BA&gap.sstd=6&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.googleadservices.com/pagead/conversion/928881125/?random=110269017&fst=1786921711165&cv=10&fmt=7&label=dZOzCJzJo6oZEOWz9roD&bg=ffffff&guid=ON&u_w=1280&u_h=720&gtm=45j91e68a1v871821103z877843112z99178667982za20gzb77843112zd77843112&auid=1441022414.1786921711&rcb=3&dma=0&npa=0&gcd=13l3l3l3l1l1&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&pscdl=noapi&url=https%3A%2F%2Fwww.quintoandar.com.br%2F&tiba=Abra%20as%20portas%20para%20um%20novo%20morar%20-%20QuintoAndar&data=event%3DPageView%3Bpage%20path%3D%2F&bttype=purchase&ec_mode=c&em=tv.1&emd=tvd.1&value=0&uip=2804%3A1b2%3A1001%3A%3A&tag_exp=115938466~115938468~117215459~118032361~118897920~118897930~119367802~119367810~119527019~120213116~120385423&_tu=BA&gap.sstd=6&s3p=1&_is_sw=f15s0t2",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/928881125/?random=71268811&fst=1786921711165&cv=10&fmt=8&label=dZOzCJzJo6oZEOWz9roD&bg=ffffff&guid=ON&u_w=1280&u_h=720&gtm=45j91e68a1v871821103z877843112z99178667982za20gzb77843112zd77843112&auid=1441022414.1786921711&rcb=3&dma=0&npa=0&gcd=13l3l3l3l1l1&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&pscdl=noapi&url=https%3A%2F%2Fwww.quintoandar.com.br%2F&tiba=Abra%20as%20portas%20para%20um%20novo%20morar%20-%20QuintoAndar&data=event%3DPageView%3Bpage%20path%3D%2F&ec_mode=c&em=tv.1&emd=tvd.1&value=0&uip=2804%3A1b2%3A1001%3A%3A&tag_exp=115938466~115938468~117215459~118032361~118897920~118897930~119367802~119367810~119527019~120213116~120385423&_tu=BA&gap.sstd=6&s3p=1&_is_sw=f15s0t2&ct_cookie_present=false&crd=CLTesQII8t-xAgit4bECCK_hsQIIobixAgixwbECCLDBsQIIscOxAgiKxbECCMLJsQII1-ixAgi0xrECCJPasQII29yxAgiH27ECCNPFsQII68yxAgjtzrECCNXPsQII9NqxAgiS67ECCMnjsQIIl9SxAgjJ27ECCM3msQIIseGxAgiz4bECCKbdsQIIgNuxAkordHJpZ2dlcjtuYXZpZ2F0aW9uLXNvdXJjZSwgbm90LWV2ZW50LXNvdXJjZVoDCgEBYgMKAQM&cerd=ChDs370tp6e-LYKwvi25sr4t&eitems=ChAI8L-F1AYQwaT7prWT5NkdEh0AlCyfRgKsmeQkqMG-NKb_HZ8464i5gZA_hvUTNg&fsk=ChAI8L-F1AYQheagoumz0fEfEiwALO7GP_xbWm6yN5nVGw43uRm3BkyefCxxpEBgb-4dWXccPVr9ljdezfsBOhoCQYU&pscrd=IhMI8O3mjqKmlgMVMiC5Bh1qkhFhQlRDaEFJOEwtRjFBWVFfN0d6Ny12XzhZWjRFaXNBOFVoeHZDaXBHaTNkakNLRWhtUWJvSmtwbFUtejBSYWhpaHM0LVk5TFhiZ2o5LWtkbWxoaE0teDF6DAgJYggIABAAGAAgAA",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.google.com/pagead/1p-conversion/928881125/?random=71268811&fst=1786921711165&cv=10&fmt=8&label=dZOzCJzJo6oZEOWz9roD&bg=ffffff&guid=ON&u_w=1280&u_h=720&gtm=45j91e68a1v871821103z877843112z99178667982za20gzb77843112zd77843112&auid=1441022414.1786921711&rcb=3&dma=0&npa=0&gcd=13l3l3l3l1l1&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&pscdl=noapi&url=https%3A%2F%2Fwww.quintoandar.com.br%2F&tiba=Abra%20as%20portas%20para%20um%20novo%20morar%20-%20QuintoAndar&data=event%3DPageView%3Bpage%20path%3D%2F&ec_mode=c&em=tv.1&emd=tvd.1&value=0&uip=2804%3A1b2%3A1001%3A%3A&tag_exp=115938466~115938468~117215459~118032361~118897920~118897930~119367802~119367810~119527019~120213116~120385423&_tu=BA&gap.sstd=6&s3p=1&_is_sw=f15s0t2&ct_cookie_present=false&crd=CLTesQII8t-xAgit4bECCK_hsQIIobixAgixwbECCLDBsQIIscOxAgiKxbECCMLJsQII1-ixAgi0xrECCJPasQII29yxAgiH27ECCNPFsQII68yxAgjtzrECCNXPsQII9NqxAgiS67ECCMnjsQIIl9SxAgjJ27ECCM3msQIIseGxAgiz4bECCKbdsQIIgNuxAkordHJpZ2dlcjtuYXZpZ2F0aW9uLXNvdXJjZSwgbm90LWV2ZW50LXNvdXJjZVoDCgEBYgMKAQM&cerd=ChDs370tp6e-LYKwvi25sr4t&fsk=ChAI8L-F1AYQheagoumz0fEfEiwALO7GP_xbWm6yN5nVGw43uRm3BkyefCxxpEBgb-4dWXccPVr9ljdezfsBOhoCQYU&pscrd=IhMI8O3mjqKmlgMVMiC5Bh1qkhFhQlRDaEFJOEwtRjFBWVFfN0d6Ny12XzhZWjRFaXNBOFVoeHZDaXBHaTNkakNLRWhtUWJvSmtwbFUtejBSYWhpaHM0LVk5TFhiZ2o5LWtkbWxoaE0teDF6DAgJYggIABAAGAAgAA&is_vtc=1&cid=CAQS6wEAEQoqgQp9yRqhVmk13ycBcwZeJJ284I4M-aEbjDANHWxXZ1FDwCPg4G18apR1ROjMbjX-C5khYfKsu3Zf6APklWxVg79flGowW7aFpftzhd89aS4UwWDOYXX91FBMFMFwsIX0ReTK71gYfjf3UdU5INkZmKcHAh2jBneilICsf84hXcT12kx2depRB3B0kFvkmTxXzho9uxp5TwXMLfpvYa0eLJrJWetQ1btQ4K4_Z-NGJb4Y7FJjNFfjGUKmOc_jRFflTgOpgEyxtp2ExEYKdIibjewwaf_69WwQoMVNGa_y4RSSCNapM6xW&eitems=ChAI8L-F1AYQwaT7prWT5NkdEh0AlCyfRruAgpgr41_SndnFkBA_LE47V3j8vXkbkw&random=517366415",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.google.com.br/pagead/1p-conversion/928881125/?random=71268811&fst=1786921711165&cv=10&fmt=8&label=dZOzCJzJo6oZEOWz9roD&bg=ffffff&guid=ON&u_w=1280&u_h=720&gtm=45j91e68a1v871821103z877843112z99178667982za20gzb77843112zd77843112&auid=1441022414.1786921711&rcb=3&dma=0&npa=0&gcd=13l3l3l3l1l1&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&pscdl=noapi&url=https%3A%2F%2Fwww.quintoandar.com.br%2F&tiba=Abra%20as%20portas%20para%20um%20novo%20morar%20-%20QuintoAndar&data=event%3DPageView%3Bpage%20path%3D%2F&ec_mode=c&em=tv.1&emd=tvd.1&value=0&uip=2804%3A1b2%3A1001%3A%3A&tag_exp=115938466~115938468~117215459~118032361~118897920~118897930~119367802~119367810~119527019~120213116~120385423&_tu=BA&gap.sstd=6&s3p=1&_is_sw=f15s0t2&ct_cookie_present=false&crd=CLTesQII8t-xAgit4bECCK_hsQIIobixAgixwbECCLDBsQIIscOxAgiKxbECCMLJsQII1-ixAgi0xrECCJPasQII29yxAgiH27ECCNPFsQII68yxAgjtzrECCNXPsQII9NqxAgiS67ECCMnjsQIIl9SxAgjJ27ECCM3msQIIseGxAgiz4bECCKbdsQIIgNuxAkordHJpZ2dlcjtuYXZpZ2F0aW9uLXNvdXJjZSwgbm90LWV2ZW50LXNvdXJjZVoDCgEBYgMKAQM&cerd=ChDs370tp6e-LYKwvi25sr4t&fsk=ChAI8L-F1AYQheagoumz0fEfEiwALO7GP_xbWm6yN5nVGw43uRm3BkyefCxxpEBgb-4dWXccPVr9ljdezfsBOhoCQYU&is_vtc=1&cid=CAQS6wEAEQoqgQp9yRqhVmk13ycBcwZeJJ284I4M-aEbjDANHWxXZ1FDwCPg4G18apR1ROjMbjX-C5khYfKsu3Zf6APklWxVg79flGowW7aFpftzhd89aS4UwWDOYXX91FBMFMFwsIX0ReTK71gYfjf3UdU5INkZmKcHAh2jBneilICsf84hXcT12kx2depRB3B0kFvkmTxXzho9uxp5TwXMLfpvYa0eLJrJWetQ1btQ4K4_Z-NGJb4Y7FJjNFfjGUKmOc_jRFflTgOpgEyxtp2ExEYKdIibjewwaf_69WwQoMVNGa_y4RSSCNapM6xW&eitems=ChAI8L-F1AYQwaT7prWT5NkdEh0AlCyfRruAgpgr41_SndnFkBA_LE47V3j8vXkbkw&random=517366415&ipr=y&pscrd=IhMI8O3mjqKmlgMVMiC5Bh1qkhFhQlRDaEFJOEwtRjFBWVFfN0d6Ny12XzhZWjRFaXNBOFVoeHZDaXBHaTNkakNLRWhtUWJvSmtwbFUtejBSYWhpaHM0LVk5TFhiZ2o5LWtkbWxoaE0teDF6DAgJYggIABAAGAAgAIIBBXABiAEB",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [
+    "Refused to get unsafe header \"ETag\"",
+    "Refused to get unsafe header \"ETag\"",
+    "Refused to get unsafe header \"CF-RAY\"",
+    "Refused to get unsafe header \"ETag\"",
+    "Refused to get unsafe header \"CF-RAY\""
+  ],
+  "titulo": "Abra as portas para um novo morar - QuintoAndar",
+  "bodyTextSample": "Alugar\nComprar\nAnunciar\nQPreço\nConsórcio\nLinks úteis\nAjuda\n\nEntrar\n\nBuscar Imóveis\nAnunciar Imóveis\nAlugue um lar\npara chamar de seu\n\nAlugar\n\nComprar\n\nCidade\n\nBairro\n\nValor total até\n\nEscolha o valor\nEscolha o valor\nR$ 1.000,00\nR$ 2.000,00\nR$ 3.000,00\nR$ 4.000,00\nR$ 5.000,00\nR$ 6.000,00\nR$ 14.000,00\nR$ 21.000,00\nR$ 28.000,00\nR$ 35.000,00\n\nQuartos\n\nNº de quartos\nNº de quartos\n1+\n2+\n3+\n4+\nBuscar imóveis\nConsórcio QuintoAndar\n\nConsórcio QuintoAndar com parcelas reduzidas em 50% até a contemplação\n\nSaiba mais\nAlugar bem, sem complicação e fiador\n\nAgende visitas online, negocie sem intermediários e assine o contrato digitalmente. Sem fiador. Sem depósito caução. Sem filas.\n\nVer apartamentos para alugar\nComo alugar no QuintoAndar\nCasas para alugar\n\nAluguel de casas para morar bem com o QuintoAndar.\n\nVer casas para alugar\nKitnets para alugar\n\nCompacta e elegante. Encontre a kitnet ideal para você morar bem.\n\nVer kitnets para alugar\nComprar seu imóvel e ter um cantinho só seu\n\nConte com nossos",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/quintoandar.png",
+  "erro": null,
+  "timestamp": "2026-08-16T23:08:28.697Z"
+}

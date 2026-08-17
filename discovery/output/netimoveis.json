@@ -1,0 +1,92 @@
+{
+  "nome": "Netimóveis",
+  "urlSolicitada": "https://www.netimoveis.com/",
+  "urlFinal": "https://www.netimoveis.com/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\r\nAllow: /\r\n\r\nSitemap: https://www.netimoveis.com/sitemap.xml\r\n\r\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 3,
+    "jsonLdSample": "\n    {\n        \"@context\": \"https://schema.org\",\n        \"@type\": \"WebSite\",\n        \"url\": \"https://www.netimoveis.com/\",\n        \"potentialAction\": [{\n            \"@type\": \"SearchAction\",\n            \"target\": \"https://www.netimoveis.com/pesquisa/{pesquisa_google}\",\n            \"query-input\": \"required name=pesquisa_google\"\n        }]\n    }\n    ",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://widgetapi.expandify.com.br/v2/widget",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://i.clarity.ms/collect",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-65GSH2ZVEX&gtm=45je68c1v9119435006za200zd9119435006&_p=1786924488810&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&are=1&cid=2093896553.1786924489&frm=0&pscdl=noapi&rcb=4&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118395335~118897920~118897930~119367802~119367810~119527019~119793973~120213116~120385423~120476658&sid=1786924489&sct=1&seg=0&dl=https%3A%2F%2Fwww.netimoveis.com%2F&dt=Netim%C3%B3veis%20-%20Im%C3%B3veis%20para%20comprar%2C%20vender%20ou%20alugar.&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=549",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=1&ae=g&auid=958553509.1786924489&dt=Netim%C3%B3veis%20-%20Im%C3%B3veis%20para%20comprar%2C%20vender%20ou%20alugar.&en=page_view&dl=https%3A%2F%2Fwww.netimoveis.com%2F&scrsrc=www.googletagmanager.com&rnd=7886019.1786924489&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He68c1v810884830za200zd810884830xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~118395334~118897920~118897930~119527020~120385423&tft=1786924489280&tfd=607&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=958553509.1786924489&gtm=45He68c1v810884830za200zd810884830xea&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/350103881/?random=1786924489516&cv=11&fst=1786924489516&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be68c1z8810884830za20gzb810884830zd810884830xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.netimoveis.com%2F&rcb=12&frm=0&tiba=Netim%C3%B3veis%20-%20Im%C3%B3veis%20para%20comprar%2C%20vender%20ou%20alugar.&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=958553509.1786924489&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=0&ae=g&auid=958553509.1786924489&dt=Netim%C3%B3veis%20-%20Im%C3%B3veis%20para%20comprar%2C%20vender%20ou%20alugar.&tid=AW-350103881&dl=https%3A%2F%2Fwww.netimoveis.com%2F&scrsrc=www.googletagmanager.com&rnd=7886019.1786924489&navt=n&npa=0&_tu=CA&gtm=45be68c1z8810884830za20gzb810884830zd810884830xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786924489528&tfd=855&tids=AW-350103881&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/587323281/?random=1786924489566&cv=11&fst=1786924489566&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be68c1v9119579752z8810884830za20gzb810884830zd810884830xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~118395333~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.netimoveis.com%2F&rcb=1&frm=0&tiba=Netim%C3%B3veis%20-%20Im%C3%B3veis%20para%20comprar%2C%20vender%20ou%20alugar.&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=958553509.1786924489&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&ae=g&auid=958553509.1786924489&dt=Netim%C3%B3veis%20-%20Im%C3%B3veis%20para%20comprar%2C%20vender%20ou%20alugar.&tid=AW-587323281&dl=https%3A%2F%2Fwww.netimoveis.com%2F&scrsrc=www.googletagmanager.com&rnd=7886019.1786924489&navt=n&npa=0&_tu=CA&gtm=45be68c1v9119579752z8810884830za20gzb810884830zd810884830xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~118395333~118897920~118897930~119367802~119367810~119527019~120385423&tft=1786924489579&tfd=906&tids=AW-587323281&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.netimoveis.com/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://i.clarity.ms/collect",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [
+    "[GSI_LOGGER]: FedCM get() rejects with TypeError: Failed to execute 'get' on 'CredentialsContainer': Failed to read the 'identity' property from 'CredentialRequestOptions': Failed to read the 'mode' property from 'IdentityCredentialRequestOptions': The provided value 'widget' is not a valid enum value of type IdentityCredentialRequestOptionsMode."
+  ],
+  "titulo": "Netimóveis - Imóveis para comprar, vender ou alugar.",
+  "bodyTextSample": "Imobiliárias\nQuero me associar\nPainel Netimóveis\nBlog\nAnunciar imóvel\nEntrar\nVende. Aluga. Conecta.\nComprar\nAlugar\nTodos os tipos\nApartamento\nAndar-pilotis\nApart-hotel\nÁrea Privativa\nBarracão\nCasa\nCasa comercial\nCasa geminada\nCasa em condomínio\nClínica\nClube\nCobertura\nConjunto de lojas\nConjunto de salas\nCoworking\nDúplex\nEstacionamento\nEmpreendimento\nFlat\nGalpão\nGaragem\nHotel\nKitchenette\nLoft\nLoja\nLote-Área-Terreno\nLote em condomínio\nMotel\nPonto comercial\nPrédio\nSala\nSalão\nShopping\nSobrado\nSobre-loja\nStudio\nTríplex\nVillage\nApartamento\nA maior Rede de imobiliárias do Brasil\nMais de 100 mil imóveis para você\n\nSomos um dos maiores portais imobiliários do país, com imóveis qualificados e sem repetição. Na Netimóveis você vende, aluga e compra o seu imóvel com muito mais segurança e agilidade.\n\nEntre em contato\nAumente os seus negócios\n\nSomos a única rede de imobiliárias do país que oferece um modelo diferenciado de negócios que permite crescimento em escala, reunindo tecnologia e inteligênc",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/netimoveis.png",
+  "erro": null,
+  "timestamp": "2026-08-16T23:54:48.505Z"
+}

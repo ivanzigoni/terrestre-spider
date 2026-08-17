@@ -1,0 +1,245 @@
+{
+  "nome": "OLX Imóveis",
+  "urlSolicitada": "https://www.olx.com.br/imoveis/estado-mg/belo-horizonte-e-regiao",
+  "urlFinal": "https://www.olx.com.br/imoveis/estado-mg/belo-horizonte-e-regiao",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 403,
+    "disallowedForTargetPath": null,
+    "contentSample": null
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 3,
+    "jsonLdSample": "{\"@context\":\"http://schema.org\",\"@type\":\"WebSite\",\"url\":\"https://www.olx.com.br\",\"name\":\"OLX\",\"alternateName\":\"OLX\"}",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": true,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "GET",
+      "url": "https://apigw.olx.com.br/v2/me?X-OLX-TEAM-KEY=hQIPDF7Bfpw2WJUDwr9GV21jIoDSEJGl",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.track.olx.com.br/data/v4/olx-web.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://apigw.olx.com.br/v4/me?X-OLX-TEAM-KEY=hQIPDF7Bfpw2WJUDwr9GV21jIoDSEJGl",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json?date=20260816",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://gum.criteo.com/sid/json?origin=prebid&topUrl=https%3A%2F%2Fwww.olx.com.br%2F&domain=www.olx.com.br&cw=1&lsw=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://api.rlcdn.com/api/identity/envelope?pid=14101",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://geo.privacymanager.io/",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://trc.taboola.com/olx-br2025/trc/3/json?llvl=2&tim=20%3A08%3A15.308&lti=default&pubit=i&t=1&data=%7B%22id%22%3A%2253542%22%2C%22sd%22%3A%22%22%2C%22ui%22%3A%22%22%2C%22ii%22%3A%22%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao%22%2C%22it%22%3A%22text%22%2C%22vi%22%3A1786921695308%2C%22cv%22%3A%2220260816-5-RELEASE%22%2C%22uiv%22%3A%22default%22%2C%22u%22%3A%22https%3A%2F%2Fwww.olx.com.br%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao%22%2C%22qs%22%3A%22%22%2C%22bv%22%3A%220%22%2C%22btv%22%3A%220%22%2C%22ul%22%3A%5B%22en-US%22%5D%2C%22cos%22%3A%224g%22%2C%22bu%22%3A%22https%3A%2F%2Fwww.olx.com.br%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao%22%2C%22vpi%22%3A%22%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao%22%2C%22bad%22%3A-1%2C%22sw%22%3A1280%2C%22sh%22%3A720%2C%22bw%22%3A1280%2C%22bh%22%3A720%2C%22dw%22%3A1280%2C%22dh%22%3A15987%2C%22sde%22%3A%221.000%22%2C%22lt%22%3A%22default%22%2C%22r%22%3A%5B%7B%22li%22%3A%22rbox-t2m%22%2C%22uip%22%3A%22Below%20Search%20Listing%20Thumbnails%22%2C%22orig_uip%22%3A%22Below%20Search%20Listing%20Thumbnails%22%2C%22s%22%3A6%2C%22uim%22%3A%22alternating-thumbnails-a%3Aabp%3D0%22%2C%22cd%22%3A15359.52%2C%22mw%22%3A932%7D%5D%2C%22uad%22%3A%7B%22mobile%22%3Afalse%2C%22model%22%3A%22%22%2C%22platform%22%3A%22Windows%22%2C%22platformVersion%22%3A%2210.0%22%2C%22uaFullVersion%22%3A%22151.0.7922.34%22%7D%2C%22cacheKey%22%3A%22text%3D%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao%2CBelow%20Search%20Listing%20Thumbnails%3Dalternating-thumbnails-a%3Aabp%3D0%22%2C%22_cn%22%3A%22tions_1%22%2C%22lbt%22%3A1786873168932%2C%22wc%22%3Atrue%7D",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://pixels.spotify.com/v1/config/001e62f96b5542ea945b4b7d5c0947d8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://pixels.spotify.com/v1/ingest",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://mug.criteo.com/sid?cpp=1b5lp3xrcWNsdG1yQVZwWjViemRsejZtell5TFdKaEV6R0thRkpVS1FRRjlxZ05PdFAwTVE1ZmpnblJ1ZWdhb1Jvb3NqaHVuZ3IwNjZad2dCd3VlVmEvODdtSmxYWllFV0FHellrYlZ2Mm03czdYZkppb2d1T3F0TU9TS29MdGFuanUrUExlOHJJZWttL2lTUDljV2RkZEJnekhYcVBUclFCQ0pXT3lxb3pNSWhuS1JBajEweUlkVGJPeElTMmJHQXFvNXQrQnlLSjNiVFVvMXp0MFJuU0NBTjRxNUtiYWpoNG42a2Zvd0g2M2pGbVZxcUQvMEkxUmFFakVYcng1NVlTZm55fA&cppv=2",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://cds.taboola.com/?uid=15e95958-d3d2-4850-a18f-e04763a698a3-tuct117bc85f&ptf=V2luZG93cw==&ptfv=MTAuMA==&ufv=MTUxLjAuNzkyMi4zNA==&bnd=Tm90PUE/QnJhbmQ=&bndv=OTk=&bnd=SGVhZGxlc3NDaHJvbWU=&bndv=MTUx&bnd=Q2hyb21pdW0=&bndv=MTUx&mbl=ZmFsc2U=&dc=ch",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://geo.privacymanager.io/",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWsDX3ebtYYz-hLyiSSUP6eDy4fOhQ0r0lt9wl5G_2u6nKsV92dXHQMOCGzSp7MetumTD6x7Ha4J6bzEOQNr3JdD_SLR_WhhzUiHUrXfuCWkAGz1MjQjmbTLvFdXfV3R1lBh-_9bQ==",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWsDX3ebtYYz-hLyiSSUP6eDy4fOhQ0r0lt9wl5G_2u6nKsV92dXHQMOCGzSp7MetumTD6x7Ha4J6bzEOQNr3JdD_SLR_WhhzUiHUrXfuCWkAGz1MjQjmbTLvFdXfV3R1lBh-_9bQ==",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://fundingchoicesmessages.google.com/el/AGSKWxWsDX3ebtYYz-hLyiSSUP6eDy4fOhQ0r0lt9wl5G_2u6nKsV92dXHQMOCGzSp7MetumTD6x7Ha4J6bzEOQNr3JdD_SLR_WhhzUiHUrXfuCWkAGz1MjQjmbTLvFdXfV3R1lBh-_9bQ==",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=6094817199984950&correlator=1547697697364111&eid=95397229%2C122880345%2C95399142&output=ldjh&gdfp_req=1&vrg=202608070101&ptt=17&impl=fif&gdpr=0&us_privacy=1---&gpp_sid=-1&iu_parts=73314699%2COLX%2C1000%2CListing&enc_prev_ius=%2F0%2F1%2F2%2F3&prev_iu_szs=970x250&ifi=1&didk=173380337&dids=advertising-desktop-listing-bi&adfs=3281560762&sfv=1-0-45&eri=1&sc=1&lrm=150&cookie_enabled=1&abxe=1&dt=1786921696047&lmt=1786921696&adxs=155&adys=218&biw=1280&bih=720&scr_x=0&scr_y=0&btvi=0&ucis=1&oid=2&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&u_tz=-180&dmc=16&bc=31&nvt=1&uach=WyJXaW5kb3dzIiwiMTAuMCIsIng4NiIsIiIsIjE1MS4wLjc5MjIuMzQiLG51bGwsMCxudWxsLCI2NCIsW1siTm90PUE_QnJhbmQiLCI5OS4wLjAuMCJdLFsiSGVhZGxlc3NDaHJvbWUiLCIxNTEuMC43OTIyLjM0Il0sWyJDaHJvbWl1bSIsIjE1MS4wLjc5MjIuMzQiXV0sMF0.&url=https%3A%2F%2Fwww.olx.com.br%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao&vis=1&psz=970x250&msz=970x250&fws=4&ohw=970&a3p=EjQKCnB1YmNpZC5vcmcSJDE0ZGEwNDRiLWI0N2EtNDJlYi04MGViLWYyNjJkODFjNGI0OVgBEh8KEGVzcC5wdWJtYXRpYy5jb20YmfbU5oA0SABSAghkEhsKDGlkNS1zeW5jLmNvbRiZ9tTmgDRIAFICCGQSHQoOZXNwLmNyaXRlby5jb20YmfbU5oA0SABSAghkEhcKCHJ0YmhvdXNlGJn21OaANEgAUgIIZA..&dlt=1786921694310&idt=1149&ppid=cf312a1ed00dbc604a21ef6d37b8415f8355c8552e6ddb3a7ff549c225153d70&prev_scp=pos%3Dweb_billboard_top_no_prebid&cust_params=plataforma%3Ddesktop%26pageType%3Dlisting%26uf%3DMG%26ddd%3D31%26keywords%3D%26zona%3Dnull%26bairro%3Dnull%26searchCategoryLevelZero%3D1000%26searchCategoryCode%3D1000%26state_id%3D2%26tipo_anuncio%3Dparticular%252Cprofissional%26ABTest%3Dadv-ad17d8_enabled%252Csa-inf-ml_control%252Cnew-price_enabled%252Cne-rdchat2_control%252Clp85_A%252Cvc-fmcn_enabled%252Ccht-id-vfy_enabled%252Csa-req-dlv_enabled%252Cadview-ecg_enabled%252Clp503_A%252Cml-switch_enabled%252Cds-weblook_enabled%252CbcnExitInt_enabled%252Cfimlsm_control%252Cacc-cpf-ph_control%252Cdpd-sv-od_enabled%252Crep-sv-lgn_enabled%252Cminoffer_control%252Crep-sv-del_enabled%252Csanity50_control%252Cposagrovib_control%252Cposjobsvib_control%252Cposmrktvib_enabled%252Cpossrvcvib_control%252Cposstndvib_control%252Crec-l71d02_enabled%252Crgn-price_control%252Cfinnewflow_enabled%252Cacc-log-id_control%252Ccdrel-rr63_on%252Chad-hadf01_enabled%252Clst-breadc_control%252Crec-h82ded_control%252Cdpd-qt-ml_control%252Crep-sv-ads_enabled%252Cpalq-2934_control%252Crep-sv-c_enabled%252Cacc-addloc_enabled%252Csecur-cent_control%252Clst-custom_enabled%252CbcnPbtHide_enabled%252Cdpd-hpick_enabled%252Cacc-check_control%252Crec-h9f036_sacred%252Crec-h6dcb8_enabled%252Cppagmyads_enabled%26ABTestWeb%3Dadv-ad17d8_enabled%252Csa-inf-ml_control%252Cnew-price_enabled%252Cne-rdchat2_control%252Clp85_A%252Cvc-fmcn_enabled%252Ccht-id-vfy_enabled%252Csa-req-dlv_enabled%252Cadview-ecg_enabled%252Clp503_A%252Cml-switch_enabled%252Cds-weblook_enabled%252CbcnExitInt_enabled%252Cfimlsm_control%252Cacc-cpf-ph_control%252Cdpd-sv-od_enabled%252Crep-sv-lgn_enabled%252Cminoffer_control%252Crep-sv-del_enabled%252Csanity50_control%252Cposagrovib_control%252Cposjobsvib_control%252Cposmrktvib_enabled%252Cpossrvcvib_control%252Cposstndvib_control%252Crec-l71d02_enabled%252Crgn-price_control%252Cfinnewflow_enabled%252Cacc-log-id_control%252Ccdrel-rr63_on%252Chad-hadf01_enabled%252Clst-breadc_control%252Crec-h82ded_control%252Cdpd-qt-ml_control%252Crep-sv-ads_enabled%252Cpalq-2934_control%252Crep-sv-c_enabled%252Cacc-addloc_enabled%252Csecur-cent_control%252Clst-custom_enabled%252CbcnPbtHide_enabled%252Cdpd-hpick_enabled%252Cacc-check_control%252Crec-h9f036_sacred%252Crec-h6dcb8_enabled%252Cppagmyads_enabled&adks=1254699001&frm=20&eoidce=1&pgls=CAk.&pbbce=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=6094817199984950&correlator=2305978546976800&eid=95397229%2C122880345%2C95399142&output=ldjh&gdfp_req=1&vrg=202608070101&ptt=17&impl=fif&gdpr=0&us_privacy=1---&gpp_sid=-1&iu_parts=73314699%2COLX%2C1000%2CListing&enc_prev_ius=%2F0%2F1%2F2%2F3&prev_iu_szs=1x1&ifi=2&didk=1171120666&dids=advertising-listing-pixel&adfs=1508840186&sfv=1-0-45&eri=1&sc=1&lrm=150&cookie_enabled=1&abxe=1&dt=1786921696074&lmt=1786921696&adxs=0&adys=81&biw=1280&bih=720&scr_x=0&scr_y=0&btvi=0&ucis=2&oid=2&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&u_tz=-180&dmc=16&bc=31&nvt=1&uach=WyJXaW5kb3dzIiwiMTAuMCIsIng4NiIsIiIsIjE1MS4wLjc5MjIuMzQiLG51bGwsMCxudWxsLCI2NCIsW1siTm90PUE_QnJhbmQiLCI5OS4wLjAuMCJdLFsiSGVhZGxlc3NDaHJvbWUiLCIxNTEuMC43OTIyLjM0Il0sWyJDaHJvbWl1bSIsIjE1MS4wLjc5MjIuMzQiXV0sMF0.&url=https%3A%2F%2Fwww.olx.com.br%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao&vis=1&psz=1280x15869&msz=1x1&fws=4&ohw=1&a3p=EjQKCnB1YmNpZC5vcmcSJDE0ZGEwNDRiLWI0N2EtNDJlYi04MGViLWYyNjJkODFjNGI0OVgBEh8KEGVzcC5wdWJtYXRpYy5jb20YmfbU5oA0SABSAghkEhsKDGlkNS1zeW5jLmNvbRiZ9tTmgDRIAFICCGQSHQoOZXNwLmNyaXRlby5jb20YmfbU5oA0SABSAghkEhcKCHJ0YmhvdXNlGJn21OaANEgAUgIIZA..&dlt=1786921694310&idt=1149&ppid=cf312a1ed00dbc604a21ef6d37b8415f8355c8552e6ddb3a7ff549c225153d70&prev_scp=pos%3Dweb_listing_pixel&cust_params=plataforma%3Ddesktop%26pageType%3Dlisting%26uf%3DMG%26ddd%3D31%26keywords%3D%26zona%3Dnull%26bairro%3Dnull%26searchCategoryLevelZero%3D1000%26searchCategoryCode%3D1000%26state_id%3D2%26tipo_anuncio%3Dparticular%252Cprofissional%26ABTest%3Dadv-ad17d8_enabled%252Csa-inf-ml_control%252Cnew-price_enabled%252Cne-rdchat2_control%252Clp85_A%252Cvc-fmcn_enabled%252Ccht-id-vfy_enabled%252Csa-req-dlv_enabled%252Cadview-ecg_enabled%252Clp503_A%252Cml-switch_enabled%252Cds-weblook_enabled%252CbcnExitInt_enabled%252Cfimlsm_control%252Cacc-cpf-ph_control%252Cdpd-sv-od_enabled%252Crep-sv-lgn_enabled%252Cminoffer_control%252Crep-sv-del_enabled%252Csanity50_control%252Cposagrovib_control%252Cposjobsvib_control%252Cposmrktvib_enabled%252Cpossrvcvib_control%252Cposstndvib_control%252Crec-l71d02_enabled%252Crgn-price_control%252Cfinnewflow_enabled%252Cacc-log-id_control%252Ccdrel-rr63_on%252Chad-hadf01_enabled%252Clst-breadc_control%252Crec-h82ded_control%252Cdpd-qt-ml_control%252Crep-sv-ads_enabled%252Cpalq-2934_control%252Crep-sv-c_enabled%252Cacc-addloc_enabled%252Csecur-cent_control%252Clst-custom_enabled%252CbcnPbtHide_enabled%252Cdpd-hpick_enabled%252Cacc-check_control%252Crec-h9f036_sacred%252Crec-h6dcb8_enabled%252Cppagmyads_enabled%26ABTestWeb%3Dadv-ad17d8_enabled%252Csa-inf-ml_control%252Cnew-price_enabled%252Cne-rdchat2_control%252Clp85_A%252Cvc-fmcn_enabled%252Ccht-id-vfy_enabled%252Csa-req-dlv_enabled%252Cadview-ecg_enabled%252Clp503_A%252Cml-switch_enabled%252Cds-weblook_enabled%252CbcnExitInt_enabled%252Cfimlsm_control%252Cacc-cpf-ph_control%252Cdpd-sv-od_enabled%252Crep-sv-lgn_enabled%252Cminoffer_control%252Crep-sv-del_enabled%252Csanity50_control%252Cposagrovib_control%252Cposjobsvib_control%252Cposmrktvib_enabled%252Cpossrvcvib_control%252Cposstndvib_control%252Crec-l71d02_enabled%252Crgn-price_control%252Cfinnewflow_enabled%252Cacc-log-id_control%252Ccdrel-rr63_on%252Chad-hadf01_enabled%252Clst-breadc_control%252Crec-h82ded_control%252Cdpd-qt-ml_control%252Crep-sv-ads_enabled%252Cpalq-2934_control%252Crep-sv-c_enabled%252Cacc-addloc_enabled%252Csecur-cent_control%252Clst-custom_enabled%252CbcnPbtHide_enabled%252Cdpd-hpick_enabled%252Cacc-check_control%252Crec-h9f036_sacred%252Crec-h6dcb8_enabled%252Cppagmyads_enabled&adks=4073025305&frm=20&eoidce=1&pgls=CAk.&pbbce=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=6094817199984950&correlator=2853763141336819&eid=95397229%2C122880345%2C95399142&output=ldjh&gdfp_req=1&vrg=202608070101&ptt=17&impl=fif&gdpr=0&us_privacy=1---&gpp_sid=-1&iu_parts=73314699%2COLX%2C1000%2CListing&enc_prev_ius=%2F0%2F1%2F2%2F3&prev_iu_szs=320x50&fluid=height&ifi=3&didk=3133310533&dids=advertising-desktop-listing-na&adfs=3875060936&sfv=1-0-45&eri=1&sc=1&lrm=150&cookie_enabled=1&abxe=1&dt=1786921696080&lmt=1786921696&adxs=790&adys=1867&biw=1280&bih=720&scr_x=0&scr_y=0&btvi=1&ucis=3&oid=2&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&u_tz=-180&dmc=16&bc=31&nvt=1&uach=WyJXaW5kb3dzIiwiMTAuMCIsIng4NiIsIiIsIjE1MS4wLjc5MjIuMzQiLG51bGwsMCxudWxsLCI2NCIsW1siTm90PUE_QnJhbmQiLCI5OS4wLjAuMCJdLFsiSGVhZGxlc3NDaHJvbWUiLCIxNTEuMC43OTIyLjM0Il0sWyJDaHJvbWl1bSIsIjE1MS4wLjc5MjIuMzQiXV0sMF0.&url=https%3A%2F%2Fwww.olx.com.br%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao&vis=1&psz=932x240&msz=932x240&fws=4&ohw=932&a3p=EjQKCnB1YmNpZC5vcmcSJDE0ZGEwNDRiLWI0N2EtNDJlYi04MGViLWYyNjJkODFjNGI0OVgBEh8KEGVzcC5wdWJtYXRpYy5jb20YmfbU5oA0SABSAghkEhsKDGlkNS1zeW5jLmNvbRiZ9tTmgDRIAFICCGQSHQoOZXNwLmNyaXRlby5jb20YmfbU5oA0SABSAghkEhcKCHJ0YmhvdXNlGJn21OaANEgAUgIIZA..&dlt=1786921694310&idt=1149&ppid=cf312a1ed00dbc604a21ef6d37b8415f8355c8552e6ddb3a7ff549c225153d70&prev_scp=pos%3Dweb_lst_native_direct_grid_list&cust_params=plataforma%3Ddesktop%26pageType%3Dlisting%26uf%3DMG%26ddd%3D31%26keywords%3D%26zona%3Dnull%26bairro%3Dnull%26searchCategoryLevelZero%3D1000%26searchCategoryCode%3D1000%26state_id%3D2%26tipo_anuncio%3Dparticular%252Cprofissional%26ABTest%3Dadv-ad17d8_enabled%252Csa-inf-ml_control%252Cnew-price_enabled%252Cne-rdchat2_control%252Clp85_A%252Cvc-fmcn_enabled%252Ccht-id-vfy_enabled%252Csa-req-dlv_enabled%252Cadview-ecg_enabled%252Clp503_A%252Cml-switch_enabled%252Cds-weblook_enabled%252CbcnExitInt_enabled%252Cfimlsm_control%252Cacc-cpf-ph_control%252Cdpd-sv-od_enabled%252Crep-sv-lgn_enabled%252Cminoffer_control%252Crep-sv-del_enabled%252Csanity50_control%252Cposagrovib_control%252Cposjobsvib_control%252Cposmrktvib_enabled%252Cpossrvcvib_control%252Cposstndvib_control%252Crec-l71d02_enabled%252Crgn-price_control%252Cfinnewflow_enabled%252Cacc-log-id_control%252Ccdrel-rr63_on%252Chad-hadf01_enabled%252Clst-breadc_control%252Crec-h82ded_control%252Cdpd-qt-ml_control%252Crep-sv-ads_enabled%252Cpalq-2934_control%252Crep-sv-c_enabled%252Cacc-addloc_enabled%252Csecur-cent_control%252Clst-custom_enabled%252CbcnPbtHide_enabled%252Cdpd-hpick_enabled%252Cacc-check_control%252Crec-h9f036_sacred%252Crec-h6dcb8_enabled%252Cppagmyads_enabled%26ABTestWeb%3Dadv-ad17d8_enabled%252Csa-inf-ml_control%252Cnew-price_enabled%252Cne-rdchat2_control%252Clp85_A%252Cvc-fmcn_enabled%252Ccht-id-vfy_enabled%252Csa-req-dlv_enabled%252Cadview-ecg_enabled%252Clp503_A%252Cml-switch_enabled%252Cds-weblook_enabled%252CbcnExitInt_enabled%252Cfimlsm_control%252Cacc-cpf-ph_control%252Cdpd-sv-od_enabled%252Crep-sv-lgn_enabled%252Cminoffer_control%252Crep-sv-del_enabled%252Csanity50_control%252Cposagrovib_control%252Cposjobsvib_control%252Cposmrktvib_enabled%252Cpossrvcvib_control%252Cposstndvib_control%252Crec-l71d02_enabled%252Crgn-price_control%252Cfinnewflow_enabled%252Cacc-log-id_control%252Ccdrel-rr63_on%252Chad-hadf01_enabled%252Clst-breadc_control%252Crec-h82ded_control%252Cdpd-qt-ml_control%252Crep-sv-ads_enabled%252Cpalq-2934_control%252Crep-sv-c_enabled%252Cacc-addloc_enabled%252Csecur-cent_control%252Clst-custom_enabled%252CbcnPbtHide_enabled%252Cdpd-hpick_enabled%252Cacc-check_control%252Crec-h9f036_sacred%252Crec-h6dcb8_enabled%252Cppagmyads_enabled&adks=3785549543&frm=20&eoidce=1&pgls=CAk.&pbbce=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://prebid.media.net/rtb/prebid?cid=8CU8Y91C2",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://fastlane.rubiconproject.com/a/api/prebid-exchange.json?as=14702-415114&m=banner&s=10",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://fastlane.rubiconproject.com/a/api/prebid-exchange.json?as=14702-415114&m=video&s=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ib.adnxs.com/ut/v3/prebid",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://prg.smartadserver.com/prebid/v1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://prg.smartadserver.com/prebid/v1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://prg.smartadserver.com/prebid/v1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://prg.smartadserver.com/prebid/v1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://prg.smartadserver.com/prebid/v1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://prg.smartadserver.com/prebid/v1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://prg.smartadserver.com/prebid/v1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://fastlane.rubiconproject.com/a/api/prebid-exchange.json?as=14702-415114&m=banner&s=10",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://fastlane.rubiconproject.com/a/api/prebid-exchange.json?as=14702-415114&m=video&s=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://id5-sync.com/api/esp/increment?counter=no-config",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://g169eb4a343838-azc7jkc56q-uc.a.run.app/events/d1009911cb949f7f1c3497e91046a5a524687046f84d49656a13fc50b34f211e",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://g169eb4a343838-azc7jkc56q-uc.a.run.app/events/d1009911cb949f7f1c3497e91046a5a524687046f84d49656a13fc50b34f211e",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://g169eb4a343838-azc7jkc56q-uc.a.run.app/events/d1009911cb949f7f1c3497e91046a5a524687046f84d49656a13fc50b34f211e",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/measurement/conversion?random=1786921695411&cv=11&tid=G-50C013M2CC&fst=1786921695411&fmt=8&en=session_start&gtm=45je68c1v872586341z8892095748za200zb889061261zd889061261xec&gcs=G111&gcd=13t3t3t3t5l1&dma=0&tcfd=1000g&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.olx.com.br%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao&gacid=733667958.1786921696&frm=0&tiba=Im%C3%B3veis%20-%20Belo%20Horizonte%20e%20regi%C3%A3o%2C%20MG%20%7C%20OLX&npa=0&us_privacy=1---&pscdl=noapi&auid=529045686.1786921696&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&rcb=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-50C013M2CC&gtm=45je68c1v872586341z8892095748za200zb889061261zd889061261&_p=1786921694558&_gaz=1&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&tcfd=1000g&_eu=AAAAAGAC&_prs=ok&are=1&cid=733667958.1786921696&frm=0&pscdl=noapi&rcb=8&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119527019~120385423&sid=1786921695&sct=1&seg=0&dl=https%3A%2F%2Fwww.olx.com.br%2Fimoveis%2Festado-mg%2Fbelo-horizonte-e-regiao&dt=Im%C3%B3veis%20-%20Belo%20Horizonte%20e%20regi%C3%A3o%2C%20MG%20%7C%20OLX&en=page_view&_fv=1&_nsi=1&_ss=2&ep.content_group=listing&ep.main_category_id=1000&ep.sub_category=Im%C3%B3veis&ep.sub_category_id=1000&ep.manual_session_id=false&ep.active_partner=unassigned&ep.web_user_agent=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F120.0.0.0%20Safari%2F537.36&tfd=2788",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [
+    "Failed to load resource: the server responded with a status of 401 ()",
+    "GetMe error DSFetchError: Usuário não logado\n    at n (https://static.olx.com.br/cd/vi/js/listing-next/_next/static/chunks/0jdrz0qmgjocv.js:1:2143)\n    at n.next (<anonymous>)\n    at r (https://static.olx.com.br/cd/vi/js/listing-next/_next/static/chunks/0jdrz0qmgjocv.js:1:3038)",
+    "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+    "Failed to load resource: the server responded with a status of 422 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 451 ()",
+    "Failed to load resource: net::ERR_TOO_MANY_REDIRECTS",
+    "Failed to load resource: net::ERR_CONNECTION_RESET",
+    "Failed to load resource: net::ERR_TOO_MANY_REDIRECTS"
+  ],
+  "titulo": "Imóveis - Belo Horizonte e região, MG | OLX",
+  "bodyTextSample": "Ir para o menu principal\nIr para o conteúdo da página\nIr para o rodapé\nPágina inicial\nBuscando em\nDDD 31 - Belo Horizonte e região\nNovo\nBusque na sua região\nDefina aqui sua localização e veja ofertas pertinho de você.\nCampo de busca\nBuscar\nPlano Profissional\nMeus Anúncios\nChat\nNotificações\nEntrar\nAnunciar grátis\n\npublicidade\n\nInício\n\nImóveis\n\nVenda - casas e apartamentos\n\n(156.696)\n\nComércio e indústria\n\n(29.597)\n\nTerrenos, sítios e fazendas\n\n(27.544)\n\nAluguel - casas e apartamentos\n\n(16.449)\n\nTemporada\n\n(185)\n\nImóvel Novo\n\n(181)\n\nPreço\nTipo de anunciante\n\nAmbos\n\nParticular\n\nProfissional\n\nOrdenar por\n\nMais Relevantes\n\nMais Recentes\n\nMenor Preço\n\nMaior Preço\n\nBrasil\nMG\nDDD 31 - Belo Horizonte e região\nImóveis - Belo Horizonte e região, MG\n\n1 - 50 de 230.652 resultados\n\nTipo de Anúncio\n\nTodos os anúncios\n\nOrdenar por\n\nMais Relevantes\nKitnet Incluso água e Luz\n20m²\n1\n1\nDireto com o proprietário\nApartamento para alugar\nR$ 800\nOnline\n\nRibeirão das Neves, Viena (Justinópolis)\n\nHoje, 19:49\n\nS",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/olx-imoveis.png",
+  "erro": null,
+  "timestamp": "2026-08-16T23:08:13.614Z"
+}

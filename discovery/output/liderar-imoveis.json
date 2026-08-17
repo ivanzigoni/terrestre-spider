@@ -1,0 +1,66 @@
+{
+  "nome": "Liderar Imóveis",
+  "urlSolicitada": "https://www.liderarimoveis.com.br/",
+  "urlFinal": "https://www.liderarimoveis.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\n\nDisallow: /imovel-nao-encontrado/\nDisallow: /obrigado-imovel-ideal/\nDisallow: /obrigado-contato/\nDisallow: /agendar-obrigado/\nDisallow: /fale-com-corretor-obrigado/\n\nSitemap: https://www.liderarimoveis.com.br/sitemap.xml\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 1,
+    "jsonLdSample": "\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Organization\",\n    \"name\": \"Liderar Imóveis\",\n    \"description\": \"Compre, venda e Alugue imóveis em Belo Horizonte e região\",\n    \"address\": {\n      \"@type\": \"PostalAddress\",\n      \"addressCountry\": {\n        \"@type\": \"Country\",\n        \"name\": \"BR\"\n      },\n      \"addressLocality\": \"Belo Horizonte\",\n      \"addressRegion\": \"mg\"\n    },\n    \"brand\": {\n      \"@type\": \"Brand\",\n      \"logo\": \"https://liderarimoveis.com.br/assets/img/logo/logo-link.png\"\n    },\n    \"URL\": \"https://www.liderarimoveis.com.br/\"\n  }\n",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.liderarimoveis.com.br/retornar-tipos-disponiveis",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.liderarimoveis.com.br/retornar-destaques",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.liderarimoveis.com.br/retornar-destaques",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.liderarimoveis.com.br/retornar-destaques",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.liderarimoveis.com.br/get-condominios",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [
+    "Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameSite",
+    "Failed to load resource: the server responded with a status of 410 ()",
+    "Failed to load resource: the server responded with a status of 410 ()",
+    "Failed to load resource: the server responded with a status of 410 ()",
+    "Failed to load resource: the server responded with a status of 410 ()"
+  ],
+  "titulo": "Imobiliária em Belo Horizonte | Encontre seu Imóvel na Liderar Imóveis",
+  "bodyTextSample": "Usamos cookies para personalizar conteúdos e melhorar a sua experiência. Para ver nossa politíca de cookies clique aqui\nAceito\nCRECI: PJ 4275\n(31) 3082-1222\n(31) 2514-5014\n \nCOMPRAR\nALUGAR\nSOBRE\nANUNCIE SEU IMÓVEL\nCONTATO\nÁREA DO CLIENTE\nVenda e Aluguel de Imóveis em Belo Horizonte e Região\nComprar\nAlugar\nTodos\nApartamento\nApartamento com área privativa\nÁrea Comercial\nÁrea privativa\nCasa\nCasa Duplex\nCasa em condomínio\nCasa geminada\nCobertura\nCobertura Duplex\nFazenda\nFlat\nGalpão\nLoja\nLote\nPonto Comercial\nPrédio Comercial\nSala\nTerreno / Área\nQuartos\n1 Quarto\n2 Quartos\n3 Quartos\n4+ Quartos\nTodos\nFiltrar Código   \nBUSCAR IMÓVEIS\nImóveis Super Destaque\nConheça nossos imóveis escolhidos como super oportunidades\n\nVenda - Apartamento à venda, 3 quartos, 2 suítes, 2 vagas, Sagrada Família - Belo Horizonte/MG\n\n3 Quartos\n2 Suítes\n4 Banheiros\n2 Vagas\n\nR$ 920.000,00\n\n\n\nSABER MAIS\nImóveis em destaque para Venda\nConheça nossos imóveis em destaque disponíveis para venda\n‹\nPrevious\n›\nNext\nFuncionários ",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/liderar-imoveis.png",
+  "erro": null,
+  "timestamp": "2026-08-16T23:07:45.065Z"
+}

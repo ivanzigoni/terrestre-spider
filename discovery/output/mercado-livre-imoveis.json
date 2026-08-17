@@ -1,0 +1,45 @@
+{
+  "nome": "Mercado Livre Imóveis",
+  "urlSolicitada": "https://lista.mercadolivre.com.br/imoveis/",
+  "urlFinal": "https://www.mercadolivre.com.br/gz/account-verification?go=https%3A%2F%2Flista.mercadolivre.com.br%2Fimoveis%2F&tid=76b12f07-bd5c-4550-85d0-1eb032d24ba0",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: Amazonbot\nUser-agent: PerplexityBot\nUser-agent: Perplexity-User\nUser-agent: ClaudeBot\nUser-agent: Claude-User\nUser-agent: GPTBot\nUser-agent: ChatGPT-User\nDisallow: /\n\nUser-agent: Bingbot\nCrawl-delay: 5\nDisallow: *_Discount_\nDisallow: *_TiempoEnvio_\nDisallow: *_TempoFrete_\nDisallow: *_SIZE_\nDisallow: *_TOTAL*AREA_\nDisallow: *_COVERED*AREA_\nDisallow: *_FULL*BATHROOMS_\nDisallow: *_PARKING*LOTS_\nDisallow: *_ItemTypeID_U\nDisallow: *_PublishedToday_\nDisallow: *_HAS*AIR*CONDITIONING_\nDisallow: *_HAS*GARDEN_\nDisallow: *_HAS*GRILL_\nDisallow: *_Vagas_\nDisallow: *_Cocheras_\nDisallow: *_Banos_\nDisallow: *bottomPads\nDisallow: *_public_\nDisallow: *CONDITION_2230284\nDisallow: /search/bookmarks/\nDisallow: /files/\nDisallow: /search/golocal/\nDisallow: /undefined\nDisallow: /null\nDisallow: /*_OrderId_\nDisallow: /*_OtherFilterID_\nDisallow: /*_FilterId_\nDisallow: /*_BestSellers_\nDisallow: /*_AcceptsMercadoPago_\nDisallow: /*_PublishedToday_\nDisallow: /*_FinishedToday_\nDisallow: /*_CarDealer_\nDisallow: /*_RealEstateAgency_\nDisallow: /*_Installments_\nDisallow: /*mercadolibre\nDisallow: /*mercado-libre\nDisallow: /*PrCategId\nDisallow: /adultos/_PrCategId_AD\nDisallow: /adultos/*\nDisallow: /*_adult\nDisallow: /*_CustId_\nDisallow: /pagina/*\nDisallow: /supermercado/*\nDisallow: /*o-l-x\nDisallow: /*_AuctTypeID_AFP\nDisallow: */mla-\nDisallow: */mlb-\nDisallow: */mlm-\nDisallow: */mlc-\nDisallow: */mlu-\nDisallow: */mlv-\nDisallow: */mco-\nDisallow: */mpe-\nDisallow: */mec-\nDisallow: *mail.\nDisallow: *yahoo.com\nDisallow: *http\nDisallow: *www.\nDisallow: *_DisplayType_\nDisallow: *_OrderId_\nDisallow: *_CostoEnvio_\nDisallow: *_CustoFrete_\nDisallow: *_Envio_\nDisallow: *_Installments_\nDisallow: *_ItemTypeID_\nDisallow: *_PriceRange_\nDisallow: *_AuctTypeID_\nDisallow: *_BestSellers_\nDisallow: *_FinishedToday_\nDisallow: *_KILOMETERS_\nDisallow: *_COLOR_\nDisallow: *_STEERING_\nDisallow: *_HAS*ABS*BRAKES_\nDisallow: *_HAS*ALARM_\nDisallow: *_HAS*POWER*DOOR*LOCKS_\nDisallow: *_HAS*POWER*WINDOWS_\nDisallow: *_ENGINE*D"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 0,
+    "jsonLdSample": null,
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": true,
+    "matchedPattern": "account-verification"
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "GET",
+      "url": "https://http2.mlstatic.com/cdn/ping.gif",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.mercadolibre.com/melidata/tracks",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [],
+  "titulo": "Mercado Libre",
+  "bodyTextSample": "Olá! Para continuar, acesse\nsua conta\n\nSou novo\nJá tenho conta\n\ntrace-id: 76b12f07-bd5c-4550-85d0-1eb032d24ba0\n\nUsamos cookies para melhorar sua experiência no Mercado Livre. Consulte mais informações na nossa Central de privacidade.\n\nAceitar cookies\nConfigurar cookies",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/mercado-livre-imoveis.png",
+  "erro": null,
+  "timestamp": "2026-08-16T23:08:07.954Z"
+}

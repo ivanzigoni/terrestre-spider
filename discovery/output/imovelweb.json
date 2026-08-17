@@ -1,0 +1,194 @@
+{
+  "nome": "Imovelweb",
+  "urlSolicitada": "https://www.imovelweb.com.br/",
+  "urlFinal": "https://www.imovelweb.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "# Sitemaps\n\nSitemap: https://www.imovelweb.com.br/sitemaps_https.xml\nSitemap: https://www.imovelweb.com.br/sitemaps_list_emp_https.xml\nSitemap: https://www.imovelweb.com.br/sitemaps_prop_emp_https.xml\nSitemap: https://www.imovelweb.com.br/blog/sitemap_index.xml\n\nUser-agent: *\nDisallow: /develop/\nDisallow: /mails/\nDisallow: /errores/\nDisallow: /bloques/\nDisallow: /bumex/\nDisallow: /homeSinPublicidad.bum\nDisallow: /cms/\nDisallow: /metrics/\nDisallow: /cdn-cgi/\nDisallow: /panel/\nDisallow: /ecommerce/\nDisallow: /users-api/\nDisallow: /avisos-api/\nDisallow: /leads-api/\nDisallow: /rpseo-static/\nDisallow: /tracking/\nDisallow: /propriedades/vistaprevia/\n\nDisallow: /sp-push-worker-fb.js\n\nDisallow: /blog/wp-admin/\n\nDisallow: /noticias/wp-admin/\nAllow: /noticias/wp-admin/admin-ajax.php\nDisallow: /noticias/wp-cron.php\nDisallow: /noticias/wp-content/plugins/\nDisallow: /noticias/wp-content/themes/\nAllow: /noticias/wp-content/uploads/\n\nDisallow: *desde*-ate-*-quartos.html\nDisallow: *-*-*-m2.html\nDisallow: *-*-*-m2-util.html\nDisallow: *-tour-virtual-360.html\nDisallow: *-videos.html\nDisallow: *-fotos.html\nDisallow: *-plantas.html\nDisallow: *-*-*-valor-condominio.html\nDisallow: /bairros/*.webp\nDisallow: /*-imobiliaria.html\nDisallow: /*reales-pagina*.html$\nDisallow: /*-ordem-precio-menor-pagina-*.html$\nDisallow: */metrics/*/*-ordem-precio-menor*\n\nAllow: /*-ordem-precio-menor.html\nDisallow: /*-ordem-*.html\n\nAllow: /*pagina-2.html$\nAllow: /*pagina-3.html$\nAllow: /*pagina-4.html$\nAllow: /*pagina-5.html$\nDisallow: /*pagina-*.html\nAllow: *pagina=2\nAllow: *pagina=3\nAllow: *pagina=4\nAllow: *pagina=5\nDisallow: *pagina=*\n\nDisallow: *?*utm_*\nDisallow: *n_src=*\nDisallow: *gad_source=*\nDisallow: *source=BP*\nDisallow: *gclid=*\nDisallow: *fbclid=*\nDisallow: *?duplicated=true*\nDisallow: *?labs=*\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 2,
+    "jsonLdSample": "\n\t{\n\t\t\"@context\": \"https://schema.org\",\n\t\t\"@type\": \"WebSite\",\n\t\t\"url\": \"https://www.imovelweb.com.br\",\n\t\t\"name\": \"Imovelweb\",\n\t\t\"potentialAction\": {\n\t\t\t\"@type\": \"SearchAction\",\n\t\t\t\"target\": \"https://www.imovelweb.com.br/imoveis-q-{search_term}.html\",\n\t\t\t\"query-input\": \"required name=search_term\"\n\t\t}\n\t}\n",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.imovelweb.com.br/cdn-cgi/challenge-platform/h/g/jsd/oneshot/aae2b9a1c261/0.7490018484936095:1786917914:GUz-sH7wT9SEWe-GEXDTwrHS0qEcXYCvrUMI989TBjo/a2c4190bcad76396",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.imovelweb.com.br/rp-api/user/session",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.imovelweb.com.br/rphom-api/v1/recommendations/nearby",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=19&frm=0&apvc=1&ae=g&auid=125974035.1786921674&dt=Im%C3%B3veis%20no%20Brasil%3A%20Apartamentos%20e%20casas%20%C3%A0%20venda%20e%20aluguel%20-%20Imovelweb&en=page_view&dl=https%3A%2F%2Fwww.imovelweb.com.br%2F&scrsrc=www.googletagmanager.com&rnd=1681742594.1786921674&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He68c1v858857621za200zd858857621xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~118395335~118897920~118897930~119527019~119793974~120385422&tft=1786921674162&tfd=655&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=125974035.1786921674&gtm=45He68c1v858857621za200zd858857621xea&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=3852188315023136&correlator=2052416832653780&eid=95395802%2C122880099%2C122880318%2C95399147&output=ldjh&gdfp_req=1&vrg=202608060101&ptt=17&impl=fifs&iu_parts=8008544%2CBR_Home_HomeSponsor_Logo%2CBR_IW_Home_Logo1%2CBR_IW_Home_Logo2%2CBR_IW_Home_Logo3%2CBR_IW_Home_Logo4%2CBR_IW_Home_Box&enc_prev_ius=0%2F1%2C0%2F2%2C0%2F3%2C0%2F4%2C0%2F5%2C0%2F6&prev_iu_szs=320x50%2C320x50%7C265x95%2C320x50%7C265x95%2C320x50%7C265x95%2C320x50%7C265x95%2C1180x300&fluid=height%2Cheight%2Cheight%2Cheight%2Cheight%2C0&ifi=1&dids=ad-sponsor-desktop~ad-logo1~ad-logo2~ad-logo3~ad-logo4~ad-box&adfs=2389114287~1847243296~1210575983~3575121130~2703990875~1685387262&sfv=1-0-45&sc=1&cookie_enabled=1&abxe=1&dt=1786921674350&lmt=1786912426&adxs=0%2C0%2C330%2C660%2C990%2C50&adys=61%2C1930%2C1930%2C1930%2C1930%2C1320&biw=1280&bih=720&scr_x=0&scr_y=0&btvi=0%7C1%7C2%7C3%7C4%7C5&ucis=1%7C2%7C3%7C4%7C5%7C6&oid=2&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&u_tz=-180&dmc=16&bc=31&nvt=1&uach=WyJXaW5kb3dzIiwiMTAuMCIsIng4NiIsIiIsIjE1MS4wLjc5MjIuMzQiLG51bGwsMCxudWxsLCI2NCIsW1siTm90PUE_QnJhbmQiLCI5OS4wLjAuMCJdLFsiSGVhZGxlc3NDaHJvbWUiLCIxNTEuMC43OTIyLjM0Il0sWyJDaHJvbWl1bSIsIjE1MS4wLjc5MjIuMzQiXV0sMF0.&url=https%3A%2F%2Fwww.imovelweb.com.br%2F&vis=1&psz=1280x426%7C1280x0%7C1280x0%7C1280x0%7C1280x0%7C1280x3296&msz=1280x426%7C290x0%7C290x0%7C290x0%7C290x0%7C1280x720&fws=128%2C0%2C0%2C0%2C0%2C128&ohw=0%2C0%2C0%2C0%2C0%2C0&dlt=1786921673585&idt=727&prev_scp=isLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dimovelweb%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dimovelweb%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dimovelweb%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dimovelweb%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dimovelweb%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dimovelweb&cust_params=isLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dimovelweb&adks=2087884233%2C1062901168%2C197321860%2C3107744268%2C2903511422%2C4013601112&frm=20&eoidce=1&pgls=CAk.",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/measurement/conversion?random=1786921674484&cv=11&tid=G-RY7RHKS235&fst=1786921674484&fmt=8&en=session_start&gtm=45je68c1v892633879z8858857621za20gzb858857621zd858857621xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~118012007~118897920~118897930~119367802~119367810~119527019~120125305~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.imovelweb.com.br%2F&gacid=72285366.1786921674&frm=0&tiba=Im%C3%B3veis%20no%20Brasil%3A%20Apartamentos%20e%20casas%20%C3%A0%20venda%20e%20aluguel%20-%20Imovelweb&npa=0&pscdl=noapi&auid=125974035.1786921674&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&rcb=9",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-RY7RHKS235&gtm=45je68c1v892633879z8858857621za20gzb858857621zd858857621&_p=1786921673597&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&_prs=ok&are=1&cid=72285366.1786921674&frm=0&pscdl=noapi&rcb=9&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938465~115938469~118012007~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786921674&sct=1&seg=0&dl=https%3A%2F%2Fwww.imovelweb.com.br%2F&dt=Im%C3%B3veis%20no%20Brasil%3A%20Apartamentos%20e%20casas%20%C3%A0%20venda%20e%20aluguel%20-%20Imovelweb&en=impression_modal&_fv=1&_nsi=1&_ss=2&ep.content_group=Home&ep.is_logged=No&ep.modal_name=Modal_Pol%C3%ADticas&tfd=994",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.imovelweb.com.br/sp-push-worker-fb.js",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gpt&tv=m202608060101&st=env&sjk=3852188315023136",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.imovelweb.com.br/tracking/g/collect?v=2&tid=G-AAAAAAAAAA&gtm=45je68c1z8858857621za20gzb858857621zd858857621&_p=1786921673597&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=76864216&_fplc=0&are=1&cid=72285366.1786921674&ec_mode=c&frm=0&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=BR-MG&sst.etld=google.com.br&sst.tft=1786921673597&sst.lpc=221915648&sst.navt=n&sst.ude=0&sst.sw_exp=1&_s=1&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786921674&sct=1&seg=0&dl=https%3A%2F%2Fwww.imovelweb.com.br%2F&dt=Im%C3%B3veis%20no%20Brasil%3A%20Apartamentos%20e%20casas%20%C3%A0%20venda%20e%20aluguel%20-%20Imovelweb&_tu=BA&en=view_home&_fv=1&_ss=1&gap.sstd=1&ep.content_group=Home&ep.fb_event=false&evnid=1786921674178.548505.233&ep.fb_id=1095805303765442&ep.x-fb-ck-fbp=fb.3.1786921674145.3011218468&ep.google_ads_id=1001830324&ep.criteo_user_email=&ep.caller_id=844&ep.application_id=com.imovelwebbr.sgtm&ep.partner_id=4025&ep.ecommerce_event=false&ep.fb_id_desarrollos=1939156920163407&ep.isDesarrollo=false&ep.ga4_event=false&ep.user_data.email_address=&ep.user_data.phone_number=&ep.user_data.address.first_name=&ep.user_data.address._tag_metadata.first_name.mode=c&ep.user_data._tag_metadata.email_address.mode=c&ep.user_data._tag_metadata.phone_number.mode=c&tfd=1293&richsstsse",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.imovelweb.com.br/tracking/g/collect?v=2&tid=G-AAAAAAAAAA&gtm=45je68c1z8858857621za20gzb858857621zd858857621&_p=1786921673597&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=76864216&_eu=AAAAAAQ&_fplc=0&are=1&cid=72285366.1786921674&ec_mode=c&frm=0&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=BR-MG&sst.etld=google.com.br&sst.tft=1786921673597&sst.lpc=221915648&sst.navt=n&sst.ude=0&sst.sw_exp=1&_s=2&tag_exp=115938465~115938468~118395334~118897920~118897930~119367802~119367810~119527020~120385423&sid=1786921674&sct=1&seg=1&dl=https%3A%2F%2Fwww.imovelweb.com.br%2F&dt=Im%C3%B3veis%20no%20Brasil%3A%20Apartamentos%20e%20casas%20%C3%A0%20venda%20e%20aluguel%20-%20Imovelweb&_tu=BA&en=page_view&gap.sstd=1&ep.content_group=Home&ep.fb_event=true&evnid=1786921674178.548505.233&ep.fb_id=1095805303765442&ep.x-fb-ck-fbp=fb.3.1786921674145.3011218468&ep.google_ads_id=1001830324&ep.criteo_user_email=&ep.caller_id=844&ep.application_id=com.imovelwebbr.sgtm&ep.partner_id=4025&ep.ecommerce_event=false&ep.fb_id_desarrollos=1939156920163407&ep.isDesarrollo=false&ep.ga4_event=false&ep.x-fb-cd-content_type=Home&_et=4&ep.user_data.email_address=&ep.user_data.phone_number=&ep.user_data.address.first_name=&ep.user_data.address._tag_metadata.first_name.mode=c&ep.user_data._tag_metadata.email_address.mode=c&ep.user_data._tag_metadata.phone_number.mode=c&tfd=1297&richsstsse",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=1329&ck=0&s=5c10b8e287e6ac3b&ref=https://www.imovelweb.com.br/&ptid=3f3294c2eff06dc3&af=err,spa,xhr,stn,ins&be=56&fe=1198&dc=207&fsh=1&perf=%7B%22timing%22:%7B%22of%22:1786921673508,%22n%22:0,%22f%22:0,%22dn%22:1,%22dne%22:2,%22c%22:2,%22s%22:16,%22ce%22:38,%22rq%22:38,%22rp%22:57,%22rpe%22:88,%22di%22:169,%22ds%22:262,%22de%22:263,%22dc%22:1245,%22l%22:1246,%22le%22:1254%7D,%22navigation%22:%7B%7D%7D&fp=176&fcp=176",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imovelweb.com.br/cdn-cgi/challenge-platform/h/g/fo/1368563333:1786917906:wWa1SvFeppJ8gvjyHA35lP0k2UWJ9ufJ0qSpm_Ciph4/a2c41913bede6396/_fcucQR2mYx4Or7seqQtXOCGiR3tN5CQFm0xpwm1FBg-1786921674-1.2.1.1-0UInNjCrQGXvwmWCinQ2.lW9Vl4AIxqJLxY0Yf_kYcKpDp2RbAnfNyS4IpRpiFmm",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/events/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=1529&ck=0&s=5c10b8e287e6ac3b&ref=https://www.imovelweb.com.br/&ptid=3f3294c2eff06dc3",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/jserrors/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=1530&ck=0&s=5c10b8e287e6ac3b&ref=https://www.imovelweb.com.br/&ptid=3f3294c2eff06dc3&ri=%7B%22RPHOM%22:%22v4.299.0-RC5%22%7D",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/events/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=1532&ck=0&s=5c10b8e287e6ac3b&ref=https://www.imovelweb.com.br/&ptid=3f3294c2eff06dc3",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/events/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=1532&ck=0&s=5c10b8e287e6ac3b&ref=https://www.imovelweb.com.br/&ptid=3f3294c2eff06dc3",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json&tc=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json&tc=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://us.creativecdn.com/tags/v2?type=json&tc=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://pagead2.googlesyndication.com/pagead/ping?e=1",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/fo/3425320227:1786917911:0ITTfQQzRzHmaxoip_1VEgwLLiaInAZawxOINlrcuak/a2c419158ac0c5e3/3iSQeUmumHzzfWy3XsM1Wdmnw2yN3A_D6NjhHbfJw5A-1786921675-1.2.1.1-jmatlM_I_JVmT3k7Cj9MnFbXzToeidTsaku4n7pKyHWl5tJfA7wE61qNQEpBK9mE",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/pat/a2c419158ac0c5e3/1786921675406/d56ce9b17cc0a075ab3a36eb2a1dff33f1dfb1127dfbd0aede2f2f6c1723071a/.leMi_JoPE4SU1f8_Hy556zer7vd3OwtS7.iKp9Rbv8-1786921675-1.3.1.1-c4lC9V0sp9NHe4ii6Bh9dzilfkWLvJgBIDyqdvmNq9pur8SQQJHv6hZUSUTkfjNsQ0vVsVH1q.Dk2FIgcavagePtZ5gCAyjvQTCWgRE69vzbey5GCuXQDgtatF47Kp7Fd7780hs0mbUr448pCp4EQHdkIkGC4tLKbARfIBoxvdJUaL_JTABF0lr7VyGCavbJ9PRP0GFJCtDmtU.tTOR33agHmI4LGQZwpnGvyYuD8tPvEiPTmGfzmCD8fKWmLwlOgbYLfOuJIr6BiBGAAeV51y67T9zCHVZ5RRf1445lOF0azMPShJnCbd4UoScWKZkOsueXcKpn44wHDB.jK2GDt9tO.Tr8isgW7FQYglFBQVyNWNA8_zElYij24w9EhhgEDJva8929DDmU4vjtsWpwOmuf7hbVb.iSQi.EeDfKAd_Ot8mhm3xnc6RdbIxjGlAwn9hn6CE1dVIddnTb.pTapU_EKV1hCcgVdGg7Toq8O4KHg6TEN2kgBRashq3rK5bvh3qZwo8BEwt8RhdGGInGNg4EenXSsVVTGIO92b126FI_xnGSuxbUQBdMKvBW29CZFr2ndAgzPnduXPNvbdxAHx8BCVhjz6IpQj_ktl3DPwiqxVErTZuK8DBxCn9V0Ckg94y7cX6oWBLOix9eP4_z1p1lduwSWHLnOsGcnJSyUgx9Y_pmen68CyoMa2QIpzDzS_A6HI_UtNdk7fDFMAfYEW3zEqRMltmg15oUmazZXZ3ficzR5o2KPlm0fgYCy0GvNgjmxWXbewFrD6JaW84lphq55.2qmvPDZ_jLaAZOaZ7PL77fcAKBl25z8BDT2xGyEnbnV9CPM9VgQt58wZ.zAA",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://hagen.challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/i/a2c419158ac0c5e3/3iSQeUmumHzzfWy3XsM1Wdmnw2yN3A_D6NjhHbfJw5A-1786921675-1.2.1.1-jmatlM_I_JVmT3k7Cj9MnFbXzToeidTsaku4n7pKyHWl5tJfA7wE61qNQEpBK9mE",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/fo/3425320227:1786917911:0ITTfQQzRzHmaxoip_1VEgwLLiaInAZawxOINlrcuak/a2c419158ac0c5e3/3iSQeUmumHzzfWy3XsM1Wdmnw2yN3A_D6NjhHbfJw5A-1786921675-1.2.1.1-jmatlM_I_JVmT3k7Cj9MnFbXzToeidTsaku4n7pKyHWl5tJfA7wE61qNQEpBK9mE",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-RY7RHKS235&gtm=45je68c1v892633879z8858857621za20gzb858857621zd858857621&_p=1786921673597&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=72285366.1786921674&frm=0&pscdl=noapi&rcb=9&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115616985~115938465~115938469~118012007~118897920~118897930~119367802~119367810~119527019~120125305~120385423&sid=1786921674&sct=1&seg=1&dl=https%3A%2F%2Fwww.imovelweb.com.br%2F&dt=Im%C3%B3veis%20no%20Brasil%3A%20Apartamentos%20e%20casas%20%C3%A0%20venda%20e%20aluguel%20-%20Imovelweb&en=page_view&ep.content_group=Home&ep.is_logged=No&ep.fb_event=false&_et=306&tfd=6302",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [
+    "Failed to load resource: the server responded with a status of 403 ()",
+    "Failed to load resource: the server responded with a status of 403 ()",
+    "Failed to load resource: the server responded with a status of 403 ()",
+    "Failed to load resource: the server responded with a status of 403 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Error: Minified React error #200; visit https://reactjs.org/docs/error-decoder.html?invariant=200 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n    at t.createPortal (https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/react-libs.bd8fbb.js:19:127452)\n    at https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/25.d273b0.js:2:5917\n    at io (https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/react-libs.bd8fbb.js:19:60441)\n    at bu (https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/react-libs.bd8fbb.js:19:74532)\n    at di (https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/react-libs.bd8fbb.js:19:120957)\n    at is (https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/react-libs.bd8fbb.js:19:109032)\n    at os (https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/react-libs.bd8fbb.js:19:108960)\n    at ls (https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/react-libs.bd8fbb.js:19:108823)\n    at Ki (https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/react-libs.bd8fbb.js:19:105630)\n    at qi (https://img10.naventcdn.com/home/RPHOMv4.299.0-RC5/react-libs.bd8fbb.js:19:104164)",
+    "%c%d font-size:0;color:transparent NaN",
+    "%c%d font-size:0;color:transparent NaN"
+  ],
+  "titulo": "Imóveis no Brasil: Apartamentos e casas à venda e aluguel - Imovelweb",
+  "bodyTextSample": "As últimas notícias\nVer mais notícias\nMercado imobiliário: o que você mais precisa saber sobre o assunto!\nGuia completo sobre a carreira de corretor de imóveis\nGuia completo sobre as melhores cidades para morar no Brasil\nComprar um imóvel a vista ou financiar? Veja o que vale a pena\nSaiba como é morar nas principais cidades\nVer mais cidades\nRio de Janeiro\nBelo Horizonte\nCuritiba\nPraia Grande\nSalvador\nSão Paulo\nCampinas\nPorto Alegre\nPesquisas mais recentes\nCasas para alugar em Jundiaí\nApartamentos para alugar em Jundiaí\nCasas à venda em Jundiaí\nApartamentos à venda em Jundiaí\nCasas para alugar em Sorocaba\nApartamentos para alugar em Sorocaba\nCasas à venda em Sorocaba\nApartamentos à venda em Sorocaba\nCasas para alugar em Santo André\nApartamentos para alugar em Santo André\nCasas à venda em Santo André\nApartamentos à venda em Santo André\nCasas para alugar em Ribeirão Preto\nApartamentos para alugar em Ribeirão Preto\nCasas à venda em Ribeirão Preto\nApartamentos à venda em Ribeirão Preto\nCasa",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/imovelweb.png",
+  "erro": null,
+  "timestamp": "2026-08-16T23:07:53.377Z"
+}
