@@ -16,60 +16,15 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
 
     const items = await page.$$eval(
       CARD_SELECTOR,
-      (cards, origin) => {
-        // Funções aninhadas aqui dentro são serializadas junto com o callback do
-        // $$eval e rodam no contexto do browser — só existem para manter a função
-        // de cada card abaixo simples o bastante para não estourar o limite de
-        // complexidade ciclomática do lint.
-        function parseCaracteristicas(card: Element) {
-          let area = 0;
-          let bedrooms = 0;
-          let bathrooms = 0;
-          let parkingSpots: number | null = null;
-
-          for (const li of card.querySelectorAll<HTMLElement>(
-            'li[data-cy^="rp-cardProperty-"]',
-          )) {
-            const cy = li.dataset.cy ?? '';
-            const text = li.innerText.trim();
-            if (cy === 'rp-cardProperty-propertyArea-txt')
-              area = Number(text.replace(/\D/g, '')) || 0;
-            else if (cy === 'rp-cardProperty-bedroomQuantity-txt')
-              bedrooms = Number(text.replace(/\D/g, '')) || 0;
-            else if (cy === 'rp-cardProperty-bathroomQuantity-txt')
-              bathrooms = Number(text.replace(/\D/g, '')) || 0;
-            else if (cy === 'rp-cardProperty-parkingSpacesQuantity-txt')
-              parkingSpots = Number(text.replace(/\D/g, '')) || 0;
-          }
-
-          return { area, bedrooms, bathrooms, parkingSpots };
-        }
-
-        function parsePrecos(priceContainer: Element | null) {
-          let price = 0;
-          let condominio = 0;
-          let iptu = 0;
-          if (!priceContainer) return { price, condominio, iptu };
-
-          const priceText =
-            priceContainer.querySelector<HTMLElement>('p.typo-body-large')
-              ?.innerText ?? '';
-          price = Number(priceText.replace(/\D/g, '')) || 0;
-
-          for (const p of priceContainer.querySelectorAll<HTMLElement>('p')) {
-            const text = p.innerText;
-            const condMatch = /Cond\.\s*R\$\s*([\d.,]+)/i.exec(text);
-            if (condMatch)
-              condominio = Number((condMatch[1] ?? '').replace(/\D/g, '')) || 0;
-            const iptuMatch = /IPTU\s*R\$\s*([\d.,]+)/i.exec(text);
-            if (iptuMatch)
-              iptu = Number((iptuMatch[1] ?? '').replace(/\D/g, '')) || 0;
-          }
-
-          return { price, condominio, iptu };
-        }
-
-        return cards
+      (cards, origin) =>
+        cards
+          // Complexidade ciclomática alta é inerente aqui: tudo precisa estar num
+          // único callback anônimo, sem funções nomeadas auxiliares — o esbuild/tsx
+          // injeta um helper `__name()` no escopo do módulo para preservar nomes de
+          // função, que não existe mais quando o Playwright serializa só este
+          // callback pro contexto do browser (ReferenceError: __name is not
+          // defined). Ver mesmo padrão em olx/routes.ts.
+          // eslint-disable-next-line sonarjs/cognitive-complexity
           .map((card) => {
             const linkEl = card.querySelector<HTMLAnchorElement>('a[href]');
             if (!linkEl) return null;
@@ -90,13 +45,51 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
                 )
                 ?.innerText.trim() ?? '';
 
-            const { area, bedrooms, bathrooms, parkingSpots } =
-              parseCaracteristicas(card);
+            let area = 0;
+            let bedrooms = 0;
+            let bathrooms = 0;
+            let parkingSpots: number | null = null;
 
+            for (const li of card.querySelectorAll<HTMLElement>(
+              'li[data-cy^="rp-cardProperty-"]',
+            )) {
+              const cy = li.dataset.cy ?? '';
+              const text = li.innerText.trim();
+              if (cy === 'rp-cardProperty-propertyArea-txt')
+                area = Number(text.replace(/\D/g, '')) || 0;
+              else if (cy === 'rp-cardProperty-bedroomQuantity-txt')
+                bedrooms = Number(text.replace(/\D/g, '')) || 0;
+              else if (cy === 'rp-cardProperty-bathroomQuantity-txt')
+                bathrooms = Number(text.replace(/\D/g, '')) || 0;
+              else if (cy === 'rp-cardProperty-parkingSpacesQuantity-txt')
+                parkingSpots = Number(text.replace(/\D/g, '')) || 0;
+            }
+
+            let price = 0;
+            let condominio = 0;
+            let iptu = 0;
             const priceContainer = card.querySelector(
               'div[data-cy="rp-cardProperty-price-txt"]',
             );
-            const { price, condominio, iptu } = parsePrecos(priceContainer);
+            if (priceContainer) {
+              const priceText =
+                priceContainer.querySelector<HTMLElement>('p.typo-body-large')
+                  ?.innerText ?? '';
+              price = Number(priceText.replace(/\D/g, '')) || 0;
+
+              for (const p of priceContainer.querySelectorAll<HTMLElement>(
+                'p',
+              )) {
+                const text = p.innerText;
+                const condMatch = /Cond\.\s*R\$\s*([\d.,]+)/i.exec(text);
+                if (condMatch)
+                  condominio =
+                    Number((condMatch[1] ?? '').replace(/\D/g, '')) || 0;
+                const iptuMatch = /IPTU\s*R\$\s*([\d.,]+)/i.exec(text);
+                if (iptuMatch)
+                  iptu = Number((iptuMatch[1] ?? '').replace(/\D/g, '')) || 0;
+              }
+            }
 
             const item: RawListingItem = {
               origin,
@@ -115,8 +108,7 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
             };
             return item;
           })
-          .filter((item): item is RawListingItem => item !== null);
-      },
+          .filter((item): item is RawListingItem => item !== null),
       OrigemAnuncio.VIVA_REAL,
     );
 
