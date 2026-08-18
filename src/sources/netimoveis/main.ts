@@ -5,6 +5,7 @@ import { loadStartUrls } from '../../config/search-urls.js';
 import { AppDataSource } from '../../persistence/data-source.js';
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { loadIntoPostgres } from '../../persistence/load.js';
+import { backoffOnRateLimit } from '../shared/backoff.js';
 import {
   MAX_REQUESTS_PER_CRAWL,
   SAME_DOMAIN_DELAY_SECS,
@@ -29,6 +30,7 @@ export async function runNetimoveis(): Promise<void> {
       headless: true,
       sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
       maxRequestsPerCrawl: MAX_REQUESTS_PER_CRAWL,
+      errorHandler: (context) => backoffOnRateLimit(context),
     });
     await crawler.run([
       { url: entry.url, userData: { transactionType: entry.transactionType } },
