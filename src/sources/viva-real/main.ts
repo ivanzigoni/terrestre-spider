@@ -59,6 +59,9 @@ if (
   process.argv[1] !== undefined &&
   import.meta.url === `file://${process.argv[1]}`
 ) {
-  await runVivaReal();
-  await AppDataSource.destroy();
+  try {
+    await runVivaReal();
+  } finally {
+    await AppDataSource.destroy();
+  }
 }

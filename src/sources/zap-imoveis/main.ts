@@ -60,6 +60,9 @@ if (
   process.argv[1] !== undefined &&
   import.meta.url === `file://${process.argv[1]}`
 ) {
-  await runZapImoveis();
-  await AppDataSource.destroy();
+  try {
+    await runZapImoveis();
+  } finally {
+    await AppDataSource.destroy();
+  }
 }

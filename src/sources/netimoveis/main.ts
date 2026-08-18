@@ -60,6 +60,9 @@ if (
   process.argv[1] !== undefined &&
   import.meta.url === `file://${process.argv[1]}`
 ) {
-  await runNetimoveis();
-  await AppDataSource.destroy();
+  try {
+    await runNetimoveis();
+  } finally {
+    await AppDataSource.destroy();
+  }
 }

@@ -59,6 +59,9 @@ if (
   process.argv[1] !== undefined &&
   import.meta.url === `file://${process.argv[1]}`
 ) {
-  await runOlx();
-  await AppDataSource.destroy();
+  try {
+    await runOlx();
+  } finally {
+    await AppDataSource.destroy();
+  }
 }

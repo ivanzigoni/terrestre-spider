@@ -76,6 +76,9 @@ if (
   process.argv[1] !== undefined &&
   import.meta.url === `file://${process.argv[1]}`
 ) {
-  await runQuintoAndar();
-  await AppDataSource.destroy();
+  try {
+    await runQuintoAndar();
+  } finally {
+    await AppDataSource.destroy();
+  }
 }
