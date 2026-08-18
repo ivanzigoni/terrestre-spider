@@ -64,10 +64,12 @@ export async function runQuintoAndar(): Promise<CrawlStats> {
     );
   }
 
-  if (!AppDataSource.isInitialized) {
-    await AppDataSource.initialize();
+  await AppDataSource.initialize();
+  try {
+    await loadIntoPostgres(dataset, AppDataSource);
+  } finally {
+    await AppDataSource.destroy();
   }
-  await loadIntoPostgres(dataset, AppDataSource);
 
   return sumCrawlStats(stats);
 }
@@ -76,9 +78,5 @@ if (
   process.argv[1] !== undefined &&
   import.meta.url === `file://${process.argv[1]}`
 ) {
-  try {
-    await runQuintoAndar();
-  } finally {
-    await AppDataSource.destroy();
-  }
+  await runQuintoAndar();
 }

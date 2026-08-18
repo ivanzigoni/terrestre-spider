@@ -40,12 +40,44 @@ const FONTES: Fonte[] = [
   },
 ];
 
-async function main(): Promise<void> {
-  if (!AppDataSource.isInitialized) {
-    await AppDataSource.initialize();
-  }
-  const execucaoRepo = AppDataSource.getRepository(Execucao);
+interface FimExecucao {
+  status: StatusExecucao;
+  finalizadaEm: Date;
+  requestsFinalizados?: number;
+  requestsFalhos?: number;
+  mensagemErro?: string;
+}
 
+// Conexão aberta só pelo tempo da escrita, não pelo loop inteiro: entre uma fonte e
+// outra o processo passa minutos só raspando, sem tocar no Postgres, e uma conexão
+// ociosa por tempo demais é derrubada em silêncio pelo pooler do Supabase — cada
+// função abaixo abre, escreve, fecha, do mesmo jeito que loadIntoPostgres já faz.
+async function registrarInicioExecucao(origem: OrigemAnuncio): Promise<number> {
+  await AppDataSource.initialize();
+  try {
+    const repo = AppDataSource.getRepository(Execucao);
+    const execucao = await repo.save(
+      repo.create({ origem, iniciadaEm: new Date() }),
+    );
+    return execucao.id;
+  } finally {
+    await AppDataSource.destroy();
+  }
+}
+
+async function registrarFimExecucao(
+  execucaoId: number,
+  fim: FimExecucao,
+): Promise<void> {
+  await AppDataSource.initialize();
+  try {
+    await AppDataSource.getRepository(Execucao).update(execucaoId, fim);
+  } finally {
+    await AppDataSource.destroy();
+  }
+}
+
+async function main(): Promise<void> {
   // Execução sequencial (não em paralelo): decisão deliberada pensando na instância
   // EC2 de produção, que roda Postgres + API + crawler juntos com pouca RAM sobrando
   // para vários browsers Chromium headless abertos ao mesmo tempo.
@@ -54,12 +86,10 @@ async function main(): Promise<void> {
     // Registrado como EM_ANDAMENTO antes de rodar, não só ao final: se o processo
     // travar ou for morto (OOM) no meio da fonte, a linha presa em EM_ANDAMENTO já é o
     // sinal de diagnóstico de que a última rodada não terminou.
-    const execucao = await execucaoRepo.save(
-      execucaoRepo.create({ origem: fonte.origem, iniciadaEm: new Date() }),
-    );
+    const execucaoId = await registrarInicioExecucao(fonte.origem);
     try {
       const stats = await fonte.run();
-      await execucaoRepo.update(execucao.id, {
+      await registrarFimExecucao(execucaoId, {
         status: StatusExecucao.SUCESSO,
         finalizadaEm: new Date(),
         requestsFinalizados: stats.requestsFinished,
@@ -67,7 +97,7 @@ async function main(): Promise<void> {
       });
       log.info(`=== ${fonte.nome} concluído ===`);
     } catch (error) {
-      await execucaoRepo.update(execucao.id, {
+      await registrarFimExecucao(execucaoId, {
         status: StatusExecucao.FALHA,
         finalizadaEm: new Date(),
         mensagemErro: error instanceof Error ? error.message : String(error),
@@ -77,7 +107,6 @@ async function main(): Promise<void> {
     }
   }
 
-  await AppDataSource.destroy();
   await Sentry.close(2000);
 }
 
