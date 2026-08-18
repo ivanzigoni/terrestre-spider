@@ -6,19 +6,22 @@ import { AppDataSource } from '../../persistence/data-source.js';
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { loadIntoPostgres } from '../../persistence/load.js';
 import { backoffOnRateLimit } from '../shared/backoff.js';
+import { type CrawlStats, sumCrawlStats } from '../shared/crawl-stats.js';
 import {
   MAX_REQUESTS_PER_CRAWL,
   SAME_DOMAIN_DELAY_SECS,
 } from '../shared/crawler-defaults.js';
+import { reportFailedRequest } from '../shared/report-failed-request.js';
 import { openFreshDataset, openFreshRequestQueue } from '../shared/storage.js';
 import { createVivaRealRouter } from './routes.js';
 
-export async function runVivaReal(): Promise<void> {
+export async function runVivaReal(): Promise<CrawlStats> {
   const entries = await loadStartUrls(OrigemAnuncio.VIVA_REAL);
   const dataset = await openFreshDataset(OrigemAnuncio.VIVA_REAL);
 
   // Um crawler por URL de busca (aluguel, venda) — o teto de páginas
   // (maxRequestsPerCrawl) vale por URL, não somado entre elas.
+  const stats: CrawlStats[] = [];
   for (const entry of entries) {
     const requestQueue = await openFreshRequestQueue(
       `${OrigemAnuncio.VIVA_REAL}-${entry.transactionType}`,
@@ -30,22 +33,35 @@ export async function runVivaReal(): Promise<void> {
       sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
       maxRequestsPerCrawl: MAX_REQUESTS_PER_CRAWL,
       errorHandler: (context) => backoffOnRateLimit(context),
+      failedRequestHandler: (context, error) => {
+        reportFailedRequest(OrigemAnuncio.VIVA_REAL, context, error);
+      },
     });
-    await crawler.run([
-      { url: entry.url, userData: { transactionType: entry.transactionType } },
-    ]);
+    stats.push(
+      await crawler.run([
+        {
+          url: entry.url,
+          userData: { transactionType: entry.transactionType },
+        },
+      ]),
+    );
   }
 
   if (!AppDataSource.isInitialized) {
     await AppDataSource.initialize();
   }
   await loadIntoPostgres(dataset, AppDataSource);
+
+  return sumCrawlStats(stats);
 }
 
 if (
   process.argv[1] !== undefined &&
   import.meta.url === `file://${process.argv[1]}`
 ) {
-  await runVivaReal();
-  await AppDataSource.destroy();
+  try {
+    await runVivaReal();
+  } finally {
+    await AppDataSource.destroy();
+  }
 }

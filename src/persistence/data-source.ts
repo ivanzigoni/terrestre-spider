@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
+import { Execucao } from './entities/execucao.entity.js';
 import { Imovel } from './entities/imovel.entity.js';
 import { ObservacaoPreco } from './entities/observacao-preco.entity.js';
 
@@ -36,7 +37,7 @@ export const AppDataSource = new DataSource({
   // segue criptografada, mas sem verificar a identidade do servidor.
   ssl:
     process.env.SUPABASE_SSL === 'true' ? { rejectUnauthorized: false } : false,
-  entities: [Imovel, ObservacaoPreco],
+  entities: [Imovel, ObservacaoPreco, Execucao],
   migrations: [
     path.join(currentDirPath, 'migrations', `*.${migrationExtension}`),
   ],
