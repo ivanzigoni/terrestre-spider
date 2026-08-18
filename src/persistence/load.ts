@@ -8,33 +8,39 @@ import { ObservacaoPreco } from './entities/observacao-preco.entity.js';
 import { TipoTransacao } from './enums/tipo-transacao.enum.js';
 import type { RawListingItem } from './raw-listing-item.js';
 
-const MAX_ITEM_RETRIES = 2;
+// Quanto maior o lote, menos idas e vindas à rede — cada lote vira 2 queries (upsert de
+// imoveis + insert de observacoes_preco), não 4-5 por item. 500 linhas fica bem abaixo do
+// limite de parâmetros do Postgres (65535) mesmo com ~19 colunas por linha.
+const BATCH_SIZE = 500;
+const MAX_BATCH_RETRIES = 2;
 
-/**
- * Com query_timeout configurado em data-source.ts, um soluço de rede vira erro rápido em
- * vez de travar pra sempre — mas sem retry aqui, um único soluço (já visto acontecer e se
- * resolver sozinho em ~60-90s) aborta o dataset.forEach inteiro e perde todos os itens
- * ainda não gravados daquela fonte. Mesmo formato de backoff exponencial de
- * shared/backoff.ts, reaproveitado em vez de duplicado.
- */
-async function saveWithRetry(
-  dataSource: DataSource,
-  run: (manager: EntityManager) => Promise<void>,
-): Promise<void> {
-  for (let attempt = 0; ; attempt++) {
-    try {
-      await dataSource.transaction(run);
-      return;
-    } catch (error) {
-      if (attempt >= MAX_ITEM_RETRIES) throw error;
-      const delayMs = Math.min(BASE_BACKOFF_MS * 2 ** attempt, MAX_BACKOFF_MS);
-      log.warning(
-        `load: transação falhou (tentativa ${String(attempt + 1)}/${String(MAX_ITEM_RETRIES + 1)}), retry em ${String(delayMs)}ms`,
-        { error },
-      );
-      await new Promise((resolve) => setTimeout(resolve, delayMs));
-    }
-  }
+// Colunas atualizadas quando o link já existe. Nunca inclui first_seen_at (só faz sentido
+// gravado uma vez, na primeira inserção) nem id/link/created_at.
+const UPDATE_COLUMNS = [
+  'title',
+  'bedrooms',
+  'bathrooms',
+  'parking_spots',
+  'area',
+  'location',
+  'origin',
+  'transaction_type',
+  'property_type',
+  'date_posted_text',
+  'current_price',
+  'current_iptu',
+  'current_condominio',
+  'current_total_price',
+  'old_price',
+  'active',
+  'last_seen_at',
+  'updated_at',
+];
+
+interface UpsertedRow {
+  id: number;
+  link: string;
+  inserted: boolean;
 }
 
 // Para venda, somar iptu/condominio ao preço não representa nada de real (preço de
@@ -51,9 +57,120 @@ function calcularTotalPrice(
 }
 
 /**
- * Lê o Dataset inteiro já populado pela fase Extract e upserta em `imoveis`
- * (por `link`), gravando também uma observação de preço append-only por item.
- * Cada item da execução compartilha o mesmo `scrapedAt`.
+ * Upsert em lote via `INSERT ... ON CONFLICT (link) DO UPDATE`, uma query pra até
+ * BATCH_SIZE linhas, em vez de um SELECT+INSERT/UPDATE por item. `(xmax = 0)` é o truque
+ * padrão do Postgres pra saber, direto no RETURNING, se aquela linha foi inserida agora ou
+ * já existia — evita uma query extra só pra contar inseridos/atualizados.
+ */
+async function upsertBatch(
+  manager: EntityManager,
+  items: RawListingItem[],
+  scrapedAt: Date,
+): Promise<{ inseridos: number; atualizados: number }> {
+  // Duplicata de link no mesmo lote quebra o ON CONFLICT (Postgres não deixa afetar a
+  // mesma linha 2x na mesma statement) — mantém só a última ocorrência de cada link.
+  const porLink = new Map<string, RawListingItem>();
+  for (const item of items) porLink.set(item.link, item);
+  const dedupedItems = [...porLink.values()];
+
+  const values = dedupedItems.map((item) => ({
+    link: item.link,
+    title: item.title,
+    bedrooms: item.bedrooms,
+    bathrooms: item.bathrooms,
+    parkingSpots: item.parkingSpots,
+    area: item.area,
+    location: item.location,
+    origin: item.origin,
+    transactionType: item.transactionType,
+    propertyType: item.propertyType,
+    datePostedText: item.datePostedText,
+    currentPrice: item.price,
+    currentIptu: item.iptu,
+    currentCondominio: item.condominio,
+    currentTotalPrice: calcularTotalPrice(item),
+    oldPrice: item.oldPrice,
+    active: true,
+    firstSeenAt: scrapedAt,
+    lastSeenAt: scrapedAt,
+    updatedAt: scrapedAt,
+  }));
+
+  const result = await manager
+    .createQueryBuilder()
+    .insert()
+    .into(Imovel)
+    .values(values)
+    .orUpdate(UPDATE_COLUMNS, ['link'])
+    .returning('id, link, (xmax = 0) AS inserted')
+    .execute();
+
+  const rows = result.raw as UpsertedRow[];
+
+  let inseridos = 0;
+  let atualizados = 0;
+  const observacoes = rows.map((row) => {
+    if (row.inserted) inseridos += 1;
+    else atualizados += 1;
+
+    const item = porLink.get(row.link);
+    if (item === undefined) {
+      throw new Error(
+        `load: link retornado pelo upsert não bate com nenhum item do lote: ${row.link}`,
+      );
+    }
+    return {
+      imovel: { id: row.id },
+      price: item.price,
+      iptu: item.iptu,
+      condominio: item.condominio,
+      totalPrice: calcularTotalPrice(item),
+      scrapedAt,
+    };
+  });
+
+  await manager
+    .createQueryBuilder()
+    .insert()
+    .into(ObservacaoPreco)
+    .values(observacoes)
+    .execute();
+
+  return { inseridos, atualizados };
+}
+
+/**
+ * Com query_timeout configurado em data-source.ts, um soluço de rede vira erro rápido em
+ * vez de travar pra sempre — mas sem retry aqui, um único soluço aborta o lote inteiro.
+ * Mesmo formato de backoff exponencial de shared/backoff.ts, reaproveitado em vez de
+ * duplicado.
+ */
+async function upsertBatchWithRetry(
+  dataSource: DataSource,
+  items: RawListingItem[],
+  scrapedAt: Date,
+): Promise<{ inseridos: number; atualizados: number }> {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return await dataSource.transaction((manager) =>
+        upsertBatch(manager, items, scrapedAt),
+      );
+    } catch (error) {
+      if (attempt >= MAX_BATCH_RETRIES) throw error;
+      const delayMs = Math.min(BASE_BACKOFF_MS * 2 ** attempt, MAX_BACKOFF_MS);
+      log.warning(
+        `load: lote de ${String(items.length)} item(ns) falhou (tentativa ${String(attempt + 1)}/${String(MAX_BATCH_RETRIES + 1)}), retry em ${String(delayMs)}ms`,
+        { error },
+      );
+      await new Promise((resolve) => setTimeout(resolve, delayMs));
+    }
+  }
+}
+
+/**
+ * Lê o Dataset inteiro já populado pela fase Extract e upserta em `imoveis` (por `link`) em
+ * lotes de BATCH_SIZE, gravando também uma observação de preço append-only por item. Cada
+ * item da execução compartilha o mesmo `scrapedAt`.
  */
 export async function loadIntoPostgres(
   dataset: Dataset<RawListingItem>,
@@ -62,60 +179,23 @@ export async function loadIntoPostgres(
   const scrapedAt = new Date();
   let inseridos = 0;
   let atualizados = 0;
+  let batch: RawListingItem[] = [];
+
+  const flush = async (): Promise<void> => {
+    if (batch.length === 0) return;
+    const resultado = await upsertBatchWithRetry(dataSource, batch, scrapedAt);
+    inseridos += resultado.inseridos;
+    atualizados += resultado.atualizados;
+    batch = [];
+  };
 
   await dataset.forEach(async (item) => {
-    const totalPrice = calcularTotalPrice(item);
-
-    await saveWithRetry(dataSource, async (manager) => {
-      const imovelRepository = manager.getRepository(Imovel);
-      const existente = await imovelRepository.findOneBy({ link: item.link });
-
-      const imovel =
-        existente ??
-        imovelRepository.create({
-          link: item.link,
-          firstSeenAt: scrapedAt,
-        });
-
-      imovel.title = item.title;
-      imovel.bedrooms = item.bedrooms;
-      imovel.bathrooms = item.bathrooms;
-      imovel.parkingSpots = item.parkingSpots;
-      imovel.area = item.area;
-      imovel.location = item.location;
-      imovel.origin = item.origin;
-      imovel.transactionType = item.transactionType;
-      imovel.propertyType = item.propertyType;
-      imovel.datePostedText = item.datePostedText;
-      imovel.currentPrice = item.price;
-      imovel.currentIptu = item.iptu;
-      imovel.currentCondominio = item.condominio;
-      imovel.currentTotalPrice = totalPrice;
-      imovel.oldPrice = item.oldPrice;
-      imovel.active = true;
-      imovel.lastSeenAt = scrapedAt;
-
-      const imovelSalvo = await imovelRepository.save(imovel);
-
-      if (existente === null) {
-        inseridos += 1;
-      } else {
-        atualizados += 1;
-      }
-
-      const observacaoRepository = manager.getRepository(ObservacaoPreco);
-      await observacaoRepository.save(
-        observacaoRepository.create({
-          imovel: imovelSalvo,
-          price: item.price,
-          iptu: item.iptu,
-          condominio: item.condominio,
-          totalPrice,
-          scrapedAt,
-        }),
-      );
-    });
+    batch.push(item);
+    if (batch.length >= BATCH_SIZE) {
+      await flush();
+    }
   });
+  await flush();
 
   log.info(
     `load: ${String(inseridos)} imóvel(is) novo(s), ${String(atualizados)} atualizado(s)`,
