@@ -6,11 +6,16 @@ OLX, Viva Real, ZAP Imóveis e Netimóveis e persiste os anúncios em Postgres v
 
 ## Setup
 
-1. `cp .env.example .env` e ajuste se necessário (valores padrão já funcionam com o
-   `docker-compose.yml` de dev).
-2. `npm run docker:up` — sobe o Postgres de desenvolvimento.
+1. `cp .env.example .env`. Os valores ativos por padrão apontam para o Supabase de produção —
+   para desenvolvimento local, comente esse bloco e descomente o bloco "Dev local" logo abaixo
+   dele no `.env`.
+2. `npm run docker:up` — sobe o Postgres de desenvolvimento (só necessário se estiver usando o
+   bloco de dev local do passo 1).
 3. `npm run migration:run` — aplica o schema (`imoveis`, `observacoes_preco`).
 4. `npm start` — roda as 4 fontes em sequência.
+
+O `docker-compose.yml` existe só para o Postgres local de dev — nunca entra em jogo em produção,
+que roda contra o Supabase (ver comentário em `.env.example`).
 
 Para rodar uma fonte isolada: `npx tsx src/sources/olx/main.ts` (também vale para
 `viva-real`, `zap-imoveis`, `netimoveis`).

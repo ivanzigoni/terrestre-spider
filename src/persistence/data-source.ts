@@ -29,6 +29,13 @@ export const AppDataSource = new DataSource({
   username: requireEnv('POSTGRES_USER'),
   password: requireEnv('POSTGRES_PASSWORD'),
   database: requireEnv('POSTGRES_DB'),
+  // SSL é exigência do Supabase, não do Postgres em si — fica numa chave com prefixo
+  // próprio em vez de "POSTGRES_SSL" para não parecer parte da conexão genérica.
+  // Pendência conhecida: Supabase assina com CA própria ("Supabase Root 2021 CA"), não uma
+  // CA pública — rejectUnauthorized desligado enquanto o certificado não é pinado no
+  // projeto. Religar para true assim que isso for resolvido.
+  ssl:
+    process.env.SUPABASE_SSL === 'true' ? { rejectUnauthorized: false } : false,
   entities: [Imovel, ObservacaoPreco],
   migrations: [
     path.join(currentDirPath, 'migrations', `*.${migrationExtension}`),
