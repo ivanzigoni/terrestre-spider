@@ -12,6 +12,7 @@ import {
   SAME_DOMAIN_DELAY_SECS,
 } from '../shared/crawler-defaults.js';
 import { reportFailedRequest } from '../shared/report-failed-request.js';
+import { runWithWatchdog } from '../shared/run-with-watchdog.js';
 import { openFreshDataset, openFreshRequestQueue } from '../shared/storage.js';
 import {
   QUINTO_ANDAR_API_URL,
@@ -48,19 +49,26 @@ export async function runQuintoAndar(): Promise<CrawlStats> {
     });
 
     stats.push(
-      await crawler.run([
-        {
-          url: QUINTO_ANDAR_API_URL,
-          method: 'POST',
-          payload: buildSearchRequestPayload({
-            slug,
-            businessContext,
-            offset: 0,
-          }),
-          headers: { 'Content-Type': 'application/json' },
-          userData: { transactionType: entry.transactionType, slug, offset: 0 },
-        },
-      ]),
+      await runWithWatchdog(
+        `Quinto Andar ${entry.transactionType}`,
+        crawler.run([
+          {
+            url: QUINTO_ANDAR_API_URL,
+            method: 'POST',
+            payload: buildSearchRequestPayload({
+              slug,
+              businessContext,
+              offset: 0,
+            }),
+            headers: { 'Content-Type': 'application/json' },
+            userData: {
+              transactionType: entry.transactionType,
+              slug,
+              offset: 0,
+            },
+          },
+        ]),
+      ),
     );
   }
 

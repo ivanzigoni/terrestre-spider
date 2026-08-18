@@ -1,11 +1,41 @@
 import type { Dataset } from 'crawlee';
 import { log } from 'crawlee';
-import type { DataSource } from 'typeorm';
+import type { DataSource, EntityManager } from 'typeorm';
 
+import { BASE_BACKOFF_MS, MAX_BACKOFF_MS } from '../sources/shared/backoff.js';
 import { Imovel } from './entities/imovel.entity.js';
 import { ObservacaoPreco } from './entities/observacao-preco.entity.js';
 import { TipoTransacao } from './enums/tipo-transacao.enum.js';
 import type { RawListingItem } from './raw-listing-item.js';
+
+const MAX_ITEM_RETRIES = 2;
+
+/**
+ * Com query_timeout configurado em data-source.ts, um soluço de rede vira erro rápido em
+ * vez de travar pra sempre — mas sem retry aqui, um único soluço (já visto acontecer e se
+ * resolver sozinho em ~60-90s) aborta o dataset.forEach inteiro e perde todos os itens
+ * ainda não gravados daquela fonte. Mesmo formato de backoff exponencial de
+ * shared/backoff.ts, reaproveitado em vez de duplicado.
+ */
+async function saveWithRetry(
+  dataSource: DataSource,
+  run: (manager: EntityManager) => Promise<void>,
+): Promise<void> {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      await dataSource.transaction(run);
+      return;
+    } catch (error) {
+      if (attempt >= MAX_ITEM_RETRIES) throw error;
+      const delayMs = Math.min(BASE_BACKOFF_MS * 2 ** attempt, MAX_BACKOFF_MS);
+      log.warning(
+        `load: transação falhou (tentativa ${String(attempt + 1)}/${String(MAX_ITEM_RETRIES + 1)}), retry em ${String(delayMs)}ms`,
+        { error },
+      );
+      await new Promise((resolve) => setTimeout(resolve, delayMs));
+    }
+  }
+}
 
 // Para venda, somar iptu/condominio ao preço não representa nada de real (preço de
 // compra + custo mensal recorrente); totalPrice só faz sentido como "custo total" no
@@ -36,7 +66,7 @@ export async function loadIntoPostgres(
   await dataset.forEach(async (item) => {
     const totalPrice = calcularTotalPrice(item);
 
-    await dataSource.transaction(async (manager) => {
+    await saveWithRetry(dataSource, async (manager) => {
       const imovelRepository = manager.getRepository(Imovel);
       const existente = await imovelRepository.findOneBy({ link: item.link });
 

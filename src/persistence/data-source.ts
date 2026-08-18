@@ -37,6 +37,16 @@ export const AppDataSource = new DataSource({
   // segue criptografada, mas sem verificar a identidade do servidor.
   ssl:
     process.env.SUPABASE_SSL === 'true' ? { rejectUnauthorized: false } : false,
+  // Sem timeout, uma query que trava por instabilidade de rede fica pendurada pra sempre
+  // (diagnosticado ao vivo: sessão presa em "idle in transaction" minutos depois do SELECT
+  // do upsert, sem nunca completar). query_timeout é do lado do cliente (pg) e força o
+  // fechamento do socket se a query não responder a tempo; statement_timeout e
+  // idle_in_transaction_session_timeout são limites do próprio Postgres.
+  extra: {
+    query_timeout: 30_000,
+    statement_timeout: 30_000,
+    idle_in_transaction_session_timeout: 30_000,
+  },
   entities: [Imovel, ObservacaoPreco, Execucao],
   migrations: [
     path.join(currentDirPath, 'migrations', `*.${migrationExtension}`),

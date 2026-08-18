@@ -8,8 +8,8 @@ const BACKOFF_STATUS_CODES = new Set([429, 503]);
  * 429/503: um site que já sinalizou rate limit não deveria ser tentado de novo no mesmo
  * ritmo, só com espera crescente.
  */
-const BASE_BACKOFF_MS = 2_000;
-const MAX_BACKOFF_MS = 60_000;
+export const BASE_BACKOFF_MS = 2_000;
+export const MAX_BACKOFF_MS = 60_000;
 
 type SleepFn = (ms: number) => Promise<void>;
 

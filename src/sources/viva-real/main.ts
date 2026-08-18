@@ -12,6 +12,7 @@ import {
   SAME_DOMAIN_DELAY_SECS,
 } from '../shared/crawler-defaults.js';
 import { reportFailedRequest } from '../shared/report-failed-request.js';
+import { runWithWatchdog } from '../shared/run-with-watchdog.js';
 import { openFreshDataset, openFreshRequestQueue } from '../shared/storage.js';
 import { createVivaRealRouter } from './routes.js';
 
@@ -38,12 +39,15 @@ export async function runVivaReal(): Promise<CrawlStats> {
       },
     });
     stats.push(
-      await crawler.run([
-        {
-          url: entry.url,
-          userData: { transactionType: entry.transactionType },
-        },
-      ]),
+      await runWithWatchdog(
+        `Viva Real ${entry.transactionType}`,
+        crawler.run([
+          {
+            url: entry.url,
+            userData: { transactionType: entry.transactionType },
+          },
+        ]),
+      ),
     );
   }
 
