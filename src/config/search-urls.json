@@ -1,18 +1,52 @@
 {
   "olx": [
-    { "url": "https://www.olx.com.br/imoveis/aluguel/estado-mg/belo-horizonte-e-regiao", "transactionType": "aluguel" },
-    { "url": "https://www.olx.com.br/imoveis/estado-mg/belo-horizonte-e-regiao", "transactionType": "venda" }
+    {
+      "url": "https://www.olx.com.br/imoveis/aluguel/estado-mg/belo-horizonte-e-regiao",
+      "transactionType": "aluguel"
+    },
+    {
+      "url": "https://www.olx.com.br/imoveis/estado-mg/belo-horizonte-e-regiao",
+      "transactionType": "venda"
+    }
   ],
   "netimoveis": [
-    { "url": "https://www.netimoveis.com/locacao/minas-gerais/belo-horizonte", "transactionType": "aluguel" },
-    { "url": "https://www.netimoveis.com/venda/minas-gerais/belo-horizonte", "transactionType": "venda" }
+    {
+      "url": "https://www.netimoveis.com/locacao/minas-gerais/belo-horizonte",
+      "transactionType": "aluguel"
+    },
+    {
+      "url": "https://www.netimoveis.com/venda/minas-gerais/belo-horizonte",
+      "transactionType": "venda"
+    }
   ],
   "viva-real": [
-    { "url": "https://www.vivareal.com.br/aluguel/minas-gerais/belo-horizonte/", "transactionType": "aluguel" },
-    { "url": "https://www.vivareal.com.br/venda/minas-gerais/belo-horizonte/", "transactionType": "venda" }
+    {
+      "url": "https://www.vivareal.com.br/aluguel/minas-gerais/belo-horizonte/",
+      "transactionType": "aluguel"
+    },
+    {
+      "url": "https://www.vivareal.com.br/venda/minas-gerais/belo-horizonte/",
+      "transactionType": "venda"
+    }
   ],
   "zap-imoveis": [
-    { "url": "https://www.zapimoveis.com.br/aluguel/imoveis/mg+belo-horizonte/", "transactionType": "aluguel" },
-    { "url": "https://www.zapimoveis.com.br/venda/imoveis/mg+belo-horizonte/", "transactionType": "venda" }
+    {
+      "url": "https://www.zapimoveis.com.br/aluguel/imoveis/mg+belo-horizonte/",
+      "transactionType": "aluguel"
+    },
+    {
+      "url": "https://www.zapimoveis.com.br/venda/imoveis/mg+belo-horizonte/",
+      "transactionType": "venda"
+    }
+  ],
+  "quinto-andar": [
+    {
+      "url": "https://www.quintoandar.com.br/alugar/imovel/belo-horizonte-mg-brasil",
+      "transactionType": "aluguel"
+    },
+    {
+      "url": "https://www.quintoandar.com.br/comprar/imovel/belo-horizonte-mg-brasil",
+      "transactionType": "venda"
+    }
   ]
 }

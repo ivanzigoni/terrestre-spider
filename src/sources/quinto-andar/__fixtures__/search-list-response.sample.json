@@ -1,0 +1,73 @@
+{
+  "engine_timed_out": false,
+  "search_id": "9d47f3a8-1259-4905-93b6-88f76527767f",
+  "took": 12,
+  "hits": {
+    "max_score": 50.0,
+    "total": { "relation": "Eq", "value": 3 },
+    "hits": [
+      {
+        "origin": "TRANSACTIONAL",
+        "_id": "894334726",
+        "_source": {
+          "id": 894334726,
+          "address": "Rua Doutor Lucídio Avelar",
+          "area": 98,
+          "bedrooms": 3,
+          "bathrooms": 4,
+          "parkingSpaces": 4,
+          "rent": 6800,
+          "salePrice": 0,
+          "condominium": 1150,
+          "iptu": 532,
+          "type": "Apartamento",
+          "forRent": true,
+          "forSale": false,
+          "neighbourhood": "Buritis",
+          "city": "Belo Horizonte"
+        }
+      },
+      {
+        "origin": "TRANSACTIONAL",
+        "_id": "894031706",
+        "_source": {
+          "id": 894031706,
+          "address": "Rua Lauro Ferreira",
+          "area": 235,
+          "bedrooms": 3,
+          "bathrooms": 3,
+          "parkingSpaces": 3,
+          "rent": 10000,
+          "salePrice": 1590000,
+          "condominium": 1500,
+          "iptu": 334,
+          "type": "Apartamento",
+          "forRent": false,
+          "forSale": true,
+          "neighbourhood": "Buritis",
+          "city": "Belo Horizonte"
+        }
+      },
+      {
+        "origin": "TRANSACTIONAL",
+        "_id": "895226985",
+        "_source": {
+          "id": 895226985,
+          "address": "Rua Professor Alberto Deodato",
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "parkingSpaces": 1,
+          "rent": 9690,
+          "salePrice": 0,
+          "condominium": -1,
+          "iptu": -1,
+          "type": "Casa",
+          "forRent": true,
+          "forSale": false,
+          "neighbourhood": "Bandeirantes",
+          "city": "Belo Horizonte"
+        }
+      }
+    ]
+  }
+}

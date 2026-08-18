@@ -3,4 +3,5 @@ export enum OrigemAnuncio {
   VIVA_REAL = 'viva_real',
   ZAP_IMOVEIS = 'zap_imoveis',
   NETIMOVEIS = 'netimoveis',
+  QUINTO_ANDAR = 'quinto_andar',
 }

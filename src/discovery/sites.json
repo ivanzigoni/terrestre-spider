@@ -300,6 +300,16 @@
     "categoria": "portal"
   },
   {
+    "nome": "QuintoAndar - Busca BH Aluguel",
+    "url": "https://www.quintoandar.com.br/alugar/imovel/belo-horizonte-mg-brasil",
+    "categoria": "portal"
+  },
+  {
+    "nome": "QuintoAndar - Busca BH Venda",
+    "url": "https://www.quintoandar.com.br/comprar/imovel/belo-horizonte-mg-brasil",
+    "categoria": "portal"
+  },
+  {
     "nome": "Viva Real",
     "url": "https://www.vivareal.com.br/",
     "categoria": "portal"

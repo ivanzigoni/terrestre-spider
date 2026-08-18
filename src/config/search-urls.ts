@@ -15,6 +15,7 @@ const SEARCH_URLS_KEY: Record<OrigemAnuncio, string> = {
   [OrigemAnuncio.NETIMOVEIS]: 'netimoveis',
   [OrigemAnuncio.VIVA_REAL]: 'viva-real',
   [OrigemAnuncio.ZAP_IMOVEIS]: 'zap-imoveis',
+  [OrigemAnuncio.QUINTO_ANDAR]: 'quinto-andar',
 };
 
 const TIPOS_TRANSACAO_VALIDOS = new Set<string>(Object.values(TipoTransacao));

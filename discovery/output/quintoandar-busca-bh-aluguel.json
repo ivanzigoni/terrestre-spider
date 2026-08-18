@@ -1,0 +1,246 @@
+{
+  "nome": "QuintoAndar - Busca BH Aluguel",
+  "urlSolicitada": "https://www.quintoandar.com.br/alugar/imovel/belo-horizonte-mg-brasil",
+  "urlFinal": "https://www.quintoandar.com.br/alugar/imovel/belo-horizonte-mg-brasil",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: atlassian-bot\nAllow: /ajuda*\n\nUser-agent: *\nAllow: /\n\nDisallow: *cdmx\n\nDisallow: /equipe\nDisallow: /favoritos\nDisallow: /inquilino\nDisallow: /parceiros\nDisallow: /busca\nDisallow: /pdf\nDisallow: /auth\nDisallow: /twa\nDisallow: /visitas/*\nDisallow: /visita/*\nDisallow: /alertas\nDisallow: /classificado*\nDisallow: */indisponivel*\nDisallow: /meu-quinto-preco/*\nDisallow: /meu-quinto-preco\nDisallow: /area-qpreco/*\nDisallow: /area-qpreco\n\nDisallow: /imovel/*?detalhes=\nDisallow: /imovel/*/agendar\nDisallow: /imovel/*/descricao\nDisallow: /imovel/*/detalhes-condominio\nDisallow: /imovel/*/detalhes-imovel\nDisallow: /imovel/*/furniture\n\nDisallow: /imovel/*/comprar?detalhes=\nDisallow: /imovel/*/comprar/agendar\nDisallow: /imovel/*/comprar/descricao\nDisallow: /imovel/*/comprar/detalhes-condominio\nDisallow: /imovel/*/comprar/detalhes-imovel\nDisallow: /imovel/*/comprar/furniture\n\nDisallow: /propostas/alugar?imovel=\nDisallow: /propostas/comprar?imovel=\n\nDisallow: */offer\n\nDisallow: /recomendacoes/*\n\nDisallow: /alugar/imovel/*?filters=true$\nDisallow: /comprar/imovel/*?filters=true$\n\n# Alternate page with proper canonical tag issue\nDisallow: *-brasil?filters=true$\nDisallow: *-brasil?map=true$\nDisallow: /alugar/imovel/*?redirect*\nDisallow: /alugar/imovel/*?search_id=*\nDisallow: /comprar/imovel/*?redirect*\nDisallow: /comprar/imovel/*?search_id=*\n\n# Agent search tracking parameters\nDisallow: /alugar/imovel/*?portfolio_ref=*\nDisallow: /comprar/imovel/*?portfolio_ref=*\nDisallow: /imovel/*?portfolio_ref=*\nDisallow: /classificado/*?portfolio_ref=*\nDisallow: /imovel/*?agent_search_mode=*\nDisallow: /classificado/*?agent_search_mode=*\n\n# regions-pwa preview environment\nDisallow: /regioes-atendidas/preview*\n\n# Stale POIs\nDisallow: */imovel/academia-\nDisallow: */imovel/banco-\nDisallow: */imovel/bar-\nDisallow: */imovel/boteco-\nDisallow: */imovel/bradesco-\nDisallow: */imovel/burger-\nDisallow: */imovel/cafe-\nDisallow: */imovel/caixa-\nDisallow: */imovel/cantina-\nDisallow: */imovel/cartorio-\nDis"
+  },
+  "estruturaDados": {
+    "hasNextData": true,
+    "nextDataSample": "{\"props\":{\"pageProps\":{\"listingFeatureFlags\":{\"isListingResponsiveImagesEnabled\":true},\"initialState\":{\"route\":{\"locationBeforeTransitions\":{\"pathname\":\"/alugar/imovel/belo-horizonte-mg-brasil\",\"search\":\"\",\"hash\":\"\",\"action\":\"POP\",\"query\":{}},\"topLevelRouteName\":\"search_results\",\"businessContext\":\"RENT\"},\"router\":{\"location\":{\"pathname\":\"\",\"search\":\"\",\"hash\":\"\",\"href\":\"\"}},\"progress\":{\"pendingRequests\":-1},\"login\":{\"response\":{},\"user\":{\"isLoggedIn\":false,\"id\":0,\"agentId\":0,\"hashId\":\"\",\"sessionId\":null,\"businessContext\":[],\"name\":\"\",\"email\":\"\",\"enableEmailUpdate\":true,\"maskedEmail\":\"\",\"maskedPhone\":\"\",\"jwt\":{\"app\":\"\",\"firebase\":\"\",\"cognito\":\"\"},\"phone\":{\"countryCode\":\"\",\"areaCode\":\"\",\"phoneNumber\":\"\"},\"country\":\"BR\",\"channel\":\"\",\"isPhoneRegistered\":false,\"acceptWhatsapp\":true,\"hasDocument\":false,\"isPartner\":false,\"loginProvider\":null,\"identities\":[],\"flow\":\"\"},\"accountForm\":{},\"redirectUrl\":\"\",\"isRequestOngoing\":false,\"request\":{\"sendAccessCodeStatus\":\"UNSET\",\"pinCodeValidationStatus\":",
+    "jsonLdCount": 1,
+    "jsonLdSample": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"name\":\"QuintoAndar\",\"url\":\"https://www.quintoandar.com.br\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"QuintoAndar\",\"item\":\"https://www.quintoandar.com.br\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Aluguel em Belo Horizonte\"}]},{\"@type\":\"Product\",\"name\":\"Imóveis para alugar em Belo Horizonte, MG\",\"description\":\"No QuintoAndar você possui mais de 3.231 opções em imóveis para alugar em Belo Horizonte de forma online, SEM fiador e SEM caução!\",\"image\":[\"https://www.quintoandar.com.br//img/med/892910425-785.4269508264341IMG3807.jpg\"],\"offers\":{\"@type\":\"AggregateOffer\",\"lowPrice\":895,\"highPrice\":19530,\"priceCurrency\":\"BRL\"}},{\"@type\":\"ItemList\",\"@id\":\"https://www.quintoandar.com.br/alugar/imovel/belo-horizonte-mg-brasil\",\"name\":\"Imóveis para alugar em Belo Horizonte, MG\",\"description\":\"No QuintoAndar você possui mais de 3.231 opções em imóveis para alugar em Belo Horizonte de forma onli",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": true,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "GET",
+      "url": "https://cdn-lib.quintoandar.com.br/cookie-banner/config/scripts-table-quintoandar-com-br.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://o105464.ingest.sentry.io/api/232115/envelope/?sentry_key=cbbaa7cf53874c47b1501052f0162d4b&sentry_version=7&sentry_client=sentry.javascript.react%2F7.120.4",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://customer.iad-03.braze.com/api/v3/data/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://apigw.prod.quintoandar.com.br/house-listing-search/v1/search/filters?language=pt-BR&isAgent=false",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://xp-spec.quintoandar.com.br/customer-facing/configuration-files/configcat-proxy/beakman-key/config_v6.json?sdk=ConfigCat-JS/a-9.5.0",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAT-4Tn5dWYKRDO_hEfAfDrM9jc7kH4jxs",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://xp-spec.quintoandar.com.br/customer-facing/configuration-files/configcat-proxy/beakman-key/config_v6.json?sdk=ConfigCat-UnifiedJS-Browser/a-1.0.2",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://xp-spec.quintoandar.com.br/customer-facing/configuration-files/configcat-proxy/beakman-key/config_v6.json?sdk=ConfigCat-UnifiedJS-Browser/a-1.0.2",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.quintoandar.com.br/braze-blocklist_4.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.quintoandar.com.br/_next/data/8d9490b299d5e87e658cfdad60af4c5bc291bee3/pt-BR.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://customer.iad-03.braze.com/api/v3/content_cards/sync",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://event-gateway.quintoandar.com.br/event/batch",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn-lib.quintoandar.com.br/cookie-banner/config/cookie-manager.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn-lib.quintoandar.com.br/cookie-banner/config/cookies-table-quintoandar-com-br.json",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://vc.hotjar.io/sessions/1203740?s=0.25&r=0.06175173504767961",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://apigw.prod.quintoandar.com.br/house-listing-search/v3/search/count",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://event-gateway.quintoandar.com.br/event/batch",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyAT-4Tn5dWYKRDO_hEfAfDrM9jc7kH4jxs",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://apigw.prod.quintoandar.com.br/house-listing-search/v2/search/coordinates?fields%5B0%5D=location&context.deviceId=j2-lyWFnv1y4DCh-0ZP41NcgH1jZ17yKUKueM_wvaM-TxAgQIB2waQ&context.listShowing=true&context.mapShowing=true&context.numPhotos=12&context.isSSR=false&filters.enableFlexibleSearch=true&filters.businessContext=RENT&filters.location.coordinate.lat=-19.916681&filters.location.coordinate.lng=-43.934493&filters.location.viewport.east=-43.72&filters.location.viewport.north=-19.54&filters.location.viewport.south=-20.22&filters.location.viewport.west=-44.17&filters.location.countryCode=BR&filters.availability=ANY&filters.occupancy=ANY&filters.origin=HYBRID",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://firestore.googleapis.com/v1/projects/quintoandar-com-br-pwa/databases/(default)/documents/users/7xn5Z2KKueY3xCX1z7PILvTbQAo1:runQuery",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://firestore.googleapis.com/v1/projects/quintoandar-com-br-pwa/databases/(default)/documents/users/7xn5Z2KKueY3xCX1z7PILvTbQAo1:runQuery",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://tracking.quintoandar.com.br/g/collect?v=2&tid=G-E2JVTQ7D7Q&gtm=45je68e1v871821103z877843112za20gzb77843112zd77843112&_p=1787008835497&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=411184641&_fplc=0&are=1&cid=1846279468.1787008839&ec_mode=c&frm=0&ngs=1&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=BR-MG&sst.etld=google.com.br&sst.tft=1787008835497&sst.lpc=248554503&sst.navt=n&sst.ude=0&sst.sw_exp=1&_s=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787008838&sct=1&seg=0&dl=https%3A%2F%2Fwww.quintoandar.com.br%2Falugar%2Fimovel%2Fbelo-horizonte-mg-brasil&dt=Im%C3%B3veis%20para%20alugar%20em%20Belo%20Horizonte%2C%20MG%20-%20QuintoAndar&_tu=BA&en=PageView&_fv=1&_nsi=1&_ss=1&gap.sstd=6&ep.page%20path=%2Falugar%2Fimovel%2Fbelo-horizonte-mg-brasil&ep.business_context=rent&ep.user_data.address.0.city=Belo%20Horizonte&ep.user_data.address.0._tag_metadata.city.mode=m&ep.user_data._tag_mode=MANUAL&tfd=4396&richsstsse",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://telemetry-web.shared.quintoandar.com.br/collect",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [
+    "Refused to get unsafe header \"ETag\"",
+    "Refused to get unsafe header \"ETag\"",
+    "Refused to get unsafe header \"CF-RAY\"",
+    "Refused to get unsafe header \"ETag\"",
+    "Refused to get unsafe header \"CF-RAY\"",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Faro\n @grafana/faro-web-sdk:transport-fetch\n Failed sending payload to the receiver\n {meta: Object, logs: Array(50)} TypeError: Failed to fetch\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/sentry-bba8e285a5401bc8.js:20:7729\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/84095.2aa264495131fffe.js:3:58045\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:4362\n    at a (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:2930)\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:3109\n    at new Promise (<anonymous>)\n    at Object.add (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:3049)\n    at iW.<anonymous> (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:3445)\n    at Generator.next (<anonymous>)\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:2164\n    at new Promise (<anonymous>)\n    at iV (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:1913)\n    at iW.send (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:3209)\n    at i_.sendTimeout (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:8:23)\n    at Array.forEach (<anonymous>)\n    at i_.flush (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:953)\n    at i_.addItem (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:531)\n    at Object.execute (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:8:562)\n    at Object.pushLog (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/91526.c80502707b214d0a.js:3:5907)\n    at console.<computed> (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:3:63792)\n    at e.log (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:34362)\n    at e.log (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:24369)\n    at e.userObjectAttributeIsMissingCondition (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:31121)\n    at e.evaluateUserCondition (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:61881)\n    at e.evaluateConditions (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:61140)\n    at e.evaluateTargetingRules (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:59291)\n    at e.evaluateSetting (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:58909)\n    at e.evaluate (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:58584)\n    at tr (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:71021)\n    at e.<anonymous> (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:76775)\n    at Object.next (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:2000)\n    at s (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/37736-8e6d7f8f4dc703e6.js:3:838)",
+    "Faro\n @grafana/faro-web-sdk:transport-fetch\n Failed sending payload to the receiver\n {meta: Object, logs: Array(50)} TypeError: Failed to fetch\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/sentry-bba8e285a5401bc8.js:20:7729\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/84095.2aa264495131fffe.js:3:58045\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:4362\n    at a (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:2930)\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:2947",
+    "Faro\n @grafana/faro-web-sdk:transport-fetch\n Failed sending payload to the receiver\n {meta: Object, logs: Array(50)} TypeError: Failed to fetch\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/sentry-bba8e285a5401bc8.js:20:7729\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/84095.2aa264495131fffe.js:3:58045\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:4362\n    at a (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:2930)\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:2947",
+    "Faro\n @grafana/faro-web-sdk:transport-fetch\n Failed sending payload to the receiver\n {meta: Object, traces: Object, events: Array(12)} TypeError: Failed to fetch\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/sentry-bba8e285a5401bc8.js:20:7729\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/84095.2aa264495131fffe.js:3:58045\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:4362\n    at a (https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:2930)\n    at https://static.quintoandar.com.br/find-webapp/_next/static/chunks/86363.4d04428811b351c4.js:7:2947"
+  ],
+  "titulo": "Imóveis para alugar em Belo Horizonte, MG - QuintoAndar",
+  "bodyTextSample": "Alugar\nComprar\nAnunciar\nQPreço\nConsórcio\nLinks úteis\nAjuda\n\nEntrar\n\nAlugar\nAluguel\nTipos de imóvel\n1+ quartos\nVagas de garagem\n1+ banheiros\nÁrea\nMobiliado\nAceita pets\nPróximo ao metrô\nDisponibilidade\nMais filtros\nCriar alerta de imóvel\n185\n173\n66\n299\n133\n169\n139\n193\n81\n64\n49\n186\n7\n95\n31\n248\n222\n83\n21\n3\n51\n43\n12\n99\n30\n5\n8\n51\n24\n34\n2\nAtalhos do teclado\nDados cartográficos ©2026 Google\nTermos\nInformar erro no mapa\nDesenhar área de busca\n\n3.231 \n\nimóveis\n\npara alugar em Belo Horizonte, MG\n\nMais relevantes\nBaixou o preço\nApartamento para alugar em São Pedro de 260 m² com varanda gourmet.\n\nR$ 5.440 aluguel\n\nR$ 6.674 total\n\n260 m² · 4 quartos · 3 vagas\nRua São Domingos do Prata, São Pedro · Belo Horizonte\nExclusivo\nBaixou o preço\nAluguel de apartamento em Santo Antônio com 3 quartos.\n\nR$ 3.950 aluguel\n\nR$ 4.845 total\n\n140 m² · 3 quartos · 1 vaga\nRua Antônio Dias, Santo Antônio · Belo Horizonte\nApartamento para alugar em Buritis de 235 m² com varanda e closet.\n\nR$ 10.000 aluguel\n\nR$ 12.230 tot",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/quinto-andar/terrestre-spider/discovery/output/screenshots/quintoandar-busca-bh-aluguel.png",
+  "erro": null,
+  "timestamp": "2026-08-17T23:20:33.928Z"
+}

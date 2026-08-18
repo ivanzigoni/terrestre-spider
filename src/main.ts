@@ -3,6 +3,7 @@ import { log } from 'crawlee';
 import { AppDataSource } from './persistence/data-source.js';
 import { runNetimoveis } from './sources/netimoveis/main.js';
 import { runOlx } from './sources/olx/main.js';
+import { runQuintoAndar } from './sources/quinto-andar/main.js';
 import { runVivaReal } from './sources/viva-real/main.js';
 import { runZapImoveis } from './sources/zap-imoveis/main.js';
 
@@ -16,6 +17,7 @@ const FONTES: Fonte[] = [
   { nome: 'Viva Real', run: runVivaReal },
   { nome: 'ZAP Imóveis', run: runZapImoveis },
   { nome: 'Netimóveis', run: runNetimoveis },
+  { nome: 'Quinto Andar', run: runQuintoAndar },
 ];
 
 async function main(): Promise<void> {
