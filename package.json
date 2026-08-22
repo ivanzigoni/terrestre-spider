@@ -36,7 +36,7 @@
     "start": "npm run start:dev",
     "start:prod": "node --env-file-if-exists=.env dist/main.js",
     "start:dev": "tsx --env-file-if-exists=.env src/main.ts",
-    "build": "tsc",
+    "build": "tsc && node -e \"require('node:fs').cpSync('src/config/search-urls.json','dist/config/search-urls.json')\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
