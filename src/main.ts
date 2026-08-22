@@ -5,6 +5,8 @@ import { AppDataSource } from './persistence/data-source.js';
 import { Execucao } from './persistence/entities/execucao.entity.js';
 import { OrigemAnuncio } from './persistence/enums/origem-anuncio.enum.js';
 import { StatusExecucao } from './persistence/enums/status-execucao.enum.js';
+import { runImobiliariaBuritis } from './sources/imobiliaria-buritis/main.js';
+import { runLiderarImoveis } from './sources/liderar-imoveis/main.js';
 import { runNetimoveis } from './sources/netimoveis/main.js';
 import { runOlx } from './sources/olx/main.js';
 import { runQuintoAndar } from './sources/quinto-andar/main.js';
@@ -37,6 +39,16 @@ const FONTES: Fonte[] = [
     nome: 'Quinto Andar',
     origem: OrigemAnuncio.QUINTO_ANDAR,
     run: runQuintoAndar,
+  },
+  {
+    nome: 'Imobiliária Buritis',
+    origem: OrigemAnuncio.IMOBILIARIA_BURITIS,
+    run: runImobiliariaBuritis,
+  },
+  {
+    nome: 'Liderar Imóveis',
+    origem: OrigemAnuncio.LIDERAR_IMOVEIS,
+    run: runLiderarImoveis,
   },
 ];
 

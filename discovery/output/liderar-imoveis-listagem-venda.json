@@ -1,0 +1,56 @@
+{
+  "nome": "Liderar Imóveis - Listagem Venda",
+  "urlSolicitada": "https://www.liderarimoveis.com.br/venda/imovel/belo-horizonte",
+  "urlFinal": "https://www.liderarimoveis.com.br/venda/imovel/belo-horizonte",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\n\nDisallow: /imovel-nao-encontrado/\nDisallow: /obrigado-imovel-ideal/\nDisallow: /obrigado-contato/\nDisallow: /agendar-obrigado/\nDisallow: /fale-com-corretor-obrigado/\n\nSitemap: https://www.liderarimoveis.com.br/sitemap.xml\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 1,
+    "jsonLdSample": "\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Organization\",\n    \"name\": \"Liderar Imóveis\",\n    \"description\": \"Compre, venda e Alugue imóveis em Belo Horizonte e região\",\n    \"address\": {\n      \"@type\": \"PostalAddress\",\n      \"addressCountry\": {\n        \"@type\": \"Country\",\n        \"name\": \"BR\"\n      },\n      \"addressLocality\": \"Belo Horizonte\",\n      \"addressRegion\": \"mg\"\n    },\n    \"brand\": {\n      \"@type\": \"Brand\",\n      \"logo\": \"https://liderarimoveis.com.br/assets/img/logo/logo-link.png\"\n    },\n    \"URL\": \"https://www.liderarimoveis.com.br/venda/imovel/belo-horizonte\"\n  }\n",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.liderarimoveis.com.br/retornar-parametros-gerais",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.liderarimoveis.com.br/retornar-parametros-url",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.liderarimoveis.com.br/retornar-imoveis-disponiveis",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [
+    "Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameSite",
+    "Failed to load resource: the server responded with a status of 410 ()",
+    "Failed to load resource: the server responded with a status of 410 ()",
+    "Failed to load resource: the server responded with a status of 410 ()",
+    "Failed to load resource: the server responded with a status of 410 ()"
+  ],
+  "titulo": "Imóveis à venda em Belo Horizonte | Liderar Imóveis",
+  "bodyTextSample": "Usamos cookies para personalizar conteúdos e melhorar a sua experiência. Para ver nossa politíca de cookies clique aqui\nAceito\nCRECI: PJ 4275\n(31) 3082-1222\n(31) 2514-5014\n \nCOMPRAR\nALUGAR\nSOBRE\nANUNCIE SEU IMÓVEL\nCONTATO\nÁREA DO CLIENTE\n1025 Imóveis à venda em Belo Horizonte\nMAIS FILTRO\nadd\nBelo Horizonte \nNOVO\n‹\nPrevious\n›\nNext\nLourdes | Belo Horizonte\nCódigo. 10552\nCódigo. 10552\nCasa comercial à venda no Lourdes\n\nR$ 1.999.999,00\n170,00\nm²\n12\nQuarto(s)\n0\nVaga(s)\n5\nBanho(s)\nNOVO\n‹\nPrevious\n›\nNext\nSerra | Belo Horizonte\nCódigo. 10550\nCódigo. 10550\nApartamento à venda no Serra\n\nR$ 620.000,00\n105,00\nm²\n3\nQuarto(s)\n1\nVaga(s)\n2\nBanho(s)\nNOVO\n‹\nPrevious\n›\nNext\nFernão Dias | Belo Horizonte\nCódigo. 10551\nCódigo. 10551\nCobertura à venda no Fernão Dias\n\nR$ 870.000,00\n200,00\nm²\n4\nQuarto(s)\n2\nVaga(s)\n3\nBanho(s)\nNOVO\n‹\nPrevious\n›\nNext\nSanta Efigênia | Belo Horizonte\nCódigo. 10546\nCódigo. 10546\nApartamento à venda no Santa Efigênia\n\nR$ 480.000,00\n47,00\nm²\n1\nQuarto(s)\n0\nVaga(s)\n1\nBanho(s)\nNOVO\n‹\nPre",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integra-imoveis-regionais/terrestre-spider/discovery/output/screenshots/liderar-imoveis-listagem-venda.png",
+  "erro": null,
+  "timestamp": "2026-08-22T01:41:47.722Z"
+}

@@ -10,7 +10,10 @@ const SEARCH_URLS_PATH = path.join(currentDirPath, 'search-urls.json');
 
 // Mapeia o valor do enum (usado para gravar `origin` no banco) para a chave
 // correspondente em search-urls.json (usada nas URLs de busca do app antigo).
-const SEARCH_URLS_KEY: Record<OrigemAnuncio, string> = {
+// Partial (não Record completo): fontes do cluster Imoview não têm URL de busca em
+// HTML — resolvem cidade dinamicamente via API (src/sources/shared/imoview-client.ts)
+// e nunca chamam loadStartUrls.
+const SEARCH_URLS_KEY: Partial<Record<OrigemAnuncio, string>> = {
   [OrigemAnuncio.OLX]: 'olx',
   [OrigemAnuncio.NETIMOVEIS]: 'netimoveis',
   [OrigemAnuncio.VIVA_REAL]: 'viva-real',
@@ -39,8 +42,13 @@ export async function loadStartUrls(
   const config = JSON.parse(raw) as SearchUrlsFile;
 
   const chave = SEARCH_URLS_KEY[fonte];
-  const entries = config[chave];
+  if (chave === undefined) {
+    throw new Error(
+      `loadStartUrls: fonte "${fonte}" não usa search-urls.json (fonte baseada em API, sem URLs de busca HTML)`,
+    );
+  }
 
+  const entries = config[chave];
   if (entries === undefined || entries.length === 0) {
     throw new Error(
       `search-urls.json não tem URLs de busca para a fonte "${chave}"`,
