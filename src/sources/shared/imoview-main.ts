@@ -19,58 +19,58 @@ import { openFreshDataset, openFreshRequestQueue } from './storage.js';
 
 /**
  * Fábrica de `run()` compartilhada por toda imobiliária do cluster Imoview — só
- * `baseUrl`/`origin`/`nomeExibicao` mudam entre elas (ver
+ * `baseUrl`/`origem`/`nomeExibicao` mudam entre elas (ver
  * `discovery/imoview-diagnostico.md`). `cidadeSlugAmigavel` é o slug usado pelo próprio
  * Imoview (`nomeurlamigavel`, ex.: `"belo-horizonte"`), resolvido em código de cidade
  * específico deste cliente antes de buscar imóveis — `codigocidade` não é global.
  */
 export function createImoviewRun(
   baseUrl: string,
-  origin: OrigemAnuncio,
+  origem: OrigemAnuncio,
   nomeExibicao: string,
   cidadeSlugAmigavel = 'belo-horizonte',
 ): () => Promise<CrawlStats> {
   return async function run(): Promise<CrawlStats> {
     const cidade = await resolveCidadeCode(baseUrl, cidadeSlugAmigavel);
-    const dataset = await openFreshDataset(origin);
+    const dataset = await openFreshDataset(origem);
     const endpointUrl = `${baseUrl}/retornar-imoveis-disponiveis`;
 
     // Um crawler por tipo de transação (aluguel, venda) — mesmo padrão das demais
     // fontes: o teto de páginas (maxRequestsPerCrawl) vale por transação, não somado.
     const stats: CrawlStats[] = [];
-    for (const transactionType of Object.values(TipoTransacao)) {
+    for (const tipoTransacao of Object.values(TipoTransacao)) {
       const requestQueue = await openFreshRequestQueue(
-        `${origin}-${transactionType}`,
+        `${origem}-${tipoTransacao}`,
       );
       const crawler = new HttpCrawler({
         httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
-        requestHandler: createImoviewRouter(dataset, baseUrl, origin),
+        requestHandler: createImoviewRouter(dataset, baseUrl, origem),
         requestQueue,
         sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
         maxRequestsPerCrawl: MAX_REQUESTS_PER_CRAWL,
         errorHandler: (context) => backoffOnRateLimit(context),
         failedRequestHandler: (context, error) => {
-          reportFailedRequest(origin, context, error);
+          reportFailedRequest(origem, context, error);
         },
       });
 
       stats.push(
         await runWithWatchdog(
-          `${nomeExibicao} ${transactionType}`,
+          `${nomeExibicao} ${tipoTransacao}`,
           crawler.run([
             {
               url: endpointUrl,
               method: 'POST',
               payload: buildSearchPayload({
                 cidade,
-                transactionType,
+                tipoTransacao,
                 numeroPagina: 1,
               }),
               headers: {
                 'Content-Type':
                   'application/x-www-form-urlencoded; charset=UTF-8',
               },
-              userData: { transactionType, cidade, numeroPagina: 1 },
+              userData: { tipoTransacao, cidade, numeroPagina: 1 },
             },
           ]),
         ),

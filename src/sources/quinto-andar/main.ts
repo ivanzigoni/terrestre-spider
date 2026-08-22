@@ -31,10 +31,10 @@ export async function runQuintoAndar(): Promise<CrawlStats> {
   const stats: CrawlStats[] = [];
   for (const entry of entries) {
     const requestQueue = await openFreshRequestQueue(
-      `${OrigemAnuncio.QUINTO_ANDAR}-${entry.transactionType}`,
+      `${OrigemAnuncio.QUINTO_ANDAR}-${entry.tipoTransacao}`,
     );
     const slug = extractLocationSlug(entry.url);
-    const businessContext = businessContextFor(entry.transactionType);
+    const businessContext = businessContextFor(entry.tipoTransacao);
 
     const crawler = new HttpCrawler({
       httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
@@ -50,7 +50,7 @@ export async function runQuintoAndar(): Promise<CrawlStats> {
 
     stats.push(
       await runWithWatchdog(
-        `Quinto Andar ${entry.transactionType}`,
+        `Quinto Andar ${entry.tipoTransacao}`,
         crawler.run([
           {
             url: QUINTO_ANDAR_API_URL,
@@ -62,7 +62,7 @@ export async function runQuintoAndar(): Promise<CrawlStats> {
             }),
             headers: { 'Content-Type': 'application/json' },
             userData: {
-              transactionType: entry.transactionType,
+              tipoTransacao: entry.tipoTransacao,
               slug,
               offset: 0,
             },

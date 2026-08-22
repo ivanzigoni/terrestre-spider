@@ -25,7 +25,7 @@ export async function runOlx(): Promise<CrawlStats> {
   const stats: CrawlStats[] = [];
   for (const entry of entries) {
     const requestQueue = await openFreshRequestQueue(
-      `${OrigemAnuncio.OLX}-${entry.transactionType}`,
+      `${OrigemAnuncio.OLX}-${entry.tipoTransacao}`,
     );
     const crawler = new CheerioCrawler({
       httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
@@ -40,11 +40,11 @@ export async function runOlx(): Promise<CrawlStats> {
     });
     stats.push(
       await runWithWatchdog(
-        `OLX ${entry.transactionType}`,
+        `OLX ${entry.tipoTransacao}`,
         crawler.run([
           {
             url: entry.url,
-            userData: { transactionType: entry.transactionType },
+            userData: { tipoTransacao: entry.tipoTransacao },
           },
         ]),
       ),

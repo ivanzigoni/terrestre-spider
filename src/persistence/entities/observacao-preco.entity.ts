@@ -8,24 +8,24 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-import { Imovel } from './imovel.entity.js';
+import { Anuncio } from './anuncio.entity.js';
 import type { RelationRef } from './relation-ref.js';
 
 @Entity('observacoes_preco')
-@Index(['imovel', 'scrapedAt'])
+@Index(['anuncio', 'raspadoEm'])
 export class ObservacaoPreco {
   @PrimaryGeneratedColumn()
   declare id: number;
 
-  @ManyToOne(() => Imovel, (imovel) => imovel.observacoesPreco, {
+  @ManyToOne(() => Anuncio, (anuncio) => anuncio.observacoesPreco, {
     onDelete: 'CASCADE',
     nullable: false,
   })
-  @JoinColumn({ name: 'imovel_id' })
-  declare imovel: RelationRef<Imovel>;
+  @JoinColumn({ name: 'anuncio_id' })
+  declare anuncio: RelationRef<Anuncio>;
 
   @Column({ type: 'int' })
-  declare price: number;
+  declare preco: number;
 
   @Column({ type: 'int', default: 0 })
   declare iptu: number;
@@ -34,10 +34,10 @@ export class ObservacaoPreco {
   declare condominio: number;
 
   @Column({ type: 'int', name: 'total_price' })
-  declare totalPrice: number;
+  declare precoTotal: number;
 
   @Column({ type: 'timestamptz', name: 'scraped_at' })
-  declare scrapedAt: Date;
+  declare raspadoEm: Date;
 
   @CreateDateColumn({ type: 'timestamptz', name: 'created_at' })
   declare createdAt: Date;

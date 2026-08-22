@@ -2,7 +2,7 @@ import { createPlaywrightRouter, type Dataset } from 'crawlee';
 
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
-import { getTransactionType } from '../shared/request-user-data.js';
+import { getTipoTransacao } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = 'div.row.imoveis article.card-imovel';
 // Netimóveis pagina via clique em JS (sem href estável no botão), mas a URL de busca
@@ -14,7 +14,7 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
   const router = createPlaywrightRouter();
 
   router.addDefaultHandler(async ({ page, request, enqueueLinks, log }) => {
-    const transactionType = getTransactionType(request.userData);
+    const tipoTransacao = getTipoTransacao(request.userData);
 
     await page
       .waitForSelector(CARD_SELECTOR, { timeout: 10_000 })
@@ -22,21 +22,21 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
 
     const items = await page.$$eval(
       CARD_SELECTOR,
-      (cards, { origin, transactionType: itemTransactionType }) =>
+      (cards, { origem, tipoTransacao: itemTipoTransacao }) =>
         cards.map((card) => {
           const linkEl = card.querySelector<HTMLAnchorElement>('a.link-imovel');
           const link = linkEl?.href ?? '';
-          const propertyType =
+          const tipoImovel =
             link !== '' ? new URL(link).searchParams.get('tipoUrl') : null;
 
-          const title = (
+          const titulo = (
             card.querySelector<HTMLElement>('section.imovel-info h2')
               ?.textContent ?? ''
           )
             .trim()
             .replace(/\s+/g, ' ');
 
-          const location =
+          const localizacao =
             card.querySelector<HTMLElement>('.endereco')?.textContent.trim() ??
             '';
 
@@ -51,22 +51,22 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
             card
               .querySelector<HTMLElement>('.caracteristica.quartos')
               ?.textContent.trim() ?? '';
-          const bedrooms = Number(/\d+/.exec(bedroomsText)?.[0] ?? '0');
+          const quartos = Number(/\d+/.exec(bedroomsText)?.[0] ?? '0');
 
           const bathroomsText =
             card
               .querySelector<HTMLElement>('.caracteristica.banheiros')
               ?.textContent.trim() ?? '';
-          const bathrooms = Number(/\d+/.exec(bathroomsText)?.[0] ?? '0');
+          const banheiros = Number(/\d+/.exec(bathroomsText)?.[0] ?? '0');
 
           const vagasText =
             card
               .querySelector<HTMLElement>('.caracteristica.vagas')
               ?.textContent.trim() ?? '';
           const vagasMatch = /\d+/.exec(vagasText);
-          const parkingSpots = vagasMatch ? Number(vagasMatch[0]) : null;
+          const vagas = vagasMatch ? Number(vagasMatch[0]) : null;
 
-          const price =
+          const preco =
             Number(
               (
                 card.querySelector<HTMLElement>('.imovel-valor .valor')
@@ -81,31 +81,31 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
               ).replace(/\D/g, ''),
             ) || 0;
 
-          const datePostedText =
+          const dataDePublicacaoText =
             card
               .querySelector<HTMLElement>('.ultima-atualizacao')
               ?.textContent.trim() ?? null;
 
           const item: RawListingItem = {
-            origin,
-            transactionType: itemTransactionType,
-            propertyType,
+            origem,
+            tipoTransacao: itemTipoTransacao,
+            tipoImovel,
             link,
-            title,
-            bedrooms,
-            bathrooms,
-            parkingSpots,
+            titulo,
+            quartos,
+            banheiros,
+            vagas,
             area,
-            location,
-            datePostedText,
-            price,
+            localizacao,
+            dataDePublicacaoText,
+            preco,
             iptu: 0,
             condominio,
-            oldPrice: null,
+            precoAntigo: null,
           };
           return item;
         }),
-      { origin: OrigemAnuncio.NETIMOVEIS, transactionType },
+      { origem: OrigemAnuncio.NETIMOVEIS, tipoTransacao },
     );
 
     const validItems = items.filter((item) => item.link !== '');
@@ -127,7 +127,7 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
       currentUrl.searchParams.set('pagina', String(currentPage + 1));
       await enqueueLinks({
         urls: [currentUrl.toString()],
-        userData: { transactionType },
+        userData: { tipoTransacao },
       });
     }
   });

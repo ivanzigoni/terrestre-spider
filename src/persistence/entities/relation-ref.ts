@@ -4,6 +4,6 @@
 // referencia a classe do outro lado diretamente, e o ciclo de import estoura
 // "Cannot access '<Classe>' before initialization" no ESM compilado (TDZ), já que os dois
 // módulos dependem um do outro na carga. A relação em si (`@ManyToOne`/`@OneToMany`)
-// continua resolvendo a classe normalmente, via thunk lazy (`() => Imovel`), que só é
+// continua resolvendo a classe normalmente, via thunk lazy (`() => Anuncio`), que só é
 // chamado depois que os dois módulos já terminaram de carregar.
 export type RelationRef<T> = T;

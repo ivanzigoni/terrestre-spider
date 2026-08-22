@@ -25,7 +25,7 @@ export async function runVivaReal(): Promise<CrawlStats> {
   const stats: CrawlStats[] = [];
   for (const entry of entries) {
     const requestQueue = await openFreshRequestQueue(
-      `${OrigemAnuncio.VIVA_REAL}-${entry.transactionType}`,
+      `${OrigemAnuncio.VIVA_REAL}-${entry.tipoTransacao}`,
     );
     const crawler = new CheerioCrawler({
       httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
@@ -40,11 +40,11 @@ export async function runVivaReal(): Promise<CrawlStats> {
     });
     stats.push(
       await runWithWatchdog(
-        `Viva Real ${entry.transactionType}`,
+        `Viva Real ${entry.tipoTransacao}`,
         crawler.run([
           {
             url: entry.url,
-            userData: { transactionType: entry.transactionType },
+            userData: { tipoTransacao: entry.tipoTransacao },
           },
         ]),
       ),

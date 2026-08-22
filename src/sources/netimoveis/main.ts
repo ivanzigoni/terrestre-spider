@@ -25,7 +25,7 @@ export async function runNetimoveis(): Promise<CrawlStats> {
   const stats: CrawlStats[] = [];
   for (const entry of entries) {
     const requestQueue = await openFreshRequestQueue(
-      `${OrigemAnuncio.NETIMOVEIS}-${entry.transactionType}`,
+      `${OrigemAnuncio.NETIMOVEIS}-${entry.tipoTransacao}`,
     );
     const crawler = new PlaywrightCrawler({
       httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
@@ -41,11 +41,11 @@ export async function runNetimoveis(): Promise<CrawlStats> {
     });
     stats.push(
       await runWithWatchdog(
-        `Netimóveis ${entry.transactionType}`,
+        `Netimóveis ${entry.tipoTransacao}`,
         crawler.run([
           {
             url: entry.url,
-            userData: { transactionType: entry.transactionType },
+            userData: { tipoTransacao: entry.tipoTransacao },
           },
         ]),
       ),

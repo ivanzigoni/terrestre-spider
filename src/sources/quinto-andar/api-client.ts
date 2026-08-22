@@ -35,9 +35,9 @@ const REQUESTED_FIELDS = [
 ] as const;
 
 export function businessContextFor(
-  transactionType: TipoTransacao,
+  tipoTransacao: TipoTransacao,
 ): BusinessContext {
-  return transactionType === TipoTransacao.ALUGUEL ? 'RENT' : 'SALE';
+  return tipoTransacao === TipoTransacao.ALUGUEL ? 'RENT' : 'SALE';
 }
 
 /**
@@ -200,9 +200,9 @@ function isSearchListResponse(
  */
 function matchesBusinessContext(
   source: QuintoAndarListingSource,
-  transactionType: TipoTransacao,
+  tipoTransacao: TipoTransacao,
 ): boolean {
-  return transactionType === TipoTransacao.ALUGUEL
+  return tipoTransacao === TipoTransacao.ALUGUEL
     ? source.forRent
     : source.forSale;
 }
@@ -214,37 +214,35 @@ function normalizeMonetaryField(value: number): number {
 
 function mapToRawListingItem(
   source: QuintoAndarListingSource,
-  transactionType: TipoTransacao,
+  tipoTransacao: TipoTransacao,
 ): RawListingItem {
-  const location = `${source.neighbourhood.trim()}, ${source.city.trim()}`;
+  const localizacao = `${source.neighbourhood.trim()}, ${source.city.trim()}`;
   const acaoLabel =
-    transactionType === TipoTransacao.ALUGUEL ? 'alugar' : 'comprar';
+    tipoTransacao === TipoTransacao.ALUGUEL ? 'alugar' : 'comprar';
   const bedroomsLabel = source.bedrooms === 1 ? 'quarto' : 'quartos';
-  const title = `${source.type} com ${String(source.bedrooms)} ${bedroomsLabel} para ${acaoLabel} em ${location}`;
+  const titulo = `${source.type} com ${String(source.bedrooms)} ${bedroomsLabel} para ${acaoLabel} em ${localizacao}`;
 
   return {
-    origin: OrigemAnuncio.QUINTO_ANDAR,
-    transactionType,
-    propertyType: source.type,
+    origem: OrigemAnuncio.QUINTO_ANDAR,
+    tipoTransacao,
+    tipoImovel: source.type,
     // Sem slug: a URL redireciona pro anúncio completo mesmo assim (confirmado ao
     // vivo) — mais simples e estável que reconstruir o slug de SEO.
     link: `https://www.quintoandar.com.br/imovel/${String(source.id)}`,
-    title,
-    bedrooms: source.bedrooms,
-    bathrooms: source.bathrooms,
-    parkingSpots: source.parkingSpaces,
+    titulo,
+    quartos: source.bedrooms,
+    banheiros: source.bathrooms,
+    vagas: source.parkingSpaces,
     area: source.area,
-    location,
+    localizacao,
     // Sem campo equivalente identificado na API (ver discovery/quintoandar-diagnostico.md).
-    datePostedText: null,
-    price:
-      transactionType === TipoTransacao.ALUGUEL
-        ? source.rent
-        : source.salePrice,
+    dataDePublicacaoText: null,
+    preco:
+      tipoTransacao === TipoTransacao.ALUGUEL ? source.rent : source.salePrice,
     iptu: normalizeMonetaryField(source.iptu),
     condominio: normalizeMonetaryField(source.condominium),
     // Sem campo equivalente identificado na API.
-    oldPrice: null,
+    precoAntigo: null,
   };
 }
 
@@ -255,7 +253,7 @@ export interface ParsedSearchPage {
 
 export function parseSearchListResponse(
   json: unknown,
-  transactionType: TipoTransacao,
+  tipoTransacao: TipoTransacao,
 ): ParsedSearchPage {
   if (!isSearchListResponse(json)) {
     throw new Error(
@@ -268,10 +266,10 @@ export function parseSearchListResponse(
     if (!isQuintoAndarListingSource(hit._source)) {
       continue;
     }
-    if (!matchesBusinessContext(hit._source, transactionType)) {
+    if (!matchesBusinessContext(hit._source, tipoTransacao)) {
       continue;
     }
-    items.push(mapToRawListingItem(hit._source, transactionType));
+    items.push(mapToRawListingItem(hit._source, tipoTransacao));
   }
 
   return { items, total: json.hits.total.value };

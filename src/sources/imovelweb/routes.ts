@@ -2,7 +2,7 @@ import { createPlaywrightRouter, type Dataset } from 'crawlee';
 
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
-import { getTransactionType } from '../shared/request-user-data.js';
+import { getTipoTransacao } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = '[data-qa="posting PROPERTY"]';
 const NEXT_LINK_SELECTOR = '[data-qa="PAGING_NEXT"]';
@@ -18,7 +18,7 @@ export function createImovelwebRouter(dataset: Dataset<RawListingItem>) {
   const router = createPlaywrightRouter();
 
   router.addDefaultHandler(async ({ page, request, enqueueLinks, log }) => {
-    const transactionType = getTransactionType(request.userData);
+    const tipoTransacao = getTipoTransacao(request.userData);
 
     // A Cloudflare roda um desafio JS em segundo plano nesta fonte (diagnosticado em
     // .claude/__workdir/integra-imovelweb/diagnostico-imovelweb.md) — às vezes passa sozinho
@@ -34,7 +34,7 @@ export function createImovelwebRouter(dataset: Dataset<RawListingItem>) {
 
     const items = await page.$$eval(
       CARD_SELECTOR,
-      (cards, { origin, transactionType: itemTransactionType }) =>
+      (cards, { origem, tipoTransacao: itemTipoTransacao }) =>
         (cards as HTMLElement[]).map((card) => {
           const toPosting = card.getAttribute('data-to-posting') ?? '';
           const link =
@@ -48,15 +48,15 @@ export function createImovelwebRouter(dataset: Dataset<RawListingItem>) {
           // condomínio sem "-para-"); nesses casos o tipo fica null, igual às demais
           // fontes quando o HTML não dá sinal confiável.
           const slug = toPosting.split('/').filter(Boolean).pop() ?? '';
-          const propertyTypeMatch = /^(.+?)-para-/.exec(slug);
-          const propertyType = propertyTypeMatch
-            ? (propertyTypeMatch[1] ?? null)
+          const tipoImovelMatch = /^(.+?)-para-/.exec(slug);
+          const tipoImovel = tipoImovelMatch
+            ? (tipoImovelMatch[1] ?? null)
             : null;
 
           const priceText =
             card.querySelector<HTMLElement>('[data-qa="POSTING_CARD_PRICE"]')
               ?.innerText ?? '';
-          const price = Number(priceText.replace(/\D/g, '')) || 0;
+          const preco = Number(priceText.replace(/\D/g, '')) || 0;
 
           // "expensas" só carrega o condomínio nesta fonte — IPTU não aparece no card
           // de listagem, só na página de detalhe (fora de escopo deste crawler).
@@ -68,10 +68,10 @@ export function createImovelwebRouter(dataset: Dataset<RawListingItem>) {
             condominio = Number(expensasText.replace(/\D/g, '')) || 0;
           }
 
-          let bedrooms = 0;
-          let bathrooms = 0;
+          let quartos = 0;
+          let banheiros = 0;
           let area = 0;
-          let parkingSpots: number | null = null;
+          let vagas: number | null = null;
           const featureSpans = card.querySelectorAll<HTMLElement>(
             '[data-qa="POSTING_CARD_FEATURES"] span',
           );
@@ -80,17 +80,17 @@ export function createImovelwebRouter(dataset: Dataset<RawListingItem>) {
             const match = /(\d+)/.exec(text);
             const value = match ? Number(match[1]) : null;
             if (value === null) continue;
-            if (text.includes('quarto')) bedrooms = value;
-            else if (text.includes('banheiro')) bathrooms = value;
-            else if (text.includes('vaga')) parkingSpots = value;
+            if (text.includes('quarto')) quartos = value;
+            else if (text.includes('banheiro')) banheiros = value;
+            else if (text.includes('vaga')) vagas = value;
             else if (text.includes('m²')) area = value;
           }
 
-          const location =
+          const localizacao =
             card
               .querySelector<HTMLElement>('[data-qa="POSTING_CARD_LOCATION"]')
               ?.innerText.trim() ?? '';
-          const title =
+          const titulo =
             card
               .querySelector<HTMLElement>(
                 '[data-qa="POSTING_CARD_DESCRIPTION"]',
@@ -98,25 +98,25 @@ export function createImovelwebRouter(dataset: Dataset<RawListingItem>) {
               ?.innerText.trim() ?? '';
 
           const item: RawListingItem = {
-            origin,
-            transactionType: itemTransactionType,
-            propertyType,
+            origem,
+            tipoTransacao: itemTipoTransacao,
+            tipoImovel,
             link,
-            title,
-            bedrooms,
-            bathrooms,
-            parkingSpots,
+            titulo,
+            quartos,
+            banheiros,
+            vagas,
             area,
-            location,
-            datePostedText: null,
-            price,
+            localizacao,
+            dataDePublicacaoText: null,
+            preco,
             iptu: 0,
             condominio,
-            oldPrice: null,
+            precoAntigo: null,
           };
           return item;
         }),
-      { origin: OrigemAnuncio.IMOVELWEB, transactionType },
+      { origem: OrigemAnuncio.IMOVELWEB, tipoTransacao },
     );
 
     const validItems = items.filter((item) => item.link !== '');
@@ -149,7 +149,7 @@ export function createImovelwebRouter(dataset: Dataset<RawListingItem>) {
       } else {
         await enqueueLinks({
           urls: [new URL(nextHref, request.loadedUrl).toString()],
-          userData: { transactionType },
+          userData: { tipoTransacao },
         });
       }
     }

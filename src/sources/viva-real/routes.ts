@@ -2,14 +2,14 @@ import { createCheerioRouter, type Dataset } from 'crawlee';
 
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
-import { getTransactionType } from '../shared/request-user-data.js';
+import { getTipoTransacao } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = 'li[data-cy="rp-property-cd"]';
 const NEXT_LINK_SELECTOR = 'a[aria-label="próxima página"]';
 
 // URL do anúncio: /imovel/<tipo>-<quartos>-quartos-.../ — o tipo é o primeiro
 // segmento do slug (ex.: "casa-2-quartos-..." -> "casa").
-function extractPropertyType(link: string): string | null {
+function extractTipoImovel(link: string): string | null {
   const pathSegments = new URL(link).pathname.split('/').filter(Boolean);
   const imovelIndex = pathSegments.indexOf('imovel');
   if (imovelIndex === -1) return null;
@@ -21,7 +21,7 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
   const router = createCheerioRouter();
 
   router.addDefaultHandler(async ({ $, request, enqueueLinks, log }) => {
-    const transactionType = getTransactionType(request.userData);
+    const tipoTransacao = getTipoTransacao(request.userData);
     const items: RawListingItem[] = [];
 
     $(CARD_SELECTOR).each((_, card) => {
@@ -29,23 +29,23 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
       const href = $card.find('a[href]').first().attr('href');
       if (href === undefined) return;
       const link = new URL(href, request.loadedUrl).toString();
-      const propertyType = extractPropertyType(link);
+      const tipoImovel = extractTipoImovel(link);
 
-      const title = $card
+      const titulo = $card
         .find('h2[data-cy="rp-cardProperty-location-txt"]')
         .text()
         .trim()
         .replace(/\s+/g, ' ');
 
-      const location = $card
+      const localizacao = $card
         .find('p[data-cy="rp-cardProperty-street-txt"]')
         .text()
         .trim();
 
       let area = 0;
-      let bedrooms = 0;
-      let bathrooms = 0;
-      let parkingSpots: number | null = null;
+      let quartos = 0;
+      let banheiros = 0;
+      let vagas: number | null = null;
 
       $card.find('li[data-cy^="rp-cardProperty-"]').each((__, li) => {
         const $li = $(li);
@@ -54,14 +54,14 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
         if (cy === 'rp-cardProperty-propertyArea-txt')
           area = Number(text.replace(/\D/g, '')) || 0;
         else if (cy === 'rp-cardProperty-bedroomQuantity-txt')
-          bedrooms = Number(text.replace(/\D/g, '')) || 0;
+          quartos = Number(text.replace(/\D/g, '')) || 0;
         else if (cy === 'rp-cardProperty-bathroomQuantity-txt')
-          bathrooms = Number(text.replace(/\D/g, '')) || 0;
+          banheiros = Number(text.replace(/\D/g, '')) || 0;
         else if (cy === 'rp-cardProperty-parkingSpacesQuantity-txt')
-          parkingSpots = Number(text.replace(/\D/g, '')) || 0;
+          vagas = Number(text.replace(/\D/g, '')) || 0;
       });
 
-      let price = 0;
+      let preco = 0;
       let condominio = 0;
       let iptu = 0;
       const $priceContainer = $card.find(
@@ -71,7 +71,7 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
         // O preço é o primeiro <p> do container — a classe exata varia entre o
         // HTML servido (SSR) e o DOM pós-hidratação, então evitamos depender dela.
         const priceText = $priceContainer.find('p').first().text();
-        price = Number(priceText.replace(/\D/g, '')) || 0;
+        preco = Number(priceText.replace(/\D/g, '')) || 0;
 
         $priceContainer.find('p').each((__, p) => {
           const text = $(p).text();
@@ -85,21 +85,21 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
       }
 
       items.push({
-        origin: OrigemAnuncio.VIVA_REAL,
-        transactionType,
-        propertyType,
+        origem: OrigemAnuncio.VIVA_REAL,
+        tipoTransacao,
+        tipoImovel,
         link,
-        title,
-        bedrooms,
-        bathrooms,
-        parkingSpots,
+        titulo,
+        quartos,
+        banheiros,
+        vagas,
         area,
-        location,
-        datePostedText: null,
-        price,
+        localizacao,
+        dataDePublicacaoText: null,
+        preco,
         iptu,
         condominio,
-        oldPrice: null,
+        precoAntigo: null,
       });
     });
 
@@ -119,7 +119,7 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
     }
 
     if (nextHref !== null) {
-      await enqueueLinks({ urls: [nextHref], userData: { transactionType } });
+      await enqueueLinks({ urls: [nextHref], userData: { tipoTransacao } });
     }
   });
 

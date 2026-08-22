@@ -2,7 +2,7 @@ import { createHttpRouter, type Dataset } from 'crawlee';
 
 import type { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
-import { getTransactionType } from '../shared/request-user-data.js';
+import { getTipoTransacao } from '../shared/request-user-data.js';
 import {
   PAGE_SIZE,
   QUINTO_ANDAR_API_URL,
@@ -12,18 +12,18 @@ import {
 } from './api-client.js';
 
 interface QuintoAndarUserData {
-  transactionType: TipoTransacao;
+  tipoTransacao: TipoTransacao;
   slug: string;
   offset: number;
 }
 
 /**
- * `slug`/`offset` viajam no `userData` junto com `transactionType` — validados aqui em
- * runtime pelo mesmo motivo de `getTransactionType`: o dado vem desserializado da
+ * `slug`/`offset` viajam no `userData` junto com `tipoTransacao` — validados aqui em
+ * runtime pelo mesmo motivo de `getTipoTransacao`: o dado vem desserializado da
  * RequestQueue, não é garantido pelo tipo estático.
  */
 function getQuintoAndarUserData(userData: unknown): QuintoAndarUserData {
-  const transactionType = getTransactionType(userData);
+  const tipoTransacao = getTipoTransacao(userData);
   if (
     typeof userData !== 'object' ||
     userData === null ||
@@ -34,14 +34,14 @@ function getQuintoAndarUserData(userData: unknown): QuintoAndarUserData {
   ) {
     throw new Error('slug ou offset ausente/inválido no userData da request');
   }
-  return { transactionType, slug: userData.slug, offset: userData.offset };
+  return { tipoTransacao, slug: userData.slug, offset: userData.offset };
 }
 
 export function createQuintoAndarRouter(dataset: Dataset<RawListingItem>) {
   const router = createHttpRouter();
 
   router.addDefaultHandler(async ({ body, request, addRequests, log }) => {
-    const { transactionType, slug, offset } = getQuintoAndarUserData(
+    const { tipoTransacao, slug, offset } = getQuintoAndarUserData(
       request.userData,
     );
 
@@ -52,7 +52,7 @@ export function createQuintoAndarRouter(dataset: Dataset<RawListingItem>) {
     const rawBody = typeof body === 'string' ? body : body.toString('utf-8');
     const json: unknown = JSON.parse(rawBody);
 
-    const { items, total } = parseSearchListResponse(json, transactionType);
+    const { items, total } = parseSearchListResponse(json, tipoTransacao);
 
     if (items.length > 0) {
       await dataset.pushData(items);
@@ -63,7 +63,7 @@ export function createQuintoAndarRouter(dataset: Dataset<RawListingItem>) {
 
     const nextOffset = offset + PAGE_SIZE;
     if (nextOffset < total) {
-      const businessContext = businessContextFor(transactionType);
+      const businessContext = businessContextFor(tipoTransacao);
       await addRequests([
         {
           url: QUINTO_ANDAR_API_URL,
@@ -74,7 +74,7 @@ export function createQuintoAndarRouter(dataset: Dataset<RawListingItem>) {
             offset: nextOffset,
           }),
           headers: { 'Content-Type': 'application/json' },
-          userData: { transactionType, slug, offset: nextOffset },
+          userData: { tipoTransacao, slug, offset: nextOffset },
           uniqueKey: `${QUINTO_ANDAR_API_URL}#slug=${slug}&businessContext=${businessContext}&offset=${String(nextOffset)}`,
         },
       ]);

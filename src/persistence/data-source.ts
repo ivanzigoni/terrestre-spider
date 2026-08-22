@@ -4,8 +4,8 @@ import { fileURLToPath } from 'node:url';
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
+import { Anuncio } from './entities/anuncio.entity.js';
 import { Execucao } from './entities/execucao.entity.js';
-import { Imovel } from './entities/imovel.entity.js';
 import { ObservacaoPreco } from './entities/observacao-preco.entity.js';
 
 const currentFilePath = fileURLToPath(import.meta.url);
@@ -47,7 +47,7 @@ export const AppDataSource = new DataSource({
     statement_timeout: 30_000,
     idle_in_transaction_session_timeout: 30_000,
   },
-  entities: [Imovel, ObservacaoPreco, Execucao],
+  entities: [Anuncio, ObservacaoPreco, Execucao],
   migrations: [
     path.join(currentDirPath, 'migrations', `*.${migrationExtension}`),
   ],

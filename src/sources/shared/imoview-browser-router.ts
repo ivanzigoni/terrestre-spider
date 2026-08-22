@@ -4,7 +4,7 @@ import type { Page, Response } from 'playwright';
 import type { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
-import { getTransactionType } from './request-user-data.js';
+import { getTipoTransacao } from './request-user-data.js';
 import {
   IMOVIEW_PAGE_SIZE,
   type ImoviewCidade,
@@ -89,23 +89,23 @@ function getImoviewUserData(userData: unknown): ImoviewBrowserUserData {
 export function buildListingPageUrl(
   baseUrl: string,
   cidadeSlugAmigavel: string,
-  transactionType: TipoTransacao,
+  tipoTransacao: TipoTransacao,
   numeroPagina: number,
 ): string {
-  return `${baseUrl}/${transactionType}/imovel/${cidadeSlugAmigavel}?pagina=${String(numeroPagina)}`;
+  return `${baseUrl}/${tipoTransacao}/imovel/${cidadeSlugAmigavel}?pagina=${String(numeroPagina)}`;
 }
 
 export function createImoviewBrowserRouter(
   dataset: Dataset<RawListingItem>,
   baseUrl: string,
-  origin: OrigemAnuncio,
+  origem: OrigemAnuncio,
   cidadeSlugAmigavel: string,
   pendingResponses: WeakMap<Page, Promise<string>>,
 ) {
   const router = createPlaywrightRouter();
 
   router.addDefaultHandler(async ({ page, request, addRequests, log }) => {
-    const transactionType = getTransactionType(request.userData);
+    const tipoTransacao = getTipoTransacao(request.userData);
     const { cidade, numeroPagina } = getImoviewUserData(request.userData);
 
     const rawBody = await pendingResponses.get(page);
@@ -119,15 +119,15 @@ export function createImoviewBrowserRouter(
     const { items, total } = parseSearchResponse(
       json,
       baseUrl,
-      origin,
-      transactionType,
+      origem,
+      tipoTransacao,
     );
 
     if (items.length > 0) {
       await dataset.pushData(items);
     }
     log.info(
-      `${origin}: ${String(items.length)} anúncio(s) na página ${String(numeroPagina)} (total=${String(total)}, via navegador)`,
+      `${origem}: ${String(items.length)} anúncio(s) na página ${String(numeroPagina)} (total=${String(total)}, via navegador)`,
     );
 
     const proximaPagina = numeroPagina + 1;
@@ -135,14 +135,14 @@ export function createImoviewBrowserRouter(
       const nextUrl = buildListingPageUrl(
         baseUrl,
         cidadeSlugAmigavel,
-        transactionType,
+        tipoTransacao,
         proximaPagina,
       );
       await addRequests([
         {
           url: nextUrl,
-          userData: { transactionType, cidade, numeroPagina: proximaPagina },
-          uniqueKey: `${baseUrl}#transactionType=${transactionType}&pagina=${String(proximaPagina)}`,
+          userData: { tipoTransacao, cidade, numeroPagina: proximaPagina },
+          uniqueKey: `${baseUrl}#tipoTransacao=${tipoTransacao}&pagina=${String(proximaPagina)}`,
         },
       ]);
     }

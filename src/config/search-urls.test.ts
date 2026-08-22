@@ -26,7 +26,7 @@ describe('loadStartUrls', () => {
       expect(entries.length).toBeGreaterThan(0);
 
       const tiposEncontrados = new Set(
-        entries.map((entry) => entry.transactionType),
+        entries.map((entry) => entry.tipoTransacao),
       );
       expect(tiposEncontrados.has(TipoTransacao.ALUGUEL)).toBe(true);
       expect(tiposEncontrados.has(TipoTransacao.VENDA)).toBe(true);

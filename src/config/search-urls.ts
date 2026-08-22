@@ -8,7 +8,7 @@ import { TipoTransacao } from '../persistence/enums/tipo-transacao.enum.js';
 const currentDirPath = path.dirname(fileURLToPath(import.meta.url));
 const SEARCH_URLS_PATH = path.join(currentDirPath, 'search-urls.json');
 
-// Mapeia o valor do enum (usado para gravar `origin` no banco) para a chave
+// Mapeia o valor do enum (usado para gravar `origem` no banco) para a chave
 // correspondente em search-urls.json (usada nas URLs de busca do app antigo).
 // Partial (não Record completo): fontes do cluster Imoview não têm URL de busca em
 // HTML — resolvem cidade dinamicamente via API (src/sources/shared/imoview-client.ts)
@@ -26,12 +26,12 @@ const TIPOS_TRANSACAO_VALIDOS = new Set<string>(Object.values(TipoTransacao));
 
 export interface SearchUrlEntry {
   url: string;
-  transactionType: TipoTransacao;
+  tipoTransacao: TipoTransacao;
 }
 
 interface RawSearchUrlEntry {
   url: string;
-  transactionType: string;
+  tipoTransacao: string;
 }
 
 type SearchUrlsFile = Record<string, RawSearchUrlEntry[]>;
@@ -57,14 +57,14 @@ export async function loadStartUrls(
   }
 
   return entries.map((entry) => {
-    if (!TIPOS_TRANSACAO_VALIDOS.has(entry.transactionType)) {
+    if (!TIPOS_TRANSACAO_VALIDOS.has(entry.tipoTransacao)) {
       throw new Error(
-        `search-urls.json: transactionType inválido "${entry.transactionType}" para a fonte "${chave}"`,
+        `search-urls.json: tipoTransacao inválido "${entry.tipoTransacao}" para a fonte "${chave}"`,
       );
     }
     return {
       url: entry.url,
-      transactionType: entry.transactionType as TipoTransacao,
+      tipoTransacao: entry.tipoTransacao as TipoTransacao,
     };
   });
 }

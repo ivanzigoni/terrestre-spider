@@ -2,7 +2,7 @@ import { createCheerioRouter, type Dataset } from 'crawlee';
 
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
-import { getTransactionType } from '../shared/request-user-data.js';
+import { getTipoTransacao } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = 'section.olx-adcard';
 
@@ -10,7 +10,7 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
   const router = createCheerioRouter();
 
   router.addDefaultHandler(async ({ $, request, enqueueLinks, log }) => {
-    const transactionType = getTransactionType(request.userData);
+    const tipoTransacao = getTipoTransacao(request.userData);
     const items: RawListingItem[] = [];
 
     $(CARD_SELECTOR).each((_, card) => {
@@ -22,7 +22,7 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
       if (link === '') return;
 
       const titleAttr = linkEl.attr('title');
-      const title =
+      const titulo =
         titleAttr !== undefined && titleAttr !== ''
           ? titleAttr
           : linkEl.text().trim();
@@ -30,13 +30,13 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
       // A categoria (ex.: "imoveis", "terrenos") é o único sinal de tipo que a OLX
       // serve no HTML puro — o rótulo mais específico ("Apartamento", "Casa") só
       // existe no DOM depois da hidratação, que o CheerioCrawler não executa.
-      const propertyType =
+      const tipoImovel =
         new URL(link).pathname.split('/').filter(Boolean)[1] ?? null;
 
-      let bedrooms = 0;
-      let bathrooms = 0;
+      let quartos = 0;
+      let banheiros = 0;
       let area = 0;
-      let parkingSpots: number | null = null;
+      let vagas: number | null = null;
 
       $card.find('.olx-adcard__detail').each((__, detail) => {
         const $detail = $(detail);
@@ -46,19 +46,19 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
         const value = match ? Number(match[1]) : null;
         if (value === null) return;
 
-        if (label.includes('quarto')) bedrooms = value;
+        if (label.includes('quarto')) quartos = value;
         else if (
           label.includes('metro') ||
           label.includes('m²') ||
           text.includes('m²')
         )
           area = value;
-        else if (label.includes('banheiro')) bathrooms = value;
-        else if (label.includes('vaga')) parkingSpots = value;
+        else if (label.includes('banheiro')) banheiros = value;
+        else if (label.includes('vaga')) vagas = value;
       });
 
       const priceText = $card.find('h3.olx-adcard__price').text();
-      const price = Number(priceText.replace(/\D/g, '')) || 0;
+      const preco = Number(priceText.replace(/\D/g, '')) || 0;
 
       let iptu = 0;
       let condominio = 0;
@@ -70,27 +70,30 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
           condominio = Number(text.replace(/\D/g, '')) || 0;
       });
 
-      const location = $card.find('p.olx-adcard__location').text().trim();
-      const datePostedTextRaw = $card.find('p.olx-adcard__date').text().trim();
-      const datePostedText =
-        datePostedTextRaw === '' ? null : datePostedTextRaw;
+      const localizacao = $card.find('p.olx-adcard__location').text().trim();
+      const dataDePublicacaoTextRaw = $card
+        .find('p.olx-adcard__date')
+        .text()
+        .trim();
+      const dataDePublicacaoText =
+        dataDePublicacaoTextRaw === '' ? null : dataDePublicacaoTextRaw;
 
       items.push({
-        origin: OrigemAnuncio.OLX,
-        transactionType,
-        propertyType,
+        origem: OrigemAnuncio.OLX,
+        tipoTransacao,
+        tipoImovel,
         link,
-        title,
-        bedrooms,
-        bathrooms,
-        parkingSpots,
+        titulo,
+        quartos,
+        banheiros,
+        vagas,
         area,
-        location,
-        datePostedText,
-        price,
+        localizacao,
+        dataDePublicacaoText,
+        preco,
         iptu,
         condominio,
-        oldPrice: null,
+        precoAntigo: null,
       });
     });
 
@@ -115,7 +118,7 @@ export function createOlxRouter(dataset: Dataset<RawListingItem>) {
     if (nextHrefAttr !== undefined) {
       await enqueueLinks({
         urls: [new URL(nextHrefAttr, request.loadedUrl).toString()],
-        userData: { transactionType },
+        userData: { tipoTransacao },
       });
     }
   });

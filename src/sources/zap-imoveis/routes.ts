@@ -2,7 +2,7 @@ import { createPlaywrightRouter, type Dataset } from 'crawlee';
 
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
-import { getTransactionType } from '../shared/request-user-data.js';
+import { getTipoTransacao } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = 'li[data-cy="rp-property-cd"] > a';
 const NEXT_LINK_SELECTOR = 'a[aria-label="próxima página"]';
@@ -11,7 +11,7 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
   const router = createPlaywrightRouter();
 
   router.addDefaultHandler(async ({ page, request, enqueueLinks, log }) => {
-    const transactionType = getTransactionType(request.userData);
+    const tipoTransacao = getTipoTransacao(request.userData);
 
     await page
       .waitForSelector(CARD_SELECTOR, { timeout: 10_000 })
@@ -19,7 +19,7 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
 
     const items = await page.$$eval(
       CARD_SELECTOR,
-      (anchors, { origin, transactionType: itemTransactionType }) =>
+      (anchors, { origem, tipoTransacao: itemTipoTransacao }) =>
         // eslint-disable-next-line sonarjs/cognitive-complexity
         (anchors as HTMLAnchorElement[]).map((anchor) => {
           const link = anchor.href;
@@ -28,7 +28,7 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
           // segmento do slug (ex.: "venda-casa-4-quartos-..." -> "casa"). Alguns
           // cards não têm href (ex.: lançamentos) — link fica '' e é descartado
           // depois pelo filtro de validItems, então pulamos o parsing aqui.
-          let propertyType: string | null = null;
+          let tipoImovel: string | null = null;
           if (link !== '') {
             const pathSegments = new URL(link).pathname
               .split('/')
@@ -37,7 +37,7 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
             const slug =
               imovelIndex !== -1 ? pathSegments[imovelIndex + 1] : undefined;
             const slugParts = slug !== undefined ? slug.split('-') : [];
-            propertyType = slugParts[1] ?? null;
+            tipoImovel = slugParts[1] ?? null;
           }
 
           const titleEl = anchor.querySelector<HTMLElement>(
@@ -46,37 +46,37 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
           const subtitleEl = anchor.querySelector<HTMLElement>(
             'p[data-cy="rp-cardProperty-street-txt"]',
           );
-          const title = [
+          const titulo = [
             titleEl?.innerText.trim() ?? '',
             subtitleEl?.innerText.trim() ?? '',
           ]
             .filter(Boolean)
             .join(' - ');
 
-          let location = '';
+          let localizacao = '';
           if (titleEl) {
             const lastChild = titleEl.childNodes[titleEl.childNodes.length - 1];
-            location = (lastChild?.textContent ?? '').trim();
+            localizacao = (lastChild?.textContent ?? '').trim();
           }
 
           const bedroomsText =
             anchor.querySelector<HTMLElement>(
               'li[data-cy="rp-cardProperty-bedroomQuantity-txt"] h3',
             )?.textContent ?? '';
-          const bedrooms = Number(/\d+/.exec(bedroomsText)?.[0] ?? '0');
+          const quartos = Number(/\d+/.exec(bedroomsText)?.[0] ?? '0');
 
           const bathroomsText =
             anchor.querySelector<HTMLElement>(
               'li[data-cy="rp-cardProperty-bathroomQuantity-txt"] h3',
             )?.textContent ?? '';
-          const bathrooms = Number(/\d+/.exec(bathroomsText)?.[0] ?? '0');
+          const banheiros = Number(/\d+/.exec(bathroomsText)?.[0] ?? '0');
 
           const parkingText =
             anchor.querySelector<HTMLElement>(
               'li[data-cy="rp-cardProperty-parkingSpacesQuantity-txt"] h3',
             )?.textContent ?? '';
           const parkingMatch = /\d+/.exec(parkingText);
-          const parkingSpots = parkingMatch ? Number(parkingMatch[0]) : null;
+          const vagas = parkingMatch ? Number(parkingMatch[0]) : null;
 
           const areaText =
             anchor.querySelector<HTMLElement>(
@@ -85,7 +85,7 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
           const areaMatch = /(\d+)/.exec(areaText);
           const area = areaMatch ? Number(areaMatch[1]) : 0;
 
-          let price = 0;
+          let preco = 0;
           let iptu = 0;
           let condominio = 0;
           const priceContainer = anchor.querySelector(
@@ -95,7 +95,7 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
             const priceText =
               priceContainer.querySelector<HTMLElement>('p.typo-body-large')
                 ?.innerText ?? '';
-            price = Number(priceText.replace(/\D/g, '')) || 0;
+            preco = Number(priceText.replace(/\D/g, '')) || 0;
 
             for (const p of priceContainer.querySelectorAll<HTMLElement>('p')) {
               const text = p.innerText;
@@ -110,25 +110,25 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
           }
 
           const item: RawListingItem = {
-            origin,
-            transactionType: itemTransactionType,
-            propertyType,
+            origem,
+            tipoTransacao: itemTipoTransacao,
+            tipoImovel,
             link,
-            title,
-            bedrooms,
-            bathrooms,
-            parkingSpots,
+            titulo,
+            quartos,
+            banheiros,
+            vagas,
             area,
-            location,
-            datePostedText: null,
-            price,
+            localizacao,
+            dataDePublicacaoText: null,
+            preco,
             iptu,
             condominio,
-            oldPrice: null,
+            precoAntigo: null,
           };
           return item;
         }),
-      { origin: OrigemAnuncio.ZAP_IMOVEIS, transactionType },
+      { origem: OrigemAnuncio.ZAP_IMOVEIS, tipoTransacao },
     );
 
     const validItems = items.filter((item) => item.link !== '');
@@ -147,7 +147,7 @@ export function createZapImoveisRouter(dataset: Dataset<RawListingItem>) {
     }, NEXT_LINK_SELECTOR);
 
     if (nextHref !== null) {
-      await enqueueLinks({ urls: [nextHref], userData: { transactionType } });
+      await enqueueLinks({ urls: [nextHref], userData: { tipoTransacao } });
     }
   });
 

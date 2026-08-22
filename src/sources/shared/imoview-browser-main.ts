@@ -39,7 +39,7 @@ import { openFreshDataset, openFreshRequestQueue } from './storage.js';
  */
 export function createImoviewBrowserRun(
   baseUrl: string,
-  origin: OrigemAnuncio,
+  origem: OrigemAnuncio,
   nomeExibicao: string,
   cidadeSlugAmigavel = 'belo-horizonte',
 ): () => Promise<CrawlStats> {
@@ -48,7 +48,7 @@ export function createImoviewBrowserRun(
     // observada está só no endpoint de busca propriamente dito (confirmado no
     // diagnóstico).
     const cidade = await resolveCidadeCode(baseUrl, cidadeSlugAmigavel);
-    const dataset = await openFreshDataset(origin);
+    const dataset = await openFreshDataset(origem);
 
     // `preNavigationHooks` roda antes do `page.goto` do Crawlee — precisa registrar o
     // listener de resposta antes da navegação, senão a chamada nativa (disparada assim
@@ -56,9 +56,9 @@ export function createImoviewBrowserRun(
     const pendingResponses = new WeakMap<Page, Promise<string>>();
 
     const stats: CrawlStats[] = [];
-    for (const transactionType of Object.values(TipoTransacao)) {
+    for (const tipoTransacao of Object.values(TipoTransacao)) {
       const requestQueue = await openFreshRequestQueue(
-        `${origin}-${transactionType}`,
+        `${origem}-${tipoTransacao}`,
       );
       const crawler = new PlaywrightCrawler({
         httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
@@ -80,29 +80,29 @@ export function createImoviewBrowserRun(
         requestHandler: createImoviewBrowserRouter(
           dataset,
           baseUrl,
-          origin,
+          origem,
           cidadeSlugAmigavel,
           pendingResponses,
         ),
         errorHandler: (context) => backoffOnRateLimit(context),
         failedRequestHandler: (context, error) => {
-          reportFailedRequest(origin, context, error);
+          reportFailedRequest(origem, context, error);
         },
       });
 
       const startUrl = buildListingPageUrl(
         baseUrl,
         cidadeSlugAmigavel,
-        transactionType,
+        tipoTransacao,
         1,
       );
       stats.push(
         await runWithWatchdog(
-          `${nomeExibicao} ${transactionType} (via navegador)`,
+          `${nomeExibicao} ${tipoTransacao} (via navegador)`,
           crawler.run([
             {
               url: startUrl,
-              userData: { transactionType, cidade, numeroPagina: 1 },
+              userData: { tipoTransacao, cidade, numeroPagina: 1 },
             },
           ]),
         ),

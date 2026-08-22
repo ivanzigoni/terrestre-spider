@@ -8,7 +8,7 @@ OLX, Viva Real, ZAP Imóveis e Netimóveis e persiste os anúncios em Postgres v
 
 1. `cp .env.example .env` e preencha a senha do Supabase (painel > Connect > Connection
    parameters) — dev e produção usam o mesmo Postgres (Supabase), não há Postgres local.
-2. `npm run migration:run` — aplica o schema (`imoveis`, `observacoes_preco`).
+2. `npm run migration:run` — aplica o schema (`anuncios`, `observacoes_preco`).
 3. `npm start` — roda as 4 fontes em sequência.
 
 O `docker-compose.yml` builda e roda o crawler containerizado (serviço `spider`), lendo as
@@ -25,7 +25,7 @@ Para rodar uma fonte isolada: `npx tsx src/sources/olx/main.ts` (também vale pa
   `CheerioCrawler` (sites 100% renderizados no servidor — sem precisar de browser); Netimóveis e
   ZAP Imóveis usam `PlaywrightCrawler` headless (parte do conteúdo só existe depois do JS
   rodar — confirmado ao vivo, não é escolha arbitrária).
-- **Load** (`src/persistence/load.ts`): lê o Dataset já populado e faz upsert em `imoveis` (por
+- **Load** (`src/persistence/load.ts`): lê o Dataset já populado e faz upsert em `anuncios` (por
   `link`) + insert append-only em `observacoes_preco`, todo scrape com o mesmo `scrapedAt`.
   `current_total_price` é `price + iptu + condominio` no aluguel, só `price` na venda (somar
   custo recorrente ao preço de compra não faz sentido).

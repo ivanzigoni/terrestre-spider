@@ -5,22 +5,22 @@ import type { TipoTransacao } from './enums/tipo-transacao.enum.js';
 
 /**
  * Formato gravado no Dataset do Crawlee por cada raspador, na fase Extract.
- * `totalPrice` não faz parte deste tipo — é calculado uma única vez, na fase Load.
+ * `precoTotal` não faz parte deste tipo — é calculado uma única vez, na fase Load.
  */
 export interface RawListingItem extends Dictionary {
-  origin: OrigemAnuncio;
-  transactionType: TipoTransacao;
-  propertyType: string | null;
+  origem: OrigemAnuncio;
+  tipoTransacao: TipoTransacao;
+  tipoImovel: string | null;
   link: string;
-  title: string;
-  bedrooms: number;
-  bathrooms: number;
-  parkingSpots: number | null;
+  titulo: string;
+  quartos: number;
+  banheiros: number;
+  vagas: number | null;
   area: number;
-  location: string;
-  datePostedText: string | null;
-  price: number;
+  localizacao: string;
+  dataDePublicacaoText: string | null;
+  preco: number;
   iptu: number;
   condominio: number;
-  oldPrice: number | null;
+  precoAntigo: number | null;
 }

@@ -8,11 +8,11 @@ import {
   buildSearchPayload,
   parseSearchResponse,
 } from './imoview-client.js';
-import { getTransactionType } from './request-user-data.js';
+import { getTipoTransacao } from './request-user-data.js';
 
 /**
  * Router único para o cluster Imoview inteiro — cada imobiliária só difere por `baseUrl` e
- * `origin`, então não há necessidade de um `routes.ts` por fonte (diferente das demais
+ * `origem`, então não há necessidade de um `routes.ts` por fonte (diferente das demais
  * fontes do projeto, cada uma com HTML/contrato próprio). Ver
  * `discovery/imoview-diagnostico.md` para a evidência de que o contrato é o mesmo.
  */
@@ -49,13 +49,13 @@ function getImoviewUserData(userData: unknown): ImoviewUserData {
 export function createImoviewRouter(
   dataset: Dataset<RawListingItem>,
   baseUrl: string,
-  origin: OrigemAnuncio,
+  origem: OrigemAnuncio,
 ) {
   const endpointUrl = `${baseUrl}/retornar-imoveis-disponiveis`;
   const router = createHttpRouter();
 
   router.addDefaultHandler(async ({ body, request, addRequests, log }) => {
-    const transactionType = getTransactionType(request.userData);
+    const tipoTransacao = getTipoTransacao(request.userData);
     const { cidade, numeroPagina } = getImoviewUserData(request.userData);
 
     // Parse manual em vez de `context.json` (tipado `any` por padrão) — mesma
@@ -66,15 +66,15 @@ export function createImoviewRouter(
     const { items, total } = parseSearchResponse(
       json,
       baseUrl,
-      origin,
-      transactionType,
+      origem,
+      tipoTransacao,
     );
 
     if (items.length > 0) {
       await dataset.pushData(items);
     }
     log.info(
-      `${origin}: ${String(items.length)} anúncio(s) na página ${String(numeroPagina)} (total=${String(total)})`,
+      `${origem}: ${String(items.length)} anúncio(s) na página ${String(numeroPagina)} (total=${String(total)})`,
     );
 
     const proximaPagina = numeroPagina + 1;
@@ -85,14 +85,14 @@ export function createImoviewRouter(
           method: 'POST',
           payload: buildSearchPayload({
             cidade,
-            transactionType,
+            tipoTransacao,
             numeroPagina: proximaPagina,
           }),
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
           },
-          userData: { transactionType, cidade, numeroPagina: proximaPagina },
-          uniqueKey: `${endpointUrl}#transactionType=${transactionType}&pagina=${String(proximaPagina)}`,
+          userData: { tipoTransacao, cidade, numeroPagina: proximaPagina },
+          uniqueKey: `${endpointUrl}#tipoTransacao=${tipoTransacao}&pagina=${String(proximaPagina)}`,
         },
       ]);
     }

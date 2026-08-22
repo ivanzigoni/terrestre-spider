@@ -3,13 +3,14 @@ import { log } from 'crawlee';
 import type { DataSource, EntityManager } from 'typeorm';
 
 import { BASE_BACKOFF_MS, MAX_BACKOFF_MS } from '../sources/shared/backoff.js';
-import { Imovel } from './entities/imovel.entity.js';
+import { Anuncio } from './entities/anuncio.entity.js';
 import { ObservacaoPreco } from './entities/observacao-preco.entity.js';
+import { TipoAnuncio } from './enums/tipo-anuncio.enum.js';
 import { TipoTransacao } from './enums/tipo-transacao.enum.js';
 import type { RawListingItem } from './raw-listing-item.js';
 
 // Quanto maior o lote, menos idas e vindas à rede — cada lote vira 2 queries (upsert de
-// imoveis + insert de observacoes_preco), não 4-5 por item. 500 linhas fica bem abaixo do
+// anuncios + insert de observacoes_preco), não 4-5 por item. 500 linhas fica bem abaixo do
 // limite de parâmetros do Postgres (65535) mesmo com ~19 colunas por linha.
 const BATCH_SIZE = 500;
 const MAX_BATCH_RETRIES = 2;
@@ -24,6 +25,7 @@ const UPDATE_COLUMNS = [
   'area',
   'location',
   'origin',
+  'ad_type',
   'transaction_type',
   'property_type',
   'date_posted_text',
@@ -44,16 +46,13 @@ interface UpsertedRow {
 }
 
 // Para venda, somar iptu/condominio ao preço não representa nada de real (preço de
-// compra + custo mensal recorrente); totalPrice só faz sentido como "custo total" no
+// compra + custo mensal recorrente); precoTotal só faz sentido como "custo total" no
 // aluguel. Em ambos os casos iptu/condominio continuam gravados, só não entram na soma.
-function calcularTotalPrice(
-  item: Pick<
-    RawListingItem,
-    'transactionType' | 'price' | 'iptu' | 'condominio'
-  >,
+function calcularPrecoTotal(
+  item: Pick<RawListingItem, 'tipoTransacao' | 'preco' | 'iptu' | 'condominio'>,
 ): number {
-  if (item.transactionType === TipoTransacao.VENDA) return item.price;
-  return item.price + item.iptu + item.condominio;
+  if (item.tipoTransacao === TipoTransacao.VENDA) return item.preco;
+  return item.preco + item.iptu + item.condominio;
 }
 
 /**
@@ -75,31 +74,34 @@ async function upsertBatch(
 
   const values = dedupedItems.map((item) => ({
     link: item.link,
-    title: item.title,
-    bedrooms: item.bedrooms,
-    bathrooms: item.bathrooms,
-    parkingSpots: item.parkingSpots,
+    titulo: item.titulo,
+    quartos: item.quartos,
+    banheiros: item.banheiros,
+    vagas: item.vagas,
     area: item.area,
-    location: item.location,
-    origin: item.origin,
-    transactionType: item.transactionType,
-    propertyType: item.propertyType,
-    datePostedText: item.datePostedText,
-    currentPrice: item.price,
-    currentIptu: item.iptu,
-    currentCondominio: item.condominio,
-    currentTotalPrice: calcularTotalPrice(item),
-    oldPrice: item.oldPrice,
-    active: true,
-    firstSeenAt: scrapedAt,
-    lastSeenAt: scrapedAt,
+    localizacao: item.localizacao,
+    origem: item.origem,
+    // Tudo que chega aqui vem da spider — único produtor deste pipeline hoje — então
+    // é sempre um anúncio de imóvel. Ver TipoAnuncio para o motivo da coluna existir.
+    tipoAnuncio: TipoAnuncio.IMOVEL,
+    tipoTransacao: item.tipoTransacao,
+    tipoImovel: item.tipoImovel,
+    dataDePublicacaoText: item.dataDePublicacaoText,
+    precoAtual: item.preco,
+    iptuAtual: item.iptu,
+    condominioAtual: item.condominio,
+    precoTotalAtual: calcularPrecoTotal(item),
+    precoAntigo: item.precoAntigo,
+    ativo: true,
+    vistoPelaPrimeiraVezEm: scrapedAt,
+    vistoPelaUltimaVezEm: scrapedAt,
     updatedAt: scrapedAt,
   }));
 
   const result = await manager
     .createQueryBuilder()
     .insert()
-    .into(Imovel)
+    .into(Anuncio)
     .values(values)
     .orUpdate(UPDATE_COLUMNS, ['link'])
     .returning('id, link, (xmax = 0) AS inserted')
@@ -120,12 +122,12 @@ async function upsertBatch(
       );
     }
     return {
-      imovel: { id: row.id },
-      price: item.price,
+      anuncio: { id: row.id },
+      preco: item.preco,
       iptu: item.iptu,
       condominio: item.condominio,
-      totalPrice: calcularTotalPrice(item),
-      scrapedAt,
+      precoTotal: calcularPrecoTotal(item),
+      raspadoEm: scrapedAt,
     };
   });
 
@@ -168,7 +170,7 @@ async function upsertBatchWithRetry(
 }
 
 /**
- * Lê o Dataset inteiro já populado pela fase Extract e upserta em `imoveis` (por `link`) em
+ * Lê o Dataset inteiro já populado pela fase Extract e upserta em `anuncios` (por `link`) em
  * lotes de BATCH_SIZE, gravando também uma observação de preço append-only por item. Cada
  * item da execução compartilha o mesmo `scrapedAt`.
  */
@@ -198,6 +200,6 @@ export async function loadIntoPostgres(
   await flush();
 
   log.info(
-    `load: ${String(inseridos)} imóvel(is) novo(s), ${String(atualizados)} atualizado(s)`,
+    `load: ${String(inseridos)} anúncio(s) novo(s), ${String(atualizados)} atualizado(s)`,
   );
 }

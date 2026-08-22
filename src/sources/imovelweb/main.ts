@@ -25,7 +25,7 @@ export async function runImovelweb(): Promise<CrawlStats> {
   const stats: CrawlStats[] = [];
   for (const entry of entries) {
     const requestQueue = await openFreshRequestQueue(
-      `${OrigemAnuncio.IMOVELWEB}-${entry.transactionType}`,
+      `${OrigemAnuncio.IMOVELWEB}-${entry.tipoTransacao}`,
     );
     const crawler = new PlaywrightCrawler({
       httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
@@ -61,11 +61,11 @@ export async function runImovelweb(): Promise<CrawlStats> {
     });
     stats.push(
       await runWithWatchdog(
-        `Imovelweb ${entry.transactionType}`,
+        `Imovelweb ${entry.tipoTransacao}`,
         crawler.run([
           {
             url: entry.url,
-            userData: { transactionType: entry.transactionType },
+            userData: { tipoTransacao: entry.tipoTransacao },
           },
         ]),
       ),

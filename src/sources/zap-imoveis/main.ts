@@ -25,7 +25,7 @@ export async function runZapImoveis(): Promise<CrawlStats> {
   const stats: CrawlStats[] = [];
   for (const entry of entries) {
     const requestQueue = await openFreshRequestQueue(
-      `${OrigemAnuncio.ZAP_IMOVEIS}-${entry.transactionType}`,
+      `${OrigemAnuncio.ZAP_IMOVEIS}-${entry.tipoTransacao}`,
     );
     const crawler = new PlaywrightCrawler({
       httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
@@ -41,11 +41,11 @@ export async function runZapImoveis(): Promise<CrawlStats> {
     });
     stats.push(
       await runWithWatchdog(
-        `ZAP Imóveis ${entry.transactionType}`,
+        `ZAP Imóveis ${entry.tipoTransacao}`,
         crawler.run([
           {
             url: entry.url,
-            userData: { transactionType: entry.transactionType },
+            userData: { tipoTransacao: entry.tipoTransacao },
           },
         ]),
       ),

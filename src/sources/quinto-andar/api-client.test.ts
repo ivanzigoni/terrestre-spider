@@ -67,7 +67,7 @@ describe('buildSearchRequestPayload', () => {
 });
 
 describe('parseSearchListResponse', () => {
-  it('mapeia só os itens que batem com o transactionType pedido, ignorando itens malformados', async () => {
+  it('mapeia só os itens que batem com o tipoTransacao pedido, ignorando itens malformados', async () => {
     const fixture = await loadFixture();
 
     const { items, total } = parseSearchListResponse(
@@ -84,18 +84,18 @@ describe('parseSearchListResponse', () => {
     if (item === undefined) {
       throw new Error('item esperado ausente em items');
     }
-    expect(item.origin).toBe(OrigemAnuncio.QUINTO_ANDAR);
-    expect(item.transactionType).toBe(TipoTransacao.ALUGUEL);
+    expect(item.origem).toBe(OrigemAnuncio.QUINTO_ANDAR);
+    expect(item.tipoTransacao).toBe(TipoTransacao.ALUGUEL);
     expect(item.link).toBe('https://www.quintoandar.com.br/imovel/894334726');
-    expect(item.propertyType).toBe('Apartamento');
-    expect(item.bedrooms).toBe(3);
+    expect(item.tipoImovel).toBe('Apartamento');
+    expect(item.quartos).toBe(3);
     expect(item.area).toBe(98);
-    expect(item.location).toBe('Buritis, Belo Horizonte');
-    expect(item.price).toBe(6800);
+    expect(item.localizacao).toBe('Buritis, Belo Horizonte');
+    expect(item.preco).toBe(6800);
     expect(item.iptu).toBe(532);
     expect(item.condominio).toBe(1150);
-    expect(item.datePostedText).toBeNull();
-    expect(item.oldPrice).toBeNull();
+    expect(item.dataDePublicacaoText).toBeNull();
+    expect(item.precoAntigo).toBeNull();
   });
 
   it('normaliza o sentinela -1 de iptu/condomínio para 0', () => {

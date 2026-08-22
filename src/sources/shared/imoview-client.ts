@@ -111,7 +111,7 @@ export async function resolveCidadeCode(
 
 export interface ImoviewSearchParams {
   cidade: ImoviewCidade;
-  transactionType: TipoTransacao;
+  tipoTransacao: TipoTransacao;
   numeroPagina: number;
 }
 
@@ -124,7 +124,7 @@ export interface ImoviewSearchParams {
  */
 export function buildSearchPayload(params: ImoviewSearchParams): string {
   return new URLSearchParams({
-    finalidade: CODIGO_FINALIDADE[params.transactionType],
+    finalidade: CODIGO_FINALIDADE[params.tipoTransacao],
     codigocidade: String(params.cidade.codigo),
     numeropagina: String(params.numeroPagina),
     numeroregistros: String(IMOVIEW_PAGE_SIZE),
@@ -217,7 +217,7 @@ function parseBrlToInteiro(valor: string): number | null {
   return Number.isNaN(numero) ? null : numero;
 }
 
-// `oldPrice` trata "R$ 0,00" como equivalente a string vazia — os dois sentinelas
+// `precoAntigo` trata "R$ 0,00" como equivalente a string vazia — os dois sentinelas
 // observados no cluster para "sem valor anterior" (Buritis usa vazio, Liderar usa "R$
 // 0,00"). Tratar 0 como preço anterior real seria um dado falso — nenhum imóvel teve
 // preço zero antes.
@@ -236,36 +236,36 @@ function parseAreaInterna(areainterna: string): number {
 function mapToRawListingItem(
   item: RawImoviewListingItem,
   baseUrl: string,
-  origin: OrigemAnuncio,
-  transactionType: TipoTransacao,
+  origem: OrigemAnuncio,
+  tipoTransacao: TipoTransacao,
 ): RawListingItem {
   return {
-    origin,
-    transactionType,
-    propertyType: item.tipo,
+    origem,
+    tipoTransacao,
+    tipoImovel: item.tipo,
     link: `${baseUrl}/imovel/${item.url_amigavel}/${String(item.codigo)}`,
-    title: item.titulo,
-    bedrooms: Number(item.numeroquartos) || 0,
-    bathrooms: Number(item.numerobanhos) || 0,
-    parkingSpots: Number(item.numerovagas) || 0,
+    titulo: item.titulo,
+    quartos: Number(item.numeroquartos) || 0,
+    banheiros: Number(item.numerobanhos) || 0,
+    vagas: Number(item.numerovagas) || 0,
     area: parseAreaInterna(item.areainterna),
-    location: `${item.bairro}, ${item.cidade}`,
-    datePostedText: item.datahoracadastro,
+    localizacao: `${item.bairro}, ${item.cidade}`,
+    dataDePublicacaoText: item.datahoracadastro,
     // Derivado de `valor` (string formatada), não de `valortratado`: confirmado ausente
     // em anúncios de aluguel do Liderar mesmo com `valor` presente. `current_price` é
-    // `int` no schema (src/persistence/entities/imovel.entity.ts) — `?? 0` é só rede de
+    // `int` no schema (src/persistence/entities/anuncio.entity.ts) — `?? 0` é só rede de
     // segurança contra formato inesperado, nunca esperado de disparar na prática.
-    price: parseBrlToInteiro(item.valor) ?? 0,
+    preco: parseBrlToInteiro(item.valor) ?? 0,
     // Nome de campo para IPTU não confirmado neste cluster (ver
     // discovery/imoview-diagnostico.md) — 0 é o default do schema, não uma leitura real.
     iptu: 0,
-    // Condomínio zero é dado real (ex.: casas), diferente de `oldPrice` — por isso usa
+    // Condomínio zero é dado real (ex.: casas), diferente de `precoAntigo` — por isso usa
     // o parser sem tratamento especial de zero.
     condominio:
       item.valorcondominio === undefined
         ? 0
         : (parseBrlToInteiro(item.valorcondominio) ?? 0),
-    oldPrice: parseValorAnterior(item.valoranterior),
+    precoAntigo: parseValorAnterior(item.valoranterior),
   };
 }
 
@@ -279,9 +279,9 @@ const POSTGRES_INT4_MAX = 2_147_483_647;
 
 function temValorPlausivel(item: RawListingItem): boolean {
   return (
-    item.price <= POSTGRES_INT4_MAX &&
+    item.preco <= POSTGRES_INT4_MAX &&
     item.condominio <= POSTGRES_INT4_MAX &&
-    (item.oldPrice === null || item.oldPrice <= POSTGRES_INT4_MAX)
+    (item.precoAntigo === null || item.precoAntigo <= POSTGRES_INT4_MAX)
   );
 }
 
@@ -293,8 +293,8 @@ export interface ParsedImoviewPage {
 export function parseSearchResponse(
   json: unknown,
   baseUrl: string,
-  origin: OrigemAnuncio,
-  transactionType: TipoTransacao,
+  origem: OrigemAnuncio,
+  tipoTransacao: TipoTransacao,
 ): ParsedImoviewPage {
   if (!isRawImoviewSearchResponse(json)) {
     throw new Error(
@@ -307,7 +307,7 @@ export function parseSearchResponse(
     if (!isRawImoviewListingItem(raw)) {
       continue;
     }
-    const mapped = mapToRawListingItem(raw, baseUrl, origin, transactionType);
+    const mapped = mapToRawListingItem(raw, baseUrl, origem, tipoTransacao);
     if (!temValorPlausivel(mapped)) {
       continue;
     }
