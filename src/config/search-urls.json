@@ -48,5 +48,15 @@
       "url": "https://www.quintoandar.com.br/comprar/imovel/belo-horizonte-mg-brasil",
       "transactionType": "venda"
     }
+  ],
+  "imovelweb": [
+    {
+      "url": "https://www.imovelweb.com.br/imoveis-aluguel-belo-horizonte-mg.html",
+      "transactionType": "aluguel"
+    },
+    {
+      "url": "https://www.imovelweb.com.br/imoveis-venda-belo-horizonte-mg.html",
+      "transactionType": "venda"
+    }
   ]
 }

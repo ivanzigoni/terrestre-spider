@@ -5,6 +5,7 @@ import { AppDataSource } from './persistence/data-source.js';
 import { Execucao } from './persistence/entities/execucao.entity.js';
 import { OrigemAnuncio } from './persistence/enums/origem-anuncio.enum.js';
 import { StatusExecucao } from './persistence/enums/status-execucao.enum.js';
+import { runImovelweb } from './sources/imovelweb/main.js';
 import { runNetimoveis } from './sources/netimoveis/main.js';
 import { runOlx } from './sources/olx/main.js';
 import { runQuintoAndar } from './sources/quinto-andar/main.js';
@@ -38,6 +39,7 @@ const FONTES: Fonte[] = [
     origem: OrigemAnuncio.QUINTO_ANDAR,
     run: runQuintoAndar,
   },
+  { nome: 'Imovelweb', origem: OrigemAnuncio.IMOVELWEB, run: runImovelweb },
 ];
 
 interface FimExecucao {
