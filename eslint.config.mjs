@@ -7,7 +7,10 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: ['eslint.config.mjs', 'dist', 'storage'],
+    // trigger/ é um microsserviço à parte (Dockerfile próprio, sem package.json/tsconfig
+    // compartilhado com o projeto principal) — não faz parte deste projeto TS, não deveria
+    // passar pelo linting type-aware dele.
+    ignores: ['eslint.config.mjs', 'dist', 'storage', 'trigger'],
   },
   eslint.configs.recommended,
   ...tseslint.configs.strictTypeChecked,

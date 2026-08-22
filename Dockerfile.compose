@@ -1,0 +1,29 @@
+# Dockerfile para rodar via docker-compose na própria infra (dev local, e futuramente a
+# EC2). Não confundir com o `Dockerfile` já existente no repo, que empacota pra deploy
+# como Apify Actor (imagem/runtime da Apify Cloud) — propósito diferente, mantido intacto.
+FROM mcr.microsoft.com/playwright:v1.62.1-noble AS builder
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci
+
+COPY . .
+# `npm run build` (não só `tsc`) — o script também copia search-urls.json pra dist/config/,
+# passo que faltando causa "ENOENT ... dist/config/search-urls.json" em runtime.
+RUN npm run build
+
+FROM mcr.microsoft.com/playwright:v1.62.1-noble
+
+WORKDIR /app
+
+COPY package*.json ./
+# Playwright browsers já vêm instalados na imagem base — só dependências de produção do
+# Node, sem o postinstall baixar browser de novo.
+RUN npm ci --omit=dev --ignore-scripts
+
+COPY --from=builder /app/dist ./dist
+
+# Migração roda a cada start (idempotente, TypeORM só aplica o que falta) antes do crawl —
+# evita depender de um passo manual separado contra um Postgres vazio na primeira vez.
+CMD ["sh", "-c", "node node_modules/typeorm/cli.js migration:run -d dist/persistence/data-source.js && node dist/main.js"]

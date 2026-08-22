@@ -6,3 +6,15 @@ storage
 
 # installed files
 node_modules
+
+# build output — reconstruído dentro da imagem. tsconfig.tsbuildinfo em especial: se
+# entrar na imagem, o tsc em modo incremental acha (errado) que a maior parte já está
+# compilada relativo a um dist/ que não existe no container, e emite só uma fração dos
+# arquivos — foi a causa do dist/persistence/ vir só com migrations/, sem data-source.js.
+dist
+*.tsbuildinfo
+
+# controle de versão e segredos locais
+.git
+.env
+.env.local

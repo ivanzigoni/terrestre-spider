@@ -1,24 +1,54 @@
 services:
-  postgres:
-    image: postgres:16-alpine
-    restart: unless-stopped
+  spider:
+    build:
+      context: .
+      dockerfile: Dockerfile.compose
+    # É um job que roda as 5 fontes e termina (ver src/main.ts) — não um servidor, não deve
+    # reiniciar sozinho.
+    restart: "no"
+    # Credenciais (Supabase) vêm do próprio .env do host — não há mais Postgres local
+    # neste compose.
+    env_file:
+      - .env
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-terrestre}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-terrestre}
-      POSTGRES_DB: ${POSTGRES_DB:-terrestre_spider}
-    ports:
-      - '${POSTGRES_PORT:-5432}:5432'
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test:
-        [
-          'CMD-SHELL',
-          'pg_isready -U ${POSTGRES_USER:-terrestre} -d ${POSTGRES_DB:-terrestre_spider}',
-        ]
-      interval: 5s
-      timeout: 5s
-      retries: 10
+      APIFY_LOG_FORMAT: JSON
 
-volumes:
-  postgres_data:
+  # Disparo manual de uma run via HTTP, pensado pra ser acionado pelo botão "Test" de um
+  # contact point do Grafana Alerting (terrestre-grafana). Faz a própria autenticação Basic
+  # Auth (sem nginx na frente — não havia TLS nem lógica extra que justificasse a camada,
+  # só auth e rate limit, e os dois cabem direto aqui).
+  trigger:
+    build:
+      context: ./trigger
+    restart: unless-stopped
+    ports:
+      - '${TRIGGER_PORT:-8088}:3100'
+    environment:
+      # Sem isso, o Compose derivaria o nome do projeto do basename do path montado
+      # (/workspace → projeto "workspace"), diferente do projeto real ("terrestre-spider",
+      # basename deste diretório no host) — quebra tanto o guard de concorrência (checa o
+      # projeto errado) quanto cria rede/imagem duplicadas e órfãs. Confirmado na prática:
+      # primeira tentativa sem isso deixou pra trás uma rede "workspace_default" e uma
+      # imagem "workspace-spider" de ~4GB.
+      COMPOSE_PROJECT_NAME: terrestre-spider
+      TRIGGER_WEBHOOK_PASSWORD: ${TRIGGER_WEBHOOK_PASSWORD}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Cópia real do projeto dentro do container — necessário pro `docker compose run`
+      # (rodando aqui, via socket do host) resolver build context e env_file corretamente.
+      # Dá a este container acesso de leitura ao .env real (mesma credencial do Postgres) —
+      # não é uma exposição nova: é o mesmo nível de confiança que um operador local já tem
+      # ao rodar `docker compose run` na própria máquina.
+      - .:/workspace:ro
+
+networks:
+  # Sem isso, o container "spider" não consegue resolver o host do Supabase — ele só
+  # responde por IPv6 (mesmo problema já documentado e resolvido em
+  # terrestre-grafana/docker-compose.yml), e a bridge padrão do Docker não tem rota IPv6 a
+  # menos que a rede seja configurada assim explicitamente. Subnet diferente da usada lá
+  # (fd00:1::/48) só pra manter os dois projetos com blocos ULA distintos, sem overlap.
+  default:
+    enable_ipv6: true
+    ipam:
+      config:
+        - subnet: fd00:2::/48

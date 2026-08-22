@@ -6,16 +6,14 @@ OLX, Viva Real, ZAP Imóveis e Netimóveis e persiste os anúncios em Postgres v
 
 ## Setup
 
-1. `cp .env.example .env`. Os valores ativos por padrão apontam para o Supabase de produção —
-   para desenvolvimento local, comente esse bloco e descomente o bloco "Dev local" logo abaixo
-   dele no `.env`.
-2. `npm run docker:up` — sobe o Postgres de desenvolvimento (só necessário se estiver usando o
-   bloco de dev local do passo 1).
-3. `npm run migration:run` — aplica o schema (`imoveis`, `observacoes_preco`).
-4. `npm start` — roda as 4 fontes em sequência.
+1. `cp .env.example .env` e preencha a senha do Supabase (painel > Connect > Connection
+   parameters) — dev e produção usam o mesmo Postgres (Supabase), não há Postgres local.
+2. `npm run migration:run` — aplica o schema (`imoveis`, `observacoes_preco`).
+3. `npm start` — roda as 4 fontes em sequência.
 
-O `docker-compose.yml` existe só para o Postgres local de dev — nunca entra em jogo em produção,
-que roda contra o Supabase (ver comentário em `.env.example`).
+O `docker-compose.yml` builda e roda o crawler containerizado (serviço `spider`), lendo as
+credenciais do Supabase do próprio `.env` — útil para testar localmente o mesmo container
+pensado para produção (EC2).
 
 Para rodar uma fonte isolada: `npx tsx src/sources/olx/main.ts` (também vale para
 `viva-real`, `zap-imoveis`, `netimoveis`).
@@ -53,19 +51,19 @@ src/discovery/probe.ts --only "<nome do site>"`.
 
 ## Scripts
 
-| Script                              | Descrição                                                   |
-| ----------------------------------- | ----------------------------------------------------------- |
-| `npm start`                         | Roda o crawler em modo desenvolvimento (`tsx`, sem build)   |
-| `npm run build`                     | Compila para `dist/`                                        |
-| `npm run start:prod`                | Roda o build compilado                                      |
-| `npm run docker:up` / `docker:down` | Sobe/derruba o Postgres de dev (`docker-compose.yml`)       |
-| `npm run migration:generate`        | Gera migration a partir do diff das entidades (`-- <nome>`) |
-| `npm run migration:run`             | Aplica migrations pendentes                                 |
-| `npm run migration:revert`          | Reverte a última migration                                  |
-| `npm run lint` / `lint:fix`         | ESLint (typescript-eslint strict + sonarjs + prettier)      |
-| `npm run format` / `format:check`   | Prettier                                                    |
-| `npm run typecheck`                 | `tsc --noEmit`                                              |
-| `npm test` / `test:watch`           | Vitest                                                      |
+| Script                              | Descrição                                                      |
+| ----------------------------------- | -------------------------------------------------------------- |
+| `npm start`                         | Roda o crawler em modo desenvolvimento (`tsx`, sem build)      |
+| `npm run build`                     | Compila para `dist/`                                           |
+| `npm run start:prod`                | Roda o build compilado                                         |
+| `npm run docker:up` / `docker:down` | Builda/derruba o crawler containerizado (`docker-compose.yml`) |
+| `npm run migration:generate`        | Gera migration a partir do diff das entidades (`-- <nome>`)    |
+| `npm run migration:run`             | Aplica migrations pendentes                                    |
+| `npm run migration:revert`          | Reverte a última migration                                     |
+| `npm run lint` / `lint:fix`         | ESLint (typescript-eslint strict + sonarjs + prettier)         |
+| `npm run format` / `format:check`   | Prettier                                                       |
+| `npm run typecheck`                 | `tsc --noEmit`                                                 |
+| `npm test` / `test:watch`           | Vitest                                                         |
 
 Hooks de pre-commit (husky + lint-staged) rodam lint/format nos arquivos staged automaticamente.
 
