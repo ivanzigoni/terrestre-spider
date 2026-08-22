@@ -10,6 +10,7 @@ import {
 import { OrigemAnuncio } from '../enums/origem-anuncio.enum.js';
 import { TipoTransacao } from '../enums/tipo-transacao.enum.js';
 import { ObservacaoPreco } from './observacao-preco.entity.js';
+import type { RelationRef } from './relation-ref.js';
 
 @Entity('imoveis')
 export class Imovel {
@@ -82,5 +83,5 @@ export class Imovel {
   declare updatedAt: Date;
 
   @OneToMany(() => ObservacaoPreco, (observacao) => observacao.imovel)
-  declare observacoesPreco: ObservacaoPreco[];
+  declare observacoesPreco: RelationRef<ObservacaoPreco>[];
 }

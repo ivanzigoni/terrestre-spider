@@ -9,6 +9,7 @@ import {
 } from 'typeorm';
 
 import { Imovel } from './imovel.entity.js';
+import type { RelationRef } from './relation-ref.js';
 
 @Entity('observacoes_preco')
 @Index(['imovel', 'scrapedAt'])
@@ -21,7 +22,7 @@ export class ObservacaoPreco {
     nullable: false,
   })
   @JoinColumn({ name: 'imovel_id' })
-  declare imovel: Imovel;
+  declare imovel: RelationRef<Imovel>;
 
   @Column({ type: 'int' })
   declare price: number;
