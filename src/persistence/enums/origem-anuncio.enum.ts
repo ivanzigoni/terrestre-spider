@@ -5,4 +5,6 @@ export enum OrigemAnuncio {
   NETIMOVEIS = 'netimoveis',
   QUINTO_ANDAR = 'quinto_andar',
   IMOVELWEB = 'imovelweb',
+  IMOBILIARIA_BURITIS = 'imobiliaria_buritis',
+  LIDERAR_IMOVEIS = 'liderar_imoveis',
 }

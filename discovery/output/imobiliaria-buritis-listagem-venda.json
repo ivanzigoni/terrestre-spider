@@ -1,0 +1,160 @@
+{
+  "nome": "Imobiliária Buritis - Listagem Venda",
+  "urlSolicitada": "https://www.imobiliariaburitis.com.br/venda/imovel/belo-horizonte",
+  "urlFinal": "https://www.imobiliariaburitis.com.br/venda/imovel/belo-horizonte",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\n\nDisallow: /imovel-nao-encontrado/\nDisallow: /obrigado-imovel-ideal/\nDisallow: /contato-obrigado/\nDisallow: /agendar-obrigado/\nDisallow: /fale-com-corretor-obrigado/\n\nSitemap: https://www.imobiliariaburitis.com.br/sitemap.xml\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 1,
+    "jsonLdSample": "\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Organization\",\n    \"name\": \"Imobiliária Buritis\",\n    \"description\": \"Compre, venda e Alugue imóveis em Belo Horizonte e região\",\n    \"address\": {\n      \"@type\": \"PostalAddress\",\n      \"addressCountry\": {\n        \"@type\": \"Country\",\n        \"name\": \"BR\"\n      },\n      \"addressLocality\": \"Belo Horizonte\",\n      \"addressRegion\": \"mg\"\n    },\n    \"brand\": {\n      \"@type\": \"Brand\",\n      \"logo\": \"https://www.imobiliariaburitis.com.br/assets/images/logo-link.png\"\n    },\n    \"URL\": \"https://www.imobiliariaburitis.com.br/venda/imovel/belo-horizonte\"\n  }\n",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-favoritos",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&apvc=1&ae=g&auid=1884584229.1787362893&dt=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&en=page_view&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&scrsrc=www.googletagmanager.com&rnd=773682792.1787362893&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He68j0h1v871029822za200zd871029822xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~120315471~120385422&tft=1787362892909&tfd=5540&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1884584229.1787362893&gtm=45He68j0h1v871029822za200zd871029822xea&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=220518761&t=pageview&_s=1&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&ul=en-us&dt=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&sr=1280x720&vp=1280x720&_u=YEBAAEABAAAAACAAI~&jid=316262139&gjid=1196258378&cid=850302940.1787362893&tid=UA-79362085-1&_gid=1572657568.1787362893&_r=1&_slc=1&gtm=45He68j0h1n81TMCH5HHv871029822za200zd871029822&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~120315471~120385422&z=1567949623",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-cidades-disponiveis",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-parametros-gerais",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-parametros-url",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-campos-extas-disponiveis",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-FNPKQ1FE0K&gtm=45je68j0h1v871172569z8871029822za20gzb871029822zd871029822&_p=1787362892429&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AgAAAGAC&are=1&cid=850302940.1787362893&frm=0&pscdl=noapi&rcb=7&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120315471~120385423~120474863&sid=1787362893&sct=1&seg=0&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&dt=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&en=page_view&_fv=1&_ss=1&tfd=5835",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/measurement/conversion?random=1787362893207&cv=11&tid=G-FNPKQ1FE0K&fst=1787362893207&fmt=8&en=encontrar_um_agente&gtm=45je68j0h1v871172569za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120315471~120385423~120474863&u_w=1280&u_h=720&hl=en&gl=us&url=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&gacid=850302940.1787362893&frm=0&tiba=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&value=0&currency_code=USD&npa=0&pscdl=noapi&auid=1884584229.1787362893&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&rcb=7",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-FNPKQ1FE0K&gtm=45je68j0h1v871172569za20gzb871029822zd871029822&_p=1787362892429&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAgAAGQC&_prs=ok&are=1&cid=850302940.1787362893&frm=0&pscdl=noapi&rcb=7&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120315471~120385423~120474863&sid=1787362893&sct=1&seg=0&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&dt=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&cu=USD&en=encontrar_um_agente&_c=1&epn.value=0&_et=5&tfd=5851",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/880141072/?random=1787362893261&cv=11&fst=1787362893261&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68j0h1v887901520z8871029822za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119793972~120213116~120315470~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&rcb=4&frm=0&tiba=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1884584229.1787362893&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/880141072/?random=1787362893284&cv=11&fst=1787362893284&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be68j0h1v887901520z8871029822za20gzb871029822zd871029822xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119793972~120213116~120315470~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&rcb=4&frm=0&tiba=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1884584229.1787362893&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=1884584229.1787362893&dt=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&tid=AW-880141072&en=page_view&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&scrsrc=www.googletagmanager.com&rnd=773682792.1787362893&navt=n&npa=0&gtm=45be68j0h1v887901520z8871029822za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119793972~120213116~120315470~120385423&tft=1787362893290&tfd=5921&tids=AW-880141072&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&ae=g&auid=1884584229.1787362893&dt=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&tid=AW-880141072&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&scrsrc=www.googletagmanager.com&rnd=773682792.1787362893&navt=n&npa=0&_tu=CA&gtm=45be68j0h1v887901520z8871029822za20gzb871029822zd871029822xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119793972~120213116~120315470~120385423&tft=1787362893290&tfd=5922&tids=AW-880141072&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-imoveis-disponiveis",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.imobiliariaburitis.com.br/retornar-bairros-disponiveis",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/measurement/conversion?random=1787362902625&cv=11&tid=G-FNPKQ1FE0K&fst=1787362902625&fmt=8&en=encontrar_um_agente&gtm=45je68j0h1v871172569za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120315471~120385423~120474863&u_w=1280&u_h=720&hl=en&gl=us&url=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte%2Ftodos-os-bairros%2F%3F%26pagina%3D1%26ordenacao%3Ddataatualizacaodesc&gacid=850302940.1787362893&frm=0&tiba=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&value=0&currency_code=USD&npa=0&pscdl=noapi&auid=1884584229.1787362893&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&rcb=7",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-FNPKQ1FE0K&gtm=45je68j0h1v871172569za20gzb871029822zd871029822&_p=1787362892429&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AkAAAGQC&ae=a&are=1&cid=850302940.1787362893&frm=0&pscdl=noapi&rcb=7&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=3&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120315471~120385423~120474863&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte%2Ftodos-os-bairros%2F%3F%26pagina%3D1%26ordenacao%3Ddataatualizacaodesc&dr=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&sid=1787362893&sct=1&seg=1&dt=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&en=page_view&_et=9401&tfd=15262",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-FNPKQ1FE0K&gtm=45je68j0h1v871172569za20gzb871029822zd871029822&_p=1787362892429&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAgAAGQC&_prs=ok&are=1&cid=850302940.1787362893&frm=0&pscdl=noapi&rcb=7&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=4&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120315471~120385423~120474863&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte%2Ftodos-os-bairros%2F%3F%26pagina%3D1%26ordenacao%3Ddataatualizacaodesc&dr=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&sid=1787362893&sct=1&seg=1&dt=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&cu=USD&en=encontrar_um_agente&_c=1&_et=1&epn.value=0&tfd=15262",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/pagead/form-data/880141072?gtm=45be68j0h1v887901520za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119793972~120213116~120315470~120385423&rcb=4&npa=0&frm=0&pscdl=noapi&ae=a&auid=1884584229.1787362893&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/form-data/880141072?gtm=45be68j0h1v887901520za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119793972~120213116~120315470~120385423&rcb=4&npa=0&frm=0&ae=a&pscdl=noapi&auid=1884584229.1787362893&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&ec_mode=a&em=tv.1&emd=tvd.1&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/880141072/?random=1787362902634&cv=11&fst=1787362902634&fmt=8&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be68j0h1v887901520za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119793972~120213116~120315470~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte%2Ftodos-os-bairros%2F%3F%26pagina%3D1%26ordenacao%3Ddataatualizacaodesc&ref=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte&rcb=4&frm=0&tiba=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&ae=a&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1884584229.1787362893&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dpage_view&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=4&frm=0&apvc=0&auid=1884584229.1787362893&dt=Im%C3%B3veis%20%C3%A0%20venda%20em%20Belo%20Horizonte&tid=AW-880141072&en=page_view&dl=https%3A%2F%2Fwww.imobiliariaburitis.com.br%2Fvenda%2Fimovel%2Fbelo-horizonte%2Ftodos-os-bairros%2F&scrsrc=www.googletagmanager.com&rnd=773682792.1787362893&navt=n&npa=0&ae=a&gtm=45be68j0h1v887901520za20gzb871029822zd871029822xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~119793972~120213116~120315470~120385423&tft=1787362902647&tfd=15278&tids=AW-880141072&fmt=8",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [],
+  "titulo": "Imóveis à venda em Belo Horizonte",
+  "bodyTextSample": "Usamos cookies para personalizar conteúdos e melhorar a sua experiência. Para ver nossa política de cookies Clique aqui\nAceito\nCOMPRAR\nALUGAR\nANUNCIAR MEU IMÓVEL\nFAVORITOS\nCOMPRAR\nALUGAR\nLANÇAMENTOS\nCIDADES\nTodos\nBelo Horizonte\nCapitólio\nCONTAGEM\nJABOTICATUBAS\nLAGOA SANTA\nNão informado\nNOVA LIMA\nRio Acima\nSETE LAGOAS\nBAIRROS\n0 Selecionados\nTIPO DE IMÒVEL\nANDAR\nANDAR CORRIDO\nAPART HOTEL\nAPARTAMENTO\nAPARTAMENTO COM ÁREA PRIVATIVA\nAPARTAMENTO DUPLEX\nAREA\nÁREA PRIVATIVA\nCASA\nCASA COMERCIAL\nCASA EM CONDOMÍNIO\nCASA GEMINADA\nCOBERTURA\nCONJUNTO DE SALAS\nESTACIONAMENTO\nFLAT\nGALPÃO\nGARAGEM\nKITNET\nLOFT\nLOJA\nLOTE\nLOTE EM CONDOMÍNIO\nLOTES EM CONDOMÍNIO\nPONTO COMERCIAL\nPRÉDIO\nPRÉDIO COMERCIAL\nSALA\nSALÃO\nSÍTIO\nSTUDIO\nTERRENO / ÁREA\nCONDOMÍNIOS\nTodos\nQUARTOS\n1\n2\n3\n4+\nBANHEIROS\n1\n2\n3\n4+\nVAGAS\n1\n2\n3\n4+\nSUITES\n1\n2\n3\n4+\nVALOR\n-\nÁREA\n-\nCÓDIGO DO IMÓVEL\nIMOVEL\nElevador\nAceita Financiamento\nAceita Permuta\nArea Privativa\nÁrea serviço\nBox banheiro\nCloset\nDCE\nLavabo\nMobiliado\nVaranda gourmet\nAlarme\nBox Despejo\n",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integra-imoveis-regionais/terrestre-spider/discovery/output/screenshots/imobiliaria-buritis-listagem-venda.png",
+  "erro": null,
+  "timestamp": "2026-08-22T01:41:27.196Z"
+}

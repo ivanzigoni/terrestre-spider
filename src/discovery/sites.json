@@ -100,6 +100,11 @@
     "categoria": "imobiliaria"
   },
   {
+    "nome": "Imobiliária Buritis - Listagem Venda",
+    "url": "https://www.imobiliariaburitis.com.br/venda/imovel/belo-horizonte",
+    "categoria": "imobiliaria"
+  },
+  {
     "nome": "Imobiliária Pampulha",
     "url": "https://imobiliariapampulha.com.br/",
     "categoria": "imobiliaria"
@@ -127,6 +132,11 @@
   {
     "nome": "Liderar Imóveis",
     "url": "https://www.liderarimoveis.com.br/",
+    "categoria": "imobiliaria"
+  },
+  {
+    "nome": "Liderar Imóveis - Listagem Venda",
+    "url": "https://www.liderarimoveis.com.br/venda/imovel/belo-horizonte",
     "categoria": "imobiliaria"
   },
   {
