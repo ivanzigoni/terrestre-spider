@@ -6,6 +6,7 @@ import { Execucao } from './persistence/entities/execucao.entity.js';
 import { OrigemAnuncio } from './persistence/enums/origem-anuncio.enum.js';
 import { StatusExecucao } from './persistence/enums/status-execucao.enum.js';
 import { Mutex } from './persistence/upload-mutex.js';
+import { runCasaGrandeImoveis } from './sources/casa-grande-imoveis/main.js';
 import { runImobiliariaBuritis } from './sources/imobiliaria-buritis/main.js';
 import { runImovelweb } from './sources/imovelweb/main.js';
 import { runLiderarImoveis } from './sources/liderar-imoveis/main.js';
@@ -33,7 +34,10 @@ interface Fonte {
 // de uma com PlaywrightCrawler — não alfabética nem por origem. Com
 // BATCH_SIZE=2 (ver crawler-defaults.ts), cada lote de 2 processados juntos
 // nunca sobe 2 browsers Chromium headless ao mesmo tempo: o par pesado fica
-// isolado, o leve roda ao lado dele.
+// isolado, o leve roda ao lado dele. Casa Grande Imóveis é HTTP-only (sem
+// Playwright) e fica ao final, sem par — com número ímpar de fontes, o
+// último lote sob BATCH_SIZE=2 roda ela sozinha, o que preserva o invariante
+// (nunca 2 browsers juntos) mesmo sem parceiro.
 const FONTES: Fonte[] = [
   { nome: 'OLX', origem: OrigemAnuncio.OLX, run: runOlx },
   {
@@ -58,6 +62,11 @@ const FONTES: Fonte[] = [
     nome: 'Liderar Imóveis',
     origem: OrigemAnuncio.LIDERAR_IMOVEIS,
     run: runLiderarImoveis,
+  },
+  {
+    nome: 'Casa Grande Imóveis',
+    origem: OrigemAnuncio.CASA_GRANDE_IMOVEIS,
+    run: runCasaGrandeImoveis,
   },
 ];
 

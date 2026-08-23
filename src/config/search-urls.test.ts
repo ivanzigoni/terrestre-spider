@@ -10,6 +10,7 @@ import { loadStartUrls } from './search-urls.js';
 const FONTES_SEM_SEARCH_URLS = new Set<OrigemAnuncio>([
   OrigemAnuncio.IMOBILIARIA_BURITIS,
   OrigemAnuncio.LIDERAR_IMOVEIS,
+  OrigemAnuncio.CASA_GRANDE_IMOVEIS,
 ]);
 
 const FONTES_COM_SEARCH_URLS = Object.values(OrigemAnuncio).filter(

@@ -145,7 +145,9 @@ interface RawImoviewListingItem {
   numerovagas: string;
   areainterna: string;
   valor: string;
-  valoranterior: string;
+  // string nos sites originais (Buritis, Liderar); número no Casa Grande — 3º cliente
+  // do cluster, mesmo campo, tipo diferente na resposta. Ver `parseValorAnterior`.
+  valoranterior: string | number;
   valorcondominio: string | undefined;
   datahoracadastro: string;
   url_amigavel: string;
@@ -176,7 +178,8 @@ function isRawImoviewListingItem(
     typeof item.numerovagas === 'string' &&
     typeof item.areainterna === 'string' &&
     typeof item.valor === 'string' &&
-    typeof item.valoranterior === 'string' &&
+    (typeof item.valoranterior === 'string' ||
+      typeof item.valoranterior === 'number') &&
     (item.valorcondominio === undefined ||
       typeof item.valorcondominio === 'string') &&
     typeof item.datahoracadastro === 'string' &&
@@ -217,12 +220,12 @@ function parseBrlToInteiro(valor: string): number | null {
   return Number.isNaN(numero) ? null : numero;
 }
 
-// `precoAntigo` trata "R$ 0,00" como equivalente a string vazia — os dois sentinelas
-// observados no cluster para "sem valor anterior" (Buritis usa vazio, Liderar usa "R$
-// 0,00"). Tratar 0 como preço anterior real seria um dado falso — nenhum imóvel teve
-// preço zero antes.
-function parseValorAnterior(valor: string): number | null {
-  const numero = parseBrlToInteiro(valor);
+// `precoAntigo` trata três sentinelas de "sem valor anterior" como equivalentes: string
+// vazia (Buritis), "R$ 0,00" (Liderar) e o número `0` (Casa Grande — mesmo campo, mas a
+// resposta já vem numérica em vez de string formatada). Tratar 0 como preço anterior
+// real seria um dado falso — nenhum imóvel teve preço zero antes.
+function parseValorAnterior(valor: string | number): number | null {
+  const numero = typeof valor === 'number' ? valor : parseBrlToInteiro(valor);
   return numero === null || numero === 0 ? null : numero;
 }
 
