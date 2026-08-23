@@ -1,3 +1,4 @@
+import type { Dictionary } from 'crawlee';
 import { Dataset, RequestQueue } from 'crawlee';
 
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
@@ -7,13 +8,17 @@ import type { RawListingItem } from '../../persistence/raw-listing-item.js';
  * (que só cobre as storages "default") — como o orquestrador roda as 4 fontes em
  * sequência no mesmo processo, cada fonte precisa começar do zero explicitamente,
  * senão itens/URLs de uma execução anterior vazam para a próxima.
+ *
+ * Genérico com default `RawListingItem` — as chamadas existentes (sem argumento de
+ * tipo explícito) continuam recebendo `Dataset<RawListingItem>` como sempre; só um
+ * Dataset de outro formato (ex.: captura bruta) precisa passar o tipo explicitamente.
  */
-export async function openFreshDataset(
+export async function openFreshDataset<T extends Dictionary = RawListingItem>(
   name: string,
-): Promise<Dataset<RawListingItem>> {
-  const existing = await Dataset.open<RawListingItem>(name);
+): Promise<Dataset<T>> {
+  const existing = await Dataset.open<T>(name);
   await existing.drop();
-  return Dataset.open<RawListingItem>(name);
+  return Dataset.open<T>(name);
 }
 
 export async function openFreshRequestQueue(

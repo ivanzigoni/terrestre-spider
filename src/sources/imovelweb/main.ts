@@ -1,24 +1,41 @@
 import { Browser, ImpitHttpClient } from '@crawlee/impit-client';
-import { PlaywrightCrawler } from 'crawlee';
+import * as Sentry from '@sentry/node';
+import { log, PlaywrightCrawler } from 'crawlee';
 
 import { loadStartUrls } from '../../config/search-urls.js';
-import { AppDataSource } from '../../persistence/data-source.js';
+import { createDataSource } from '../../persistence/data-source.js';
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
-import { loadIntoPostgres } from '../../persistence/load.js';
+import type { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
+// import { loadIntoPostgres } from '../../persistence/load.js';
+import {
+  inserirCapturasBrutas,
+  uploadCapturasBrutas,
+} from '../../persistence/load-raw-captures.js';
+import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
+import { Mutex } from '../../persistence/upload-mutex.js';
 import { backoffOnRateLimit } from '../shared/backoff.js';
 import { type CrawlStats, sumCrawlStats } from '../shared/crawl-stats.js';
 import {
-  MAX_REQUESTS_PER_CRAWL,
+  getMaxListingPagesPerCrawl,
   SAME_DOMAIN_DELAY_SECS,
 } from '../shared/crawler-defaults.js';
 import { reportFailedRequest } from '../shared/report-failed-request.js';
 import { runWithWatchdog } from '../shared/run-with-watchdog.js';
 import { openFreshDataset, openFreshRequestQueue } from '../shared/storage.js';
-import { createImovelwebRouter } from './routes.js';
+import {
+  createImovelwebDetalheRouter,
+  createImovelwebRouter,
+} from './routes.js';
 
-export async function runImovelweb(): Promise<CrawlStats> {
+export async function runImovelweb(
+  uploadMutex: Mutex = new Mutex(),
+): Promise<CrawlStats> {
+  const maxListingPages = getMaxListingPagesPerCrawl(OrigemAnuncio.IMOVELWEB);
   const entries = await loadStartUrls(OrigemAnuncio.IMOVELWEB);
   const dataset = await openFreshDataset(OrigemAnuncio.IMOVELWEB);
+  const capturaDataset = await openFreshDataset<RawCaptureItem>(
+    `${OrigemAnuncio.IMOVELWEB}-raw`,
+  );
 
   // Um crawler por URL de busca (aluguel, venda) — o teto de páginas
   // (maxRequestsPerCrawl) vale por URL, não somado entre elas.
@@ -29,11 +46,11 @@ export async function runImovelweb(): Promise<CrawlStats> {
     );
     const crawler = new PlaywrightCrawler({
       httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
-      requestHandler: createImovelwebRouter(dataset),
+      requestHandler: createImovelwebRouter(dataset, capturaDataset),
       requestQueue,
       headless: true,
       sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
-      maxRequestsPerCrawl: MAX_REQUESTS_PER_CRAWL,
+      maxRequestsPerCrawl: maxListingPages,
       // O SessionPool do Crawlee (`_throwOnBlockedRequest`, em basic-crawler.js) aposenta a
       // sessão e lança erro de imediato em qualquer resposta 401/403/429, ANTES até da
       // heurística própria do Crawlee pra desafio Cloudflare (que espera 5s e reavalia)
@@ -53,7 +70,17 @@ export async function runImovelweb(): Promise<CrawlStats> {
       // garantia de alcançar o teto de página 5 já imposto pelo robots.txt (routes.ts) —
       // e, de qualquer forma, não há, e não deve haver, nenhuma tentativa de resolver o
       // desafio interativamente.
-      sessionPoolOptions: { blockedStatusCodes: [401, 429] },
+      //
+      // Também isola o Key-Value Store de sessão por origem: sem isso, o SessionPool
+      // se autopersiste no store DEFAULT do processo com uma chave fixa — sob
+      // SPIDER_BATCH_SIZE > 1, duas fontes escrevendo ali ao mesmo tempo (o evento
+      // persistState do Crawlee dispara pra todas juntas, a cada 60s) corrompeu esse
+      // arquivo em runs reais (JSON5: invalid end of input). Mesmo risco existiria
+      // com `context.useState()` — não usar sem configurar um KVS próprio.
+      sessionPoolOptions: {
+        blockedStatusCodes: [401, 429],
+        persistStateKeyValueStoreId: `${OrigemAnuncio.IMOVELWEB}-sessions`,
+      },
       errorHandler: (context) => backoffOnRateLimit(context),
       failedRequestHandler: (context, error) => {
         reportFailedRequest(OrigemAnuncio.IMOVELWEB, context, error);
@@ -68,15 +95,97 @@ export async function runImovelweb(): Promise<CrawlStats> {
             userData: { tipoTransacao: entry.tipoTransacao },
           },
         ]),
+        maxListingPages,
       ),
     );
   }
 
-  await AppDataSource.initialize();
+  // Fase de detalhe: visita cada link único descoberto na listagem — sem teto próprio
+  // (o volume já é limitado indiretamente por MAX_LISTING_PAGES_PER_CRAWL). Um link
+  // pode aparecer nas duas transações raramente; fica com a primeira tipoTransacao
+  // vista, não é crítico pra captura bruta.
+  const linksUnicos = new Map<string, TipoTransacao>();
+  await dataset.forEach((item) => {
+    if (!linksUnicos.has(item.link)) {
+      linksUnicos.set(item.link, item.tipoTransacao);
+    }
+  });
+
+  if (linksUnicos.size > 0) {
+    const detalheQueue = await openFreshRequestQueue(
+      `${OrigemAnuncio.IMOVELWEB}-detalhe`,
+    );
+    await detalheQueue.addRequests(
+      [...linksUnicos].map(([url, tipoTransacao]) => ({
+        url,
+        userData: { tipoTransacao },
+      })),
+    );
+    const detalheCrawler = new PlaywrightCrawler({
+      httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
+      requestHandler: createImovelwebDetalheRouter(capturaDataset),
+      requestQueue: detalheQueue,
+      headless: true,
+      sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
+      // Mesmo ajuste do crawler de listagem acima (ver comentário lá) — evita que um
+      // 403 do desafio Cloudflare aposente a sessão inteira, e usa o mesmo Key-Value
+      // Store de sessão (nunca rodam ao mesmo tempo dentro desta fonte).
+      sessionPoolOptions: {
+        blockedStatusCodes: [401, 429],
+        persistStateKeyValueStoreId: `${OrigemAnuncio.IMOVELWEB}-sessions`,
+      },
+      errorHandler: (context) => backoffOnRateLimit(context),
+      failedRequestHandler: (context, error) => {
+        reportFailedRequest(OrigemAnuncio.IMOVELWEB, context, error);
+      },
+    });
+    stats.push(
+      await runWithWatchdog(
+        'Imovelweb detalhe',
+        detalheCrawler.run(),
+        linksUnicos.size,
+      ),
+    );
+  }
+
+  // anuncios/observacoes_preco foram descontinuadas (ver migration
+  // DropAnunciosTables) — loadIntoPostgres fica comentado, não apagado.
+  //
+  // const dataSource = createDataSource();
+  // await dataSource.initialize();
+  // try {
+  //   await loadIntoPostgres(dataset, dataSource);
+  // } finally {
+  //   await dataSource.destroy();
+  // }
+
+  // Dentro do mutex: duas fontes chamando uploadCapturasBrutas ao mesmo
+  // tempo corrompeu o armazenamento local do Crawlee numa run real (ver
+  // upload-mutex.ts).
   try {
-    await loadIntoPostgres(dataset, AppDataSource);
-  } finally {
-    await AppDataSource.destroy();
+    await uploadMutex.runExclusive(async () => {
+      const capturas = await uploadCapturasBrutas(capturaDataset);
+      const dataSource = createDataSource();
+      await dataSource.initialize();
+      try {
+        await inserirCapturasBrutas(capturas, dataSource);
+      } finally {
+        await dataSource.destroy();
+      }
+      log.info(
+        `Imovelweb: ${String(capturas.length)} captura(s) bruta(s) enviada(s) ao bucket e registrada(s) em capturas_brutas`,
+      );
+    });
+  } catch (error) {
+    log.warning(
+      'Imovelweb: captura bruta falhou, run principal não é afetada',
+      {
+        error,
+      },
+    );
+    Sentry.captureException(error, {
+      tags: { fonte: OrigemAnuncio.IMOVELWEB, fase: 'captura-bruta' },
+    });
   }
 
   return sumCrawlStats(stats);

@@ -1,16 +1,18 @@
 import * as Sentry from '@sentry/node';
 import { log } from 'crawlee';
 
-import { AppDataSource } from './persistence/data-source.js';
+import { createDataSource } from './persistence/data-source.js';
 import { Execucao } from './persistence/entities/execucao.entity.js';
 import { OrigemAnuncio } from './persistence/enums/origem-anuncio.enum.js';
 import { StatusExecucao } from './persistence/enums/status-execucao.enum.js';
+import { Mutex } from './persistence/upload-mutex.js';
 import { runImobiliariaBuritis } from './sources/imobiliaria-buritis/main.js';
 import { runImovelweb } from './sources/imovelweb/main.js';
 import { runLiderarImoveis } from './sources/liderar-imoveis/main.js';
 import { runNetimoveis } from './sources/netimoveis/main.js';
 import { runOlx } from './sources/olx/main.js';
 import { runQuintoAndar } from './sources/quinto-andar/main.js';
+import { BATCH_SIZE } from './sources/shared/crawler-defaults.js';
 import { runVivaReal } from './sources/viva-real/main.js';
 import { runZapImoveis } from './sources/zap-imoveis/main.js';
 import type { CrawlStats } from './sources/shared/crawl-stats.js';
@@ -24,17 +26,22 @@ Sentry.init({ dsn: process.env.SENTRY_DSN, tracesSampleRate: 0 });
 interface Fonte {
   nome: string;
   origem: OrigemAnuncio;
-  run: () => Promise<CrawlStats>;
+  run: (uploadMutex: Mutex) => Promise<CrawlStats>;
 }
 
+// Ordem pareada — uma fonte sem browser (CheerioCrawler/HttpCrawler) seguida
+// de uma com PlaywrightCrawler — não alfabética nem por origem. Com
+// BATCH_SIZE=2 (ver crawler-defaults.ts), cada lote de 2 processados juntos
+// nunca sobe 2 browsers Chromium headless ao mesmo tempo: o par pesado fica
+// isolado, o leve roda ao lado dele.
 const FONTES: Fonte[] = [
   { nome: 'OLX', origem: OrigemAnuncio.OLX, run: runOlx },
-  { nome: 'Viva Real', origem: OrigemAnuncio.VIVA_REAL, run: runVivaReal },
   {
     nome: 'ZAP Imóveis',
     origem: OrigemAnuncio.ZAP_IMOVEIS,
     run: runZapImoveis,
   },
+  { nome: 'Viva Real', origem: OrigemAnuncio.VIVA_REAL, run: runVivaReal },
   { nome: 'Netimóveis', origem: OrigemAnuncio.NETIMOVEIS, run: runNetimoveis },
   {
     nome: 'Quinto Andar',
@@ -62,20 +69,24 @@ interface FimExecucao {
   mensagemErro?: string;
 }
 
-// Conexão aberta só pelo tempo da escrita, não pelo loop inteiro: entre uma fonte e
-// outra o processo passa minutos só raspando, sem tocar no Postgres, e uma conexão
-// ociosa por tempo demais é derrubada em silêncio pelo pooler do Supabase — cada
-// função abaixo abre, escreve, fecha, do mesmo jeito que loadIntoPostgres já faz.
+// Conexão aberta só pelo tempo da escrita, não pelo loop inteiro — e agora
+// cada chamada cria seu próprio DataSource (createDataSource(), não um
+// singleton compartilhado): com fontes rodando em paralelo (BATCH_SIZE > 1),
+// duas chamadas concorrentes num DataSource só poderiam fechar a conexão
+// uma da outra no meio do caminho. Entre uma fonte e outra o processo passa
+// minutos só raspando, sem tocar no Postgres, e uma conexão ociosa por tempo
+// demais é derrubada em silêncio pelo pooler do Supabase.
 async function registrarInicioExecucao(origem: OrigemAnuncio): Promise<number> {
-  await AppDataSource.initialize();
+  const dataSource = createDataSource();
+  await dataSource.initialize();
   try {
-    const repo = AppDataSource.getRepository(Execucao);
+    const repo = dataSource.getRepository(Execucao);
     const execucao = await repo.save(
       repo.create({ origem, iniciadaEm: new Date() }),
     );
     return execucao.id;
   } finally {
-    await AppDataSource.destroy();
+    await dataSource.destroy();
   }
 }
 
@@ -83,45 +94,66 @@ async function registrarFimExecucao(
   execucaoId: number,
   fim: FimExecucao,
 ): Promise<void> {
-  await AppDataSource.initialize();
+  const dataSource = createDataSource();
+  await dataSource.initialize();
   try {
-    await AppDataSource.getRepository(Execucao).update(execucaoId, fim);
+    await dataSource.getRepository(Execucao).update(execucaoId, fim);
   } finally {
-    await AppDataSource.destroy();
+    await dataSource.destroy();
   }
 }
 
+async function runFonte(fonte: Fonte, uploadMutex: Mutex): Promise<void> {
+  log.info(`=== iniciando ${fonte.nome} ===`);
+  const execucaoId = await registrarInicioExecucao(fonte.origem);
+  try {
+    const stats = await fonte.run(uploadMutex);
+    await registrarFimExecucao(execucaoId, {
+      status: StatusExecucao.SUCESSO,
+      finalizadaEm: new Date(),
+      requestsFinalizados: stats.requestsFinished,
+      requestsFalhos: stats.requestsFailed,
+    });
+    log.info(`=== ${fonte.nome} concluído ===`);
+  } catch (error) {
+    await registrarFimExecucao(execucaoId, {
+      status: StatusExecucao.FALHA,
+      finalizadaEm: new Date(),
+      mensagemErro: error instanceof Error ? error.message : String(error),
+    });
+    Sentry.captureException(error, { tags: { fonte: fonte.origem } });
+    log.error(`=== ${fonte.nome} falhou ===`, { error });
+  }
+}
+
+/**
+ * Lotes de BATCH_SIZE fontes por vez (default 1 — sequencial, idêntico ao
+ * comportamento anterior). `runFonte` nunca relança (qualquer erro de fonte
+ * é capturado e vira FALHA na própria Execucao), então `Promise.all` num
+ * lote nunca aborta por causa de uma fonte com problema.
+ */
 async function main(): Promise<void> {
-  // Execução sequencial (não em paralelo): decisão deliberada pensando na instância
-  // EC2 de produção, que roda Postgres + API + crawler juntos com pouca RAM sobrando
-  // para vários browsers Chromium headless abertos ao mesmo tempo.
-  for (const fonte of FONTES) {
-    log.info(`=== iniciando ${fonte.nome} ===`);
-    // Registrado como EM_ANDAMENTO antes de rodar, não só ao final: se o processo
-    // travar ou for morto (OOM) no meio da fonte, a linha presa em EM_ANDAMENTO já é o
-    // sinal de diagnóstico de que a última rodada não terminou.
-    const execucaoId = await registrarInicioExecucao(fonte.origem);
-    try {
-      const stats = await fonte.run();
-      await registrarFimExecucao(execucaoId, {
-        status: StatusExecucao.SUCESSO,
-        finalizadaEm: new Date(),
-        requestsFinalizados: stats.requestsFinished,
-        requestsFalhos: stats.requestsFailed,
-      });
-      log.info(`=== ${fonte.nome} concluído ===`);
-    } catch (error) {
-      await registrarFimExecucao(execucaoId, {
-        status: StatusExecucao.FALHA,
-        finalizadaEm: new Date(),
-        mensagemErro: error instanceof Error ? error.message : String(error),
-      });
-      Sentry.captureException(error, { tags: { fonte: fonte.origem } });
-      log.error(`=== ${fonte.nome} falhou ===`, { error });
-    }
+  // Compartilhado por toda a run (não só por lote): serializa o upload de
+  // captura bruta entre fontes concorrentes, ver upload-mutex.ts. O Extract
+  // (crawler.run) continua paralelo dentro do lote — só essa fase final,
+  // que mexe no armazenamento local compartilhado do Crawlee, roda uma
+  // fonte de cada vez.
+  const uploadMutex = new Mutex();
+
+  for (let i = 0; i < FONTES.length; i += BATCH_SIZE) {
+    const lote = FONTES.slice(i, i + BATCH_SIZE);
+    await Promise.all(lote.map((fonte) => runFonte(fonte, uploadMutex)));
   }
 
   await Sentry.close(2000);
 }
 
 await main();
+
+// Confirmado na prática numa run completa: mesmo com todas as fontes
+// concluídas e Sentry.close resolvido, o processo não saía sozinho — algum
+// handle não liberado (Playwright/CDP ou o servidor HTTP local do Crawlee)
+// segurava o event loop indefinidamente. process.exit explícito depois que o
+// trabalho de verdade já terminou, em vez de depender do processo encerrar
+// sozinho.
+process.exit(0);

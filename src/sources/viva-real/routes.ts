@@ -1,6 +1,9 @@
 import { createCheerioRouter, type Dataset } from 'crawlee';
 
+import { FormatoCaptura } from '../../persistence/enums/formato-captura.enum.js';
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
+import { TipoPaginaCaptura } from '../../persistence/enums/tipo-pagina-captura.enum.js';
+import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
 import { getTipoTransacao } from '../shared/request-user-data.js';
 
@@ -17,11 +20,25 @@ function extractTipoImovel(link: string): string | null {
   return slug !== undefined ? (slug.split('-')[0] ?? null) : null;
 }
 
-export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
+export function createVivaRealRouter(
+  dataset: Dataset<RawListingItem>,
+  capturaDataset: Dataset<RawCaptureItem>,
+) {
   const router = createCheerioRouter();
 
   router.addDefaultHandler(async ({ $, request, enqueueLinks, log }) => {
     const tipoTransacao = getTipoTransacao(request.userData);
+
+    await capturaDataset.pushData({
+      origem: OrigemAnuncio.VIVA_REAL,
+      tipoTransacao,
+      tipoPagina: TipoPaginaCaptura.LISTAGEM,
+      url: request.loadedUrl,
+      formato: FormatoCaptura.HTML,
+      conteudo: $.html(),
+      capturadoEm: new Date().toISOString(),
+    });
+
     const items: RawListingItem[] = [];
 
     $(CARD_SELECTOR).each((_, card) => {
@@ -121,6 +138,33 @@ export function createVivaRealRouter(dataset: Dataset<RawListingItem>) {
     if (nextHref !== null) {
       await enqueueLinks({ urls: [nextHref], userData: { tipoTransacao } });
     }
+  });
+
+  return router;
+}
+
+/**
+ * Router da fase de detalhe — visita a página do próprio anúncio (o `link` já extraído
+ * pelo router de listagem acima) e grava o HTML bruto, sem extração estruturada.
+ */
+export function createVivaRealDetalheRouter(
+  capturaDataset: Dataset<RawCaptureItem>,
+) {
+  const router = createCheerioRouter();
+
+  router.addDefaultHandler(async ({ $, request, log }) => {
+    const tipoTransacao = getTipoTransacao(request.userData);
+
+    await capturaDataset.pushData({
+      origem: OrigemAnuncio.VIVA_REAL,
+      tipoTransacao,
+      tipoPagina: TipoPaginaCaptura.DETALHE,
+      url: request.loadedUrl,
+      formato: FormatoCaptura.HTML,
+      conteudo: $.html(),
+      capturadoEm: new Date().toISOString(),
+    });
+    log.info(`Viva Real: detalhe capturado em ${request.loadedUrl}`);
   });
 
   return router;

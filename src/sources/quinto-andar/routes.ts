@@ -1,6 +1,10 @@
 import { createHttpRouter, type Dataset } from 'crawlee';
 
+import { FormatoCaptura } from '../../persistence/enums/formato-captura.enum.js';
+import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
+import { TipoPaginaCaptura } from '../../persistence/enums/tipo-pagina-captura.enum.js';
 import type { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
+import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
 import { getTipoTransacao } from '../shared/request-user-data.js';
 import {
@@ -37,7 +41,10 @@ function getQuintoAndarUserData(userData: unknown): QuintoAndarUserData {
   return { tipoTransacao, slug: userData.slug, offset: userData.offset };
 }
 
-export function createQuintoAndarRouter(dataset: Dataset<RawListingItem>) {
+export function createQuintoAndarRouter(
+  dataset: Dataset<RawListingItem>,
+  capturaDataset: Dataset<RawCaptureItem>,
+) {
   const router = createHttpRouter();
 
   router.addDefaultHandler(async ({ body, request, addRequests, log }) => {
@@ -51,6 +58,16 @@ export function createQuintoAndarRouter(dataset: Dataset<RawListingItem>) {
     // manual (`parseSearchListResponse`) antes de virar tipo forte.
     const rawBody = typeof body === 'string' ? body : body.toString('utf-8');
     const json: unknown = JSON.parse(rawBody);
+
+    await capturaDataset.pushData({
+      origem: OrigemAnuncio.QUINTO_ANDAR,
+      tipoTransacao,
+      tipoPagina: TipoPaginaCaptura.LISTAGEM,
+      url: request.url,
+      formato: FormatoCaptura.JSON,
+      conteudo: rawBody,
+      capturadoEm: new Date().toISOString(),
+    });
 
     const { items, total } = parseSearchListResponse(json, tipoTransacao);
 
@@ -79,6 +96,36 @@ export function createQuintoAndarRouter(dataset: Dataset<RawListingItem>) {
         },
       ]);
     }
+  });
+
+  return router;
+}
+
+/**
+ * Router da fase de detalhe — visita a página do próprio anúncio (o `link` já extraído
+ * pelo router de listagem acima). Diferente da listagem (API JSON), a página de detalhe
+ * de qualquer imóvel é HTML normal renderizado no servidor — grava o corpo bruto sem
+ * extração estruturada.
+ */
+export function createQuintoAndarDetalheRouter(
+  capturaDataset: Dataset<RawCaptureItem>,
+) {
+  const router = createHttpRouter();
+
+  router.addDefaultHandler(async ({ body, request, log }) => {
+    const tipoTransacao = getTipoTransacao(request.userData);
+    const rawBody = typeof body === 'string' ? body : body.toString('utf-8');
+
+    await capturaDataset.pushData({
+      origem: OrigemAnuncio.QUINTO_ANDAR,
+      tipoTransacao,
+      tipoPagina: TipoPaginaCaptura.DETALHE,
+      url: request.url,
+      formato: FormatoCaptura.HTML,
+      conteudo: rawBody,
+      capturadoEm: new Date().toISOString(),
+    });
+    log.info(`Quinto Andar: detalhe capturado em ${request.url}`);
   });
 
   return router;

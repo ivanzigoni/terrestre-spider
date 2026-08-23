@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Scraper do mercado imobiliario de Belo Horizonte, construido com Crawlee.",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1116.0",
     "@crawlee/impit-client": "^3.0.0",
     "@sentry/node": "^10.70.0",
     "crawlee": "^3.0.0",

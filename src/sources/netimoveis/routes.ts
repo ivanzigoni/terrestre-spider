@@ -1,6 +1,9 @@
 import { createPlaywrightRouter, type Dataset } from 'crawlee';
 
+import { FormatoCaptura } from '../../persistence/enums/formato-captura.enum.js';
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
+import { TipoPaginaCaptura } from '../../persistence/enums/tipo-pagina-captura.enum.js';
+import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
 import type { RawListingItem } from '../../persistence/raw-listing-item.js';
 import { getTipoTransacao } from '../shared/request-user-data.js';
 
@@ -10,7 +13,10 @@ const CARD_SELECTOR = 'div.row.imoveis article.card-imovel';
 // calculamos a próxima URL incrementando esse parâmetro e enfileiramos diretamente.
 const NEXT_BUTTON_SELECTOR = 'nav ul.pagination li.clnext';
 
-export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
+export function createNetimoveisRouter(
+  dataset: Dataset<RawListingItem>,
+  capturaDataset: Dataset<RawCaptureItem>,
+) {
   const router = createPlaywrightRouter();
 
   router.addDefaultHandler(async ({ page, request, enqueueLinks, log }) => {
@@ -19,6 +25,16 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
     await page
       .waitForSelector(CARD_SELECTOR, { timeout: 10_000 })
       .catch(() => undefined);
+
+    await capturaDataset.pushData({
+      origem: OrigemAnuncio.NETIMOVEIS,
+      tipoTransacao,
+      tipoPagina: TipoPaginaCaptura.LISTAGEM,
+      url: page.url(),
+      formato: FormatoCaptura.HTML,
+      conteudo: await page.content(),
+      capturadoEm: new Date().toISOString(),
+    });
 
     const items = await page.$$eval(
       CARD_SELECTOR,
@@ -130,6 +146,35 @@ export function createNetimoveisRouter(dataset: Dataset<RawListingItem>) {
         userData: { tipoTransacao },
       });
     }
+  });
+
+  return router;
+}
+
+/**
+ * Router da fase de detalhe — visita a página do próprio anúncio (o `link` já extraído
+ * pelo router de listagem acima) e grava o HTML bruto, sem extração estruturada. Sem
+ * `waitForSelector` específico (a marcação da página de detalhe ainda não foi
+ * diagnosticada) — captura o que o carregamento padrão do Playwright já trouxer.
+ */
+export function createNetimoveisDetalheRouter(
+  capturaDataset: Dataset<RawCaptureItem>,
+) {
+  const router = createPlaywrightRouter();
+
+  router.addDefaultHandler(async ({ page, request, log }) => {
+    const tipoTransacao = getTipoTransacao(request.userData);
+
+    await capturaDataset.pushData({
+      origem: OrigemAnuncio.NETIMOVEIS,
+      tipoTransacao,
+      tipoPagina: TipoPaginaCaptura.DETALHE,
+      url: page.url(),
+      formato: FormatoCaptura.HTML,
+      conteudo: await page.content(),
+      capturadoEm: new Date().toISOString(),
+    });
+    log.info(`Netimóveis: detalhe capturado em ${page.url()}`);
   });
 
   return router;

@@ -5,13 +5,23 @@ services:
       dockerfile: Dockerfile.compose
     # É um job que roda as 5 fontes e termina (ver src/main.ts) — não um servidor, não deve
     # reiniciar sozinho.
-    restart: "no"
+    restart: 'no'
     # Credenciais (Supabase) vêm do próprio .env do host — não há mais Postgres local
     # neste compose.
     env_file:
       - .env
     environment:
       APIFY_LOG_FORMAT: JSON
+    # "default" continua obrigatória (ver comentário na seção networks: sem ela o
+    # container não resolve o host do Supabase). "terrestre-local" é a rede do MinIO
+    # (projeto separado, ver ../terrestre-minio) — hoje o spider fala com ele só pela
+    # porta publicada no host (127.0.0.1:9000, ver .env.example), então esta segunda
+    # rede ainda não é usada de fato; é preparação pra quando precisar resolver o
+    # MinIO por hostname de container. Como é `external`, `docker compose up` aqui
+    # falha se terrestre-minio nunca tiver subido antes (a rede não existiria).
+    networks:
+      - default
+      - terrestre-local
 
   # Disparo manual de uma run via HTTP, pensado pra ser acionado pelo botão "Test" de um
   # contact point do Grafana Alerting (terrestre-grafana). Faz a própria autenticação Basic
@@ -52,3 +62,6 @@ networks:
     ipam:
       config:
         - subnet: fd00:2::/48
+  # Dona real é o compose de ../terrestre-minio — este projeto só se anexa.
+  terrestre-local:
+    external: true

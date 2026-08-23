@@ -1,24 +1,38 @@
 import { Browser, ImpitHttpClient } from '@crawlee/impit-client';
-import { CheerioCrawler } from 'crawlee';
+import * as Sentry from '@sentry/node';
+import { CheerioCrawler, log } from 'crawlee';
 
 import { loadStartUrls } from '../../config/search-urls.js';
-import { AppDataSource } from '../../persistence/data-source.js';
+import { createDataSource } from '../../persistence/data-source.js';
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
-import { loadIntoPostgres } from '../../persistence/load.js';
+import type { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
+// import { loadIntoPostgres } from '../../persistence/load.js';
+import {
+  inserirCapturasBrutas,
+  uploadCapturasBrutas,
+} from '../../persistence/load-raw-captures.js';
+import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
+import { Mutex } from '../../persistence/upload-mutex.js';
 import { backoffOnRateLimit } from '../shared/backoff.js';
 import { type CrawlStats, sumCrawlStats } from '../shared/crawl-stats.js';
 import {
-  MAX_REQUESTS_PER_CRAWL,
+  getMaxListingPagesPerCrawl,
   SAME_DOMAIN_DELAY_SECS,
 } from '../shared/crawler-defaults.js';
 import { reportFailedRequest } from '../shared/report-failed-request.js';
 import { runWithWatchdog } from '../shared/run-with-watchdog.js';
 import { openFreshDataset, openFreshRequestQueue } from '../shared/storage.js';
-import { createOlxRouter } from './routes.js';
+import { createOlxDetalheRouter, createOlxRouter } from './routes.js';
 
-export async function runOlx(): Promise<CrawlStats> {
+export async function runOlx(
+  uploadMutex: Mutex = new Mutex(),
+): Promise<CrawlStats> {
+  const maxListingPages = getMaxListingPagesPerCrawl(OrigemAnuncio.OLX);
   const entries = await loadStartUrls(OrigemAnuncio.OLX);
   const dataset = await openFreshDataset(OrigemAnuncio.OLX);
+  const capturaDataset = await openFreshDataset<RawCaptureItem>(
+    `${OrigemAnuncio.OLX}-raw`,
+  );
 
   // Um crawler por URL de busca (aluguel, venda) — o teto de páginas
   // (maxRequestsPerCrawl) vale por URL, não somado entre elas.
@@ -29,10 +43,21 @@ export async function runOlx(): Promise<CrawlStats> {
     );
     const crawler = new CheerioCrawler({
       httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
-      requestHandler: createOlxRouter(dataset),
+      requestHandler: createOlxRouter(dataset, capturaDataset),
       requestQueue,
       sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
-      maxRequestsPerCrawl: MAX_REQUESTS_PER_CRAWL,
+      maxRequestsPerCrawl: maxListingPages,
+      // Sem isso, o SessionPool desta fonte se autopersiste no Key-Value Store
+      // DEFAULT do processo, com a mesma chave usada por qualquer outro crawler —
+      // sob SPIDER_BATCH_SIZE > 1, duas fontes escrevendo ali ao mesmo tempo (o
+      // evento persistState do Crawlee dispara pra todas juntas, a cada 60s)
+      // corrompeu esse arquivo em runs reais (JSON5: invalid end of input). Um
+      // Key-Value Store nomeado por origem isola cada fonte completamente. Mesmo
+      // risco existiria com `context.useState()` — não usar sem configurar um KVS
+      // próprio pelo mesmo motivo.
+      sessionPoolOptions: {
+        persistStateKeyValueStoreId: `${OrigemAnuncio.OLX}-sessions`,
+      },
       errorHandler: (context) => backoffOnRateLimit(context),
       failedRequestHandler: (context, error) => {
         reportFailedRequest(OrigemAnuncio.OLX, context, error);
@@ -47,15 +72,98 @@ export async function runOlx(): Promise<CrawlStats> {
             userData: { tipoTransacao: entry.tipoTransacao },
           },
         ]),
+        maxListingPages,
       ),
     );
   }
 
-  await AppDataSource.initialize();
+  // Fase de detalhe: visita cada link único descoberto na listagem — sem teto próprio
+  // (o volume já é limitado indiretamente por MAX_LISTING_PAGES_PER_CRAWL). Um link
+  // pode aparecer nas duas transações raramente; fica com a primeira tipoTransacao
+  // vista, não é crítico pra captura bruta.
+  const linksUnicos = new Map<string, TipoTransacao>();
+  await dataset.forEach((item) => {
+    if (!linksUnicos.has(item.link)) {
+      linksUnicos.set(item.link, item.tipoTransacao);
+    }
+  });
+
+  if (linksUnicos.size > 0) {
+    const detalheQueue = await openFreshRequestQueue(
+      `${OrigemAnuncio.OLX}-detalhe`,
+    );
+    await detalheQueue.addRequests(
+      [...linksUnicos].map(([url, tipoTransacao]) => ({
+        url,
+        userData: { tipoTransacao },
+      })),
+    );
+    const detalheCrawler = new CheerioCrawler({
+      httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
+      requestHandler: createOlxDetalheRouter(capturaDataset),
+      requestQueue: detalheQueue,
+      sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
+      // Mesmo id do crawler de listagem acima — nunca rodam ao mesmo tempo dentro
+      // desta fonte (sequencial), só entre fontes diferentes é que precisa isolar.
+      sessionPoolOptions: {
+        persistStateKeyValueStoreId: `${OrigemAnuncio.OLX}-sessions`,
+      },
+      errorHandler: (context) => backoffOnRateLimit(context),
+      failedRequestHandler: (context, error) => {
+        reportFailedRequest(OrigemAnuncio.OLX, context, error);
+      },
+    });
+    stats.push(
+      await runWithWatchdog(
+        'OLX detalhe',
+        detalheCrawler.run(),
+        linksUnicos.size,
+      ),
+    );
+  }
+
+  // anuncios/observacoes_preco foram descontinuadas (ver migration
+  // DropAnunciosTables) — loadIntoPostgres fica comentado, não apagado, pra
+  // religar fácil se o pipeline estruturado voltar.
+  //
+  // const dataSource = createDataSource();
+  // await dataSource.initialize();
+  // try {
+  //   await loadIntoPostgres(dataset, dataSource);
+  // } finally {
+  //   await dataSource.destroy();
+  // }
+
+  // Trilha secundária, não a fonte de verdade dos anúncios — uma falha aqui (S3 fora do
+  // ar, MinIO não subiu) não pode propagar e marcar a Execucao inteira como FALHA
+  // quando o loadIntoPostgres acima já teve sucesso. Por isso este try/catch é próprio,
+  // separado do catch por fonte em src/main.ts, e só loga + reporta ao Sentry.
+  //
+  // Dentro do mutex: duas fontes chamando uploadCapturasBrutas ao mesmo tempo
+  // corrompeu o armazenamento local do Crawlee numa run real (ver
+  // upload-mutex.ts) — o Extract acima continua paralelo, só esta fase roda
+  // uma fonte de cada vez.
   try {
-    await loadIntoPostgres(dataset, AppDataSource);
-  } finally {
-    await AppDataSource.destroy();
+    await uploadMutex.runExclusive(async () => {
+      const capturas = await uploadCapturasBrutas(capturaDataset);
+      const dataSource = createDataSource();
+      await dataSource.initialize();
+      try {
+        await inserirCapturasBrutas(capturas, dataSource);
+      } finally {
+        await dataSource.destroy();
+      }
+      log.info(
+        `OLX: ${String(capturas.length)} captura(s) bruta(s) enviada(s) ao bucket e registrada(s) em capturas_brutas`,
+      );
+    });
+  } catch (error) {
+    log.warning('OLX: captura bruta falhou, run principal não é afetada', {
+      error,
+    });
+    Sentry.captureException(error, {
+      tags: { fonte: OrigemAnuncio.OLX, fase: 'captura-bruta' },
+    });
   }
 
   return sumCrawlStats(stats);
