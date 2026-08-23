@@ -32,4 +32,45 @@ export class Execucao {
 
   @Column({ type: 'text', name: 'mensagem_erro', nullable: true })
   declare mensagemErro: string | null;
+
+  @Column({ type: 'int', name: 'requests_total', nullable: true })
+  declare requestsTotal: number | null;
+
+  @Column({ type: 'int', name: 'crawler_runtime_millis', nullable: true })
+  declare crawlerRuntimeMillis: number | null;
+
+  @Column({
+    type: 'int',
+    name: 'request_total_duration_millis',
+    nullable: true,
+  })
+  declare requestTotalDurationMillis: number | null;
+
+  @Column({
+    type: 'double precision',
+    name: 'request_avg_finished_duration_millis',
+    nullable: true,
+  })
+  declare requestAvgFinishedDurationMillis: number | null;
+
+  @Column({
+    type: 'double precision',
+    name: 'request_avg_failed_duration_millis',
+    nullable: true,
+  })
+  declare requestAvgFailedDurationMillis: number | null;
+
+  // Indexado por número de retentativas (índice 0 = sem retry) — ver
+  // `sources/shared/crawl-stats.ts` para como é agregado entre sub-crawls.
+  @Column({ type: 'jsonb', name: 'retry_histogram', nullable: true })
+  declare retryHistogram: number[] | null;
+
+  @Column({ type: 'int', name: 'anuncios_encontrados', nullable: true })
+  declare anunciosEncontrados: number | null;
+
+  @Column({ type: 'int', name: 'anuncios_unicos_detalhe', nullable: true })
+  declare anunciosUnicosDetalhe: number | null;
+
+  @Column({ type: 'int', name: 'capturas_brutas_enviadas', nullable: true })
+  declare capturasBrutasEnviadas: number | null;
 }

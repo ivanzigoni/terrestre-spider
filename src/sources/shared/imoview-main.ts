@@ -13,7 +13,11 @@ import {
 import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
 import { Mutex } from '../../persistence/upload-mutex.js';
 import { backoffOnRateLimit } from './backoff.js';
-import { type CrawlStats, sumCrawlStats } from './crawl-stats.js';
+import {
+  type CrawlStats,
+  type ExecucaoStats,
+  sumCrawlStats,
+} from './crawl-stats.js';
 import {
   getMaxListingPagesPerCrawl,
   SAME_DOMAIN_DELAY_SECS,
@@ -39,10 +43,10 @@ export function createImoviewRun(
   origem: OrigemAnuncio,
   nomeExibicao: string,
   cidadeSlugAmigavel = 'belo-horizonte',
-): (uploadMutex?: Mutex) => Promise<CrawlStats> {
+): (uploadMutex?: Mutex) => Promise<ExecucaoStats> {
   return async function run(
     uploadMutex: Mutex = new Mutex(),
-  ): Promise<CrawlStats> {
+  ): Promise<ExecucaoStats> {
     const maxListingPages = getMaxListingPagesPerCrawl(origem);
     const cidade = await resolveCidadeCode(baseUrl, cidadeSlugAmigavel);
     const dataset = await openFreshDataset(origem);
@@ -121,6 +125,7 @@ export function createImoviewRun(
         linksUnicos.set(item.link, item.tipoTransacao);
       }
     });
+    const anunciosEncontrados = (await dataset.getInfo())?.itemCount ?? 0;
 
     if (linksUnicos.size > 0) {
       const detalheQueue = await openFreshRequestQueue(`${origem}-detalhe`);
@@ -168,6 +173,7 @@ export function createImoviewRun(
     // Dentro do mutex: duas fontes chamando uploadCapturasBrutas ao mesmo
     // tempo corrompeu o armazenamento local do Crawlee numa run real (ver
     // upload-mutex.ts).
+    let capturasBrutasEnviadas = 0;
     try {
       await uploadMutex.runExclusive(async () => {
         const capturas = await uploadCapturasBrutas(capturaDataset);
@@ -178,6 +184,7 @@ export function createImoviewRun(
         } finally {
           await dataSource.destroy();
         }
+        capturasBrutasEnviadas = capturas.length;
         log.info(
           `${nomeExibicao}: ${String(capturas.length)} captura(s) bruta(s) enviada(s) ao bucket e registrada(s) em capturas_brutas`,
         );
@@ -192,6 +199,11 @@ export function createImoviewRun(
       });
     }
 
-    return sumCrawlStats(stats);
+    return {
+      ...sumCrawlStats(stats),
+      anunciosEncontrados,
+      anunciosUnicosDetalhe: linksUnicos.size,
+      capturasBrutasEnviadas,
+    };
   };
 }

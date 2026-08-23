@@ -14,7 +14,11 @@ import {
 import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
 import { Mutex } from '../../persistence/upload-mutex.js';
 import { backoffOnRateLimit } from '../shared/backoff.js';
-import { type CrawlStats, sumCrawlStats } from '../shared/crawl-stats.js';
+import {
+  type CrawlStats,
+  type ExecucaoStats,
+  sumCrawlStats,
+} from '../shared/crawl-stats.js';
 import {
   getMaxListingPagesPerCrawl,
   SAME_DOMAIN_DELAY_SECS,
@@ -29,7 +33,7 @@ import {
 
 export async function runZapImoveis(
   uploadMutex: Mutex = new Mutex(),
-): Promise<CrawlStats> {
+): Promise<ExecucaoStats> {
   const maxListingPages = getMaxListingPagesPerCrawl(OrigemAnuncio.ZAP_IMOVEIS);
   const entries = await loadStartUrls(OrigemAnuncio.ZAP_IMOVEIS);
   const dataset = await openFreshDataset(OrigemAnuncio.ZAP_IMOVEIS);
@@ -91,6 +95,7 @@ export async function runZapImoveis(
       linksUnicos.set(item.link, item.tipoTransacao);
     }
   });
+  const anunciosEncontrados = (await dataset.getInfo())?.itemCount ?? 0;
 
   if (linksUnicos.size > 0) {
     const detalheQueue = await openFreshRequestQueue(
@@ -141,6 +146,7 @@ export async function runZapImoveis(
   // Dentro do mutex: duas fontes chamando uploadCapturasBrutas ao mesmo
   // tempo corrompeu o armazenamento local do Crawlee numa run real (ver
   // upload-mutex.ts).
+  let capturasBrutasEnviadas = 0;
   try {
     await uploadMutex.runExclusive(async () => {
       const capturas = await uploadCapturasBrutas(capturaDataset);
@@ -151,6 +157,7 @@ export async function runZapImoveis(
       } finally {
         await dataSource.destroy();
       }
+      capturasBrutasEnviadas = capturas.length;
       log.info(
         `ZAP Imóveis: ${String(capturas.length)} captura(s) bruta(s) enviada(s) ao bucket e registrada(s) em capturas_brutas`,
       );
@@ -165,7 +172,12 @@ export async function runZapImoveis(
     });
   }
 
-  return sumCrawlStats(stats);
+  return {
+    ...sumCrawlStats(stats),
+    anunciosEncontrados,
+    anunciosUnicosDetalhe: linksUnicos.size,
+    capturasBrutasEnviadas,
+  };
 }
 
 if (

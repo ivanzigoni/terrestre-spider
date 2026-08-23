@@ -14,7 +14,11 @@ import {
 import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
 import { Mutex } from '../../persistence/upload-mutex.js';
 import { backoffOnRateLimit } from '../shared/backoff.js';
-import { type CrawlStats, sumCrawlStats } from '../shared/crawl-stats.js';
+import {
+  type CrawlStats,
+  type ExecucaoStats,
+  sumCrawlStats,
+} from '../shared/crawl-stats.js';
 import {
   getMaxListingPagesPerCrawl,
   SAME_DOMAIN_DELAY_SECS,
@@ -29,7 +33,7 @@ import {
 
 export async function runNetimoveis(
   uploadMutex: Mutex = new Mutex(),
-): Promise<CrawlStats> {
+): Promise<ExecucaoStats> {
   const maxListingPages = getMaxListingPagesPerCrawl(OrigemAnuncio.NETIMOVEIS);
   const entries = await loadStartUrls(OrigemAnuncio.NETIMOVEIS);
   const dataset = await openFreshDataset(OrigemAnuncio.NETIMOVEIS);
@@ -91,6 +95,7 @@ export async function runNetimoveis(
       linksUnicos.set(item.link, item.tipoTransacao);
     }
   });
+  const anunciosEncontrados = (await dataset.getInfo())?.itemCount ?? 0;
 
   if (linksUnicos.size > 0) {
     const detalheQueue = await openFreshRequestQueue(
@@ -141,6 +146,7 @@ export async function runNetimoveis(
   // Dentro do mutex: duas fontes chamando uploadCapturasBrutas ao mesmo
   // tempo corrompeu o armazenamento local do Crawlee numa run real desta
   // própria fonte (ver upload-mutex.ts).
+  let capturasBrutasEnviadas = 0;
   try {
     await uploadMutex.runExclusive(async () => {
       const capturas = await uploadCapturasBrutas(capturaDataset);
@@ -151,6 +157,7 @@ export async function runNetimoveis(
       } finally {
         await dataSource.destroy();
       }
+      capturasBrutasEnviadas = capturas.length;
       log.info(
         `Netimóveis: ${String(capturas.length)} captura(s) bruta(s) enviada(s) ao bucket e registrada(s) em capturas_brutas`,
       );
@@ -165,7 +172,12 @@ export async function runNetimoveis(
     });
   }
 
-  return sumCrawlStats(stats);
+  return {
+    ...sumCrawlStats(stats),
+    anunciosEncontrados,
+    anunciosUnicosDetalhe: linksUnicos.size,
+    capturasBrutasEnviadas,
+  };
 }
 
 if (

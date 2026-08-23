@@ -14,7 +14,11 @@ import {
 import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
 import { Mutex } from '../../persistence/upload-mutex.js';
 import { backoffOnRateLimit } from './backoff.js';
-import { type CrawlStats, sumCrawlStats } from './crawl-stats.js';
+import {
+  type CrawlStats,
+  type ExecucaoStats,
+  sumCrawlStats,
+} from './crawl-stats.js';
 import {
   getMaxListingPagesPerCrawl,
   SAME_DOMAIN_DELAY_SECS,
@@ -50,10 +54,10 @@ export function createImoviewBrowserRun(
   origem: OrigemAnuncio,
   nomeExibicao: string,
   cidadeSlugAmigavel = 'belo-horizonte',
-): (uploadMutex?: Mutex) => Promise<CrawlStats> {
+): (uploadMutex?: Mutex) => Promise<ExecucaoStats> {
   return async function run(
     uploadMutex: Mutex = new Mutex(),
-  ): Promise<CrawlStats> {
+  ): Promise<ExecucaoStats> {
     // resolveCidadeCode funciona via fetch direto mesmo neste site — a proteção
     // observada está só no endpoint de busca propriamente dito (confirmado no
     // diagnóstico).
@@ -149,6 +153,7 @@ export function createImoviewBrowserRun(
         linksUnicos.set(item.link, item.tipoTransacao);
       }
     });
+    const anunciosEncontrados = (await dataset.getInfo())?.itemCount ?? 0;
 
     if (linksUnicos.size > 0) {
       const detalheQueue = await openFreshRequestQueue(`${origem}-detalhe`);
@@ -200,6 +205,7 @@ export function createImoviewBrowserRun(
     // Dentro do mutex: duas fontes chamando uploadCapturasBrutas ao mesmo
     // tempo corrompeu o armazenamento local do Crawlee numa run real (ver
     // upload-mutex.ts).
+    let capturasBrutasEnviadas = 0;
     try {
       await uploadMutex.runExclusive(async () => {
         const capturas = await uploadCapturasBrutas(capturaDataset);
@@ -210,6 +216,7 @@ export function createImoviewBrowserRun(
         } finally {
           await dataSource.destroy();
         }
+        capturasBrutasEnviadas = capturas.length;
         log.info(
           `${nomeExibicao}: ${String(capturas.length)} captura(s) bruta(s) enviada(s) ao bucket e registrada(s) em capturas_brutas`,
         );
@@ -224,6 +231,11 @@ export function createImoviewBrowserRun(
       });
     }
 
-    return sumCrawlStats(stats);
+    return {
+      ...sumCrawlStats(stats),
+      anunciosEncontrados,
+      anunciosUnicosDetalhe: linksUnicos.size,
+      capturasBrutasEnviadas,
+    };
   };
 }

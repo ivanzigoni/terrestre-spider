@@ -15,7 +15,7 @@ import { runQuintoAndar } from './sources/quinto-andar/main.js';
 import { BATCH_SIZE } from './sources/shared/crawler-defaults.js';
 import { runVivaReal } from './sources/viva-real/main.js';
 import { runZapImoveis } from './sources/zap-imoveis/main.js';
-import type { CrawlStats } from './sources/shared/crawl-stats.js';
+import type { ExecucaoStats } from './sources/shared/crawl-stats.js';
 
 // Sem captura de performance/tracing — este init é só para captura de erro. Sem
 // SENTRY_DSN configurado, o SDK vira no-op automaticamente (comportamento documentado
@@ -26,7 +26,7 @@ Sentry.init({ dsn: process.env.SENTRY_DSN, tracesSampleRate: 0 });
 interface Fonte {
   nome: string;
   origem: OrigemAnuncio;
-  run: (uploadMutex: Mutex) => Promise<CrawlStats>;
+  run: (uploadMutex: Mutex) => Promise<ExecucaoStats>;
 }
 
 // Ordem pareada — uma fonte sem browser (CheerioCrawler/HttpCrawler) seguida
@@ -67,6 +67,15 @@ interface FimExecucao {
   requestsFinalizados?: number;
   requestsFalhos?: number;
   mensagemErro?: string;
+  requestsTotal?: number;
+  crawlerRuntimeMillis?: number;
+  requestTotalDurationMillis?: number;
+  requestAvgFinishedDurationMillis?: number;
+  requestAvgFailedDurationMillis?: number;
+  retryHistogram?: number[];
+  anunciosEncontrados?: number;
+  anunciosUnicosDetalhe?: number;
+  capturasBrutasEnviadas?: number;
 }
 
 // Conexão aberta só pelo tempo da escrita, não pelo loop inteiro — e agora
@@ -113,6 +122,15 @@ async function runFonte(fonte: Fonte, uploadMutex: Mutex): Promise<void> {
       finalizadaEm: new Date(),
       requestsFinalizados: stats.requestsFinished,
       requestsFalhos: stats.requestsFailed,
+      requestsTotal: stats.requestsTotal,
+      crawlerRuntimeMillis: stats.crawlerRuntimeMillis,
+      requestTotalDurationMillis: stats.requestTotalDurationMillis,
+      requestAvgFinishedDurationMillis: stats.requestAvgFinishedDurationMillis,
+      requestAvgFailedDurationMillis: stats.requestAvgFailedDurationMillis,
+      retryHistogram: stats.retryHistogram,
+      anunciosEncontrados: stats.anunciosEncontrados,
+      anunciosUnicosDetalhe: stats.anunciosUnicosDetalhe,
+      capturasBrutasEnviadas: stats.capturasBrutasEnviadas,
     });
     log.info(`=== ${fonte.nome} concluído ===`);
   } catch (error) {
