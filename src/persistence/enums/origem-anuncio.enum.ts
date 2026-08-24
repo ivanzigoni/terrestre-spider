@@ -13,4 +13,6 @@ export enum OrigemAnuncio {
   VALORE_IMOVEIS = 'valore_imoveis',
   IVI_INVISTA_IMOVEIS = 'ivi_invista_imoveis',
   REAL_IMOBILIARIA = 'real_imobiliaria',
+  JMC_IMOVEIS = 'jmc_imoveis',
+  LUXUS_IMOVEIS_PREMIUM = 'luxus_imoveis_premium',
 }

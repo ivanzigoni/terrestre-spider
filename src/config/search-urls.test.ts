@@ -4,9 +4,10 @@ import { OrigemAnuncio } from '../persistence/enums/origem-anuncio.enum.js';
 import { TipoTransacao } from '../persistence/enums/tipo-transacao.enum.js';
 import { loadStartUrls } from './search-urls.js';
 
-// Fontes baseadas em API (cluster Imoview) não têm URL de busca em HTML — resolvem
-// cidade dinamicamente (src/sources/shared/imoview-client.ts) e nunca chamam
-// loadStartUrls de verdade. Excluídas do parametrizado abaixo, cobertas à parte.
+// Fontes baseadas em API (clusters Imoview e Kenlo) não têm URL de busca em HTML —
+// resolvem/montam a URL de busca dinamicamente (src/sources/shared/imoview-client.ts,
+// src/sources/shared/kenlo-client.ts) e nunca chamam loadStartUrls de verdade. Excluídas
+// do parametrizado abaixo, cobertas à parte.
 const FONTES_SEM_SEARCH_URLS = new Set<OrigemAnuncio>([
   OrigemAnuncio.IMOBILIARIA_BURITIS,
   OrigemAnuncio.LIDERAR_IMOVEIS,
@@ -16,6 +17,8 @@ const FONTES_SEM_SEARCH_URLS = new Set<OrigemAnuncio>([
   OrigemAnuncio.VALORE_IMOVEIS,
   OrigemAnuncio.IVI_INVISTA_IMOVEIS,
   OrigemAnuncio.REAL_IMOBILIARIA,
+  OrigemAnuncio.JMC_IMOVEIS,
+  OrigemAnuncio.LUXUS_IMOVEIS_PREMIUM,
 ]);
 
 const FONTES_COM_SEARCH_URLS = Object.values(OrigemAnuncio).filter(

@@ -12,7 +12,9 @@ import { runDiegoGarciaImoveis } from './sources/diego-garcia-imoveis/main.js';
 import { runImobiliariaBuritis } from './sources/imobiliaria-buritis/main.js';
 import { runImovelweb } from './sources/imovelweb/main.js';
 import { runIviInvistaImoveis } from './sources/ivi-invista-imoveis/main.js';
+import { runJmcImoveis } from './sources/jmc-imoveis/main.js';
 import { runLiderarImoveis } from './sources/liderar-imoveis/main.js';
+import { runLuxusImoveisPremium } from './sources/luxus-imoveis-premium/main.js';
 import { runNetimoveis } from './sources/netimoveis/main.js';
 import { runOlx } from './sources/olx/main.js';
 import { runQuintoAndar } from './sources/quinto-andar/main.js';
@@ -102,6 +104,18 @@ const FONTES: Fonte[] = [
     nome: 'Real Imobiliária',
     origem: OrigemAnuncio.REAL_IMOBILIARIA,
     run: runRealImobiliaria,
+  },
+  // Cluster Kenlo (lote 2 de .claude/__workdir/integracao-lote/lotes.md) — as duas
+  // usam HttpCrawler, sem browser, então não quebram o pareamento leve/pesado acima.
+  {
+    nome: 'JMC Imóveis',
+    origem: OrigemAnuncio.JMC_IMOVEIS,
+    run: runJmcImoveis,
+  },
+  {
+    nome: 'Luxus Imóveis Premium',
+    origem: OrigemAnuncio.LUXUS_IMOVEIS_PREMIUM,
+    run: runLuxusImoveisPremium,
   },
 ];
 
