@@ -8,19 +8,27 @@ import { StatusExecucao } from './persistence/enums/status-execucao.enum.js';
 import { Mutex } from './persistence/upload-mutex.js';
 import { runAdimoveisBh } from './sources/adimoveis-bh/main.js';
 import { runCasaGrandeImoveis } from './sources/casa-grande-imoveis/main.js';
+import { runCasaPampulhaImoveis } from './sources/casa-pampulha-imoveis/main.js';
 import { runDiegoGarciaImoveis } from './sources/diego-garcia-imoveis/main.js';
+import { runHabitarPampulha } from './sources/habitar-pampulha/main.js';
 import { runImobiliariaBuritis } from './sources/imobiliaria-buritis/main.js';
 import { runImovelweb } from './sources/imovelweb/main.js';
 import { runIviInvistaImoveis } from './sources/ivi-invista-imoveis/main.js';
 import { runJmcImoveis } from './sources/jmc-imoveis/main.js';
 import { runLiderarImoveis } from './sources/liderar-imoveis/main.js';
 import { runLuxusImoveisPremium } from './sources/luxus-imoveis-premium/main.js';
+import { runModeloImovel } from './sources/modelo-imovel/main.js';
 import { runNetimoveis } from './sources/netimoveis/main.js';
 import { runOlx } from './sources/olx/main.js';
+import { runPrimerImoveis } from './sources/primer-imoveis/main.js';
 import { runQuintoAndar } from './sources/quinto-andar/main.js';
 import { runRealImobiliaria } from './sources/real-imobiliaria/main.js';
+import { runRealImoveisPampulha } from './sources/real-imoveis-pampulha/main.js';
+import { runSevenImoveis } from './sources/seven-imoveis/main.js';
 import { BATCH_SIZE } from './sources/shared/crawler-defaults.js';
+import { runTopmigImoveis } from './sources/topmig-imoveis/main.js';
 import { runValoreImoveis } from './sources/valore-imoveis/main.js';
+import { runVendaNovaImoveis } from './sources/venda-nova-imoveis/main.js';
 import { runVivaReal } from './sources/viva-real/main.js';
 import { runZapImoveis } from './sources/zap-imoveis/main.js';
 import type { ExecucaoStats } from './sources/shared/crawl-stats.js';
@@ -116,6 +124,48 @@ const FONTES: Fonte[] = [
     nome: 'Luxus Imóveis Premium',
     origem: OrigemAnuncio.LUXUS_IMOVEIS_PREMIUM,
     run: runLuxusImoveisPremium,
+  },
+  // Cluster GTM Capital/Loft Sites (lote 3 de .claude/__workdir/integracao-lote/lotes.md)
+  // — as 8 usam CheerioCrawler, sem browser, mesmo raciocínio do cluster Kenlo acima.
+  {
+    nome: 'Casa Pampulha Imóveis',
+    origem: OrigemAnuncio.CASA_PAMPULHA_IMOVEIS,
+    run: runCasaPampulhaImoveis,
+  },
+  {
+    nome: 'Habitar Pampulha',
+    origem: OrigemAnuncio.HABITAR_PAMPULHA,
+    run: runHabitarPampulha,
+  },
+  {
+    nome: 'Modelo Imóvel',
+    origem: OrigemAnuncio.MODELO_IMOVEL,
+    run: runModeloImovel,
+  },
+  {
+    nome: 'Primer Imóveis',
+    origem: OrigemAnuncio.PRIMER_IMOVEIS,
+    run: runPrimerImoveis,
+  },
+  {
+    nome: 'Real Imóveis Pampulha',
+    origem: OrigemAnuncio.REAL_IMOVEIS_PAMPULHA,
+    run: runRealImoveisPampulha,
+  },
+  {
+    nome: 'Seven Imóveis',
+    origem: OrigemAnuncio.SEVEN_IMOVEIS,
+    run: runSevenImoveis,
+  },
+  {
+    nome: 'TOPMIG Imóveis',
+    origem: OrigemAnuncio.TOPMIG_IMOVEIS,
+    run: runTopmigImoveis,
+  },
+  {
+    nome: 'Venda Nova Imóveis',
+    origem: OrigemAnuncio.VENDA_NOVA_IMOVEIS,
+    run: runVendaNovaImoveis,
   },
 ];
 

@@ -95,3 +95,50 @@ function parseBatchSize(): number {
  * `SPIDER_BATCH_SIZE=2` nunca ligue 2 browsers ao mesmo tempo.
  */
 export const BATCH_SIZE = parseBatchSize();
+
+const DEFAULT_MAX_DETAIL_PAGES_PER_CRAWL = 200;
+
+function parseMaxDetailPagesPerCrawl(): number {
+  const raw = process.env.SPIDER_MAX_DETAIL_PAGES_PER_CRAWL;
+  if (raw === undefined || raw === '') {
+    return DEFAULT_MAX_DETAIL_PAGES_PER_CRAWL;
+  }
+  const parsed = Number(raw);
+  if (!Number.isInteger(parsed) || parsed <= 0) {
+    throw new Error(
+      `SPIDER_MAX_DETAIL_PAGES_PER_CRAWL inválido: "${raw}" (esperado inteiro positivo)`,
+    );
+  }
+  return parsed;
+}
+
+const MAX_DETAIL_PAGES_PER_CRAWL = parseMaxDetailPagesPerCrawl();
+
+/**
+ * Teto de páginas de DETALHE por fonte — mesmo raciocínio de
+ * `MAX_LISTING_PAGES_PER_CRAWL`, mas para um perfil de volume diferente: cada fonte do
+ * cluster Loft Sites descobre o catálogo inteiro via sitemap (sem paginação de busca,
+ * ver `loft-sites-client.ts`) e visita uma página de detalhe por imóvel único — ~950
+ * imóveis observados num único site do cluster durante o lote 3
+ * (`.claude/__workdir/integracao-lote/lotes.md`). Sem teto, uma run completa das 8
+ * fontes visitaria potencialmente milhares de páginas de detalhe por execução.
+ *
+ * Default (200) é uma escolha arbitrária deste lote, não validada com o time — ajustável
+ * via `SPIDER_MAX_DETAIL_PAGES_PER_CRAWL` (global) ou
+ * `SPIDER_MAX_DETAIL_PAGES_PER_CRAWL_<ORIGEM>` (por fonte, mesma disciplina de
+ * `getMaxListingPagesPerCrawl`).
+ */
+export function getMaxDetailPagesPerCrawl(origem: OrigemAnuncio): number {
+  const perSourceKey = `SPIDER_MAX_DETAIL_PAGES_PER_CRAWL_${origem.toUpperCase()}`;
+  const raw = process.env[perSourceKey];
+  if (raw === undefined || raw === '') {
+    return MAX_DETAIL_PAGES_PER_CRAWL;
+  }
+  const parsed = Number(raw);
+  if (!Number.isInteger(parsed) || parsed <= 0) {
+    throw new Error(
+      `${perSourceKey} inválido: "${raw}" (esperado inteiro positivo)`,
+    );
+  }
+  return parsed;
+}

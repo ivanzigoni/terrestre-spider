@@ -15,4 +15,12 @@ export enum OrigemAnuncio {
   REAL_IMOBILIARIA = 'real_imobiliaria',
   JMC_IMOVEIS = 'jmc_imoveis',
   LUXUS_IMOVEIS_PREMIUM = 'luxus_imoveis_premium',
+  CASA_PAMPULHA_IMOVEIS = 'casa_pampulha_imoveis',
+  HABITAR_PAMPULHA = 'habitar_pampulha',
+  MODELO_IMOVEL = 'modelo_imovel',
+  PRIMER_IMOVEIS = 'primer_imoveis',
+  REAL_IMOVEIS_PAMPULHA = 'real_imoveis_pampulha',
+  SEVEN_IMOVEIS = 'seven_imoveis',
+  TOPMIG_IMOVEIS = 'topmig_imoveis',
+  VENDA_NOVA_IMOVEIS = 'venda_nova_imoveis',
 }

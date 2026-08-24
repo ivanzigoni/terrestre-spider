@@ -4,10 +4,13 @@ import { OrigemAnuncio } from '../persistence/enums/origem-anuncio.enum.js';
 import { TipoTransacao } from '../persistence/enums/tipo-transacao.enum.js';
 import { loadStartUrls } from './search-urls.js';
 
-// Fontes baseadas em API (clusters Imoview e Kenlo) não têm URL de busca em HTML —
-// resolvem/montam a URL de busca dinamicamente (src/sources/shared/imoview-client.ts,
-// src/sources/shared/kenlo-client.ts) e nunca chamam loadStartUrls de verdade. Excluídas
-// do parametrizado abaixo, cobertas à parte.
+// Três categorias de fonte não têm URL de busca em HTML e nunca chamam loadStartUrls de
+// verdade, cada uma por um motivo diferente: clusters Imoview e Kenlo resolvem/montam a
+// URL de busca dinamicamente via API própria (src/sources/shared/imoview-client.ts,
+// src/sources/shared/kenlo-client.ts); cluster Loft Sites não tem busca por
+// cidade/transação nenhuma — a descoberta é via sitemap fixo por site, sem variação de
+// tipoTransacao na URL (src/sources/shared/loft-sites-client.ts). Excluídas do
+// parametrizado abaixo, cobertas à parte.
 const FONTES_SEM_SEARCH_URLS = new Set<OrigemAnuncio>([
   OrigemAnuncio.IMOBILIARIA_BURITIS,
   OrigemAnuncio.LIDERAR_IMOVEIS,
@@ -19,6 +22,14 @@ const FONTES_SEM_SEARCH_URLS = new Set<OrigemAnuncio>([
   OrigemAnuncio.REAL_IMOBILIARIA,
   OrigemAnuncio.JMC_IMOVEIS,
   OrigemAnuncio.LUXUS_IMOVEIS_PREMIUM,
+  OrigemAnuncio.CASA_PAMPULHA_IMOVEIS,
+  OrigemAnuncio.HABITAR_PAMPULHA,
+  OrigemAnuncio.MODELO_IMOVEL,
+  OrigemAnuncio.PRIMER_IMOVEIS,
+  OrigemAnuncio.REAL_IMOVEIS_PAMPULHA,
+  OrigemAnuncio.SEVEN_IMOVEIS,
+  OrigemAnuncio.TOPMIG_IMOVEIS,
+  OrigemAnuncio.VENDA_NOVA_IMOVEIS,
 ]);
 
 const FONTES_COM_SEARCH_URLS = Object.values(OrigemAnuncio).filter(
