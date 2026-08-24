@@ -4,7 +4,6 @@ import { fileURLToPath } from 'node:url';
 
 import { describe, expect, it } from 'vitest';
 
-import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
 import {
   businessContextFor,
@@ -67,7 +66,7 @@ describe('buildSearchRequestPayload', () => {
 });
 
 describe('parseSearchListResponse', () => {
-  it('mapeia só os itens que batem com o tipoTransacao pedido, ignorando itens malformados', async () => {
+  it('mapeia só os itens que batem com o tipoTransacao pedido, montando o link a partir do id', async () => {
     const fixture = await loadFixture();
 
     const { items, total } = parseSearchListResponse(
@@ -75,71 +74,38 @@ describe('parseSearchListResponse', () => {
       TipoTransacao.ALUGUEL,
     );
 
-    // A fixture tem 3 hits: 1 aluguel válido, 1 venda válida (filtrada por não bater
-    // forRent), 1 com "area" ausente (guard de shape descarta antes de checar o flag).
+    // A fixture tem 3 hits: 2 com forRent=true (um deles sem "area", irrelevante agora
+    // que só id/forRent/forSale são lidos) e 1 de venda (forRent=false, filtrado).
     expect(total).toBe(3);
-    expect(items).toHaveLength(1);
-
-    const item = items[0];
-    if (item === undefined) {
-      throw new Error('item esperado ausente em items');
-    }
-    expect(item.origem).toBe(OrigemAnuncio.QUINTO_ANDAR);
-    expect(item.tipoTransacao).toBe(TipoTransacao.ALUGUEL);
-    expect(item.link).toBe('https://www.quintoandar.com.br/imovel/894334726');
-    expect(item.tipoImovel).toBe('Apartamento');
-    expect(item.quartos).toBe(3);
-    expect(item.area).toBe(98);
-    expect(item.localizacao).toBe('Buritis, Belo Horizonte');
-    expect(item.preco).toBe(6800);
-    expect(item.iptu).toBe(532);
-    expect(item.condominio).toBe(1150);
-    expect(item.dataDePublicacaoText).toBeNull();
-    expect(item.precoAntigo).toBeNull();
+    expect(items).toHaveLength(2);
+    expect(items.map((item) => item.link)).toEqual([
+      'https://www.quintoandar.com.br/imovel/894334726',
+      'https://www.quintoandar.com.br/imovel/895226985',
+    ]);
+    expect(
+      items.every((item) => item.tipoTransacao === TipoTransacao.ALUGUEL),
+    ).toBe(true);
   });
 
-  it('normaliza o sentinela -1 de iptu/condomínio para 0', () => {
-    // Recorte isolado, só com o hit de iptu/condomínio sentinela — não depende da
-    // fixture completa usada no teste acima.
-    const fixtureComItemSentinela = {
+  it('descarta item sem id/forRent/forSale, sem lançar erro', () => {
+    const fixtureComItemMalformado = {
       hits: {
-        total: { value: 1 },
+        total: { value: 2 },
         hits: [
-          {
-            _source: {
-              id: 895226985,
-              address: 'Rua Professor Alberto Deodato',
-              area: 271,
-              bedrooms: 3,
-              bathrooms: 2,
-              parkingSpaces: 1,
-              rent: 9690,
-              salePrice: 0,
-              condominium: -1,
-              iptu: -1,
-              type: 'Casa',
-              forRent: true,
-              forSale: false,
-              neighbourhood: 'Bandeirantes',
-              city: 'Belo Horizonte',
-            },
-          },
+          { _source: { id: 111, forRent: true, forSale: false } },
+          { _source: { id: 222 } },
         ],
       },
     };
 
-    const { items } = parseSearchListResponse(
-      fixtureComItemSentinela,
+    const { items, total } = parseSearchListResponse(
+      fixtureComItemMalformado,
       TipoTransacao.ALUGUEL,
     );
 
+    expect(total).toBe(2);
     expect(items).toHaveLength(1);
-    const item = items[0];
-    if (item === undefined) {
-      throw new Error('item esperado ausente em items');
-    }
-    expect(item.iptu).toBe(0);
-    expect(item.condominio).toBe(0);
+    expect(items[0]?.link).toBe('https://www.quintoandar.com.br/imovel/111');
   });
 
   it('lança erro para uma resposta em formato inesperado', () => {

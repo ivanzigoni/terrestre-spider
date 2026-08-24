@@ -1,8 +1,7 @@
 import { randomUUID } from 'node:crypto';
 
-import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
+import type { LinkAnuncio } from '../../persistence/link-anuncio.js';
 import { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
-import type { RawListingItem } from '../../persistence/raw-listing-item.js';
 
 export const QUINTO_ANDAR_API_URL =
   'https://apigw.prod.quintoandar.com.br/house-listing-search/v3/search/list';
@@ -118,22 +117,14 @@ export function buildSearchRequestPayload(
   });
 }
 
+// Só os campos usados para montar o link e filtrar por tipo de transação — o único
+// dado extraído do payload nesta pipeline. Nenhum outro campo (endereço, área, quartos,
+// preço etc.) é lido: a captura bruta da resposta inteira (ver `routes.ts`) já preserva
+// tudo, sem perda.
 interface QuintoAndarListingSource {
   id: number;
-  address: string;
-  area: number;
-  bedrooms: number;
-  bathrooms: number;
-  parkingSpaces: number;
-  rent: number;
-  salePrice: number;
-  condominium: number;
-  iptu: number;
-  type: string;
   forRent: boolean;
   forSale: boolean;
-  neighbourhood: string;
-  city: string;
 }
 
 // Guard manual em vez de `as`: o payload vem de uma API de terceiro não documentada,
@@ -147,20 +138,8 @@ function isQuintoAndarListingSource(
   const source = value as Record<string, unknown>;
   return (
     typeof source.id === 'number' &&
-    typeof source.address === 'string' &&
-    typeof source.area === 'number' &&
-    typeof source.bedrooms === 'number' &&
-    typeof source.bathrooms === 'number' &&
-    typeof source.parkingSpaces === 'number' &&
-    typeof source.rent === 'number' &&
-    typeof source.salePrice === 'number' &&
-    typeof source.condominium === 'number' &&
-    typeof source.iptu === 'number' &&
-    typeof source.type === 'string' &&
     typeof source.forRent === 'boolean' &&
-    typeof source.forSale === 'boolean' &&
-    typeof source.neighbourhood === 'string' &&
-    typeof source.city === 'string'
+    typeof source.forSale === 'boolean'
   );
 }
 
@@ -207,47 +186,20 @@ function matchesBusinessContext(
     : source.forSale;
 }
 
-// -1 é o sentinela da API para "não se aplica a este imóvel" (ex.: casa sem condomínio).
-function normalizeMonetaryField(value: number): number {
-  return value > 0 ? value : 0;
-}
-
-function mapToRawListingItem(
+function mapToLinkAnuncio(
   source: QuintoAndarListingSource,
   tipoTransacao: TipoTransacao,
-): RawListingItem {
-  const localizacao = `${source.neighbourhood.trim()}, ${source.city.trim()}`;
-  const acaoLabel =
-    tipoTransacao === TipoTransacao.ALUGUEL ? 'alugar' : 'comprar';
-  const bedroomsLabel = source.bedrooms === 1 ? 'quarto' : 'quartos';
-  const titulo = `${source.type} com ${String(source.bedrooms)} ${bedroomsLabel} para ${acaoLabel} em ${localizacao}`;
-
+): LinkAnuncio {
   return {
-    origem: OrigemAnuncio.QUINTO_ANDAR,
-    tipoTransacao,
-    tipoImovel: source.type,
     // Sem slug: a URL redireciona pro anúncio completo mesmo assim (confirmado ao
     // vivo) — mais simples e estável que reconstruir o slug de SEO.
     link: `https://www.quintoandar.com.br/imovel/${String(source.id)}`,
-    titulo,
-    quartos: source.bedrooms,
-    banheiros: source.bathrooms,
-    vagas: source.parkingSpaces,
-    area: source.area,
-    localizacao,
-    // Sem campo equivalente identificado na API (ver discovery/quintoandar-diagnostico.md).
-    dataDePublicacaoText: null,
-    preco:
-      tipoTransacao === TipoTransacao.ALUGUEL ? source.rent : source.salePrice,
-    iptu: normalizeMonetaryField(source.iptu),
-    condominio: normalizeMonetaryField(source.condominium),
-    // Sem campo equivalente identificado na API.
-    precoAntigo: null,
+    tipoTransacao,
   };
 }
 
 export interface ParsedSearchPage {
-  items: RawListingItem[];
+  items: LinkAnuncio[];
   total: number;
 }
 
@@ -261,7 +213,7 @@ export function parseSearchListResponse(
     );
   }
 
-  const items: RawListingItem[] = [];
+  const items: LinkAnuncio[] = [];
   for (const hit of json.hits.hits) {
     if (!isQuintoAndarListingSource(hit._source)) {
       continue;
@@ -269,7 +221,7 @@ export function parseSearchListResponse(
     if (!matchesBusinessContext(hit._source, tipoTransacao)) {
       continue;
     }
-    items.push(mapToRawListingItem(hit._source, tipoTransacao));
+    items.push(mapToLinkAnuncio(hit._source, tipoTransacao));
   }
 
   return { items, total: json.hits.total.value };

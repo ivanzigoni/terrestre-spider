@@ -82,8 +82,8 @@ interface FimExecucao {
   requestAvgFinishedDurationMillis?: number;
   requestAvgFailedDurationMillis?: number;
   retryHistogram?: number[];
-  anunciosEncontrados?: number;
-  anunciosUnicosDetalhe?: number;
+  linksEncontrados?: number;
+  linksUnicosDetalhe?: number;
   capturasBrutasEnviadas?: number;
 }
 
@@ -137,8 +137,8 @@ async function runFonte(fonte: Fonte, uploadMutex: Mutex): Promise<void> {
       requestAvgFinishedDurationMillis: stats.requestAvgFinishedDurationMillis,
       requestAvgFailedDurationMillis: stats.requestAvgFailedDurationMillis,
       retryHistogram: stats.retryHistogram,
-      anunciosEncontrados: stats.anunciosEncontrados,
-      anunciosUnicosDetalhe: stats.anunciosUnicosDetalhe,
+      linksEncontrados: stats.linksEncontrados,
+      linksUnicosDetalhe: stats.linksUnicosDetalhe,
       capturasBrutasEnviadas: stats.capturasBrutasEnviadas,
     });
     log.info(`=== ${fonte.nome} concluído ===`);

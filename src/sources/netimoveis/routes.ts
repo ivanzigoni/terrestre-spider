@@ -4,7 +4,7 @@ import { FormatoCaptura } from '../../persistence/enums/formato-captura.enum.js'
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { TipoPaginaCaptura } from '../../persistence/enums/tipo-pagina-captura.enum.js';
 import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
-import type { RawListingItem } from '../../persistence/raw-listing-item.js';
+import type { LinkAnuncio } from '../../persistence/link-anuncio.js';
 import { getTipoTransacao } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = 'div.row.imoveis article.card-imovel';
@@ -14,7 +14,7 @@ const CARD_SELECTOR = 'div.row.imoveis article.card-imovel';
 const NEXT_BUTTON_SELECTOR = 'nav ul.pagination li.clnext';
 
 export function createNetimoveisRouter(
-  dataset: Dataset<RawListingItem>,
+  dataset: Dataset<LinkAnuncio>,
   capturaDataset: Dataset<RawCaptureItem>,
 ) {
   const router = createPlaywrightRouter();
@@ -38,90 +38,14 @@ export function createNetimoveisRouter(
 
     const items = await page.$$eval(
       CARD_SELECTOR,
-      (cards, { origem, tipoTransacao: itemTipoTransacao }) =>
+      (cards, { tipoTransacao: itemTipoTransacao }) =>
         cards.map((card) => {
           const linkEl = card.querySelector<HTMLAnchorElement>('a.link-imovel');
           const link = linkEl?.href ?? '';
-          const tipoImovel =
-            link !== '' ? new URL(link).searchParams.get('tipoUrl') : null;
-
-          const titulo = (
-            card.querySelector<HTMLElement>('section.imovel-info h2')
-              ?.textContent ?? ''
-          )
-            .trim()
-            .replace(/\s+/g, ' ');
-
-          const localizacao =
-            card.querySelector<HTMLElement>('.endereco')?.textContent.trim() ??
-            '';
-
-          const areaText =
-            card
-              .querySelector<HTMLElement>('.caracteristica.area')
-              ?.textContent.trim() ?? '';
-          const area =
-            Number((areaText.split(',')[0] ?? '').replace(/\D/g, '')) || 0;
-
-          const bedroomsText =
-            card
-              .querySelector<HTMLElement>('.caracteristica.quartos')
-              ?.textContent.trim() ?? '';
-          const quartos = Number(/\d+/.exec(bedroomsText)?.[0] ?? '0');
-
-          const bathroomsText =
-            card
-              .querySelector<HTMLElement>('.caracteristica.banheiros')
-              ?.textContent.trim() ?? '';
-          const banheiros = Number(/\d+/.exec(bathroomsText)?.[0] ?? '0');
-
-          const vagasText =
-            card
-              .querySelector<HTMLElement>('.caracteristica.vagas')
-              ?.textContent.trim() ?? '';
-          const vagasMatch = /\d+/.exec(vagasText);
-          const vagas = vagasMatch ? Number(vagasMatch[0]) : null;
-
-          const preco =
-            Number(
-              (
-                card.querySelector<HTMLElement>('.imovel-valor .valor')
-                  ?.textContent ?? ''
-              ).replace(/\D/g, ''),
-            ) || 0;
-          const condominio =
-            Number(
-              (
-                card.querySelector<HTMLElement>('.imovel-valor .condominio')
-                  ?.textContent ?? ''
-              ).replace(/\D/g, ''),
-            ) || 0;
-
-          const dataDePublicacaoText =
-            card
-              .querySelector<HTMLElement>('.ultima-atualizacao')
-              ?.textContent.trim() ?? null;
-
-          const item: RawListingItem = {
-            origem,
-            tipoTransacao: itemTipoTransacao,
-            tipoImovel,
-            link,
-            titulo,
-            quartos,
-            banheiros,
-            vagas,
-            area,
-            localizacao,
-            dataDePublicacaoText,
-            preco,
-            iptu: 0,
-            condominio,
-            precoAntigo: null,
-          };
+          const item: LinkAnuncio = { link, tipoTransacao: itemTipoTransacao };
           return item;
         }),
-      { origem: OrigemAnuncio.NETIMOVEIS, tipoTransacao },
+      { tipoTransacao },
     );
 
     const validItems = items.filter((item) => item.link !== '');
