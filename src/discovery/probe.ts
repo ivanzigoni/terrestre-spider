@@ -209,6 +209,20 @@ function parseOnlyFlag(argv: string[]): string | null {
   return argv[onlyIndex + 1] ?? null;
 }
 
+// Alvo avulso (site sem entrada em sites.json — ex.: página de listagem descoberta
+// durante um diagnóstico pontual), sem precisar editar sites.json a cada URL testada.
+function parseAdHocUrlFlag(argv: string[]): DiscoverySite | null {
+  const urlIndex = argv.indexOf('--url');
+  if (urlIndex === -1) return null;
+  const url = argv[urlIndex + 1];
+  if (url === undefined) {
+    throw new Error('--url requer um valor (a URL completa a sondar)');
+  }
+  const nomeIndex = argv.indexOf('--nome');
+  const nome = nomeIndex === -1 ? 'ad-hoc' : (argv[nomeIndex + 1] ?? 'ad-hoc');
+  return { nome, url, categoria: 'imobiliaria' };
+}
+
 function selectTargets(
   sites: DiscoverySite[],
   only: string | null,
@@ -223,9 +237,11 @@ function selectTargets(
 }
 
 async function main(): Promise<void> {
-  const only = parseOnlyFlag(process.argv.slice(2));
-  const allSites = await loadSites();
-  const targets = selectTargets(allSites, only);
+  const argv = process.argv.slice(2);
+  const adHocSite = parseAdHocUrlFlag(argv);
+  const only = parseOnlyFlag(argv);
+  const targets =
+    adHocSite !== null ? [adHocSite] : selectTargets(await loadSites(), only);
 
   if (!existsSync(SCREENSHOTS_DIR)) {
     await mkdir(SCREENSHOTS_DIR, { recursive: true });

@@ -1,0 +1,65 @@
+{
+  "nome": "kenlo-piloto-jmc",
+  "urlSolicitada": "https://www.jmcimoveisbh.com.br/",
+  "urlFinal": "https://www.jmcimoveisbh.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": true,
+    "contentSample": "User-agent: AdsBot-Google\nUser-agent: AdsBot-Google-Mobile\nUser-agent: Mediapartners-Google\nUser-agent: adidxbot\nAllow: /\nDisallow: /api/*\nDisallow: /*.marko$\n\nUser-agent: Googlebot\nUser-agent: Googlebot-Image\nUser-agent: Googlebot-Video\nUser-agent: Googlebot-News\nUser-agent: Googlebot-Favicon\nUser-agent: Google-InspectionTool\nUser-agent: GoogleOther\nUser-agent: GoogleOther-Image\nUser-agent: GoogleOther-Video\nUser-agent: bingbot\nUser-agent: MicrosoftPreview\nUser-agent: DuckDuckBot\nUser-agent: Applebot\nUser-agent: LinkedInBot\nUser-agent: Twitterbot\nUser-agent: Slackbot\nUser-agent: Pinterestbot\nUser-agent: Telegrambot\nUser-agent: Discordbot\nUser-agent: WhatsApp\nUser-agent: facebookexternalhit\nUser-agent: facebookcatalog\nUser-agent: OAI-SearchBot\nUser-agent: ChatGPT-User\nUser-agent: Claude-SearchBot\nUser-agent: Claude-User\nUser-agent: PerplexityBot\nUser-agent: Perplexity-User\nUser-agent: Applebot-Extended\nUser-agent: DuckAssistBot\nUser-agent: MistralAI-User\nAllow: /\nDisallow: /api/*\nDisallow: /*.marko$\nDisallow: /*+*\nDisallow: /*%2B*\nDisallow: /*%2b*\n\nUser-agent: *\nAllow: /ads.txt\nDisallow: /\n\nSitemap: https://www.jmcimoveisbh.com.br/sitemap.xml\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 2,
+    "jsonLdSample": "{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"url\":\"https://www.jmcimoveisbh.com.br/\",\"name\":\"JMC  IMÓVEIS  Belo Horizonte/MG CRECI PJ 0003945\",\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://www.jmcimoveisbh.com.br/imoveis?codigo={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": true,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-5E2QCWRG3B&gtm=45je68j1h2v9168627494za200zd9168627494&_p=1787527901107&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAACAC&are=1&cid=2017720471.1787527901&frm=0&ibt=1&ngs=1&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=115616985~115938465~115938468~118897920~118897930~119367802~119367810~120315470~120385422&sid=1787527901&sct=1&seg=0&dl=https%3A%2F%2Fwww.jmcimoveisbh.com.br%2F&dt=JMC%20IM%C3%93VEIS%20Belo%20Horizonte%2FMG%20CRECI%20PJ%200003945&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=820",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.jmcimoveisbh.com.br/api/listings/a-venda+para-alugar?caracteristicas=super-destaque&somente-imobiliaria=1&com-fotos=true&ordenar=aleatorio&expand=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.jmcimoveisbh.com.br/api/listings/a-venda?caracteristicas=destaque&somente-imobiliaria=1&com-fotos=true&ordenar=aleatorio&expand=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.jmcimoveisbh.com.br/api/listings/para-alugar?caracteristicas=destaque&somente-imobiliaria=1&com-fotos=true&ordenar=aleatorio&expand=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.jmcimoveisbh.com.br/api/listings/a-venda+para-alugar?caracteristicas=aceita-permuta&somente-imobiliaria=1&com-fotos=true&ordenar=aleatorio&expand=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.jmcimoveisbh.com.br/api/listings/a-venda+para-alugar?caracteristicas=aceita-financiamento,exclusivo,super-destaque&somente-imobiliaria=1&com-fotos=true&ordenar=aleatorio&expand=1",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [],
+  "titulo": "JMC IMÓVEIS Belo Horizonte/MG CRECI PJ 0003945",
+  "bodyTextSample": "JMC IMÓVEIS Belo Horizonte/MG CRECI PJ 0003945 - Jmc Imóveis\n(31) 2537-7500\n BAIRROS E CONDOMÍNIOS\n IMOBILIÁRIA CRECI PJ 0003945\nCompre ou alugue agora\nBuscar por pretensão\nPretensão\nComprar\nBuscar por tipo\nTipo imóvel\nDigite condomínio, região, bairro ou cidade\nEncontrar imóvel\nBusca por código\nOportunidades de Negócio\n\nSI0008-JMC\n\nSítio\n\nIndustrial Americano - Santa Luzia - MG\n2800 m²\n4 Quartos\n4 Suítes\n4 Banheiros\n10 Vagas\n\nVenda\n\nR$ 1.200.000\n\nAP2238-JMC\n\nApartamento\n\nLiberdade - Belo Horizonte - MG\n104.33 m²\n4 Quartos\n1 Suíte\n2 Banheiros\n3 Vagas\n\nVenda\n\nR$ 1.085.000\n\nGD0253-JMC\n\nApartamento garden\n\nDom Cabral - Belo Horizonte - MG\n43.63 m²\n1 Quarto\n1 Banheiro\n1 Vaga\n\nVenda\n\nR$ 551.353\n\nCA0633-JMC\n\nCasa\n\nDona Clara - Belo Horizonte - MG\n159 m²\n3 Quartos\n1 Suíte\n2 Banheiros\n1 Vaga\n\nVenda\n\nR$ 950.000\n\nLO0061-JMC\n\nLoja\n\nDona Clara - Belo Horizonte - MG\n55.08 m²\n1 Banheiro\n1 Vaga\n\nVenda\n\nR$ 500.677,20\n\nLF0004-JMC\n\nLoft\n\nDona Clara - Belo Horizonte - MG\n39.18 m²\n1 Quarto\n1 Suíte\n1 Banhe",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/kenlo-piloto-jmc.png",
+  "erro": null,
+  "timestamp": "2026-08-23T23:31:39.961Z"
+}
