@@ -8,4 +8,9 @@ export enum OrigemAnuncio {
   IMOBILIARIA_BURITIS = 'imobiliaria_buritis',
   LIDERAR_IMOVEIS = 'liderar_imoveis',
   CASA_GRANDE_IMOVEIS = 'casa_grande_imoveis',
+  ADIMOVEIS_BH = 'adimoveis_bh',
+  DIEGO_GARCIA_IMOVEIS = 'diego_garcia_imoveis',
+  VALORE_IMOVEIS = 'valore_imoveis',
+  IVI_INVISTA_IMOVEIS = 'ivi_invista_imoveis',
+  REAL_IMOBILIARIA = 'real_imobiliaria',
 }

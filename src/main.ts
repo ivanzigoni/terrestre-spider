@@ -6,14 +6,19 @@ import { Execucao } from './persistence/entities/execucao.entity.js';
 import { OrigemAnuncio } from './persistence/enums/origem-anuncio.enum.js';
 import { StatusExecucao } from './persistence/enums/status-execucao.enum.js';
 import { Mutex } from './persistence/upload-mutex.js';
+import { runAdimoveisBh } from './sources/adimoveis-bh/main.js';
 import { runCasaGrandeImoveis } from './sources/casa-grande-imoveis/main.js';
+import { runDiegoGarciaImoveis } from './sources/diego-garcia-imoveis/main.js';
 import { runImobiliariaBuritis } from './sources/imobiliaria-buritis/main.js';
 import { runImovelweb } from './sources/imovelweb/main.js';
+import { runIviInvistaImoveis } from './sources/ivi-invista-imoveis/main.js';
 import { runLiderarImoveis } from './sources/liderar-imoveis/main.js';
 import { runNetimoveis } from './sources/netimoveis/main.js';
 import { runOlx } from './sources/olx/main.js';
 import { runQuintoAndar } from './sources/quinto-andar/main.js';
+import { runRealImobiliaria } from './sources/real-imobiliaria/main.js';
 import { BATCH_SIZE } from './sources/shared/crawler-defaults.js';
+import { runValoreImoveis } from './sources/valore-imoveis/main.js';
 import { runVivaReal } from './sources/viva-real/main.js';
 import { runZapImoveis } from './sources/zap-imoveis/main.js';
 import type { ExecucaoStats } from './sources/shared/crawl-stats.js';
@@ -34,10 +39,15 @@ interface Fonte {
 // de uma com PlaywrightCrawler — não alfabética nem por origem. Com
 // BATCH_SIZE=2 (ver crawler-defaults.ts), cada lote de 2 processados juntos
 // nunca sobe 2 browsers Chromium headless ao mesmo tempo: o par pesado fica
-// isolado, o leve roda ao lado dele. Casa Grande Imóveis é HTTP-only (sem
-// Playwright) e fica ao final, sem par — com número ímpar de fontes, o
-// último lote sob BATCH_SIZE=2 roda ela sozinha, o que preserva o invariante
-// (nunca 2 browsers juntos) mesmo sem parceiro.
+// isolado, o leve roda ao lado dele. Exceção documentada no final da lista:
+// a expansão do cluster Imoview (lote 1 de
+// `.claude/__workdir/integracao-lote/lotes.md`) trouxe 4 fontes que precisam
+// da variante navegador (bloqueio confirmado contra cliente HTTP direto) e
+// só 1 nova fonte HTTP (AdimóveisBH) para parear — sem fonte HTTP sobrando
+// para a quarta, IVI Invista e Real Imobiliária ficam adjacentes como
+// PlaywrightCrawler+PlaywrightCrawler. Sob BATCH_SIZE=2, esse par específico
+// sobe 2 browsers ao mesmo tempo; SPIDER_BATCH_SIZE=1 (piso/default) não é
+// afetado.
 const FONTES: Fonte[] = [
   { nome: 'OLX', origem: OrigemAnuncio.OLX, run: runOlx },
   {
@@ -67,6 +77,31 @@ const FONTES: Fonte[] = [
     nome: 'Casa Grande Imóveis',
     origem: OrigemAnuncio.CASA_GRANDE_IMOVEIS,
     run: runCasaGrandeImoveis,
+  },
+  {
+    nome: 'Diego Garcia Imóveis',
+    origem: OrigemAnuncio.DIEGO_GARCIA_IMOVEIS,
+    run: runDiegoGarciaImoveis,
+  },
+  {
+    nome: 'AdimóveisBH',
+    origem: OrigemAnuncio.ADIMOVEIS_BH,
+    run: runAdimoveisBh,
+  },
+  {
+    nome: 'Valore Imóveis',
+    origem: OrigemAnuncio.VALORE_IMOVEIS,
+    run: runValoreImoveis,
+  },
+  {
+    nome: 'IVI Invista Imóveis',
+    origem: OrigemAnuncio.IVI_INVISTA_IMOVEIS,
+    run: runIviInvistaImoveis,
+  },
+  {
+    nome: 'Real Imobiliária',
+    origem: OrigemAnuncio.REAL_IMOBILIARIA,
+    run: runRealImobiliaria,
   },
 ];
 

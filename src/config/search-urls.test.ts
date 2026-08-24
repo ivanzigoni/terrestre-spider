@@ -11,6 +11,11 @@ const FONTES_SEM_SEARCH_URLS = new Set<OrigemAnuncio>([
   OrigemAnuncio.IMOBILIARIA_BURITIS,
   OrigemAnuncio.LIDERAR_IMOVEIS,
   OrigemAnuncio.CASA_GRANDE_IMOVEIS,
+  OrigemAnuncio.ADIMOVEIS_BH,
+  OrigemAnuncio.DIEGO_GARCIA_IMOVEIS,
+  OrigemAnuncio.VALORE_IMOVEIS,
+  OrigemAnuncio.IVI_INVISTA_IMOVEIS,
+  OrigemAnuncio.REAL_IMOBILIARIA,
 ]);
 
 const FONTES_COM_SEARCH_URLS = Object.values(OrigemAnuncio).filter(
