@@ -1,0 +1,34 @@
+{
+  "nome": "loft-piloto-casapampulha",
+  "urlSolicitada": "https://casapampulhaimoveis.com.br/busca",
+  "urlFinal": "https://casapampulhaimoveis.com.br/busca",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\nAllow: /\nDisallow: /busca/\n\nSitemap: https://casapampulhaimoveis.com.br/sitemap.xml\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 0,
+    "jsonLdSample": null,
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [],
+  "consoleErros": [],
+  "titulo": "CASA PAMPULHA IMOVEIS LTDA",
+  "bodyTextSample": "(31) 99476-6650\n(31) 3665-1650\ncontato@casapampulhaimoveis.com.br\n7663\nHOME\nSOBRE NÓS\nBUSCAR IMÓVEL\nCONTATO\nBUSCA DE IMÓVEIS\nFiltrar\n12 imóveis de 925\nOrdenar por\nComparar\nR$ 850.000,00\nVenda\nCód: 3910\nCasa\nCasa à Venda com 3 Quartos sendo 1 Suíte e 2 Vagas- Trevo Descubra esta excelente casa no coração do bairro Trevo, perfeita para quem busca conforto e modernidade! Distribuição: - 3 quartos amplos, sendo 1 suíte aconchegante e bem iluminada - Sa\nTrevo, Belo Horizonte - MG\n120m²\n3\n2\n1\n2\nComparar\nR$ 370.000,00\nVenda\nCód: 3228\nApartamento\nApartamento 3 quartos Santa Monica. Venha morar com sua família a poucos metros da Av Erico Veríssimo e toda infraestrutura do bairro Imóvel composto por Metragem aproximada 60,75m² total - 3 quartos amplos sendo dois com armarios\nSanta Mônica, Belo Horizonte - MG\n50m²\n3\n1\n1\nComparar\nR$ 535.000,00\nVenda\nCód: 2745\nÁrea Privativa\nÁrea privativa 2 quartos, Santa Branca. Metragem: Área total: 67m² Área interna: 55,53m² Distribuição: - Sala; - Cozinha; - Á",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/loft-piloto-casapampulha.png",
+  "erro": null,
+  "timestamp": "2026-08-23T23:30:18.632Z"
+}

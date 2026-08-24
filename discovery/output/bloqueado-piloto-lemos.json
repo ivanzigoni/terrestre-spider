@@ -1,0 +1,42 @@
+{
+  "nome": "bloqueado-piloto-lemos",
+  "urlSolicitada": "https://www.lemosimoveis.com.br/",
+  "urlFinal": "https://www.lemosimoveis.com.br/",
+  "httpStatus": 406,
+  "robots": {
+    "fetched": true,
+    "status": 406,
+    "disallowedForTargetPath": null,
+    "contentSample": null
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 0,
+    "jsonLdSample": null,
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.lemosimoveis.com.br/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [
+    "Failed to load resource: the server responded with a status of 406 ()"
+  ],
+  "titulo": "Erro 601",
+  "bodyTextSample": "Erro 601\n\nNão foi possível se conectar, o DNS não está configurado corretamente.\n\nDetalhes do acesso\nID da requisição: 695b45575b4ddc757a51f4dc4c093aa8\nEndereço de IP: 172.64.222.10\nData/Hora: 2026-08-23 20:33:39\nURL: https://www.lemosimoveis.com.br/\n\nO que fazer?\n\nEncaminhe uma print dessa tela com todas as informações para o administrador do site.",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/bloqueado-piloto-lemos.png",
+  "erro": null,
+  "timestamp": "2026-08-23T23:33:39.459Z"
+}

@@ -1,0 +1,34 @@
+{
+  "nome": "imobibrasil-piloto-strutural",
+  "urlSolicitada": "https://struturalimoveis.com.br/buscar",
+  "urlFinal": "https://struturalimoveis.com.br/buscar",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-Agent: *\r\nAllow: /"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 1,
+    "jsonLdSample": "\n    {\"@context\":\"https://schema.org\",\n    \"@type\":\"RealEstateAgent\",\n    \"logo\":\"https://cdn-img-src.imobibrasil.app.br/4bfae013cfa568825a2515e8f4c5f6b7dcfb15c3/logos/logo_site/202607211805556742.png\",\n    \"image\":\"https://cdn-img-src.imobibrasil.app.br/4bfae013cfa568825a2515e8f4c5f6b7dcfb15c3/logos/logo_site/202607211805556742.png\",\n    \"url\":\"https://struturalimoveis.com.br/\",\n    \"@id\":\"https://struturalimoveis.com.br/\",\n    \"name\":\"Strutural Imóveis Ltda\",\n    \"description\":\"Strutural Imóveis Ltda, Imobiliária em Belo Horizonte - MG\",\n    \"telephone\":\"(31) 97508-2271\",\n\t\"priceRange\": \"$$$\",\n    \"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Rua do Uruguai, Sion, 620\",\"addressLocality\":\"Belo Horizonte\",\n                    \"addressRegion\":\"MG\",\n                    \"addressCountry\":\"Brasil\",\n                    \"postalCode\":\"30310300\"},\n    \"sameAs\":[\"https://www.facebook.com/share/1CpgcqyQms/?mibextid=wwXIfr\",\"https://www.instagram.com/strutural_imoveis/\",\"https://wa.me/553197",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [],
+  "consoleErros": [],
+  "titulo": "Pesquisa Completa de Imóveis",
+  "bodyTextSample": "Venda\nLocação\nInformações\nContato\n\n(31) 97508-2271 (31) 99417-8066\n\nPesquisa Completa\nInforme os dados abaixo para fazer a busca.\n \nFinalidade:\t\nVenda\nLocação\n\t \nTipo:\t\n- todos os tipos -\nApartamento\nApartamento / Novo\nCasa\nCasa em Condomínio\nCobertura\nGaragem\nTerreno\nÁrea Privativa\n\t \nCidade:\t\n- todas as cidades -\nBelo Horizonte\nBrumadinho\nNova Lima\n\t \nBairro:\t\n- todos -\n\t \nCondomínio:\t\n- todos -\nBertoia\nEDIFICO ELIZABETH\nEdifício Maria Odila\nHistory\nManhattan\nMarilia Correa\nMartius Milton\n\t \nEmpreendimento:\t\n- todos -\nCanopus\nEDIFICIO FLORENÇA\nEd. Martius Milton\n\t \nZona:\t\n- todos -\nSul\n\t \nRegião:\t\n- todos -\nANCHIETA\nLourdes\nSul\n\t \nAcomodações\t\n- todos -\n1 pessoa\n2 pessoas\n3 pessoas\n4 pessoas\n5 pessoas\n1 ou + pessoas\n3 ou + pessoas\n6 ou + pessoas\n9 ou + pessoas\n12 ou + pessoas\n\t \nDormitórios:\t\n- todos -\n1 dormitório\n2 dormitórios\n3 dormitórios\n4 dormitórios\n5 dormitórios\n1 ou + dormitórios\n2 ou + dormitórios\n3 ou + dormitórios\n4 ou + dormitórios\n5 ou + dormitórios\n\t \nBanheiros:\t\n- tod",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/terrestre-spider/discovery/output/screenshots/imobibrasil-piloto-strutural.png",
+  "erro": null,
+  "timestamp": "2026-08-23T23:31:23.231Z"
+}
