@@ -10,9 +10,12 @@ const SEARCH_URLS_PATH = path.join(currentDirPath, 'search-urls.json');
 
 // Mapeia o valor do enum (usado para gravar `origem` no banco) para a chave
 // correspondente em search-urls.json (usada nas URLs de busca do app antigo).
-// Partial (não Record completo): fontes do cluster Imoview não têm URL de busca em
-// HTML — resolvem cidade dinamicamente via API (src/sources/shared/imoview-client.ts)
-// e nunca chamam loadStartUrls.
+// Partial (não Record completo): três categorias de fonte não têm URL de busca em HTML e
+// nunca chamam loadStartUrls — clusters Imoview e Kenlo resolvem/montam a URL de busca
+// dinamicamente via API própria (src/sources/shared/imoview-client.ts,
+// src/sources/shared/kenlo-client.ts); cluster Loft Sites não tem busca por
+// cidade/transação — a descoberta é via sitemap fixo por site
+// (src/sources/shared/loft-sites-client.ts).
 const SEARCH_URLS_KEY: Partial<Record<OrigemAnuncio, string>> = {
   [OrigemAnuncio.OLX]: 'olx',
   [OrigemAnuncio.NETIMOVEIS]: 'netimoveis',

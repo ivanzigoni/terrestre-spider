@@ -109,6 +109,45 @@ comparado contra `RawListingItem`), confirmar filtro de `aluguel` (só `a-venda`
 e decidir se o parâmetro de paginação tem teto conhecido (não testado além da página 2). Nenhum
 teste de robots.txt/bloqueio anti-bot foi feito ainda para este cluster.
 
+### Correções ao Achado 2, feitas durante a implementação (lote 2 de
+
+`.claude/__workdir/integracao-lote/lotes.md`)
+
+- **robots.txt já estava capturado, a afirmação acima estava desatualizada**: o próprio
+  `discovery/output/kenlo-piloto-jmc.json` já trazia `robots.disallowedForTargetPath: true`. Confirmado
+  ao vivo (`curl` a `robots.txt`) que é o mesmo template nos dois sites: `User-agent: *` →
+  `Disallow: /` (só `/ads.txt` liberado), e `/api/*` desautorizado até para os bots nomeados
+  (Googlebot etc.). Diferente do cluster Imoview, onde `disallowedForTargetPath: false`. Decisão do
+  desenvolvedor: seguir mesmo assim, mesmo tratamento dado a Termos de Uso não confirmados no
+  Imoview — risco sinalizado, não bloqueante neste porte.
+- **"Luxus 939 imóveis à venda" não é o inventário de Belo Horizonte** — é o inventário do tenant
+  inteiro (região de atuação da imobiliária). O endpoint sem slug de cidade (`/api/listings/a-venda`)
+  mistura Belo Horizonte com outras cidades (Nova Lima é a maioria: 538 de 939 pelos `aggs.city`
+  agregados na própria resposta; também Arraial d'Ajuda, Esmeraldas, Rio Acima em volume marginal).
+  JMC tem o mesmo problema em menor escala (215 brutos vs. 187 em BH). Achado técnico que resolve
+  isso: o endpoint aceita um **slug de cidade como segmento de path**
+  (`/api/listings/<finalidade>/<cidade-slug>`, ex.: `/a-venda/belo-horizonte`) que filtra no
+  próprio servidor — confirmado com contagem exata batendo com o agregado de `aggs.city` nos dois
+  sites, aluguel e venda. `kenlo-client.ts` usa esse formato, não o endpoint sem slug.
+- **Contagens reais em Belo Horizonte** (via endpoint com slug, confirmado ao vivo): JMC 187 à
+  venda / 15 para alugar; Luxus 398 à venda / 18 para alugar — bem abaixo dos números brutos
+  citados acima, mas ainda a maior fonte nova do lote em volume de aluguel.
+- **Paginação sem teto observado**: página 30 de 33 da Luxus (398 itens ÷ 12/página) respondeu 200
+  com dado real, cidade ainda batendo. Tamanho de página do servidor confirmado fixo em **12**
+  itens (não documentado antes).
+- **`property_tax`/`condo_fees` (IPTU/condomínio) podem estar ausentes do JSON, não só `null`** —
+  achado só na integração real: 8 de 12 itens da página 1 de venda da JMC não tinham a chave
+  `property_tax` no objeto. Um guard que só aceitava `null` ou `number` descartava esses itens em
+  silêncio (33% de itens válidos perdidos numa única página, antes do fix). `kenlo-client.ts`
+  trata chave ausente e `null` como equivalentes.
+- **`bedrooms`/`bathrooms`/`garages`/`area`/`sale_price`/`rent_price` vêm como array `[min, max]`**,
+  não escalar — não documentado no Achado 2 original. Só o primeiro elemento é usado (os dois
+  valores são sempre idênticos nas amostras confirmadas, para um imóvel específico).
+- **`property_purposes` varia entre string e array** ("FOR_SALE" vs. ["FOR_SALE","FOR_RENT"] para
+  imóveis que aceitam venda e aluguel ao mesmo tempo) — não usado para decidir `tipoTransacao` do
+  item gravado; isso vem do segmento de URL consultado (`a-venda`/`para-alugar`), mesma lógica do
+  Imoview.
+
 ## Achado 3 — cluster de template compartilhado sem API: "GTM Capital / Loft Sites"
 
 CDN `cdn.loftsites.com.br`/`grupo.loft.com.br`/`loft-analytics.gtmcapital.com.br` apareceu em **8
