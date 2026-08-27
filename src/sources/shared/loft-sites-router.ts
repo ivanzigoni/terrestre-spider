@@ -9,7 +9,7 @@ import {
   parseSitemapIndex,
   parseSitemapUrls,
   type SitemapUrlEntry,
-} from './loft-sites-client.js';
+} from './sitemap-client.js';
 
 /**
  * Routers do cluster GTM Capital/Loft Sites — dois papéis bem separados, diferente do

@@ -1,16 +1,13 @@
 import type { CheerioAPI } from 'cheerio';
 
 /**
- * Cliente compartilhado para o cluster de 8 imobiliárias sobre o mesmo template de
- * site-building (CDN `cdn.loftsites.com.br`/`loft-analytics.gtmcapital.com.br`,
- * confirmado em `discovery/independentes-diagnostico.md`, Achado 3, e no lote 3 de
- * `.claude/__workdir/integracao-lote/lotes.md`) — sem API, listagem e detalhe
- * renderizados 100% no HTML inicial.
- *
- * A pipeline não estrutura mais dado de anúncio (ver refactor que remove
- * `RawListingItem`) — o único papel deste cliente hoje é descobrir os links de cada
- * imóvel via sitemap, para a fase de detalhe capturar o HTML bruto (ver
- * `loft-sites-router.ts`).
+ * Parsing de sitemap XML genérico (`<sitemapindex>`/`<urlset>`), sem lógica específica
+ * de nenhum template — filtra só por path `/imovel/`, convenção comum aos dois clusters
+ * que hoje descobrem links via sitemap: GTM Capital/Loft Sites
+ * (`discovery/independentes-diagnostico.md`, Achado 3, lote 3 de
+ * `.claude/__workdir/integracao-lote/lotes.md`) e ImobiBrasil (Achado 4, lote 4). Já se
+ * chamou `loft-sites-client.ts`, mas nunca teve lógica exclusiva daquele template — só
+ * fazia sentido renomear quando um segundo cluster passou a reaproveitar o arquivo.
  */
 
 export function parseSitemapIndex($: CheerioAPI): string[] {

@@ -7,9 +7,9 @@ import { loadStartUrls } from './search-urls.js';
 // Três categorias de fonte não têm URL de busca em HTML e nunca chamam loadStartUrls de
 // verdade, cada uma por um motivo diferente: clusters Imoview e Kenlo resolvem/montam a
 // URL de busca dinamicamente via API própria (src/sources/shared/imoview-client.ts,
-// src/sources/shared/kenlo-client.ts); cluster Loft Sites não tem busca por
-// cidade/transação nenhuma — a descoberta é via sitemap fixo por site, sem variação de
-// tipoTransacao na URL (src/sources/shared/loft-sites-client.ts). Excluídas do
+// src/sources/shared/kenlo-client.ts); clusters Loft Sites e ImobiBrasil não têm busca
+// por cidade/transação nenhuma — a descoberta é via sitemap fixo por site, sem variação
+// de tipoTransacao na URL (src/sources/shared/sitemap-client.ts). Excluídas do
 // parametrizado abaixo, cobertas à parte.
 const FONTES_SEM_SEARCH_URLS = new Set<OrigemAnuncio>([
   OrigemAnuncio.IMOBILIARIA_BURITIS,
@@ -30,6 +30,8 @@ const FONTES_SEM_SEARCH_URLS = new Set<OrigemAnuncio>([
   OrigemAnuncio.SEVEN_IMOVEIS,
   OrigemAnuncio.TOPMIG_IMOVEIS,
   OrigemAnuncio.VENDA_NOVA_IMOVEIS,
+  OrigemAnuncio.LIMA_IMOVEIS_BARREIRO,
+  OrigemAnuncio.STRUTURAL_IMOBILIARIA,
 ]);
 
 const FONTES_COM_SEARCH_URLS = Object.values(OrigemAnuncio).filter(
