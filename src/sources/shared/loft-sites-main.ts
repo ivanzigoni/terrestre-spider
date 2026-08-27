@@ -54,7 +54,6 @@ export function createLoftSitesRun(
     uploadMutex: Mutex = new Mutex(),
   ): Promise<ExecucaoStats> {
     const maxDetailPages = getMaxDetailPagesPerCrawl(origem);
-    const dataset = await openFreshDataset(origem);
     const capturaDataset = await openFreshDataset<RawCaptureItem>(
       `${origem}-raw`,
     );
@@ -108,18 +107,15 @@ export function createLoftSitesRun(
     });
     const cortados = ordenados.slice(0, maxDetailPages);
 
-    // Fase 2 — detalhe: uma request por imóvel único descoberto na fase 1.
-    let anunciosEncontrados = 0;
+    // Fase 2 — detalhe: uma request por imóvel único descoberto na fase 1. Sem dataset de
+    // itens estruturados (a pipeline não estrutura mais dado de anúncio) — só captura
+    // bruta, gravada dentro do próprio router de detalhe.
     if (cortados.length > 0) {
       const detalheQueue = await openFreshRequestQueue(`${origem}-detalhe`);
       await detalheQueue.addRequests(cortados.map(([url]) => ({ url })));
       const detalheCrawler = new CheerioCrawler({
         httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
-        requestHandler: createLoftSitesDetalheRouter(
-          dataset,
-          capturaDataset,
-          origem,
-        ),
+        requestHandler: createLoftSitesDetalheRouter(capturaDataset, origem),
         requestQueue: detalheQueue,
         sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
         maxRequestsPerCrawl: maxDetailPages,
@@ -140,7 +136,6 @@ export function createLoftSitesRun(
           cortados.length,
         ),
       );
-      anunciosEncontrados = (await dataset.getInfo())?.itemCount ?? 0;
     }
 
     // Dentro do mutex: duas fontes chamando uploadCapturasBrutas ao mesmo tempo
@@ -173,8 +168,8 @@ export function createLoftSitesRun(
 
     return {
       ...sumCrawlStats(stats),
-      anunciosEncontrados,
-      anunciosUnicosDetalhe: cortados.length,
+      linksEncontrados: porUrl.size,
+      linksUnicosDetalhe: cortados.length,
       capturasBrutasEnviadas,
     };
   };

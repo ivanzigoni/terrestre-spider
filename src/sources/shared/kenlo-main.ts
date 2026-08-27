@@ -107,7 +107,7 @@ export function createKenloRun(
         linksUnicos.set(item.link, item.tipoTransacao);
       }
     });
-    const anunciosEncontrados = (await dataset.getInfo())?.itemCount ?? 0;
+    const linksEncontrados = (await dataset.getInfo())?.itemCount ?? 0;
 
     if (linksUnicos.size > 0) {
       const detalheQueue = await openFreshRequestQueue(`${origem}-detalhe`);
@@ -171,8 +171,8 @@ export function createKenloRun(
 
     return {
       ...sumCrawlStats(stats),
-      anunciosEncontrados,
-      anunciosUnicosDetalhe: linksUnicos.size,
+      linksEncontrados,
+      linksUnicosDetalhe: linksUnicos.size,
       capturasBrutasEnviadas,
     };
   };

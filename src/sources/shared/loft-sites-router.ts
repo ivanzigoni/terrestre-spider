@@ -5,9 +5,7 @@ import { FormatoCaptura } from '../../persistence/enums/formato-captura.enum.js'
 import type { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { TipoPaginaCaptura } from '../../persistence/enums/tipo-pagina-captura.enum.js';
 import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
-import type { RawListingItem } from '../../persistence/raw-listing-item.js';
 import {
-  parseListingDetailPage,
   parseSitemapIndex,
   parseSitemapUrls,
   type SitemapUrlEntry,
@@ -15,7 +13,7 @@ import {
 
 /**
  * Routers do cluster GTM Capital/Loft Sites — dois papéis bem separados, diferente do
- * padrão de dois estágios do Kenlo/Imoview (lá a fase 1 já extrai o item completo via
+ * padrão de dois estágios do Kenlo/Imoview (lá a fase 1 já extrai o link do item via
  * API; aqui o sitemap não carrega dado de negócio, só links).
  *
  * Fase de descoberta (`createLoftSitesDescobertaRouter`): `/sitemap.xml` (label
@@ -25,10 +23,11 @@ import {
  * `FormatoCaptura` que se aplicaria seria XML, que não existe no enum hoje; estender o
  * enum só pra isso não se paga, ver decisão registrada no plano do lote 3).
  *
- * Fase de detalhe (`createLoftSitesDetalheRouter`): único request handler, sempre grava
- * a captura bruta da página ANTES de tentar extrair (mesmo padrão de
- * `src/sources/olx/routes.ts` — mesmo com falha de parse, é o caso mais útil pra
- * diagnosticar depois), e só grava no `dataset` quando a extração teve sucesso.
+ * Fase de detalhe (`createLoftSitesDetalheRouter`): único request handler, só grava a
+ * captura bruta da página — sem tentativa de extração estruturada (a pipeline não
+ * estrutura mais dado de anúncio, ver refactor que remove `RawListingItem`).
+ * `tipoTransacao` é sempre `null`: o sitemap não distingue venda/aluguel, e nenhuma
+ * extração de conteúdo é feita aqui pra descobrir.
  */
 
 /**
@@ -69,7 +68,6 @@ export function createLoftSitesDescobertaRouter(coletados: SitemapUrlEntry[]) {
 }
 
 export function createLoftSitesDetalheRouter(
-  dataset: Dataset<RawListingItem>,
   capturaDataset: Dataset<RawCaptureItem>,
   origem: OrigemAnuncio,
 ) {
@@ -77,32 +75,17 @@ export function createLoftSitesDetalheRouter(
 
   router.addDefaultHandler(async ({ $, request, log }) => {
     const url = request.loadedUrl;
-    const item = parseListingDetailPage(comoCheerioDoProjeto($), url, origem);
 
-    // Grava a captura bruta incondicionalmente, antes/depois de tentar extrair — mesmo
-    // com falha de parse, é o caso mais útil pra diagnosticar depois (mesmo raciocínio
-    // do router da OLX). `tipoTransacao` só é conhecido depois do parse (achado do lote
-    // 3 — a URL não indica venda/aluguel), por isso `null` explícito quando o parse
-    // falha.
     await capturaDataset.pushData({
       origem,
-      tipoTransacao: item?.tipoTransacao ?? null,
+      tipoTransacao: null,
       tipoPagina: TipoPaginaCaptura.DETALHE,
       url,
       formato: FormatoCaptura.HTML,
       conteudo: $.html(),
       capturadoEm: new Date().toISOString(),
     });
-
-    if (item === null) {
-      log.warning(
-        `${origem}: item malformado (rótulo de preço ausente) em ${url}`,
-      );
-      return;
-    }
-
-    await dataset.pushData([item]);
-    log.info(`${origem}: item extraído em ${url}`);
+    log.info(`${origem}: detalhe capturado em ${url}`);
   });
 
   return router;

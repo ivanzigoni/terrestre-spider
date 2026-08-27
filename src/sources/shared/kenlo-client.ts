@@ -1,7 +1,5 @@
-import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
-import type { RawListingItem } from '../../persistence/raw-listing-item.js';
-import { temValorPlausivel } from './raw-listing-item-plausibilidade.js';
+import type { LinkAnuncio } from '../../persistence/link-anuncio.js';
 
 /**
  * Cliente compartilhado para o cluster de imobiliárias sobre a plataforma Kenlo (SaaS de
@@ -53,43 +51,12 @@ export function buildSearchUrl(
   return `${baseUrl}/api/listings/${segmento}/${params.cidadeSlug}?${query.toString()}`;
 }
 
-/**
- * `bedrooms`/`bathrooms`/`garages`/`area`/`sale_price`/`rent_price` vêm como array
- * `[min, max]` (provavelmente pensado para resultado de busca com faixa, mas para um
- * imóvel específico os dois valores são sempre idênticos nas amostras confirmadas) — só
- * o primeiro elemento é usado. `property_purposes` varia entre string única
- * ("FOR_SALE"/"FOR_RENT") e array (["FOR_SALE","FOR_RENT"]) para imóveis que aceitam
- * venda e aluguel ao mesmo tempo — não é usado para decidir `tipoTransacao` do item
- * (isso vem do próprio segmento de URL consultado, `a-venda` ou `para-alugar`, mesma
- * lógica do Imoview), só documentado aqui porque é a explicação do formato variável.
- */
+// Só o campo usado para montar o link do anúncio — o único dado extraído da resposta
+// nesta pipeline. Nenhum outro campo (preço, quartos, área etc.) é lido: a captura bruta
+// da resposta inteira (ver `kenlo-router.ts`) já preserva tudo, sem perda — mesma
+// disciplina adotada no cluster Imoview (`imoview-client.ts`).
 interface RawKenloListingItem {
   url: string;
-  heading1: string;
-  neighborhood: string;
-  city: string;
-  bedrooms: number[];
-  bathrooms: number[];
-  garages: number[];
-  area: number[];
-  sale_price: number[];
-  rent_price: number[];
-  property_type: string;
-  // `null` explícito ou chave inteiramente ausente do objeto (confirmado nos dois — ver
-  // lote 2 de lotes.md: 8 de 12 itens da página 1 de venda da JMC não têm a chave
-  // `property_tax` no JSON, não é `null`) — os dois casos significam "sem IPTU/condomínio
-  // informado" e são tratados de forma idêntica em `mapToRawListingItem` (`?? 0`).
-  property_tax?: number | null;
-  condo_fees?: number | null;
-  updated_at: string;
-}
-
-function isNumberArrayComElemento(value: unknown): value is number[] {
-  return (
-    Array.isArray(value) &&
-    value.length > 0 &&
-    value.every((entry) => typeof entry === 'number')
-  );
 }
 
 // Guard manual em vez de `as`: endpoint interno não documentado, sem contrato formal —
@@ -99,26 +66,7 @@ function isRawKenloListingItem(value: unknown): value is RawKenloListingItem {
     return false;
   }
   const item = value as Record<string, unknown>;
-  return (
-    typeof item.url === 'string' &&
-    typeof item.heading1 === 'string' &&
-    typeof item.neighborhood === 'string' &&
-    typeof item.city === 'string' &&
-    isNumberArrayComElemento(item.bedrooms) &&
-    isNumberArrayComElemento(item.bathrooms) &&
-    isNumberArrayComElemento(item.garages) &&
-    isNumberArrayComElemento(item.area) &&
-    isNumberArrayComElemento(item.sale_price) &&
-    isNumberArrayComElemento(item.rent_price) &&
-    typeof item.property_type === 'string' &&
-    (item.property_tax === undefined ||
-      item.property_tax === null ||
-      typeof item.property_tax === 'number') &&
-    (item.condo_fees === undefined ||
-      item.condo_fees === null ||
-      typeof item.condo_fees === 'number') &&
-    typeof item.updated_at === 'string'
-  );
+  return typeof item.url === 'string';
 }
 
 interface RawKenloSearchResponse {
@@ -136,53 +84,14 @@ function isRawKenloSearchResponse(
   return Array.isArray(response.data) && typeof response.count === 'number';
 }
 
-function mapToRawListingItem(
-  item: RawKenloListingItem,
-  baseUrl: string,
-  origem: OrigemAnuncio,
-  tipoTransacao: TipoTransacao,
-): RawListingItem {
-  const preco =
-    tipoTransacao === TipoTransacao.VENDA
-      ? (item.sale_price[0] ?? 0)
-      : (item.rent_price[0] ?? 0);
-
-  return {
-    origem,
-    tipoTransacao,
-    // Vocabulário próprio da Kenlo (ex.: "PENTHOUSE_APARTMENT"), sem tradução — mesma
-    // convenção do Quinto Andar (`tipoImovel: source.type`), campo espelha o contrato
-    // de uma API de terceiro.
-    tipoImovel: item.property_type,
-    link: `${baseUrl}${item.url}`,
-    titulo: item.heading1,
-    quartos: item.bedrooms[0] ?? 0,
-    banheiros: item.bathrooms[0] ?? 0,
-    vagas: item.garages[0] ?? 0,
-    area: Math.round(item.area[0] ?? 0),
-    localizacao: `${item.neighborhood}, ${item.city}`,
-    dataDePublicacaoText: item.updated_at,
-    preco,
-    // `property_tax` é o IPTU — quando o imóvel não tem valor informado, a chave vem
-    // `null` ou inteiramente ausente do JSON (os dois casos tratados igual aqui),
-    // diferente do cluster Imoview, onde o campo não foi localizado (`iptu: 0` fixo lá).
-    iptu: item.property_tax ?? 0,
-    condominio: item.condo_fees ?? 0,
-    // Kenlo não expõe preço anterior/histórico em nenhum campo da amostra confirmada
-    // (diferente de `valoranterior` no Imoview) — sempre `null` até achado em contrário.
-    precoAntigo: null,
-  };
-}
-
 export interface ParsedKenloPage {
-  items: RawListingItem[];
+  items: LinkAnuncio[];
   total: number;
 }
 
 export function parseSearchResponse(
   json: unknown,
   baseUrl: string,
-  origem: OrigemAnuncio,
   tipoTransacao: TipoTransacao,
 ): ParsedKenloPage {
   if (!isRawKenloSearchResponse(json)) {
@@ -191,16 +100,12 @@ export function parseSearchResponse(
     );
   }
 
-  const items: RawListingItem[] = [];
+  const items: LinkAnuncio[] = [];
   for (const raw of json.data) {
     if (!isRawKenloListingItem(raw)) {
       continue;
     }
-    const mapped = mapToRawListingItem(raw, baseUrl, origem, tipoTransacao);
-    if (!temValorPlausivel(mapped)) {
-      continue;
-    }
-    items.push(mapped);
+    items.push({ link: `${baseUrl}${raw.url}`, tipoTransacao });
   }
 
   return { items, total: json.count };

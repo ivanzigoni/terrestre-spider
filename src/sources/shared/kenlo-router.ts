@@ -3,8 +3,8 @@ import { createHttpRouter, type Dataset } from 'crawlee';
 import { FormatoCaptura } from '../../persistence/enums/formato-captura.enum.js';
 import type { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { TipoPaginaCaptura } from '../../persistence/enums/tipo-pagina-captura.enum.js';
+import type { LinkAnuncio } from '../../persistence/link-anuncio.js';
 import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
-import type { RawListingItem } from '../../persistence/raw-listing-item.js';
 import {
   buildSearchUrl,
   KENLO_PAGE_SIZE,
@@ -45,7 +45,7 @@ function getKenloUserData(userData: unknown): KenloUserData {
 }
 
 export function createKenloRouter(
-  dataset: Dataset<RawListingItem>,
+  dataset: Dataset<LinkAnuncio>,
   capturaDataset: Dataset<RawCaptureItem>,
   baseUrl: string,
   origem: OrigemAnuncio,
@@ -71,12 +71,7 @@ export function createKenloRouter(
       capturadoEm: new Date().toISOString(),
     });
 
-    const { items, total } = parseSearchResponse(
-      json,
-      baseUrl,
-      origem,
-      tipoTransacao,
-    );
+    const { items, total } = parseSearchResponse(json, baseUrl, tipoTransacao);
 
     if (items.length > 0) {
       await dataset.pushData(items);
