@@ -7,12 +7,10 @@ import { DataSource } from 'typeorm';
 import { CapturaBruta } from './entities/captura-bruta.entity.js';
 import { Execucao } from './entities/execucao.entity.js';
 
-// `Anuncio`/`ObservacaoPreco` saíram daqui quando as tabelas foram
-// descontinuadas (ver migration DropAnunciosTables) — com `synchronize:
-// false`, mantê-las listadas sem tabela por trás faria um futuro
-// `migration:generate` propor recriá-las, achando que é drift não
-// intencional. As classes de entidade continuam no repositório como código
-// morto, mais fácil de religar quando "por ora" acabar.
+// `Anuncio`/`ObservacaoPreco` foram removidas do projeto: a pipeline não estrutura mais
+// dado de anúncio, só captura conteúdo bruto (`CapturaBruta`) e controla a própria
+// execução (`Execucao`). As tabelas foram dropadas (ver migration DropAnunciosTables) e
+// as classes de entidade foram apagadas junto — não há intenção de religar.
 
 const currentFilePath = fileURLToPath(import.meta.url);
 const currentDirPath = path.dirname(currentFilePath);

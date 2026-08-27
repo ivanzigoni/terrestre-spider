@@ -4,8 +4,8 @@ import { FormatoCaptura } from '../../persistence/enums/formato-captura.enum.js'
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { TipoPaginaCaptura } from '../../persistence/enums/tipo-pagina-captura.enum.js';
 import type { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
+import type { LinkAnuncio } from '../../persistence/link-anuncio.js';
 import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
-import type { RawListingItem } from '../../persistence/raw-listing-item.js';
 import { getTipoTransacao } from '../shared/request-user-data.js';
 import {
   PAGE_SIZE,
@@ -42,7 +42,7 @@ function getQuintoAndarUserData(userData: unknown): QuintoAndarUserData {
 }
 
 export function createQuintoAndarRouter(
-  dataset: Dataset<RawListingItem>,
+  dataset: Dataset<LinkAnuncio>,
   capturaDataset: Dataset<RawCaptureItem>,
 ) {
   const router = createHttpRouter();

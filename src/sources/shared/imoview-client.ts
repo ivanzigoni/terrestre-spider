@@ -1,8 +1,5 @@
-import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
+import type { LinkAnuncio } from '../../persistence/link-anuncio.js';
 import { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
-import type { RawListingItem } from '../../persistence/raw-listing-item.js';
-import { parseBrlToInteiro } from './parse-brl.js';
-import { temValorPlausivel } from './raw-listing-item-plausibilidade.js';
 
 /**
  * Cliente compartilhado para o cluster de imobiliárias sobre a plataforma Universal
@@ -136,32 +133,18 @@ export function buildSearchPayload(params: ImoviewSearchParams): string {
   }).toString();
 }
 
+// Só os dois campos usados para montar o link do anúncio — o único dado extraído do
+// payload nesta pipeline. Nenhum outro campo da resposta (preço, quartos, área etc.) é
+// lido: a captura bruta da resposta inteira (ver `imoview-router.ts`) já preserva tudo,
+// sem perda.
 interface RawImoviewListingItem {
   codigo: number;
-  titulo: string;
-  tipo: string;
-  bairro: string;
-  cidade: string;
-  numeroquartos: string;
-  numerobanhos: string;
-  numerovagas: string;
-  areainterna: string;
-  valor: string;
-  // string nos sites originais (Buritis, Liderar); número no Casa Grande — 3º cliente
-  // do cluster, mesmo campo, tipo diferente na resposta. Ver `parseValorAnterior`.
-  valoranterior: string | number;
-  valorcondominio: string | undefined;
-  datahoracadastro: string;
   url_amigavel: string;
 }
 
 // Guard manual em vez de `as`: o payload vem de um endpoint interno não documentado,
 // sem contrato formal — mesma disciplina do cliente do Quinto Andar
-// (src/sources/quinto-andar/api-client.ts). `valorcondominio` é opcional (confirmado
-// ausente em alguns imóveis de alguns sites do cluster). `valortratado` (inteiro pronto)
-// não entra aqui de propósito: confirmado ausente em anúncios de aluguel do Liderar,
-// mesmo com `valor` presente — por isso o preço é sempre derivado de `valor` (string),
-// nunca de `valortratado`, ver `mapToRawListingItem`.
+// (src/sources/quinto-andar/api-client.ts).
 function isRawImoviewListingItem(
   value: unknown,
 ): value is RawImoviewListingItem {
@@ -170,22 +153,7 @@ function isRawImoviewListingItem(
   }
   const item = value as Record<string, unknown>;
   return (
-    typeof item.codigo === 'number' &&
-    typeof item.titulo === 'string' &&
-    typeof item.tipo === 'string' &&
-    typeof item.bairro === 'string' &&
-    typeof item.cidade === 'string' &&
-    typeof item.numeroquartos === 'string' &&
-    typeof item.numerobanhos === 'string' &&
-    typeof item.numerovagas === 'string' &&
-    typeof item.areainterna === 'string' &&
-    typeof item.valor === 'string' &&
-    (typeof item.valoranterior === 'string' ||
-      typeof item.valoranterior === 'number') &&
-    (item.valorcondominio === undefined ||
-      typeof item.valorcondominio === 'string') &&
-    typeof item.datahoracadastro === 'string' &&
-    typeof item.url_amigavel === 'string'
+    typeof item.codigo === 'number' && typeof item.url_amigavel === 'string'
   );
 }
 
@@ -206,67 +174,18 @@ function isRawImoviewSearchResponse(
   );
 }
 
-// `precoAntigo` trata três sentinelas de "sem valor anterior" como equivalentes: string
-// vazia (Buritis), "R$ 0,00" (Liderar) e o número `0` (Casa Grande — mesmo campo, mas a
-// resposta já vem numérica em vez de string formatada). Tratar 0 como preço anterior
-// real seria um dado falso — nenhum imóvel teve preço zero antes.
-function parseValorAnterior(valor: string | number): number | null {
-  const numero = typeof valor === 'number' ? valor : parseBrlToInteiro(valor);
-  return numero === null || numero === 0 ? null : numero;
-}
-
-// `area` é `int` no schema (src/persistence/entities/imovel.entity.ts) — arredonda em
-// vez de truncar, já que o valor de origem já vem com só 2 casas decimais (m²).
-function parseAreaInterna(areainterna: string): number {
-  const numero = Number(areainterna.replace(',', '.'));
-  return Number.isNaN(numero) ? 0 : Math.round(numero);
-}
-
-function mapToRawListingItem(
-  item: RawImoviewListingItem,
-  baseUrl: string,
-  origem: OrigemAnuncio,
-  tipoTransacao: TipoTransacao,
-): RawListingItem {
-  return {
-    origem,
-    tipoTransacao,
-    tipoImovel: item.tipo,
-    link: `${baseUrl}/imovel/${item.url_amigavel}/${String(item.codigo)}`,
-    titulo: item.titulo,
-    quartos: Number(item.numeroquartos) || 0,
-    banheiros: Number(item.numerobanhos) || 0,
-    vagas: Number(item.numerovagas) || 0,
-    area: parseAreaInterna(item.areainterna),
-    localizacao: `${item.bairro}, ${item.cidade}`,
-    dataDePublicacaoText: item.datahoracadastro,
-    // Derivado de `valor` (string formatada), não de `valortratado`: confirmado ausente
-    // em anúncios de aluguel do Liderar mesmo com `valor` presente. `current_price` é
-    // `int` no schema (src/persistence/entities/anuncio.entity.ts) — `?? 0` é só rede de
-    // segurança contra formato inesperado, nunca esperado de disparar na prática.
-    preco: parseBrlToInteiro(item.valor) ?? 0,
-    // Nome de campo para IPTU não confirmado neste cluster (ver
-    // discovery/imoview-diagnostico.md) — 0 é o default do schema, não uma leitura real.
-    iptu: 0,
-    // Condomínio zero é dado real (ex.: casas), diferente de `precoAntigo` — por isso usa
-    // o parser sem tratamento especial de zero.
-    condominio:
-      item.valorcondominio === undefined
-        ? 0
-        : (parseBrlToInteiro(item.valorcondominio) ?? 0),
-    precoAntigo: parseValorAnterior(item.valoranterior),
-  };
+function buildLink(item: RawImoviewListingItem, baseUrl: string): string {
+  return `${baseUrl}/imovel/${item.url_amigavel}/${String(item.codigo)}`;
 }
 
 export interface ParsedImoviewPage {
-  items: RawListingItem[];
+  items: LinkAnuncio[];
   total: number;
 }
 
 export function parseSearchResponse(
   json: unknown,
   baseUrl: string,
-  origem: OrigemAnuncio,
   tipoTransacao: TipoTransacao,
 ): ParsedImoviewPage {
   if (!isRawImoviewSearchResponse(json)) {
@@ -275,16 +194,12 @@ export function parseSearchResponse(
     );
   }
 
-  const items: RawListingItem[] = [];
+  const items: LinkAnuncio[] = [];
   for (const raw of json.lista) {
     if (!isRawImoviewListingItem(raw)) {
       continue;
     }
-    const mapped = mapToRawListingItem(raw, baseUrl, origem, tipoTransacao);
-    if (!temValorPlausivel(mapped)) {
-      continue;
-    }
-    items.push(mapped);
+    items.push({ link: buildLink(raw, baseUrl), tipoTransacao });
   }
 
   return { items, total: json.quantidade };

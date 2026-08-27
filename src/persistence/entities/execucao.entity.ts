@@ -65,11 +65,11 @@ export class Execucao {
   @Column({ type: 'jsonb', name: 'retry_histogram', nullable: true })
   declare retryHistogram: number[] | null;
 
-  @Column({ type: 'int', name: 'anuncios_encontrados', nullable: true })
-  declare anunciosEncontrados: number | null;
+  @Column({ type: 'int', name: 'links_encontrados', nullable: true })
+  declare linksEncontrados: number | null;
 
-  @Column({ type: 'int', name: 'anuncios_unicos_detalhe', nullable: true })
-  declare anunciosUnicosDetalhe: number | null;
+  @Column({ type: 'int', name: 'links_unicos_detalhe', nullable: true })
+  declare linksUnicosDetalhe: number | null;
 
   @Column({ type: 'int', name: 'capturas_brutas_enviadas', nullable: true })
   declare capturasBrutasEnviadas: number | null;

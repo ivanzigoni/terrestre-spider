@@ -4,13 +4,13 @@ import { FormatoCaptura } from '../../persistence/enums/formato-captura.enum.js'
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import { TipoPaginaCaptura } from '../../persistence/enums/tipo-pagina-captura.enum.js';
 import type { RawCaptureItem } from '../../persistence/raw-capture-item.js';
-import type { RawListingItem } from '../../persistence/raw-listing-item.js';
+import type { LinkAnuncio } from '../../persistence/link-anuncio.js';
 import { getTipoTransacao } from '../shared/request-user-data.js';
 
 const CARD_SELECTOR = 'section.olx-adcard';
 
 export function createOlxRouter(
-  dataset: Dataset<RawListingItem>,
+  dataset: Dataset<LinkAnuncio>,
   capturaDataset: Dataset<RawCaptureItem>,
 ) {
   const router = createCheerioRouter();
@@ -30,7 +30,7 @@ export function createOlxRouter(
       capturadoEm: new Date().toISOString(),
     });
 
-    const items: RawListingItem[] = [];
+    const items: LinkAnuncio[] = [];
 
     $(CARD_SELECTOR).each((_, card) => {
       const $card = $(card);
@@ -40,80 +40,7 @@ export function createOlxRouter(
         href !== undefined ? new URL(href, request.loadedUrl).toString() : '';
       if (link === '') return;
 
-      const titleAttr = linkEl.attr('title');
-      const titulo =
-        titleAttr !== undefined && titleAttr !== ''
-          ? titleAttr
-          : linkEl.text().trim();
-
-      // A categoria (ex.: "imoveis", "terrenos") é o único sinal de tipo que a OLX
-      // serve no HTML puro — o rótulo mais específico ("Apartamento", "Casa") só
-      // existe no DOM depois da hidratação, que o CheerioCrawler não executa.
-      const tipoImovel =
-        new URL(link).pathname.split('/').filter(Boolean)[1] ?? null;
-
-      let quartos = 0;
-      let banheiros = 0;
-      let area = 0;
-      let vagas: number | null = null;
-
-      $card.find('.olx-adcard__detail').each((__, detail) => {
-        const $detail = $(detail);
-        const label = ($detail.attr('aria-label') ?? '').toLowerCase();
-        const text = $detail.text().trim().toLowerCase();
-        const match = /(\d+)/.exec(label);
-        const value = match ? Number(match[1]) : null;
-        if (value === null) return;
-
-        if (label.includes('quarto')) quartos = value;
-        else if (
-          label.includes('metro') ||
-          label.includes('m²') ||
-          text.includes('m²')
-        )
-          area = value;
-        else if (label.includes('banheiro')) banheiros = value;
-        else if (label.includes('vaga')) vagas = value;
-      });
-
-      const priceText = $card.find('h3.olx-adcard__price').text();
-      const preco = Number(priceText.replace(/\D/g, '')) || 0;
-
-      let iptu = 0;
-      let condominio = 0;
-      $card.find('div.olx-adcard__price-info').each((__, el) => {
-        const text = $(el).text().trim().toLowerCase();
-        if (text.startsWith('iptu'))
-          iptu = Number(text.replace(/\D/g, '')) || 0;
-        else if (text.startsWith('condomínio') || text.startsWith('condominio'))
-          condominio = Number(text.replace(/\D/g, '')) || 0;
-      });
-
-      const localizacao = $card.find('p.olx-adcard__location').text().trim();
-      const dataDePublicacaoTextRaw = $card
-        .find('p.olx-adcard__date')
-        .text()
-        .trim();
-      const dataDePublicacaoText =
-        dataDePublicacaoTextRaw === '' ? null : dataDePublicacaoTextRaw;
-
-      items.push({
-        origem: OrigemAnuncio.OLX,
-        tipoTransacao,
-        tipoImovel,
-        link,
-        titulo,
-        quartos,
-        banheiros,
-        vagas,
-        area,
-        localizacao,
-        dataDePublicacaoText,
-        preco,
-        iptu,
-        condominio,
-        precoAntigo: null,
-      });
+      items.push({ link, tipoTransacao });
     });
 
     if (items.length > 0) {

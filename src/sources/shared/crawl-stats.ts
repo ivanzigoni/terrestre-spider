@@ -12,8 +12,8 @@ export interface CrawlStats {
 // Contadores locais de cada fonte, não vêm do FinalStatistics do Crawlee — cada
 // `*-main.ts` já os calcula em memória hoje, só nunca saem da função.
 export interface ExecucaoStats extends CrawlStats {
-  anunciosEncontrados: number;
-  anunciosUnicosDetalhe: number;
+  linksEncontrados: number;
+  linksUnicosDetalhe: number;
   capturasBrutasEnviadas: number;
 }
 

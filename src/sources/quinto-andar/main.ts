@@ -6,7 +6,6 @@ import { loadStartUrls } from '../../config/search-urls.js';
 import { createDataSource } from '../../persistence/data-source.js';
 import { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
 import type { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
-// import { loadIntoPostgres } from '../../persistence/load.js';
 import {
   inserirCapturasBrutas,
   uploadCapturasBrutas,
@@ -117,7 +116,7 @@ export async function runQuintoAndar(
       linksUnicos.set(item.link, item.tipoTransacao);
     }
   });
-  const anunciosEncontrados = (await dataset.getInfo())?.itemCount ?? 0;
+  const linksEncontrados = (await dataset.getInfo())?.itemCount ?? 0;
 
   if (linksUnicos.size > 0) {
     const detalheQueue = await openFreshRequestQueue(
@@ -153,17 +152,6 @@ export async function runQuintoAndar(
     );
   }
 
-  // anuncios/observacoes_preco foram descontinuadas (ver migration
-  // DropAnunciosTables) — loadIntoPostgres fica comentado, não apagado.
-  //
-  // const dataSource = createDataSource();
-  // await dataSource.initialize();
-  // try {
-  //   await loadIntoPostgres(dataset, dataSource);
-  // } finally {
-  //   await dataSource.destroy();
-  // }
-
   // Dentro do mutex: duas fontes chamando uploadCapturasBrutas ao mesmo
   // tempo corrompeu o armazenamento local do Crawlee numa run real (ver
   // upload-mutex.ts).
@@ -195,8 +183,8 @@ export async function runQuintoAndar(
 
   return {
     ...sumCrawlStats(stats),
-    anunciosEncontrados,
-    anunciosUnicosDetalhe: linksUnicos.size,
+    linksEncontrados,
+    linksUnicosDetalhe: linksUnicos.size,
     capturasBrutasEnviadas,
   };
 }
