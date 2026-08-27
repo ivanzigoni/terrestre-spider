@@ -16,6 +16,7 @@ import { runImovelweb } from './sources/imovelweb/main.js';
 import { runIviInvistaImoveis } from './sources/ivi-invista-imoveis/main.js';
 import { runJmcImoveis } from './sources/jmc-imoveis/main.js';
 import { runLiderarImoveis } from './sources/liderar-imoveis/main.js';
+import { runLimaImoveisBarreiro } from './sources/lima-imoveis-barreiro/main.js';
 import { runLuxusImoveisPremium } from './sources/luxus-imoveis-premium/main.js';
 import { runModeloImovel } from './sources/modelo-imovel/main.js';
 import { runNetimoveis } from './sources/netimoveis/main.js';
@@ -26,6 +27,7 @@ import { runRealImobiliaria } from './sources/real-imobiliaria/main.js';
 import { runRealImoveisPampulha } from './sources/real-imoveis-pampulha/main.js';
 import { runSevenImoveis } from './sources/seven-imoveis/main.js';
 import { BATCH_SIZE } from './sources/shared/crawler-defaults.js';
+import { runStruturalImobiliaria } from './sources/strutural-imobiliaria/main.js';
 import { runTopmigImoveis } from './sources/topmig-imoveis/main.js';
 import { runValoreImoveis } from './sources/valore-imoveis/main.js';
 import { runVendaNovaImoveis } from './sources/venda-nova-imoveis/main.js';
@@ -152,6 +154,16 @@ const FONTES: Fonte[] = [
     origem: OrigemAnuncio.REAL_IMOVEIS_PAMPULHA,
     run: runRealImoveisPampulha,
   },
+  // Cluster ImobiBrasil (lote 4 de .claude/__workdir/integracao-lote/lotes.md) — as 2
+  // usam PlaywrightCrawler na fase de DETALHE (conteúdo real só existe pós-JS,
+  // diferente do Loft Sites), mas ficam intercaladas neste trecho sem-browser em vez
+  // de adjacentes uma à outra, preservando o pareamento leve/pesado sem precisar de
+  // nova exceção.
+  {
+    nome: 'Lima Imóveis Barreiro',
+    origem: OrigemAnuncio.LIMA_IMOVEIS_BARREIRO,
+    run: runLimaImoveisBarreiro,
+  },
   {
     nome: 'Seven Imóveis',
     origem: OrigemAnuncio.SEVEN_IMOVEIS,
@@ -166,6 +178,11 @@ const FONTES: Fonte[] = [
     nome: 'Venda Nova Imóveis',
     origem: OrigemAnuncio.VENDA_NOVA_IMOVEIS,
     run: runVendaNovaImoveis,
+  },
+  {
+    nome: 'Strutural Imobiliária',
+    origem: OrigemAnuncio.STRUTURAL_IMOBILIARIA,
+    run: runStruturalImobiliaria,
   },
 ];
 

@@ -23,4 +23,6 @@ export enum OrigemAnuncio {
   SEVEN_IMOVEIS = 'seven_imoveis',
   TOPMIG_IMOVEIS = 'topmig_imoveis',
   VENDA_NOVA_IMOVEIS = 'venda_nova_imoveis',
+  LIMA_IMOVEIS_BARREIRO = 'lima_imoveis_barreiro',
+  STRUTURAL_IMOBILIARIA = 'strutural_imobiliaria',
 }

@@ -1,6 +1,6 @@
 import { Browser, ImpitHttpClient } from '@crawlee/impit-client';
 import * as Sentry from '@sentry/node';
-import { CheerioCrawler, log } from 'crawlee';
+import { CheerioCrawler, log, PlaywrightCrawler } from 'crawlee';
 
 import { createDataSource } from '../../persistence/data-source.js';
 import type { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
@@ -20,32 +20,24 @@ import {
   getMaxDetailPagesPerCrawl,
   SAME_DOMAIN_DELAY_SECS,
 } from './crawler-defaults.js';
-import type { SitemapUrlEntry } from './sitemap-client.js';
 import {
-  createLoftSitesDescobertaRouter,
-  createLoftSitesDetalheRouter,
-} from './loft-sites-router.js';
+  createImobiBrasilDescobertaRouter,
+  createImobiBrasilDetalheRouter,
+} from './imobibrasil-router.js';
 import { reportFailedRequest } from './report-failed-request.js';
 import { runWithWatchdog } from './run-with-watchdog.js';
+import type { SitemapUrlEntry } from './sitemap-client.js';
 import { openFreshDataset, openFreshRequestQueue } from './storage.js';
 
 /**
- * Fábrica de `run()` compartilhada por toda imobiliária do cluster GTM Capital/Loft
- * Sites — só `baseUrl`/`origem`/`nomeExibicao` mudam entre elas (ver
- * `discovery/independentes-diagnostico.md`, Achado 3, e lote 3 de
- * `.claude/__workdir/integracao-lote/lotes.md`).
- *
- * Fluxo em 2 fases, diferente do padrão Kenlo/Imoview (lá a listagem já é o dado de
- * negócio; aqui é só descoberta de links via sitemap — ver `loft-sites-router.ts`):
- * 1. Descoberta: `CheerioCrawler` sobre `/sitemap.xml` → `/sitemaps/imoveis-N.xml`,
- *    sem teto (custo de buscar poucos arquivos XML pequenos é baixo, não é o gargalo).
- * 2. Detalhe: ordena os links coletados por `lastmod` desc (mais recentes primeiro,
- *    mesmo raciocínio do teto de listagem do Imoview/Kenlo — captura o que mudou mais
- *    recentemente sob um teto) e corta em `getMaxDetailPagesPerCrawl(origem)` ANTES de
- *    enfileirar, pra não enfileirar milhares de URLs pra depois descartar a maioria
- *    silenciosamente no meio do crawl.
+ * Fábrica de `run()` compartilhada pelo cluster ImobiBrasil — descoberta via sitemap
+ * igual ao Loft Sites (`loft-sites-main.ts`), mas a fase de detalhe usa
+ * `PlaywrightCrawler` em vez de `CheerioCrawler`: confirmado no diagnóstico ao vivo do
+ * lote 4 (`.claude/__workdir/integracao-lote/lotes.md`) que a página de detalhe deste
+ * template só entrega conteúdo real (preço, descrição) depois do JS rodar — o HTML cru
+ * vem só com `<title>`/meta, sem interceptação de rede possível (0 XHR observado).
  */
-export function createLoftSitesRun(
+export function createImobiBrasilRun(
   baseUrl: string,
   origem: OrigemAnuncio,
   nomeExibicao: string,
@@ -60,13 +52,12 @@ export function createLoftSitesRun(
 
     const stats: CrawlStats[] = [];
 
-    // Fase 1 — descoberta: acumula em memória via closure (sem Dataset próprio, ver
-    // `loft-sites-router.ts`).
+    // Fase 1 — descoberta: acumula em memória via closure, mesmo padrão do Loft Sites.
     const coletados: SitemapUrlEntry[] = [];
     const descobertaQueue = await openFreshRequestQueue(`${origem}-descoberta`);
     const descobertaCrawler = new CheerioCrawler({
       httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
-      requestHandler: createLoftSitesDescobertaRouter(coletados),
+      requestHandler: createImobiBrasilDescobertaRouter(coletados),
       requestQueue: descobertaQueue,
       sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
       sessionPoolOptions: {
@@ -77,22 +68,18 @@ export function createLoftSitesRun(
         reportFailedRequest(origem, context, error);
       },
     });
-    // Sem teto explícito (`maxRequestsPerCrawl`) — quantidade de arquivos de sitemap é
-    // pequena (ex.: 19 no maior caso observado no lote 3), watchdog usa um piso de 5min
-    // já generoso pra esse volume.
     stats.push(
       await runWithWatchdog(
         `${nomeExibicao} descoberta`,
         descobertaCrawler.run([
-          { url: `${baseUrl}/sitemap.xml`, label: 'SITEMAP_INDEX' },
+          { url: `${baseUrl}/sitemap.xml`, label: 'SITEMAP_ENTRY' },
         ]),
         maxDetailPages,
       ),
     );
 
-    // Dedup por URL (defensivo — sitemaps diferentes não deveriam repetir a mesma URL de
-    // imóvel, mas não é garantido) + ordena por lastmod desc (mais recente primeiro,
-    // ausência de lastmod vai pro final) + corta no teto ANTES de enfileirar.
+    // Dedup por URL + ordena por lastmod desc (mais recente primeiro) + corta no teto
+    // ANTES de enfileirar — mesmo raciocínio do Loft Sites.
     const porUrl = new Map<string, string | null>();
     for (const entrada of coletados) {
       if (!porUrl.has(entrada.url)) {
@@ -107,20 +94,19 @@ export function createLoftSitesRun(
     });
     const cortados = ordenados.slice(0, maxDetailPages);
 
-    // Fase 2 — detalhe: uma request por imóvel único descoberto na fase 1. Sem dataset de
-    // itens estruturados (a pipeline não estrutura mais dado de anúncio) — só captura
-    // bruta, gravada dentro do próprio router de detalhe.
+    // Fase 2 — detalhe: PlaywrightCrawler (não CheerioCrawler) — ver justificativa no
+    // comentário do módulo. Mesmo padrão de sessão/erro do
+    // `imoview-browser-main.ts`.
     if (cortados.length > 0) {
       const detalheQueue = await openFreshRequestQueue(`${origem}-detalhe`);
       await detalheQueue.addRequests(cortados.map(([url]) => ({ url })));
-      const detalheCrawler = new CheerioCrawler({
+      const detalheCrawler = new PlaywrightCrawler({
         httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
-        requestHandler: createLoftSitesDetalheRouter(capturaDataset, origem),
+        requestHandler: createImobiBrasilDetalheRouter(capturaDataset, origem),
         requestQueue: detalheQueue,
+        headless: true,
         sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
         maxRequestsPerCrawl: maxDetailPages,
-        // Mesmo id do crawler de descoberta acima — nunca rodam ao mesmo tempo dentro
-        // desta fonte (sequencial), só entre fontes diferentes é que precisa isolar.
         sessionPoolOptions: {
           persistStateKeyValueStoreId: `${origem}-sessions`,
         },
@@ -138,8 +124,6 @@ export function createLoftSitesRun(
       );
     }
 
-    // Dentro do mutex: duas fontes chamando uploadCapturasBrutas ao mesmo tempo
-    // corrompeu o armazenamento local do Crawlee numa run real (ver upload-mutex.ts).
     let capturasBrutasEnviadas = 0;
     try {
       await uploadMutex.runExclusive(async () => {

@@ -1,7 +1,7 @@
 import { load } from 'cheerio';
 import { describe, expect, it } from 'vitest';
 
-import { parseSitemapIndex, parseSitemapUrls } from './loft-sites-client.js';
+import { parseSitemapIndex, parseSitemapUrls } from './sitemap-client.js';
 
 describe('parseSitemapIndex', () => {
   it('extrai só as <loc> terminadas em .xml, sem duplicar', () => {
