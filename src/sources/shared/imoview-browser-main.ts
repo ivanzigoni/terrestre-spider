@@ -81,6 +81,11 @@ export function createImoviewBrowserRun(
         httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
         requestQueue,
         headless: true,
+        // Sem isso, o AutoscaledPool escala sozinho até 200 (default) se a máquina
+        // parecer ter folga — cada tarefa concorrente aqui é uma página headless
+        // inteira renderizando JS, o custo real de RAM (não o processo do browser em
+        // si). 1 de cada vez, mesma disciplina do sameDomainDelaySecs abaixo.
+        maxConcurrency: 1,
         sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
         maxRequestsPerCrawl: maxListingPages,
         // Sem isso, o SessionPool desta fonte se autopersiste no Key-Value Store
@@ -170,6 +175,7 @@ export function createImoviewBrowserRun(
         ),
         requestQueue: detalheQueue,
         headless: true,
+        maxConcurrency: 1,
         sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
         // Mesmo id do crawler de listagem acima — nunca rodam ao mesmo tempo dentro
         // desta fonte (sequencial), só entre fontes diferentes é que precisa isolar.

@@ -52,6 +52,11 @@ export async function runImovelweb(
       requestHandler: createImovelwebRouter(dataset, capturaDataset),
       requestQueue,
       headless: true,
+      // Ver imoview-browser-main.ts: sem isso o AutoscaledPool escala sozinho até
+      // 200, e cada tarefa aqui é uma página headless inteira renderizando JS — além
+      // disso, 1 de cada vez fica mais perto do padrão humano que o desafio
+      // Cloudflare comentado abaixo já está tolerando.
+      maxConcurrency: 1,
       sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
       maxRequestsPerCrawl: maxListingPages,
       // O SessionPool do Crawlee (`_throwOnBlockedRequest`, em basic-crawler.js) aposenta a
@@ -130,6 +135,7 @@ export async function runImovelweb(
       requestHandler: createImovelwebDetalheRouter(capturaDataset),
       requestQueue: detalheQueue,
       headless: true,
+      maxConcurrency: 1,
       sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
       // Mesmo ajuste do crawler de listagem acima (ver comentário lá) — evita que um
       // 403 do desafio Cloudflare aposente a sessão inteira, e usa o mesmo Key-Value
