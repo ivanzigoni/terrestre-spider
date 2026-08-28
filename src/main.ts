@@ -31,6 +31,7 @@ import { runRealImobiliaria } from './sources/real-imobiliaria/main.js';
 import { runRealImoveisPampulha } from './sources/real-imoveis-pampulha/main.js';
 import { runSevenImoveis } from './sources/seven-imoveis/main.js';
 import { BATCH_SIZE } from './sources/shared/crawler-defaults.js';
+import { runStiloNetimoveis } from './sources/stilo-netimoveis/main.js';
 import { runStruturalImobiliaria } from './sources/strutural-imobiliaria/main.js';
 import { runTopmigImoveis } from './sources/topmig-imoveis/main.js';
 import { runValoreImoveis } from './sources/valore-imoveis/main.js';
@@ -217,6 +218,14 @@ const FONTES: Fonte[] = [
     nome: 'Casa Mineira',
     origem: OrigemAnuncio.CASA_MINEIRA,
     run: runCasaMineira,
+  },
+  // Fecha o lote 5 (.claude/__workdir/integracao-lote/lotes.md). HttpCrawler sem
+  // browser (busca via wp-admin/admin-ajax.php, ver client.ts), não afeta o
+  // pareamento leve/pesado acima.
+  {
+    nome: 'Stilo Netimóveis',
+    origem: OrigemAnuncio.STILO_NETIMOVEIS,
+    run: runStiloNetimoveis,
   },
 ];
 

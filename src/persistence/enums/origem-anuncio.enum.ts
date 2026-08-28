@@ -29,4 +29,5 @@ export enum OrigemAnuncio {
   IMOBILIARIA_PAMPULHA = 'imobiliaria_pampulha',
   CHAVE_CERTA_IMOVEIS_BH = 'chave_certa_imoveis_bh',
   CASA_MINEIRA = 'casa_mineira',
+  STILO_NETIMOVEIS = 'stilo_netimoveis',
 }
