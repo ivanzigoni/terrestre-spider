@@ -8,6 +8,7 @@ import { StatusExecucao } from './persistence/enums/status-execucao.enum.js';
 import { Mutex } from './persistence/upload-mutex.js';
 import { runAdimoveisBh } from './sources/adimoveis-bh/main.js';
 import { runCasaGrandeImoveis } from './sources/casa-grande-imoveis/main.js';
+import { runCasaMineira } from './sources/casa-mineira/main.js';
 import { runCasaPampulhaImoveis } from './sources/casa-pampulha-imoveis/main.js';
 import { runChaveCertaImoveisBh } from './sources/chave-certa-imoveis-bh/main.js';
 import { runDiegoGarciaImoveis } from './sources/diego-garcia-imoveis/main.js';
@@ -207,6 +208,15 @@ const FONTES: Fonte[] = [
     nome: 'Imobiliária Pampulha',
     origem: OrigemAnuncio.IMOBILIARIA_PAMPULHA,
     run: runImobiliariaPampulha,
+  },
+  // Portal regional do Grupo QuintoAndar (plataforma Navent) — mesmo padrão dos
+  // portais grandes (OLX/ZAP/Viva Real/Imovelweb), CheerioCrawler sem browser, não
+  // afeta o pareamento leve/pesado acima. Investigação registrada em
+  // .claude/__workdir/integracao-lote/lotes.md (29-08-2026).
+  {
+    nome: 'Casa Mineira',
+    origem: OrigemAnuncio.CASA_MINEIRA,
+    run: runCasaMineira,
   },
 ];
 
