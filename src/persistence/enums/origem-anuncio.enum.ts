@@ -30,4 +30,5 @@ export enum OrigemAnuncio {
   CHAVE_CERTA_IMOVEIS_BH = 'chave_certa_imoveis_bh',
   CASA_MINEIRA = 'casa_mineira',
   STILO_NETIMOVEIS = 'stilo_netimoveis',
+  MY_BROKER_BELO_HORIZONTE = 'my_broker_belo_horizonte',
 }

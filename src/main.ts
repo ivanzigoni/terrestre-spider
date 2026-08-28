@@ -23,6 +23,7 @@ import { runLiderarImoveis } from './sources/liderar-imoveis/main.js';
 import { runLimaImoveisBarreiro } from './sources/lima-imoveis-barreiro/main.js';
 import { runLuxusImoveisPremium } from './sources/luxus-imoveis-premium/main.js';
 import { runModeloImovel } from './sources/modelo-imovel/main.js';
+import { runMyBrokerBeloHorizonte } from './sources/my-broker-belo-horizonte/main.js';
 import { runNetimoveis } from './sources/netimoveis/main.js';
 import { runOlx } from './sources/olx/main.js';
 import { runPrimerImoveis } from './sources/primer-imoveis/main.js';
@@ -226,6 +227,14 @@ const FONTES: Fonte[] = [
     nome: 'Stilo Netimóveis',
     origem: OrigemAnuncio.STILO_NETIMOVEIS,
     run: runStiloNetimoveis,
+  },
+  // Lote 6 (.claude/__workdir/integracao-lote/lotes.md, casos especiais). HttpCrawler
+  // sem browser (busca via /api/properties do site, ver client.ts), não afeta o
+  // pareamento leve/pesado acima.
+  {
+    nome: 'My Broker Belo Horizonte',
+    origem: OrigemAnuncio.MY_BROKER_BELO_HORIZONTE,
+    run: runMyBrokerBeloHorizonte,
   },
 ];
 
