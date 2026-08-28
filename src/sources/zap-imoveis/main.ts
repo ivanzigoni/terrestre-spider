@@ -52,6 +52,9 @@ export async function runZapImoveis(
       requestHandler: createZapImoveisRouter(dataset, capturaDataset),
       requestQueue,
       headless: true,
+      // Ver imoview-browser-main.ts: sem isso o AutoscaledPool escala sozinho até
+      // 200, e cada tarefa aqui é uma página headless inteira renderizando JS.
+      maxConcurrency: 1,
       sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
       maxRequestsPerCrawl: maxListingPages,
       // Sem isso, o SessionPool desta fonte se autopersiste no Key-Value Store
@@ -111,6 +114,7 @@ export async function runZapImoveis(
       requestHandler: createZapImoveisDetalheRouter(capturaDataset),
       requestQueue: detalheQueue,
       headless: true,
+      maxConcurrency: 1,
       sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
       // Mesmo id do crawler de listagem acima — nunca rodam ao mesmo tempo dentro
       // desta fonte (sequencial), só entre fontes diferentes é que precisa isolar.

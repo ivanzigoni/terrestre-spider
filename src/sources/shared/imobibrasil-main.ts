@@ -105,6 +105,9 @@ export function createImobiBrasilRun(
         requestHandler: createImobiBrasilDetalheRouter(capturaDataset, origem),
         requestQueue: detalheQueue,
         headless: true,
+        // Ver imoview-browser-main.ts: sem isso o AutoscaledPool escala sozinho até
+        // 200, e cada tarefa aqui é uma página headless inteira renderizando JS.
+        maxConcurrency: 1,
         sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
         maxRequestsPerCrawl: maxDetailPages,
         sessionPoolOptions: {
