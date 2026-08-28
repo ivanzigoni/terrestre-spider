@@ -25,4 +25,7 @@ export enum OrigemAnuncio {
   VENDA_NOVA_IMOVEIS = 'venda_nova_imoveis',
   LIMA_IMOVEIS_BARREIRO = 'lima_imoveis_barreiro',
   STRUTURAL_IMOBILIARIA = 'strutural_imobiliaria',
+  GSA_ATIVOS = 'gsa_ativos',
+  IMOBILIARIA_PAMPULHA = 'imobiliaria_pampulha',
+  CHAVE_CERTA_IMOVEIS_BH = 'chave_certa_imoveis_bh',
 }

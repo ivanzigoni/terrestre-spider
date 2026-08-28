@@ -1,0 +1,84 @@
+{
+  "nome": "GSA Ativos",
+  "urlSolicitada": "https://gsaativos.com.br/",
+  "urlFinal": "https://gsaativos.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\r\nDisallow: /wp-admin/\r\nAllow: /wp-admin/admin-ajax.php\r\nSitemap: https://gsaativos.com.br/sitemap_index.xml"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 0,
+    "jsonLdSample": null,
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=12&frm=0&apvc=1&ae=g&auid=539083153.1787876226&dt=GSA%20Ativos%20%E2%80%93%20A%20melhor%20solu%C3%A7%C3%A3o%20de%20gest%C3%A3o%20para%20seu%20ativo!&en=page_view&dl=https%3A%2F%2Fgsaativos.com.br%2F&scrsrc=www.googletagmanager.com&rnd=759904581.1787876226&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He68q1v891195441za200zd891195441xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118131808~118897920~118897930~120385423~120469145~120469153&tft=1787876225520&tfd=895&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=539083153.1787876226&gtm=45He68q1v891195441za200zd891195441xea&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-MBW9Y2V59Z&gtm=45Pe68q1v9204707667za200zb891195441zd891195441&_p=1787876224875&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dZTNiMT&are=1&cid=2141788188.1787876226&frm=0&ngs=1&pscdl=noapi&rcb=13&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120385422~120763598&sid=1787876225&sct=1&seg=0&dl=https%3A%2F%2Fgsaativos.com.br%2F&dt=GSA%20Ativos%20%E2%80%93%20A%20melhor%20solu%C3%A7%C3%A3o%20de%20gest%C3%A3o%20para%20seu%20ativo!&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=971",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-5B1P0TJ6N0&gtm=45je68q1v869939224z8891195441za20gzb891195441zd891195441&_p=1787876224875&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1253840430&_eu=AAAAAGAC&are=1&cid=2141788188.1787876226&ec_mode=a&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787876225&sct=1&seg=0&dl=https%3A%2F%2Fgsaativos.com.br%2F&dt=GSA%20Ativos%20%E2%80%93%20A%20melhor%20solu%C3%A7%C3%A3o%20de%20gest%C3%A3o%20para%20seu%20ativo!&en=page_view&_fv=1&_ss=1&tfd=1240",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-5B1P0TJ6N0&gtm=45je68q1v869939224z8891195441za20gzb891195441zd891195441&_p=1787876224875&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1253840430&_eu=AAAAAGQC&are=1&cid=2141788188.1787876226&ec_mode=a&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787876225&sct=1&seg=1&dl=https%3A%2F%2Fgsaativos.com.br%2F&dt=GSA%20Ativos%20%E2%80%93%20A%20melhor%20solu%C3%A7%C3%A3o%20de%20gest%C3%A3o%20para%20seu%20ativo!&en=page_view&ep.current_url=https%3A%2F%2Fgsaativos.com.br%2F&_et=5&tfd=1245",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://gsaativos.com.br/g/collect?v=2&tid=G-5B1P0TJ6N0&gtm=45je68q1v869939224z8891195441za20gzb891195441zd891195441&_p=1787876224875&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dZTNiMT&ecid=1253840430&_eu=AAACAGQC&_fplc=0&are=1&cid=2141788188.1787876226&ec_mode=a&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=3&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787876225&sct=1&seg=1&dl=https%3A%2F%2Fgsaativos.com.br%2F&dt=GSA%20Ativos%20%E2%80%93%20A%20melhor%20solu%C3%A7%C3%A3o%20de%20gest%C3%A3o%20para%20seu%20ativo!&_tu=BA&en=page_view&_et=2&tfd=1252",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://gsaativos.com.br/g/collect?v=2&tid=G-5B1P0TJ6N0&gtm=45je68q1v869939224z8891195441za20gzb891195441zd891195441&_p=1787876224875&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dZTNiMT&ecid=1253840430&_eu=AAAAAGQ&_fplc=0&are=1&cid=2141788188.1787876226&frm=0&pscdl=noapi&rcb=18&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=BR-MG&sst.etld=google.com.br&sst.tft=1787876224875&sst.lpc=247769489&sst.navt=n&sst.ude=1&sst.sw_exp=1&gaf=2&_s=4&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787876225&sct=1&seg=1&dl=https%3A%2F%2Fgsaativos.com.br%2F&dt=GSA%20Ativos%20%E2%80%93%20A%20melhor%20solu%C3%A7%C3%A3o%20de%20gest%C3%A3o%20para%20seu%20ativo!&_tu=BA&en=gtm.dom&gap.sstd=1&evnid=98b0130b-da5a-46fa-ad91-b0e169403049_1787876224875.14&ep.event_name=PageView&_et=1&tfd=1256&richsstsse",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/11093506385/?random=1787876225930&cv=11&fst=1787876225930&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be68q1v9103836228z8891195441za20gzb891195441zd891195441xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118131808~118897920~118897930~119367802~119367810~120385422~120763598&u_w=1280&u_h=720&url=https%3A%2F%2Fgsaativos.com.br%2F&rcb=17&frm=0&tiba=GSA%20Ativos%20%E2%80%93%20A%20melhor%20solu%C3%A7%C3%A3o%20de%20gest%C3%A3o%20para%20seu%20ativo!&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=539083153.1787876226&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=0&auid=539083153.1787876226&dt=GSA%20Ativos%20%E2%80%93%20A%20melhor%20solu%C3%A7%C3%A3o%20de%20gest%C3%A3o%20para%20seu%20ativo!&tid=AW-11093506385&en=page_view&dl=https%3A%2F%2Fgsaativos.com.br%2F&scrsrc=www.googletagmanager.com&rnd=759904581.1787876226&navt=n&npa=0&gtm=45be68q1v9103836228z8891195441za20gzb891195441zd891195441xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938469~118131808~118897920~118897930~119367802~119367810~120385422~120763598&tft=1787876225957&tfd=1332&tids=AW-11093506385&fmt=8",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "titulo": "GSA Ativos – A melhor solução de gestão para seu ativo!",
+  "bodyTextSample": "Ir para o conteúdo\nHome\nSobre Nós\nESG\nEncontre seu Imóvel\nShoppings \nMeus Favoritos\nContato\nÁrea do Empreendedor\nEncontre o Imóvel que você deseja\nTipo de Imóvel\nAndar\nGalpão\nLoja\nSalas Corporativas\nShopping\nTerreno\nCidade\nBairro\nBuscar Imóveis\nEspaços que inspiram negócios\nTemos as melhores opções para o seu negócio nos melhores pontos de Belo Horizonte e região.\nALUGUEL\nSALAS CORPORATIVAS\nCOD: P38A900\nWORK PLACE - 9º ANDAR\nR$ 13.500,00\nEstoril\nBelo Horizonte -\nMG\n9º ANDAR\nVER IMÓVEL\nALUGUEL\nSALAS CORPORATIVAS\nCOD: P02A\nBUSINESS TOWER - PAVIMENTO TIPO\nR$ 34.500,00\nSanto Agostinho\nBelo Horizonte -\nMG\nAndar\nVER IMÓVEL\nALUGUEL\nSALAS CORPORATIVAS\nCOD: P04A802\nBHM 2600 - SALA 802\nR$ 6.200,00\nNova Granada\nBelo Horizonte -\nMG\nSALA 802\nVER IMÓVEL\nALUGUEL\nSALAS CORPORATIVAS\nCOD: P14\nAFONSO PENA 3880\nR$ 110.000,00\nCruzeiro\nBelo Horizonte -\nMG\nVER IMÓVEL\nALUGUEL\nSALAS CORPORATIVAS\nCOD: P38A100\nWORK PLACE - 1º ANDAR\nR$ 13.500,00\nEstoril\nBelo Horizonte -\nMG\n1º ANDAR\nVER IMÓVEL\nALUGUEL\nSALAS CORPOR",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integracao-lote/terrestre-spider/discovery/output/screenshots/gsa-ativos.png",
+  "erro": null,
+  "timestamp": "2026-08-28T00:17:03.701Z"
+}

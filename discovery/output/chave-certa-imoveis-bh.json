@@ -1,0 +1,80 @@
+{
+  "nome": "Chave Certa Imóveis BH",
+  "urlSolicitada": "https://www.chavecertaimoveisbh.com.br/",
+  "urlFinal": "https://chavecertaimoveisbh.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "# --- GRUPO 0: GOOGLE ADS (Prioridade Total) ---\n# Separados para ignorar os bloqueios de parâmetros abaixo e validar os anúncios.\nUser-agent: AdsBot-Google\nUser-agent: AdsBot-Google-Mobile\nAllow: /\n\n# --- GRUPO 1: Buscadores e Ferramentas de SEO ---\nUser-agent: Googlebot\nUser-agent: Googlebot-Image\nUser-agent: Googlebot-Video\nUser-agent: Mediapartners-Google\nUser-agent: Bingbot\nUser-agent: AdIdxBot\nUser-agent: MSNBot\nUser-agent: DuckDuckBot\nUser-agent: RSiteAuditor\nUser-agent: SemrushBot\nUser-agent: SiteAuditBot\nUser-agent: SemrushBot-BA\nUser-agent: AhrefsBot\nUser-agent: rogerbot\nUser-agent: DotBot\nUser-agent: Screaming Frog SEO Spider\nUser-agent: Facebookexternalhit\nUser-agent: Twitterbot\nUser-agent: LinkedInBot\nUser-agent: WhatsApp\n\nAllow: /\n\n# Bloqueios para evitar conteúdo duplicado no Orgânico e Ferramentas\nDisallow: /*?*neighborhoods=\nDisallow: /*?*streets=\nDisallow: /*?*condo_id=\nDisallow: /*?*name=\nDisallow: /*?*price_min=\nDisallow: /*?*price_max=\nDisallow: /*?*bedrooms=\nDisallow: /*?*suites=\nDisallow: /*?*bathrooms=\nDisallow: /*?*garages=\nDisallow: /*?*area_min=\nDisallow: /*?*area_max=\nDisallow: /*?*types=\nDisallow: /*?*cities=\nDisallow: /*?*order=\nDisallow: /*?*direction=\nDisallow: /*?*sort=\n\n# >> BLOQUEIOS ADMINISTRATIVOS/SEGURANCA <<\nDisallow: /admin/\nDisallow: /painel/\nDisallow: /login\nDisallow: /recuperar-senha\nDisallow: /api/\nDisallow: /alertas/\nDisallow: /favoritos/\nDisallow: /comparar/\n\n# --- GRUPO 2: Bloqueio Geral (Bots desconhecidos) ---\nUser-agent: *\nAllow: /\n\nDisallow: /*?*neighborhoods=\nDisallow: /*?*streets=\nDisallow: /*?*price_min=\nDisallow: /*?*price_max=\nDisallow: /admin/\nDisallow: /api/\n\n# Sitemap\nSitemap: https://chavecertaimoveisbh.com.br/sitemap.xml"
+  },
+  "estruturaDados": {
+    "hasNextData": true,
+    "nextDataSample": "{\"props\":{\"isServer\":true,\"initialState\":{\"form\":{},\"components\":{\"header\":{\"type\":\"Header3\",\"logo_padding\":0,\"logo_opacity\":1,\"title_size\":\"40\",\"title_color\":\"#ffffff\",\"has_opacity\":false,\"file_url\":\"https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grq6lwb4htd1/b/dcda8854-f780-44ae-80b9-d5e274511f85/o/settings/main-images/363e1a66-0631-4e19-b219-f7a79e4fdb53.jpg\",\"video_url\":\"https://youtube.com/embed/Yv-KAhC6Ves\",\"video_identifier\":\"Yv-KAhC6Ves\",\"is_translate_shown\":false,\"is_social_shown\":false,\"is_phones_shown\":false,\"is_contacts_grouped\":true,\"is_email_shown\":false,\"is_email_protected\":true,\"is_video_shown\":false,\"is_title_shown\":false,\"header_image_shown\":true},\"footer\":{\"type\":\"Footer2\",\"logo_padding\":5,\"is_menu_shown\":true,\"is_social_shown\":true,\"is_contacts_shown\":false,\"logo_url\":\"https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grq6lwb4htd1/b/dcda8854-f780-44ae-80b9-d5e274511f85/o/settings/logos/270x140/outside/c091c6b2-b7e7-4efb-9ba8-edca84384ea01768567471SI9A.png",
+    "jsonLdCount": 1,
+    "jsonLdSample": "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Chave Certa Imóveis BH\",\"url\":\"https://chavecertaimoveisbh.com.br\",\"sameAs\":[\"https://www.instagram.com/chavecertaimoveisbh/\"],\"contactPoint\":[{\"@type\":\"ContactPoint\",\"telephone\":\"+55 (31) 97349-5660\",\"contactType\":\"customer support\",\"areaServed\":\"BR\",\"availableLanguage\":\"Portuguese\",\"email\":\"cbs.consultorimobiliario@gmail.com\"}]}",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": true,
+    "hasNextLink": true
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://chavecertaimoveisbh.com.br/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://api-sites.tecimob.com.br/api/properties/featured-list/74631bfc-7b11-4964-8e17-2e5d97ba8275?page=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://api-sites.tecimob.com.br/api/properties/transactions",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://api-sites.tecimob.com.br/api/filters/states?sort=acronym",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://api-sites.tecimob.com.br/api/filters/types?sort=order&filter%5Bhaving_properties%5D=true",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://api-sites.tecimob.com.br/api/condos?custom_query=condos_filter",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://chavecertaimoveisbh.com.br/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/recaptcha/api2/reload?k=6LcerJsUAAAAAKw6v70xur2BM2Y5k3tG74wSoSk8",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/recaptcha/api2/clr?k=6LcerJsUAAAAAKw6v70xur2BM2Y5k3tG74wSoSk8",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": ["requestStorageAccess: Permission denied."],
+  "titulo": "Chave Certa Imóveis BH - Compra, Venda e Aluguel de Imóveis",
+  "bodyTextSample": "Início\nSobre\nContato\nFinancie\nNegocie seu Imóvel\nImóveis Favoritos\n\nEncontre o seu imóvel\n\nReferência\nNegócio\nComprar\nTipo do Imóvel\nSelecione\nValor mínimo\nValor máximo\nCidade e bairros\nSelecione\nPesquisar\nImóveis em Destaque\nPronto para morar\nRef.: 716VENDA\nAraguaia - Belo Horizonte/MG\nApartamento em Araguaia, Belo Horizonte/MG\nDormitórios\t2\nGaragens\t1\nR$ 325.000,00\nPronto para morar\nRef.: 715VENDA\nNovo Santa Cecília (Barreiro) - Belo Horizonte/MG\nCasa em Novo Santa Cecília (Barreiro), Belo Horizonte/MG\nDormitórios\t3\nGaragens\t1\nÁrea Construída\t150m²\nR$ 475.000,00\nPronto para morar\nRef.: 711VENDA\nSolar do Barreiro (Barreiro) - Belo Horizonte/MG\nCasa Geminada em Solar do Barreiro (Barreiro), Belo Horizonte/MG\nDormitórios\t2\nGaragens\t1\nÁrea Construída\t52m²\nR$ 177.000,00\nPronto para morar\nRef.: 714VENDA\nVale do Jatobá (Barreiro) - Belo Horizonte/MG\nCasa em Vale do Jatobá (Barreiro), Belo Horizonte/MG\nDormitórios\t3, sendo 1 suíte\nGaragens\t2\nÁrea Construída\t234m²\nR$ 620.000,00\nPronto para mo",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integracao-lote/terrestre-spider/discovery/output/screenshots/chave-certa-imoveis-bh.png",
+  "erro": null,
+  "timestamp": "2026-08-28T00:14:28.737Z"
+}

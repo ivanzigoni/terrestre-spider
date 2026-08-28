@@ -1,0 +1,80 @@
+{
+  "nome": "Simplifica Imóveis BH",
+  "urlSolicitada": "https://simplificaimoveisbh.com.br/",
+  "urlFinal": "https://simplificaimoveisbh.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\r\nDisallow: /wp-admin/\r\nAllow: /wp-admin/admin-ajax.php\r\n\r\nSitemap: https://simplificaimoveisbh.com.br/sitemap.xml\r\nSitemap: https://simplificaimoveisbh.com.br/sitemap.rss\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 1,
+    "jsonLdSample": "\n\t\t\t{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/simplificaimoveisbh.com.br\\/#breadcrumblist\",\"itemListElement\":[{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/simplificaimoveisbh.com.br#listItem\",\"position\":1,\"name\":\"Dom\\u00e9stica\"}]},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/simplificaimoveisbh.com.br\\/#organization\",\"name\":\"Simplifica Im\\u00f3veis\",\"url\":\"https:\\/\\/simplificaimoveisbh.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https:\\/\\/simplificaimoveisbh.com.br\\/wp-content\\/uploads\\/2023\\/12\\/cropped-Icone-site.png\",\"@id\":\"https:\\/\\/simplificaimoveisbh.com.br\\/#organizationLogo\",\"width\":2207,\"height\":1029},\"image\":{\"@id\":\"https:\\/\\/simplificaimoveisbh.com.br\\/#organizationLogo\"}},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/simplificaimoveisbh.com.br\\/#webpage\",\"url\":\"https:\\/\\/simplificaimoveisbh.com.br\\/\",\"name\":\"Imobiliaria - Simplifica Im\\u00f3veis\",\"description\":\"Somos uma imobili\\u00e1ria especializada em loca\\u00e7\\u00f5es e vendas de im\\u00f3vei",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id?slf_rd=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id?slf_rd=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id?slf_rd=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [],
+  "titulo": "Imobiliaria - Simplifica Imóveis",
+  "bodyTextSample": "Somos uma imobiliária especializada em locações e vendas de imóveis na região da Pampulha em BH\n\nContamos com uma equipe de administradores e corretores experientes, devidamente capacitados e registrados no CRECI/MG.\n\nClique e cadastre seu imóvel\n\nGESTÃO DA LOCAÇÃO DE IMÓVEIS\n\nClique e cadastre seu imóvel\n\nGESTÃO DA VENDA DE IMÓVEIS\n\nQuero falar com um corretor\n\nQue tal ganhar uma graninha extra indicando imóveis que estão disponíveis para alugar na sua vizinhança ?\n\nAlém de faturar essa premiação você ajudará seu vizinho que precisa do aluguel.\n\nQuero indicar um imóvel\n\nEstamos no mercado a 07 anos, seu fundador tem uma experiência de mais de 15 anos atuando intensamente no mercado imobiliário como corretor.\n\nContamos hoje com equipe qualificada para pronto atendimentos aos proprietários dos imóveis, inquilinos e compradores, para esclarecimentos na área comercial, financeira, jurídica, técnica e no que fizer necessário.\n\nQuero falar com um corretor\n\nImóveis anunciados em destaque\n\nAn",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integracao-lote/terrestre-spider/discovery/output/screenshots/simplifica-imoveis-bh.png",
+  "erro": null,
+  "timestamp": "2026-08-28T00:18:39.809Z"
+}
