@@ -23,6 +23,7 @@ const SEARCH_URLS_KEY: Partial<Record<OrigemAnuncio, string>> = {
   [OrigemAnuncio.ZAP_IMOVEIS]: 'zap-imoveis',
   [OrigemAnuncio.QUINTO_ANDAR]: 'quinto-andar',
   [OrigemAnuncio.IMOVELWEB]: 'imovelweb',
+  [OrigemAnuncio.CASA_MINEIRA]: 'casa-mineira',
 };
 
 const TIPOS_TRANSACAO_VALIDOS = new Set<string>(Object.values(TipoTransacao));

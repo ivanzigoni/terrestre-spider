@@ -58,5 +58,15 @@
       "url": "https://www.imovelweb.com.br/imoveis-venda-belo-horizonte-mg.html",
       "tipoTransacao": "venda"
     }
+  ],
+  "casa-mineira": [
+    {
+      "url": "https://www.casamineira.com.br/aluguel/imovel/belo-horizonte_mg",
+      "tipoTransacao": "aluguel"
+    },
+    {
+      "url": "https://www.casamineira.com.br/venda/imovel/belo-horizonte_mg",
+      "tipoTransacao": "venda"
+    }
   ]
 }
