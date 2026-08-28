@@ -1,0 +1,128 @@
+{
+  "nome": "Casa Mineira",
+  "urlSolicitada": "https://www.casamineira.com.br/",
+  "urlFinal": "https://www.casamineira.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "Sitemap: https://sitemaps.casamineira.com.br/sitemap.xml\nSitemap: https://www.casamineira.com.br/blog/sitemap_index.xml\n\nUser-agent: sitecheck.internetseer.com\nDisallow: /\n\nUser-agent: Zealbot\nDisallow: /\n\nUser-agent: MSIECrawler\nDisallow: /\n\nUser-agent: SiteSnagger\nDisallow: /\n\nUser-agent: WebStripper\nDisallow: /\n\nUser-agent: WebCopier\nDisallow: /\n\nUser-agent: Fetch\nDisallow: /\n\nUser-agent: Offline Explorer\nDisallow: /\n\nUser-agent: Teleport\nDisallow: /\n\nUser-agent: TeleportPro\nDisallow: /\n\nUser-agent: WebZIP\nDisallow: /\n\nUser-agent: linko\nDisallow: /\n\nUser-agent: HTTrack\nDisallow: /\n\nUser-agent: Microsoft.URL.Control\nDisallow: /\n\nUser-agent: Xenu\nDisallow: /\n\nUser-agent: larbin\nDisallow: /\n\nUser-agent: libwww\nDisallow: /\n\nUser-agent: ZyBORG\nDisallow: /\n\nUser-agent: Download Ninja\nDisallow: /\n\nUser-agent: fast\nDisallow: /\n\nUser-agent: wget\nDisallow: /\n\nUser-agent: grub-client\nDisallow: /\n\nUser-agent: k2spider\nDisallow: /\n\nUser-agent: NPBot\nDisallow: /\n\nUser-agent: WebReaper\nDisallow: /\n\nUser-agent: *\nDisallow: /develop/\nDisallow: /mails/\nDisallow: /errores/\nDisallow: /bloques/\nDisallow: /bumex/\nDisallow: /homeSinPublicidad.bum\nDisallow: /cms/\nDisallow: /tracking/\n\nAllow: /ordem-menor-preco\nDisallow: /ordem-*\n\nDisallow: *?*utm_*\nDisallow: *n_src=*\nDisallow: *gad_source=*\nDisallow: *source=BP*\nDisallow: *gclid=*\nDisallow: *fbclid=*\nDisallow: *?duplicated=true*\nDisallow: *?labs=*\n"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 2,
+    "jsonLdSample": "\n\t{\n\t\t\"@context\": \"https://schema.org\",\n\t\t\"@type\": \"WebSite\",\n\t\t\"url\": \"https://www.casamineira.com.br\",\n\t\t\"name\": \"Casamineira\",\n\t\t\"potentialAction\": {\n\t\t\t\"@type\": \"SearchAction\",\n\t\t\t\"target\": \"https://www.casamineira.com.br/imoveis-q-{search_term}.html\",\n\t\t\t\"query-input\": \"required name=search_term\"\n\t\t}\n\t}\n",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.casamineira.com.br/rp-api/user/session",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.casamineira.com.br/rphom-api/recommended-for-home?isMobile=false&userId=&tipoDeOperacion=desarrollosURL&limit=20&sort=relevance",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=8&frm=0&apvc=1&ae=g&auid=2051930374.1787876512&dt=Im%C3%B3veis%2C%20apartamentos%20e%20casas%20%C3%A0%20venda%20e%20para%20alugar%20-%20Casa%20Mineira&en=page_view&dl=https%3A%2F%2Fwww.casamineira.com.br%2F&scrsrc=www.googletagmanager.com&rnd=480999705.1787876512&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He68q1v858857621za200zd858857621xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~118012009~118897920~118897930~119793972~120385423&tft=1787876512129&tfd=975&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=2051930374.1787876512&gtm=45He68q1v858857621za200zd858857621xea&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://securepubads.g.doubleclick.net/gampad/ads?pvsid=5718052826877300&correlator=1202677935335445&eid=95340252%2C95340254&output=ldjh&gdfp_req=1&vrg=202608240101&ptt=17&impl=fifs&iu_parts=8008544%2CBR_IW_Home_HomeSponsor_Logo%2CBR_IW_Home_Logo1%2CBR_IW_Home_Logo2%2CBR_IW_Home_Logo3%2CBR_IW_Home_Logo4%2CBR_IW_Home_Box&enc_prev_ius=0%2F1%2C0%2F2%2C0%2F3%2C0%2F4%2C0%2F5%2C0%2F6&prev_iu_szs=320x50%2C320x50%7C265x95%2C320x50%7C265x95%2C320x50%7C265x95%2C320x50%7C265x95%2C1180x300&fluid=height%2Cheight%2Cheight%2Cheight%2Cheight%2C0&ifi=1&dids=ad-sponsor-desktop~ad-logo1~ad-logo2~ad-logo3~ad-logo4~ad-box&adfs=2389114287~3302985280~3799904394~380857174~4291282587~2906103863&sfv=1-0-45&sc=1&cookie_enabled=1&abxe=1&dt=1787876512351&lmt=1787863349&adxs=0%2C0%2C330%2C660%2C990%2C50&adys=61%2C992%2C992%2C992%2C992%2C1016&biw=1280&bih=720&scr_x=0&scr_y=0&btvi=0%7C1%7C2%7C3%7C4%7C5&ucis=1%7C2%7C3%7C4%7C5%7C6&oid=2&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&u_tz=-180&dmc=16&bc=31&nvt=1&uach=WyJXaW5kb3dzIiwiMTAuMCIsIng4NiIsIiIsIjE1MS4wLjc5MjIuMzQiLG51bGwsMCxudWxsLCI2NCIsW1siTm90PUE_QnJhbmQiLCI5OS4wLjAuMCJdLFsiSGVhZGxlc3NDaHJvbWUiLCIxNTEuMC43OTIyLjM0Il0sWyJDaHJvbWl1bSIsIjE1MS4wLjc5MjIuMzQiXV0sMF0.&url=https%3A%2F%2Fwww.casamineira.com.br%2F&vis=1&psz=1280x426%7C1280x0%7C1280x0%7C1280x0%7C1280x0%7C1280x2637&msz=1280x426%7C290x0%7C290x0%7C290x0%7C290x0%7C1280x720&fws=128%2C0%2C0%2C0%2C0%2C128&ohw=0%2C0%2C0%2C0%2C0%2C0&dlt=1787876511560&idt=745&prev_scp=isLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dcasamineira%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dcasamineira%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dcasamineira%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dcasamineira%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dcasamineira%7CisLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dcasamineira&cust_params=isLancamento%3D2%26idtipodeoperacion%3D1%26idtipodepropiedad%3D2%26ambiente%3D3%26portal%3Dcasamineira&adks=3014999484%2C1062901168%2C197321860%2C3107744268%2C2903511422%2C4013601112&frm=20&eoidce=1&pgls=CAk.",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.casamineira.com.br/rp-api/labs/v1/recommended?isMobile=false&page=home&limit=20&action=&isDevelop=false&idsPostingView=undefined&recommendName=undefined",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-F6SNC7N5MB&gtm=45je68q1v890398591z8858857621za20gzb858857621zd858857621&_p=1787876511575&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&are=1&cid=1858564711.1787876513&frm=0&pscdl=noapi&rcb=0&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115616985~115938465~115938469~118897920~118897930~119367802~119367810~120385423&sid=1787876512&sct=1&seg=0&dl=https%3A%2F%2Fwww.casamineira.com.br%2F&dt=Im%C3%B3veis%2C%20apartamentos%20e%20casas%20%C3%A0%20venda%20e%20para%20alugar%20-%20Casa%20Mineira&en=select_content&_fv=1&_nsi=1&_ss=1&ep.content_group=Home&ep.is_logged=No&ep.content_type=Modal%20login%20rapido%20Google&ep.item_id=Cerrar%20modal&up.variant_id_home=&tfd=1357",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.amplitude.com/",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.casamineira.com.br/tracking/g/collect?v=2&tid=G-3W0YTSRCK7&gtm=45je68q1v9235587196z8858857621za20gzb858857621zd858857621&_p=1787876511575&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=1335508677&_eu=AAAAAGA&_fplc=0&are=1&cid=1858564711.1787876513&ec_mode=c&frm=0&pscdl=noapi&rcb=4&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=BR-MG&sst.etld=google.com.br&sst.tft=1787876511575&sst.lpc=220311434&sst.navt=n&sst.ude=0&sst.sw_exp=1&gaf=2&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120385422&sid=1787876512&sct=1&seg=0&dl=https%3A%2F%2Fwww.casamineira.com.br%2F&dt=Im%C3%B3veis%2C%20apartamentos%20e%20casas%20%C3%A0%20venda%20e%20para%20alugar%20-%20Casa%20Mineira&_tu=BA&en=select_content&_fv=1&_ss=1&gap.sstd=1&ep.content_group=Home&ep.fb_event=true&evnid=1787876512149.191588.127&ep.fb_id=1569240659799011&ep.x-fb-ck-fbp=fb.3.1787876512128.2986339954&ep.google_ads_id=322694527&ep.criteo_user_email=&ep.ecommerce_event=false&ep.isDesarrollo=false&ep.ga4_event=true&ep.content_type=Modal%20login%20rapido%20Google&ep.item_id=Cerrar%20modal&ep.user_data._tag_mode=AUTO&ep.user_data.email_address=&ep.user_data.phone_number=&ep.user_data.address.first_name=&ep.user_data.address._tag_metadata.first_name.mode=c&tfd=1441&richsstsse",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.casamineira.com.br/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gpt&tv=m202608240101&st=env&sjk=5718052826877300",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.casamineira.com.br/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=2116&ck=0&s=487b7b33a195ef9a&ref=https://www.casamineira.com.br/&ptid=50b4983f5bad3856&af=err,spa,xhr,stn,ins&be=396&fe=1654&dc=454&fsh=1&perf=%7B%22timing%22:%7B%22of%22:1787876511155,%22n%22:0,%22f%22:0,%22dn%22:1,%22dne%22:2,%22c%22:2,%22s%22:316,%22ce%22:347,%22rq%22:347,%22rp%22:396,%22rpe%22:411,%22di%22:447,%22ds%22:850,%22de%22:850,%22dc%22:2046,%22l%22:2046,%22le%22:2050%7D,%22navigation%22:%7B%7D%7D&fp=512&fcp=512",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/events/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=2320&ck=0&s=487b7b33a195ef9a&ref=https://www.casamineira.com.br/&ptid=50b4983f5bad3856",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/jserrors/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=2322&ck=0&s=487b7b33a195ef9a&ref=https://www.casamineira.com.br/&ptid=50b4983f5bad3856&ri=%7B%22RPHOM%22:%22v4.300.0-RC2%22%7D",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/events/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=2324&ck=0&s=487b7b33a195ef9a&ref=https://www.casamineira.com.br/&ptid=50b4983f5bad3856",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://bam.nr-data.net/events/1/9e5469c271?a=302090033&sa=1&v=1.319.0&t=Unnamed%20Transaction&rst=2324&ck=0&s=487b7b33a195ef9a&ref=https://www.casamineira.com.br/&ptid=50b4983f5bad3856",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [
+    "[GSI_LOGGER]: FedCM get() rejects with TypeError: Failed to execute 'get' on 'CredentialsContainer': Failed to read the 'identity' property from 'CredentialRequestOptions': Failed to read the 'mode' property from 'IdentityCredentialRequestOptions': The provided value 'widget' is not a valid enum value of type IdentityCredentialRequestOptionsMode.",
+    "Failed to load resource: the server responded with a status of 400 ()"
+  ],
+  "titulo": "Imóveis, apartamentos e casas à venda e para alugar - Casa Mineira",
+  "bodyTextSample": "Comprar\nAlugar\nBuscar imobiliárias\nMeus contatos\nAnunciar grátis\nEntrar\nEncontre seu lar\n\nAlugar\n\nComprar\n\nImóvel Novo\n\nApartamento (Todos)\nBuscar\nSugestões de imóveis que você vai amar\nApartamentos em alta mais procurados\nImóveis que acabaram de chegar\nOportunidade imperdível\nNovos apartamentos para alugar\nAcompanhamos você em cada passo\nBusca clara e rápida\nPensamos em nossos filtros e mapas para simplificar sua experiência em nosso portal.\nVocê tem sua própria seção\nAcesse com facilidade e segurança os avisos de contato, favoritos, notas que você criou e muito mais.\nVariedade de anunciantes\nCorretores de imóveis e proprietários diretos de todo o país oferecem as melhores opções de imóveis para você.\nSomos o Casa Mineira!\n39 anos no mercado e um milhão de imóveis oferecidos nos apoiam na busca pela sua casa.\nPesquisas populares no portal Casa Mineira\nRegião Sudeste\nApartamentos com 4 quartos à venda em Buritis, Belo Horizonte - MG\nApartamentos com 4 quartos à venda em Prado, Belo Hor",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integracao-lote/terrestre-spider/discovery/output/screenshots/casa-mineira.png",
+  "erro": null,
+  "timestamp": "2026-08-28T00:21:50.853Z"
+}

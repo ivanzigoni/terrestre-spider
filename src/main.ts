@@ -9,9 +9,12 @@ import { Mutex } from './persistence/upload-mutex.js';
 import { runAdimoveisBh } from './sources/adimoveis-bh/main.js';
 import { runCasaGrandeImoveis } from './sources/casa-grande-imoveis/main.js';
 import { runCasaPampulhaImoveis } from './sources/casa-pampulha-imoveis/main.js';
+import { runChaveCertaImoveisBh } from './sources/chave-certa-imoveis-bh/main.js';
 import { runDiegoGarciaImoveis } from './sources/diego-garcia-imoveis/main.js';
+import { runGsaAtivos } from './sources/gsa-ativos/main.js';
 import { runHabitarPampulha } from './sources/habitar-pampulha/main.js';
 import { runImobiliariaBuritis } from './sources/imobiliaria-buritis/main.js';
+import { runImobiliariaPampulha } from './sources/imobiliaria-pampulha/main.js';
 import { runImovelweb } from './sources/imovelweb/main.js';
 import { runIviInvistaImoveis } from './sources/ivi-invista-imoveis/main.js';
 import { runJmcImoveis } from './sources/jmc-imoveis/main.js';
@@ -183,6 +186,27 @@ const FONTES: Fonte[] = [
     nome: 'Strutural Imobiliária',
     origem: OrigemAnuncio.STRUTURAL_IMOBILIARIA,
     run: runStruturalImobiliaria,
+  },
+  // Lote 5 de .claude/__workdir/integracao-lote/lotes.md (diagnóstico individual, sem
+  // arquitetura compartilhada entre as 3): Chave Certa usa HttpCrawler (API Tecimob,
+  // sem browser); GSA Ativos usa CheerioCrawler (WordPress renderizado no servidor,
+  // sem browser); Imobiliária Pampulha usa PlaywrightCrawler na fase de detalhe (mesmo
+  // motivo do ImobiBrasil, lote 4) — fica entre as duas fontes sem-browser acima e
+  // abaixo dela, preservando o pareamento leve/pesado sem exceção nova.
+  {
+    nome: 'Chave Certa Imóveis BH',
+    origem: OrigemAnuncio.CHAVE_CERTA_IMOVEIS_BH,
+    run: runChaveCertaImoveisBh,
+  },
+  {
+    nome: 'GSA Ativos',
+    origem: OrigemAnuncio.GSA_ATIVOS,
+    run: runGsaAtivos,
+  },
+  {
+    nome: 'Imobiliária Pampulha',
+    origem: OrigemAnuncio.IMOBILIARIA_PAMPULHA,
+    run: runImobiliariaPampulha,
   },
 ];
 

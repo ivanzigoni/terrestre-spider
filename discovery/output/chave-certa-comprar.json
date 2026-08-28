@@ -1,0 +1,47 @@
+{
+  "nome": "chave-certa-comprar",
+  "urlSolicitada": "https://chavecertaimoveisbh.com.br/comprar",
+  "urlFinal": "https://chavecertaimoveisbh.com.br/comprar",
+  "httpStatus": 404,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "# --- GRUPO 0: GOOGLE ADS (Prioridade Total) ---\n# Separados para ignorar os bloqueios de parâmetros abaixo e validar os anúncios.\nUser-agent: AdsBot-Google\nUser-agent: AdsBot-Google-Mobile\nAllow: /\n\n# --- GRUPO 1: Buscadores e Ferramentas de SEO ---\nUser-agent: Googlebot\nUser-agent: Googlebot-Image\nUser-agent: Googlebot-Video\nUser-agent: Mediapartners-Google\nUser-agent: Bingbot\nUser-agent: AdIdxBot\nUser-agent: MSNBot\nUser-agent: DuckDuckBot\nUser-agent: RSiteAuditor\nUser-agent: SemrushBot\nUser-agent: SiteAuditBot\nUser-agent: SemrushBot-BA\nUser-agent: AhrefsBot\nUser-agent: rogerbot\nUser-agent: DotBot\nUser-agent: Screaming Frog SEO Spider\nUser-agent: Facebookexternalhit\nUser-agent: Twitterbot\nUser-agent: LinkedInBot\nUser-agent: WhatsApp\n\nAllow: /\n\n# Bloqueios para evitar conteúdo duplicado no Orgânico e Ferramentas\nDisallow: /*?*neighborhoods=\nDisallow: /*?*streets=\nDisallow: /*?*condo_id=\nDisallow: /*?*name=\nDisallow: /*?*price_min=\nDisallow: /*?*price_max=\nDisallow: /*?*bedrooms=\nDisallow: /*?*suites=\nDisallow: /*?*bathrooms=\nDisallow: /*?*garages=\nDisallow: /*?*area_min=\nDisallow: /*?*area_max=\nDisallow: /*?*types=\nDisallow: /*?*cities=\nDisallow: /*?*order=\nDisallow: /*?*direction=\nDisallow: /*?*sort=\n\n# >> BLOQUEIOS ADMINISTRATIVOS/SEGURANCA <<\nDisallow: /admin/\nDisallow: /painel/\nDisallow: /login\nDisallow: /recuperar-senha\nDisallow: /api/\nDisallow: /alertas/\nDisallow: /favoritos/\nDisallow: /comparar/\n\n# --- GRUPO 2: Bloqueio Geral (Bots desconhecidos) ---\nUser-agent: *\nAllow: /\n\nDisallow: /*?*neighborhoods=\nDisallow: /*?*streets=\nDisallow: /*?*price_min=\nDisallow: /*?*price_max=\nDisallow: /admin/\nDisallow: /api/\n\n# Sitemap\nSitemap: https://chavecertaimoveisbh.com.br/sitemap.xml"
+  },
+  "estruturaDados": {
+    "hasNextData": true,
+    "nextDataSample": "{\"props\":{\"isServer\":true,\"initialState\":{\"form\":{},\"components\":{\"header\":{\"type\":\"Header1\",\"logo_padding\":0,\"logo_opacity\":1,\"title\":null,\"title_size\":40,\"title_color\":\"#FFFFFF\",\"logo_url\":null,\"logo_background\":null,\"file_url\":null,\"video_url\":null,\"is_translate_shown\":null,\"is_social_shown\":null,\"is_contacts_shown\":null,\"is_video_shown\":null,\"is_video_mobile\":null,\"video_identifier\":null,\"has_opacity\":true,\"languages\":[]},\"footer\":{\"type\":\"Footer1\",\"logo_padding\":0,\"logo_url\":null,\"logo_background\":null,\"is_menu_shown\":true,\"is_social_shown\":false,\"is_contacts_shown\":false,\"background_color\":null},\"super_highlight\":{\"type\":null,\"title\":null,\"properties\":null},\"slide_home\":{\"type\":null,\"items\":null},\"videos\":{\"title\":null,\"items\":null},\"testimonials\":{\"type\":null,\"title\":null,\"items\":null},\"partners\":{\"title\":null,\"items\":null},\"search\":{\"type\":\"Search1\",\"background\":null,\"fields\":{}},\"filter\":{\"fields\":{}},\"whatsapp\":{\"is_active\":true,\"is_auto_disable\":true,\"active_hours\":[],\"activ",
+    "jsonLdCount": 0,
+    "jsonLdSample": null,
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://chavecertaimoveisbh.com.br/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://chavecertaimoveisbh.com.br/cdn-cgi/rum?",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [
+    "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "titulo": "",
+  "bodyTextSample": "404\nDesculpe, a página que você está\nprocurando não foi encontrada.\nIR PARA O INÍCIO",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integracao-lote/terrestre-spider/discovery/output/screenshots/chave-certa-comprar.png",
+  "erro": null,
+  "timestamp": "2026-08-28T00:15:02.816Z"
+}

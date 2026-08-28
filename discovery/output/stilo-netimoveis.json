@@ -1,0 +1,240 @@
+{
+  "nome": "Stilo Netimóveis",
+  "urlSolicitada": "https://www.stilonetimoveis.com.br/",
+  "urlFinal": "https://www.stilonetimoveis.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\r\nAllow: /\r\n\r\nDisallow: /wp-admin/\r\nDisallow: /wp-includes/\r\nDisallow: /checkout/\r\nDisallow: /search\r\nDisallow: /support/search.php\r\nDisallow: /extend/plugins/search.php\r\nDisallow: /plugins/search.php\r\nDisallow: /extend/themes/search.php\r\nDisallow: /themes/search.php\r\nDisallow: /support/rss\r\nDisallow: /archive/\r\n\r\n\r\n# =========================\r\n# BLOQUEIO DE BOTS DE IA\r\n# =========================\r\n\r\nUser-agent: GPTBot\r\nDisallow: /\r\n\r\nUser-agent: ChatGPT-User\r\nDisallow: /\r\n\r\nUser-agent: ClaudeBot\r\nDisallow: /\r\n\r\nUser-agent: Google-Extended\r\nDisallow: /\r\n\r\nUser-agent: CCBot\r\nDisallow: /\r\n\r\nUser-agent: Amazonbot\r\nDisallow: /\r\n\r\nUser-agent: Applebot-Extended\r\nDisallow: /\r\n\r\nUser-agent: Bytespider\r\nDisallow: /\r\n\r\nUser-agent: Meta-ExternalAgent\r\nDisallow: /\r\n\r\nUser-agent: FacebookBot\r\nDisallow: /"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 0,
+    "jsonLdSample": null,
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": true,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&ae=g&auid=1890845981.1787876449&dt=Im%C3%B3veis%20Imobili%C3%A1ria%20Loca%C3%A7%C3%A3o%20Aluguel%20Venda%20Compra%20Buritis&en=page_view&dl=https%3A%2F%2Fwww.stilonetimoveis.com.br%2F&scrsrc=www.googletagmanager.com&rnd=1514380367.1787876449&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He68q1v9178161142za200zd9178161142xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938469~118897920~118897930~120385422~120412526&tft=1787876449000&tfd=1584&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://ad.doubleclick.net/ccm/s/collect?auid=1890845981.1787876449&gtm=45He68q1v9178161142za200zd9178161142xea&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-2RDMQ21PTG&gtm=45je68q1v9183451737z89178161142za20gzb9178161142zd9178161142&_p=1787876448602&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1159233520.1787876449&frm=0&ngs=1&pscdl=noapi&rcb=12&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=115616986~115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787876449&sct=1&seg=0&dl=https%3A%2F%2Fwww.stilonetimoveis.com.br%2F&dt=Im%C3%B3veis%20Imobili%C3%A1ria%20Loca%C3%A7%C3%A3o%20Aluguel%20Venda%20Compra%20Buritis&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1857",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id?slf_rd=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id?slf_rd=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/youtubei/v1/player?prettyPrint=false",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/youtubei/v1/player?prettyPrint=false",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/youtubei/v1/player?prettyPrint=false",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/id?slf_rd=1",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://fonts.gstatic.com/s/i/youtube_outline_experimental/player_full_enter_alt/v1/24px.svg",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/rmkt/collect/16465473216/?random=1787876450106&cv=11&fst=1787876450106&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be68q1v9213112768z89178161142za20gzb9178161142zd9178161142xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~118897920~118897930~119367802~119367810~120385423&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.stilonetimoveis.com.br%2F&rcb=1&frm=0&tiba=Im%C3%B3veis%20Imobili%C3%A1ria%20Loca%C3%A7%C3%A3o%20Aluguel%20Venda%20Compra%20Buritis&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1890845981.1787876449&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&_tu=CA&gap.plf=5&ept=68&gcp=5",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google.com/ccm/collect?rcb=1&frm=0&apvc=0&ae=g&auid=1890845981.1787876449&dt=Im%C3%B3veis%20Imobili%C3%A1ria%20Loca%C3%A7%C3%A3o%20Aluguel%20Venda%20Compra%20Buritis&tid=AW-16465473216&dl=https%3A%2F%2Fwww.stilonetimoveis.com.br%2F&scrsrc=www.googletagmanager.com&rnd=1514380367.1787876449&navt=n&npa=0&_tu=CA&gtm=45be68q1v9213112768z89178161142za20gzb9178161142zd9178161142xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938468~118897920~118897930~119367802~119367810~120385423&tft=1787876450119&tfd=2703&gap.plf=5&tids=AW-16465473216&fmt=8",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://rr2---sn-b8u-jo4z.googlevideo.com/videoplayback?expire=1787898050&ei=YtSQaqDKAcvy1sQP4ZC50Ac&ip=2804%3A1b2%3A1000%3Af5%3A82f7%3A2404%3A617f%3A84b1&id=o-AEwYB7WC9Lwb0_3MBQhFCV3VX-4jKsySLUGSHprV3NIz&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=259&met=1787876450%2C&mh=tG&mm=31%2C29&mn=sn-b8u-jo4z%2Csn-b8u-bpb6&ms=au%2Crdu&mv=m&mvi=2&pl=48&rms=au%2Cau&pcm2=yes&initcwndbps=2903750&spc=KBGBcvsp-kC0pqDgvMW2OtxtGqFjg63n9Je49hcpEUVzNWVRaNTJ91wbmZsTbvGSJoKRfcy_&svpuc=1&ns=zv4A2wLe_aGuUNeriRu80MMX&sabr=1&rqh=1&mt=1787875976&fvip=1&keepalive=yes&fexp=51565116%2C52135441&c=WEB_EMBEDDED_PLAYER&n=-Og0eHk4piRZHQ&sparams=expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cspc%2Csvpuc%2Cns%2Csabr%2Crqh&sig=AE0s2JYwRQIhAMEzIfvItgok3UyH_99BRMk47Ox3di3K4xtnuut5QkQMAiA7O-T1OITCaQnewwDAem9Eg8qK6hoJ6PXuuCZiJzfOdQ%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIgfOxtgFk85xmZcvczEE7DP8t28Sr5PQ1nF1lJ8MVPrTgCIQC4lIEbr1p6HfP6bdUjhadjBdC5MOq3J9FOJU7gDoc7lA%3D%3D&cpn=B4CnnNSApgy_8E3X&cver=2.20260827.01.00&rn=1&alr=yes",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/youtubei/v1/next?prettyPrint=false",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://rr2---sn-8p8v-jo46.googlevideo.com/videoplayback?expire=1787898050&ei=YtSQapoVhpqhsg-5kOaQBQ&ip=2804%3A1b2%3A1000%3Af5%3A82f7%3A2404%3A617f%3A84b1&id=o-ABbhWV_WEALwIGFaVYTfrP0Yq-K3dIzT3jnS03CfgyMp&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=224&met=1787876450%2C&mh=AU&mm=31%2C29&mn=sn-8p8v-jo46%2Csn-b8u-bpbl&ms=au%2Crdu&mv=m&mvi=2&pl=48&rms=au%2Cau&pcm2=yes&initcwndbps=2962500&spc=KBGBcsMF2X-6AzI0WJrIZg0GtE-vVWe4EvvVm7ZwAZlkrC-SObRBRuMzZYZNQ7tlUtLB_e5w&svpuc=1&ns=QvJfV2HClzBl1gyZS2QDQ6YX&sabr=1&rqh=1&mt=1787875976&fvip=2&keepalive=yes&fexp=51565116%2C52135441&c=WEB_EMBEDDED_PLAYER&n=nXz4Mk7bimfA-Q&sparams=expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cspc%2Csvpuc%2Cns%2Csabr%2Crqh&sig=AE0s2JYwRAIfGiXS7H5YnkQfgBONjqu-kvN13yKbVxfwT-G28UlRWQIhAL50bApTklOBroQvHTciCrOXNvD9HCwmEXQldG_TB8ut&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRAIgfqXMMqqjRDM2QylCwaq1gfVfdrDHY73RRmwljeyBS6ECIE4Fz8FAtujHdMw7a66MH6iZuQY3lq5hc92YxQ0nSL7U&cpn=faLPdGUuBmNtoX0_&cver=2.20260827.01.00&rn=1&alr=yes",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/youtubei/v1/next?prettyPrint=false",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://rr2---sn-8p8v-jo46.googlevideo.com/videoplayback?expire=1787898050&ei=YtSQarq9Apf6-LAP0cqAOQ&ip=2804%3A1b2%3A1000%3Af5%3A82f7%3A2404%3A617f%3A84b1&id=o-AMF3iP5HObcYX1GnDvoquqJiwhUV5ka_8PRDpLFxn3hu&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=240&met=1787876450%2C&mh=Dx&mm=31%2C29&mn=sn-8p8v-jo46%2Csn-b8u-bpb6&ms=au%2Crdu&mv=m&mvi=2&pl=48&rms=au%2Cau&pcm2=yes&initcwndbps=2962500&spc=KBGBcrJOn9nI17nX4NB_mQo91zBBZsnCyJ44yAys6vNE4CnM_c7rWARzglxsB_9fWx87KTYB&svpuc=1&ns=euZ_RxYycHSUPUVQQeMDroYX&sabr=1&rqh=1&mt=1787875976&fvip=2&keepalive=yes&fexp=51565116%2C52135441&c=WEB_EMBEDDED_PLAYER&n=xRB3dIuZuxkJVw&sparams=expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cspc%2Csvpuc%2Cns%2Csabr%2Crqh&sig=AE0s2JYwRQIhAPt2L1hnH9Gki9tR_xbr1P1761PJ3-TSzj5QG32v8aR8AiB3hvQCf2y_yorUerRapNXDwQQzejOhhHTBAmfDZiexrg%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIgOLTtK77jsLADosjVDRU7AySAs-83UFShCVuAC9nYiE8CIQCd3Q0WyhoZIRav3l8j1hBWj-UYmwYofTK0SVRQmrYB3A%3D%3D&cpn=bjBVTwd3r1qNkPmQ&cver=2.20260827.01.00&rn=1&alr=yes",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/youtubei/v1/next?prettyPrint=false",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.youtube.com/api/timedtext?v=IhJc45Ivexo&ei=YtSQarq9Apf6-LAP0cqAOQ&caps=asr&opi=112496729&xoaf=5&xowf=1&hl=pt&ip=0.0.0.0&ipbits=0&expire=1787901650&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cxoaf&signature=DA022955223C7AA815D2664C9E0C94ECB8A0DD80.AFCD6954896F810E992771580689A4E27232AC92&key=yt8&kind=asr&lang=pt&fmt=json3&xorb=2&xobt=3&xovt=3&cbr=Chrome&cbrver=120.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20260827.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/api/stats/qoe?fmt=243&afmt=251&cpn=B4CnnNSApgy_8E3X&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47716%2C76958%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C34394%2C30906%2C2878%2C12227%2C25059%2C4174%2C30447%2C18705%2C21437%2C4571%2C5236%2C7780%2C13110%2C2977%2C6620%2C2784%2C23826%2C9500%2C1840%2C94838%2C20588%2C34313%2C9181%2C15416%2C17457%2C20110%2C366%2C5330%2C336%2C1168%2C372%2C7758%2C34321%2C11462%2C927%2C2249%2C12082%2C11591%2C1460%2C479%2C277%2C4360%2C5116%2C2128%2C5619%2C9717%2C1409%2C2204%2C187%2C3708%2C3301%2C3767%2C652%2C2%2C14921%2C553%2C3292%2C1165%2C3%2C3%2C744%2C13600%2C1643%2C1341%2C6469%2C3148%2C1287%2C3242%2C7889%2C2898%2C5329%2C1226%2C339%2C7941%2C757%2C1538%2C7443%2C1540%2C14914%2C2419%2C3360%2C352%2C3%2C10823%2C1250%2C2167%2C8157%2C2208%2C370%2C7934%2C8212&cl=970918632&seq=1&docid=JKhbUupuoEQ&ei=YtSQaqDKAcvy1sQP4ZC50Ac&event=streamingstats&plid=AAZaEGy1UVeV6eQT&cbr=Chrome&cbrver=120.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20260827.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&vps=0.000:N,0.009:B,0.120:S,0.421:S,0.421:S&cat=streaming,sabr&cmt=0.009:0.000,0.120:0.000,0.421:1.000&afs=0.418:251;CggKA2RyYxIBMQ::i:fl.-10000;tl.-14;vg.0;nm.1;sms.2:CAEoAQ&vfs=0.421:243:243::a:sms.2:CAEoAQ&view=0.421:560:315&bwm=0.421:709002:0.193&bwe=0.421:589824&bat=0.421:1:1&vis=0.421:0&bh=0.421:0.000&qclc=ChBCNENubk5TQXBneV84RTNYEAE",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://rr2---sn-b8u-jo4z.googlevideo.com/videoplayback?expire=1787898050&ei=YtSQaqDKAcvy1sQP4ZC50Ac&ip=2804%3A1b2%3A1000%3Af5%3A82f7%3A2404%3A617f%3A84b1&id=o-AEwYB7WC9Lwb0_3MBQhFCV3VX-4jKsySLUGSHprV3NIz&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=259&met=1787876450%2C&mh=tG&mm=31%2C29&mn=sn-b8u-jo4z%2Csn-b8u-bpb6&ms=au%2Crdu&mv=m&mvi=2&pl=48&rms=au%2Cau&pcm2=yes&initcwndbps=2903750&spc=KBGBcvsp-kC0pqDgvMW2OtxtGqFjg63n9Je49hcpEUVzNWVRaNTJ91wbmZsTbvGSJoKRfcy_&svpuc=1&ns=zv4A2wLe_aGuUNeriRu80MMX&sabr=1&rqh=1&mt=1787875976&fvip=1&keepalive=yes&fexp=51565116%2C52135441&c=WEB_EMBEDDED_PLAYER&n=-Og0eHk4piRZHQ&sparams=expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cspc%2Csvpuc%2Cns%2Csabr%2Crqh&sig=AE0s2JYwRQIhAMEzIfvItgok3UyH_99BRMk47Ox3di3K4xtnuut5QkQMAiA7O-T1OITCaQnewwDAem9Eg8qK6hoJ6PXuuCZiJzfOdQ%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIgfOxtgFk85xmZcvczEE7DP8t28Sr5PQ1nF1lJ8MVPrTgCIQC4lIEbr1p6HfP6bdUjhadjBdC5MOq3J9FOJU7gDoc7lA%3D%3D&cpn=B4CnnNSApgy_8E3X&cver=2.20260827.01.00&rn=2&alr=yes",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/api/stats/qoe?fmt=136&cpn=bjBVTwd3r1qNkPmQ&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47716%2C76958%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C34394%2C30906%2C2878%2C12227%2C25059%2C4174%2C30447%2C18705%2C21437%2C4571%2C5236%2C7780%2C13110%2C2977%2C6620%2C2784%2C23826%2C9500%2C1840%2C94838%2C20588%2C34313%2C9181%2C15416%2C17457%2C20110%2C366%2C5330%2C336%2C1168%2C372%2C7758%2C34321%2C11462%2C927%2C2249%2C12082%2C11591%2C1460%2C479%2C277%2C4360%2C5116%2C2128%2C5619%2C9717%2C1409%2C2204%2C187%2C3708%2C3301%2C3767%2C652%2C2%2C14921%2C553%2C3292%2C1165%2C3%2C3%2C744%2C13600%2C1643%2C1341%2C6469%2C3148%2C1287%2C3242%2C7889%2C2898%2C5329%2C1226%2C339%2C7941%2C757%2C1538%2C7443%2C1540%2C14914%2C2419%2C3360%2C352%2C3%2C10823%2C1250%2C2167%2C8157%2C2208%2C370%2C7934%2C8212&cl=970918632&seq=1&docid=IhJc45Ivexo&ei=YtSQarq9Apf6-LAP0cqAOQ&event=streamingstats&plid=AAZaEGy1jhktNkQu&cbr=Chrome&cbrver=120.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20260827.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&vps=0.000:N,0.009:B,0.105:S,0.521:S,0.521:S&cat=streaming,sabr&cmt=0.009:0.000,0.105:0.000,0.521:1.000&cfs=0.516:a.pt:::s&vfs=0.521:136:136::a:sms.2:CAEoAQ&view=0.521:2455:1381&bwm=0.521:117538:0.248&bwe=0.521:589824&bat=0.521:1:1&vis=0.521:0&bh=0.521:0.000&qclc=ChBiakJWVHdkM3IxcU5rUG1REAE",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.youtube.com/api/timedtext?v=IhJc45Ivexo&ei=YtSQarq9Apf6-LAP0cqAOQ&caps=asr&opi=112496729&xoaf=5&xowf=1&hl=pt&ip=0.0.0.0&ipbits=0&expire=1787901650&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cxoaf&signature=DA022955223C7AA815D2664C9E0C94ECB8A0DD80.AFCD6954896F810E992771580689A4E27232AC92&key=yt8&kind=asr&lang=pt&fmt=json3&xorb=2&xobt=3&xovt=3&cbr=Chrome&cbrver=120.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20260827.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/api/stats/qoe?fmt=135&afmt=251&cpn=faLPdGUuBmNtoX0_&el=embedded&ns=yt&fexp=v1%2C24004644%2C27058999%2C34656%2C47716%2C76958%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C34394%2C30906%2C2878%2C12227%2C25059%2C4174%2C30447%2C18705%2C21437%2C4571%2C5236%2C7780%2C13110%2C2977%2C6620%2C2784%2C23826%2C9500%2C1840%2C94838%2C20588%2C34313%2C9181%2C15416%2C17457%2C20110%2C366%2C5330%2C336%2C1168%2C372%2C7758%2C34321%2C11462%2C927%2C2249%2C12082%2C11591%2C1460%2C479%2C277%2C4360%2C5116%2C2128%2C5619%2C9717%2C1409%2C2204%2C187%2C3708%2C3301%2C3767%2C652%2C2%2C14921%2C553%2C3292%2C1165%2C3%2C3%2C744%2C13600%2C1643%2C1341%2C6469%2C3148%2C1287%2C3242%2C7889%2C2898%2C5329%2C1226%2C339%2C7941%2C757%2C1538%2C7443%2C1540%2C14914%2C2419%2C3360%2C352%2C3%2C10823%2C1250%2C2167%2C8157%2C2208%2C370%2C7934%2C8212&cl=970918632&seq=1&docid=XbAjkoP2Y7c&ei=YtSQapoVhpqhsg-5kOaQBQ&event=streamingstats&plid=AAZaEGy1HAzpJU1t&cbr=Chrome&cbrver=120.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20260827.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&vps=0.000:N,0.011:B,0.136:S,0.603:S,0.603:S&cat=streaming,sabr&cmt=0.011:0.000,0.136:0.000,0.603:1.000&afs=0.601:251::i:fl.-12.65;tl.-14;vg.-1.3399999999999999;nm.1;sms.2:CAEoAQ&vfs=0.603:135:134::a:sms.2:CAEoAQ&view=0.603:560:315&bwm=0.603:931469:0.322&bwe=0.603:589824&bat=0.603:1:1&vis=0.603:0&bh=0.603:0.000&qclc=ChBmYUxQZEdVdUJtTnRvWDBfEAE",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=B4CnnNSApgy_8E3X&ver=2&cmt=1.075&fmt=243&fs=0&rt=0.638&euri=https%3A%2F%2Fwww.stilonetimoveis.com.br%2F&lact=956&cl=970918632&mos=1&volume=100&cbr=Chrome&cbrver=120.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20260827.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&autoplay=1&epm=1&splay=1&hl=pt_BR&cr=BR&len=141.541&fexp=v1%2C24004644%2C27058999%2C34656%2C47716%2C76958%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C34394%2C30906%2C2878%2C12227%2C25059%2C4174%2C30447%2C18705%2C21437%2C4571%2C5236%2C7780%2C13110%2C2977%2C6620%2C2784%2C23826%2C9500%2C1840%2C94838%2C20588%2C34313%2C9181%2C15416%2C17457%2C20110%2C366%2C5330%2C336%2C1168%2C372%2C7758%2C34321%2C11462%2C927%2C2249%2C12082%2C11591%2C1460%2C479%2C277%2C4360%2C5116%2C2128%2C5619%2C9717%2C1409%2C2204%2C187%2C3708%2C3301%2C3767%2C652%2C2%2C14921%2C553%2C3292%2C1165%2C3%2C3%2C744%2C13600%2C1643%2C1341%2C6469%2C3148%2C1287%2C3242%2C7889%2C2898%2C5329%2C1226%2C339%2C7941%2C757%2C1538%2C7443%2C1540%2C14914%2C2419%2C3360%2C352%2C3%2C10823%2C1250%2C2167%2C8157%2C2208%2C370%2C7934%2C8212&rtn=11&afmt=251&size=560%3A315&inview=0&muted=1&docid=JKhbUupuoEQ&ei=YtSQaqDKAcvy1sQP4ZC50Ac&plid=AAZaEGy1UVeV6eQT&referrer=https%3A%2F%2Fwww.youtube.com%2Fembed%2F%3Fmodestbranding%3D1%26autoplay%3D0%26controls%3D0%26showinfo%3D0%26rel%3D0%26enablejsapi%3D1%26version%3D3%26playerapiid%3Diframe_panelVideo-1%26origin%3Dhttps%253A%252F%252Fwww.stilonetimoveis.com.br%26allowfullscreen%3Dtrue%26wmode%3Dtransparent%26iv_load_policy%3D3%26cc_load_policy%3D0%26playsinline%3D0%26html5%3D1%26widgetid%3D1%26forigin%3Dhttps%253A%252F%252Fwww.stilonetimoveis.com.br%252F%26aoriginsup%3D1%26vf%3D1&of=nBni41ETR8lEDbNBxHSr9Q&vm=CAEQABgEOjJBSHFpSlRKeTRsdV9XSXFCRXRKQjBCbjdHQ0VEdUZQUHdYWDlkWWZoWWwwWXU1SXdaQWJbQUxkcUFQTHBIRTQ5cno4ZWxhcmgybkg4N0xBNVM5X3J6dGFRRjhudDlrUHlxRHMyQk1STVBCWFl0OE1ySlFQZEtNUGhzbTVnYlVndDJYZE50TjA3amdqUjhSdw",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.youtube.com/ptracking?html5=1&video_id=JKhbUupuoEQ&cpn=B4CnnNSApgy_8E3X&ei=YtSQaqDKAcvy1sQP4ZC50Ac&ptk=youtube_none&pltype=contentugc",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://www.youtube.com/pagead/viewthroughconversion/962985656/?backend=innertube&cname=56&cver=2_20260827&foc_id=8WUYWniGwT57U9cadXCxNA&label=followon_view&ptype=no_rmkt&random=614801837",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://rr2---sn-b8u-jo4z.googlevideo.com/videoplayback?expire=1787898050&ei=YtSQaqDKAcvy1sQP4ZC50Ac&ip=2804%3A1b2%3A1000%3Af5%3A82f7%3A2404%3A617f%3A84b1&id=o-AEwYB7WC9Lwb0_3MBQhFCV3VX-4jKsySLUGSHprV3NIz&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=259&met=1787876450%2C&mh=tG&mm=31%2C29&mn=sn-b8u-jo4z%2Csn-b8u-bpb6&ms=au%2Crdu&mv=m&mvi=2&pl=48&rms=au%2Cau&pcm2=yes&initcwndbps=2903750&spc=KBGBcvsp-kC0pqDgvMW2OtxtGqFjg63n9Je49hcpEUVzNWVRaNTJ91wbmZsTbvGSJoKRfcy_&svpuc=1&ns=zv4A2wLe_aGuUNeriRu80MMX&sabr=1&rqh=1&mt=1787875976&fvip=1&keepalive=yes&fexp=51565116%2C52135441&c=WEB_EMBEDDED_PLAYER&n=-Og0eHk4piRZHQ&sparams=expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cspc%2Csvpuc%2Cns%2Csabr%2Crqh&sig=AE0s2JYwRQIhAMEzIfvItgok3UyH_99BRMk47Ox3di3K4xtnuut5QkQMAiA7O-T1OITCaQnewwDAem9Eg8qK6hoJ6PXuuCZiJzfOdQ%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIgfOxtgFk85xmZcvczEE7DP8t28Sr5PQ1nF1lJ8MVPrTgCIQC4lIEbr1p6HfP6bdUjhadjBdC5MOq3J9FOJU7gDoc7lA%3D%3D&cpn=B4CnnNSApgy_8E3X&cver=2.20260827.01.00&rn=3&alr=yes",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://rr2---sn-8p8v-jo46.googlevideo.com/videoplayback?expire=1787898050&ei=YtSQapoVhpqhsg-5kOaQBQ&ip=2804%3A1b2%3A1000%3Af5%3A82f7%3A2404%3A617f%3A84b1&id=o-ABbhWV_WEALwIGFaVYTfrP0Yq-K3dIzT3jnS03CfgyMp&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=224&met=1787876450%2C&mh=AU&mm=31%2C29&mn=sn-8p8v-jo46%2Csn-b8u-bpbl&ms=au%2Crdu&mv=m&mvi=2&pl=48&rms=au%2Cau&pcm2=yes&initcwndbps=2962500&spc=KBGBcsMF2X-6AzI0WJrIZg0GtE-vVWe4EvvVm7ZwAZlkrC-SObRBRuMzZYZNQ7tlUtLB_e5w&svpuc=1&ns=QvJfV2HClzBl1gyZS2QDQ6YX&sabr=1&rqh=1&mt=1787875976&fvip=2&keepalive=yes&fexp=51565116%2C52135441&c=WEB_EMBEDDED_PLAYER&n=nXz4Mk7bimfA-Q&sparams=expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cspc%2Csvpuc%2Cns%2Csabr%2Crqh&sig=AE0s2JYwRAIfGiXS7H5YnkQfgBONjqu-kvN13yKbVxfwT-G28UlRWQIhAL50bApTklOBroQvHTciCrOXNvD9HCwmEXQldG_TB8ut&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRAIgfqXMMqqjRDM2QylCwaq1gfVfdrDHY73RRmwljeyBS6ECIE4Fz8FAtujHdMw7a66MH6iZuQY3lq5hc92YxQ0nSL7U&cpn=faLPdGUuBmNtoX0_&cver=2.20260827.01.00&rn=2&alr=yes",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/962985656/?backend=innertube&cname=56&cver=2_20260827&foc_id=8WUYWniGwT57U9cadXCxNA&label=followon_view&ptype=no_rmkt&random=614801837&cv_attributed=0",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=faLPdGUuBmNtoX0_&ver=2&cmt=1.01&fmt=135&fs=0&rt=0.86&euri=https%3A%2F%2Fwww.stilonetimoveis.com.br%2F&lact=1201&cl=970918632&mos=1&volume=100&cbr=Chrome&cbrver=120.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20260827.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&autoplay=1&epm=1&splay=1&hl=pt_BR&cr=BR&len=87.541&fexp=v1%2C24004644%2C27058999%2C34656%2C47716%2C76958%2C117689%2C9252%2C3479%2C13030%2C23206%2C35402%2C34394%2C30906%2C2878%2C12227%2C25059%2C4174%2C30447%2C18705%2C21437%2C4571%2C5236%2C7780%2C13110%2C2977%2C6620%2C2784%2C23826%2C9500%2C1840%2C94838%2C20588%2C34313%2C9181%2C15416%2C17457%2C20110%2C366%2C5330%2C336%2C1168%2C372%2C7758%2C34321%2C11462%2C927%2C2249%2C12082%2C11591%2C1460%2C479%2C277%2C4360%2C5116%2C2128%2C5619%2C9717%2C1409%2C2204%2C187%2C3708%2C3301%2C3767%2C652%2C2%2C14921%2C553%2C3292%2C1165%2C3%2C3%2C744%2C13600%2C1643%2C1341%2C6469%2C3148%2C1287%2C3242%2C7889%2C2898%2C5329%2C1226%2C339%2C7941%2C757%2C1538%2C7443%2C1540%2C14914%2C2419%2C3360%2C352%2C3%2C10823%2C1250%2C2167%2C8157%2C2208%2C370%2C7934%2C8212&rtn=8&afmt=251&size=560%3A315&inview=0&muted=1&docid=XbAjkoP2Y7c&ei=YtSQapoVhpqhsg-5kOaQBQ&plid=AAZaEGy1HAzpJU1t&referrer=https%3A%2F%2Fwww.youtube.com%2Fembed%2F%3Fmodestbranding%3D1%26autoplay%3D0%26controls%3D0%26showinfo%3D0%26rel%3D0%26enablejsapi%3D1%26version%3D3%26playerapiid%3Diframe_panelVideo-2%26origin%3Dhttps%253A%252F%252Fwww.stilonetimoveis.com.br%26allowfullscreen%3Dtrue%26wmode%3Dtransparent%26iv_load_policy%3D3%26cc_load_policy%3D0%26playsinline%3D0%26html5%3D1%26widgetid%3D2%26forigin%3Dhttps%253A%252F%252Fwww.stilonetimoveis.com.br%252F%26aoriginsup%3D1%26vf%3D1&of=nBni41ETR8lEDbNBxHSr9Q&vm=CAEQABgEOjJBSHFpSlRMUTNWM1NCRkoxdzlteW42OUxhVXFOV2Z0Y0xXeXZIRHh6dEVFSldteTdWQWJbQUxkcUFQSTBwWGNHSXVHZ21zaE5JUk1YT3FZTGp0VUlhMk8tbm1yekpfZGNXWU45eGZZQlZibWFSb2haUjRKT2pjdl81cmMwTHhNX1FhTjdyY1UtakNWU3ZQcw",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [
+    "Access to fetch at 'https://googleads.g.doubleclick.net/pagead/viewthroughconversion/962985656/?backend=innertube&cname=56&cver=2_20260827&foc_id=8WUYWniGwT57U9cadXCxNA&label=followon_view&ptype=no_rmkt&random=614801837&cv_attributed=0' (redirected from 'https://www.youtube.com/pagead/viewthroughconversion/962985656/?backend=innertube&cname=56&cver=2_20260827&foc_id=8WUYWniGwT57U9cadXCxNA&label=followon_view&ptype=no_rmkt&random=614801837') from origin 'https://www.youtube.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+    "Failed to load resource: net::ERR_FAILED",
+    "Access to fetch at 'https://googleads.g.doubleclick.net/pagead/viewthroughconversion/962985656/?backend=innertube&cname=56&cver=2_20260827&foc_id=8WUYWniGwT57U9cadXCxNA&label=followon_view&ptype=no_rmkt&random=367435730&cv_attributed=0' (redirected from 'https://www.youtube.com/pagead/viewthroughconversion/962985656/?backend=innertube&cname=56&cver=2_20260827&foc_id=8WUYWniGwT57U9cadXCxNA&label=followon_view&ptype=no_rmkt&random=367435730') from origin 'https://www.youtube.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+    "Failed to load resource: net::ERR_FAILED"
+  ],
+  "titulo": "Imóveis Imobiliária Locação Aluguel Venda Compra Buritis",
+  "bodyTextSample": " Venda\n   \n Locação\nAlugar ou Comprar: 31972323931\n Av. Professor Mário Werneck nº 2805, Buritis - BH/MG\nInicial\nContato\nInstitucional \nStilo Netimóveis\nVende. Aluga. Conecta.\nAlugar\nComprar\nApartamento\nTodos os tipos\nAndar-pilotis\nApart-hotel\nÁrea Privativa\nBarracão\nCasa\nCasa comercial\nCasa geminada\nCasa em condomínio\nChácara\nCobertura\nConjunto de lojas\nConjunto de salas\nCoworking\nDúplex\nEstacionamento\nEmpreendimento\nFazenda\nFlat\nGalpão\nGaragem\nHotel\nKitchenette\nLoja\nLote-Área-Terreno\nLote em condomínio\nPonto comercial\nPrédio\nSala\nSítio\nSobrado\nSobre-loja\nStudio\nApartamento\nMenos filtros\nQuartos:\n1+\n2+\n3+\n4+\n5+\n \nBanheiros:\n1+\n2+\n3+\n4+\n5+\n \nVagas:\n1+\n2+\n3+\n4+\n5+\nValor:\nÁrea:\nBuscar\nDestaques de imóveis\nComprar\nAlugar\nApartamento 2 quartos à venda\nNova Lima, Vila da Serra\n110m²\n2 quartos\n2 vagas\n2 banheiros\nLocalizado na área mais nobre de Nova Lima, esse belíssimo imóvel está localizado próximo ao Biocor, Alameda Oscar Niemeyer, Bh Shopping, entre outros. Com 110 m² muito bem distribu",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integracao-lote/terrestre-spider/discovery/output/screenshots/stilo-netimoveis.png",
+  "erro": null,
+  "timestamp": "2026-08-28T00:20:46.433Z"
+}

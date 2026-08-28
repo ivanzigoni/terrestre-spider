@@ -1,0 +1,55 @@
+{
+  "nome": "pampulha-detalhe-1",
+  "urlSolicitada": "https://imobiliariapampulha.com.br/imovel/casa-a-venda-com-70m%c2%b2-2-quartos-e-sem-vaga-caicara/",
+  "urlFinal": "https://imobiliariapampulha.com.br/imovel/casa-a-venda-com-70m%c2%b2-2-quartos-e-sem-vaga-caicara/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\r\nDisallow:\r\n\r\nAllow: /wp-admin/admin-ajax.php\r\n\r\nUser-agent: Googlebot\r\nAllow:\r\n\r\nUser-agent: Googlebot-Image\r\nAllow:\r\n\r\nUser-agent: Mediapartners-Google\r\nAllow:\r\n\r\nUser-agent: Adsbot-Google\r\nAllow:\r\n\r\nUser-agent: *\r\nDisallow: /wp-admin/\r\nDisallow: /wp-content/uploads/wpforms/\r\nDisallow: /*?*\r\nDisallow: /Sistema*\r\nDisallow: /search*\r\nDisallow: /smarthint-search*\r\n\r\nsitemap: https://imobiliariapampulha.com.br/sitemap_index.xml"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 1,
+    "jsonLdSample": "{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/imovel\\/casa-a-venda-com-70m%c2%b2-2-quartos-e-sem-vaga-caicara\\/\",\"url\":\"https:\\/\\/imobiliariapampulha.com.br\\/imovel\\/casa-a-venda-com-70m%c2%b2-2-quartos-e-sem-vaga-caicara\\/\",\"name\":\"Casa à venda com 70m², 2 quartos e sem vaga Caiçara - Imobiliária Pampulha\",\"isPartOf\":{\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/imovel\\/casa-a-venda-com-70m%c2%b2-2-quartos-e-sem-vaga-caicara\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/imovel\\/casa-a-venda-com-70m%c2%b2-2-quartos-e-sem-vaga-caicara\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/imobiliariapampulha.com.br\\/wp-content\\/uploads\\/2023\\/01\\/D_NQ_NP_676373-MLB52960306305_122022-W.jpg\",\"datePublished\":\"2023-01-26T17:49:51+00:00\",\"dateModified\":\"2023-01-26T17:50:56+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/im",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-XVZZXZTY8R&gtm=45je68r0h2v9104694804z89104693392za20gzb9104693392zd9104693392&_p=1787876008798&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=698453402.1787876010&frm=0&ngs=1&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=115616985~115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787876009&sct=1&seg=0&dl=https%3A%2F%2Fimobiliariapampulha.com.br%2Fimovel%2Fcasa-a-venda-com-70m%C2%B2-2-quartos-e-sem-vaga-caicara%2F&dt=Casa%20%C3%A0%20venda%20com%2070m%C2%B2%2C%202%20quartos%20e%20sem%20vaga%20Cai%C3%A7ara%20-%20Imobili%C3%A1ria%20Pampulha&en=page_view&_fv=1&_nsi=1&_ss=1&gap.plf=5&tfd=1559",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://0dca3d4bb12a.w.hcaptcha.com/logo.png",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "GET",
+      "url": "https://7cca5900f921.w.hcaptcha.com/logo.png",
+      "resourceType": "fetch"
+    },
+    {
+      "method": "POST",
+      "url": "https://api.hcaptcha.com/checksiteconfig?v=80155bd74291c2c1a8aa730ad8cb06c9c23a3f65&host=imobiliariapampulha.com.br&sitekey=2b43477a-ac5e-459b-af43-08c806c4c10b&sc=1&swa=1&spst=1",
+      "resourceType": "xhr"
+    }
+  ],
+  "consoleErros": [],
+  "titulo": "Casa à venda com 70m², 2 quartos e sem vaga Caiçara - Imobiliária Pampulha",
+  "bodyTextSample": "contato@imobiliaria.com.br(31) 99999-9999 (31) 3131-3131\nCasa à venda com 70m², 2 quartos e sem vaga Caiçara\n1\nÁrea total 70m² 2 Quartos 1 Banheiro\n\nCasa à venda com 70m², 2 quartos e sem vaga Caiçara\n\nEntre em contato.\n\nR$ 165,000\n\nCONDOMÍNIO: Não Informado\n\nIPTU: R$ 1500\n\nFale com a Imobiliária\n\nMais de 82 pessoas interessadas neste imóvel nas últimas horas.\n\nSe inscreva em nossa newsletter\nEnviar\nConcordo com a\npolítica de privacidade\n\n \n \n \nInstitucional\nInício\nSobre\nComprar\nAlugar\nAnuncie seu imóvel\nContato\nFavoritos\nNotícias\nNavegue\nServiços\nInvestimento Imobiliário\nDocumentos Necessários\nAvaliação de Imóvel\nContato\n(31) 99999-9999\n(31) 3131-3131\ncontato@imobiliaria.com.br\n\n© 2026 Imobiliária Pampulha | Todos os direitos reservados",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integracao-lote/terrestre-spider/discovery/output/screenshots/pampulha-detalhe-1.png",
+  "erro": null,
+  "timestamp": "2026-08-28T00:13:27.657Z"
+}

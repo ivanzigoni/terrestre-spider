@@ -1,0 +1,40 @@
+{
+  "nome": "Imobiliária Pampulha",
+  "urlSolicitada": "https://imobiliariapampulha.com.br/",
+  "urlFinal": "https://imobiliariapampulha.com.br/",
+  "httpStatus": 200,
+  "robots": {
+    "fetched": true,
+    "status": 200,
+    "disallowedForTargetPath": false,
+    "contentSample": "User-agent: *\r\nDisallow:\r\n\r\nAllow: /wp-admin/admin-ajax.php\r\n\r\nUser-agent: Googlebot\r\nAllow:\r\n\r\nUser-agent: Googlebot-Image\r\nAllow:\r\n\r\nUser-agent: Mediapartners-Google\r\nAllow:\r\n\r\nUser-agent: Adsbot-Google\r\nAllow:\r\n\r\nUser-agent: *\r\nDisallow: /wp-admin/\r\nDisallow: /wp-content/uploads/wpforms/\r\nDisallow: /*?*\r\nDisallow: /Sistema*\r\nDisallow: /search*\r\nDisallow: /smarthint-search*\r\n\r\nsitemap: https://imobiliariapampulha.com.br/sitemap_index.xml"
+  },
+  "estruturaDados": {
+    "hasNextData": false,
+    "nextDataSample": null,
+    "jsonLdCount": 1,
+    "jsonLdSample": "{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/\",\"url\":\"https:\\/\\/imobiliariapampulha.com.br\\/\",\"name\":\"Imobiliária BH - Corretor de Imóveis BH - Corretor Imobiliário\",\"isPartOf\":{\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/#website\"},\"datePublished\":\"2014-07-03T18:45:01+00:00\",\"dateModified\":\"2023-03-17T14:15:00+00:00\",\"description\":\"Aqui na Imobiliária Pampulha você encontra imóveis com os menores preços de BH. Compra e venda sem burocracia. Fale com um corretor.\",\"breadcrumb\":{\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/imobiliariapampulha.com.br\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/imobiliariapampulha.com.br\\/#website\",\"url\":\"https:\\/\\/imobiliariapampulha.com.br\\/\",",
+    "hasInitialState": false
+  },
+  "bloqueio": {
+    "blocked": false,
+    "matchedPattern": null
+  },
+  "paginacao": {
+    "hasNumberedPagination": false,
+    "hasNextLink": false
+  },
+  "requisicoesRede": [
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-XVZZXZTY8R&gtm=45je68q1v9104694804z89104693392za20gzb9104693392zd9104693392&_p=1787875916384&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dZTNiMT&are=1&cid=95695089.1787875917&frm=0&ngs=1&pscdl=noapi&rcb=8&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CHeadlessChrome%3B151.0.7922.34%7CChromium%3B151.0.7922.34&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787875917&sct=1&seg=0&dl=https%3A%2F%2Fimobiliariapampulha.com.br%2F&dt=Imobili%C3%A1ria%20BH%20-%20Corretor%20de%20Im%C3%B3veis%20BH%20-%20Corretor%20Imobili%C3%A1rio&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=1514",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErros": [],
+  "titulo": "Imobiliária BH - Corretor de Imóveis BH - Corretor Imobiliário",
+  "bodyTextSample": "contato@imobiliaria.com.br(31) 99999-9999 (31) 3131-3131\nImobiliária BH - Corretor de imóveis em BH\nO imóvel que você\nsonhou está aqui,\nte esperando.\nSeja para alugar, comprar ou vender, você veio ao lugar certo. Nós intermediamos o seu sonho. Imobiliária Pampulha, Preocupe-se apenas em morar bem.  \nFinalidade\nÁ Venda\nAluguel\nTipo\nCidade\nBairro\nBusque por código\nBusque por tipo\nde propriedade\nO seu sonho está de mudança pra cá!\nFalar com um Corretor\nAlugar\nAluguel apartamento\nAluguel casa\nAluguel de kitnets\nAluguel de lojas\nAluguel de salas\nAluguel galpões\nComprar\nComprar apartamento\nComprar casas\nComprar galpões\nComprar kitnets\nComprar lojas\nComprar salas\nComprar terrenos\nImóveis em\ndestaque\nVenda\nKitnet com 1 Quarto e 1 banheiro à Venda, 22 m² no Dona Clara\n2\nR$ 190.000\n30m²\n1\n1\nVer Imóvel\nVenda\nLote/Terreno à Venda, 420 m² Bom Retiro\n2\nR$ 700.000\n630m²\nVer Imóvel\nVenda\nLote/Terreno à Venda, 1076 m² no Betânia\n1\nR$ 120.000\n1076m²\nVer Imóvel\nVenda\nApartamento à venda com 85m², 3 quart",
+  "screenshotPath": "/home/ivan/Documents/repos/terrestre-dados/_worktrees/integracao-lote/terrestre-spider/discovery/output/screenshots/imobiliaria-pampulha.png",
+  "erro": null,
+  "timestamp": "2026-08-28T00:11:54.842Z"
+}
