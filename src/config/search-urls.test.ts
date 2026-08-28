@@ -37,6 +37,7 @@ const FONTES_SEM_SEARCH_URLS = new Set<OrigemAnuncio>([
   OrigemAnuncio.GSA_ATIVOS,
   OrigemAnuncio.IMOBILIARIA_PAMPULHA,
   OrigemAnuncio.CHAVE_CERTA_IMOVEIS_BH,
+  OrigemAnuncio.STILO_NETIMOVEIS,
 ]);
 
 const FONTES_COM_SEARCH_URLS = Object.values(OrigemAnuncio).filter(
