@@ -72,6 +72,9 @@ export class CapturaBruta {
   @Column({ type: 'text', name: 'content_hash' })
   declare hashConteudo: string;
 
+  @Column({ type: 'text', name: 'erro_processamento', nullable: true })
+  declare erroProcessamento: string | null;
+
   @Column({ type: 'int', name: 'size_bytes' })
   declare tamanhoBytes: number;
 

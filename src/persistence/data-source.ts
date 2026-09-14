@@ -4,14 +4,12 @@ import { fileURLToPath } from 'node:url';
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
+import { Anuncio } from './entities/anuncio.entity.js';
+import { Avistamento } from './entities/avistamento.entity.js';
 import { CapturaBruta } from './entities/captura-bruta.entity.js';
+import { ExecucaoProcessamento } from './entities/execucao-processamento.entity.js';
 import { Execucao } from './entities/execucao.entity.js';
 import { requireEnv } from './require-env.js';
-
-// `Anuncio`/`ObservacaoPreco` foram removidas do projeto: a pipeline não estrutura mais
-// dado de anúncio, só captura conteúdo bruto (`CapturaBruta`) e controla a própria
-// execução (`Execucao`). As tabelas foram dropadas (ver migration DropAnunciosTables) e
-// as classes de entidade foram apagadas junto — não há intenção de religar.
 
 const currentFilePath = fileURLToPath(import.meta.url);
 const currentDirPath = path.dirname(currentFilePath);
@@ -69,7 +67,13 @@ export function createDataSource(): DataSource {
       statement_timeout: 30_000,
       idle_in_transaction_session_timeout: 30_000,
     },
-    entities: [Execucao, CapturaBruta],
+    entities: [
+      Execucao,
+      CapturaBruta,
+      Anuncio,
+      Avistamento,
+      ExecucaoProcessamento,
+    ],
     migrations: [
       path.join(currentDirPath, 'migrations', `*.${migrationExtension}`),
     ],
