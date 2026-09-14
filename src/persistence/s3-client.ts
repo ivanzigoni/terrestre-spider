@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 
 import {
   CreateBucketCommand,
+  GetObjectCommand,
   HeadBucketCommand,
   PutObjectCommand,
   S3Client,
@@ -75,4 +76,23 @@ export async function uploadObject(
       ContentType: params.contentType,
     }),
   );
+}
+
+/**
+ * Lê de volta o conteúdo bruto gravado por `uploadObject` — usado por scripts de
+ * diagnóstico/análise (ex.: `src/scripts/analisar-qualidade-capturas.ts`), nunca pela
+ * pipeline de captura em si (que só escreve).
+ */
+export async function downloadObject(
+  client: S3Client,
+  bucket: string,
+  key: string,
+): Promise<string> {
+  const response = await client.send(
+    new GetObjectCommand({ Bucket: bucket, Key: key }),
+  );
+  if (response.Body === undefined) {
+    throw new Error(`objeto "${key}" no bucket "${bucket}" veio sem corpo`);
+  }
+  return response.Body.transformToString('utf-8');
 }

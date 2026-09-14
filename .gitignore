@@ -9,3 +9,4 @@ coverage
 *.tsbuildinfo
 discovery/output/screenshots
 backups
+analysis-output
