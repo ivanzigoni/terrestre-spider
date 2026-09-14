@@ -6,6 +6,7 @@ import { DataSource } from 'typeorm';
 
 import { CapturaBruta } from './entities/captura-bruta.entity.js';
 import { Execucao } from './entities/execucao.entity.js';
+import { requireEnv } from './require-env.js';
 
 // `Anuncio`/`ObservacaoPreco` foram removidas do projeto: a pipeline não estrutura mais
 // dado de anúncio, só captura conteúdo bruto (`CapturaBruta`) e controla a própria
@@ -19,14 +20,6 @@ const currentDirPath = path.dirname(currentFilePath);
 // uma env var separada só para isso.
 const migrationExtension = currentFilePath.endsWith('.ts') ? 'ts' : 'js';
 
-function requireEnv(name: string): string {
-  const value = process.env[name];
-  if (value === undefined || value === '') {
-    throw new Error(`variável de ambiente obrigatória ausente: ${name}`);
-  }
-  return value;
-}
-
 /**
  * Fábrica, não singleton: com runs paralelas (`SPIDER_BATCH_SIZE` > 1) rodando
  * ao mesmo tempo, cada uma precisa da sua própria conexão — um `DataSource`
@@ -36,6 +29,14 @@ function requireEnv(name: string): string {
  * compartilhado entre runs concorrentes.
  */
 export function createDataSource(): DataSource {
+  // Schema dedicado deste serviço no Postgres compartilhado (ver glossário do workspace:
+  // o banco "terrestre" tem um schema por aplicação — pagamentos, terra-em-foco,
+  // terrestre). Obrigatório, sem default: nunca cai em "public" por omissão. Vale tanto
+  // para o SQL gerado pelo TypeORM a partir das entidades (opção `schema` abaixo)
+  // quanto para o SQL bruto já existente nas migrations mais antigas, que não qualifica
+  // schema explicitamente — `search_path` (em `extra.options`) cobre esse caso.
+  const schema = requireEnv('POSTGRES_SCHEMA');
+
   return new DataSource({
     type: 'postgres',
     host: process.env.POSTGRES_HOST ?? 'localhost',
@@ -43,21 +44,27 @@ export function createDataSource(): DataSource {
     username: requireEnv('POSTGRES_USER'),
     password: requireEnv('POSTGRES_PASSWORD'),
     database: requireEnv('POSTGRES_DB'),
-    // SSL é exigência do Supabase, não do Postgres em si — fica numa chave com prefixo
-    // próprio em vez de "POSTGRES_SSL" para não parecer parte da conexão genérica.
-    // Supabase assina com CA própria ("Supabase Root 2021 CA"), fora do truststore padrão
-    // do Node; sem pinning dela no projeto, rejectUnauthorized fica desligado — conexão
-    // segue criptografada, mas sem verificar a identidade do servidor.
+    schema,
+    // TLS é exigência de provedores de Postgres gerenciado (ex.: Supabase, proxy do
+    // Railway), não do Postgres em si — por isso fica numa chave própria em vez de
+    // parecer parte da conexão genérica. Esses provedores tipicamente assinam com CA
+    // própria, fora do truststore padrão do Node; sem pinning dela no projeto,
+    // rejectUnauthorized fica desligado — conexão segue criptografada, mas sem verificar
+    // a identidade do servidor.
     ssl:
-      process.env.SUPABASE_SSL === 'true'
+      process.env.POSTGRES_SSL === 'true'
         ? { rejectUnauthorized: false }
         : false,
     // Sem timeout, uma query que trava por instabilidade de rede fica pendurada pra sempre
     // (diagnosticado ao vivo: sessão presa em "idle in transaction" minutos depois do SELECT
     // do upsert, sem nunca completar). query_timeout é do lado do cliente (pg) e força o
     // fechamento do socket se a query não responder a tempo; statement_timeout e
-    // idle_in_transaction_session_timeout são limites do próprio Postgres.
+    // idle_in_transaction_session_timeout são limites do próprio Postgres. `options` fixa
+    // o search_path da sessão só para este schema — sem isso, um `CREATE TABLE`/`ALTER
+    // TYPE` sem schema explícito (padrão das migrations mais antigas) resolveria contra o
+    // search_path default da role, que pode incluir "public".
     extra: {
+      options: `-c search_path=${schema}`,
       query_timeout: 30_000,
       statement_timeout: 30_000,
       idle_in_transaction_session_timeout: 30_000,

@@ -261,7 +261,7 @@ interface FimExecucao {
 // duas chamadas concorrentes num DataSource só poderiam fechar a conexão
 // uma da outra no meio do caminho. Entre uma fonte e outra o processo passa
 // minutos só raspando, sem tocar no Postgres, e uma conexão ociosa por tempo
-// demais é derrubada em silêncio pelo pooler do Supabase.
+// demais é derrubada em silêncio pelo pooler do provedor gerenciado.
 async function registrarInicioExecucao(origem: OrigemAnuncio): Promise<number> {
   const dataSource = createDataSource();
   await dataSource.initialize();

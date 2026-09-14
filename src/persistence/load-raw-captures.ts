@@ -109,7 +109,7 @@ async function insertBatchWithRetry(
  * Fase 1: só S3, sem tocar Postgres — deliberadamente separada de
  * `inserirCapturasBrutas` pra não manter uma conexão Postgres aberta durante o upload
  * (I/O de rede que pode levar minutos), reabrindo o problema que `loadIntoPostgres` já
- * resolveu (pooler do Supabase derruba conexão ociosa).
+ * resolveu (pooler do provedor gerenciado derruba conexão ociosa).
  */
 export async function uploadCapturasBrutas(
   dataset: Dataset<RawCaptureItem>,
