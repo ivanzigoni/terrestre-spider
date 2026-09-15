@@ -1,0 +1,88 @@
+{
+  "quantidade": 1,
+  "menorvalor": 0,
+  "maiorvalor": 0,
+  "menorarea": 0,
+  "maiorarea": 0,
+  "lista": [
+    {
+      "codigo": 1940,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "KITNET MOBILIADA PARA LOCA\u00c7\u00c3O NO PADRE EUST\u00c1QUIO \u2013 PRATICIDADE, CONFORTO E EXCELENTE LOCALIZA\u00c7\u00c3O",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 10,
+      "tipo": "Kitnet",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.500,00",
+      "valorminimo": "R$ 1.500,00",
+      "valormaximo": "R$ 1.500,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 59,
+      "bairro": "Padre Eust\u00e1quio",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "30730-530",
+      "endereco": "Rua Corn\u00e9lio Cerqueira",
+      "numero": "***",
+      "complemento": "******",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "1",
+      "numerosalas": "1",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "20,00",
+      "areainterna": "20,00",
+      "areaexterna": "20,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/saimobiliaria\/Imoveis\/1940\/abgur-original895242693-409023172698938943-1782172878.jpeg?1782172878",
+      "descricaoFotoPrincipal": "Kitnet para aluguel no Padre Eust\u00e1quio: ",
+      "urlpublica": "",
+      "datahoracadastro": "22\/06\/2026 21:00:12",
+      "fotos": [
+        {
+          "descricao": "Kitnet para aluguel no Padre Eust\u00e1quio: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/saimobiliaria\/Imoveis\/1940\/abgur-original895242693-409023172698938943-1782172878.jpeg?1782172878"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Padre Eust\u00e1quio: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/saimobiliaria\/Imoveis\/1940\/8c2i8f-original895242693-64900039740970511-1782172878.jpeg?1782172878"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Padre Eust\u00e1quio: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/saimobiliaria\/Imoveis\/1940\/9s1n2-original895242693-80415421474231154-1782172878.jpeg?1782172878"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Padre Eust\u00e1quio: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/saimobiliaria\/Imoveis\/1940\/9sddd-original895242693-74994837034720482-1782172878.jpeg?1782172878"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Padre Eust\u00e1quio: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/saimobiliaria\/Imoveis\/1940\/bmg2h-original895242693-54284235514290315-1782172878.jpeg?1782172878"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Padre Eust\u00e1quio: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/saimobiliaria\/Imoveis\/1940\/feb3g-original895242693-297785518214961148-1782172878.jpeg?1782172878"
+        }
+      ],
+      "tempoCadastro": 67,
+      "url_amigavel": "kitnet-mobiliada-para-locacao-no-padre-eustaquio-praticidade-conforto-e-excelente-localizacao"
+    }
+  ],
+  "favoritos": []
+}
