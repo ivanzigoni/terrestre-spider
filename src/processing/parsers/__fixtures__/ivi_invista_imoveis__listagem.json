@@ -1,0 +1,1570 @@
+{
+  "quantidade": 28,
+  "menorvalor": 0,
+  "maiorvalor": 0,
+  "menorarea": 0,
+  "maiorarea": 0,
+  "lista": [
+    {
+      "codigo": 3312,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Casa geminada loca\u00e7\u00e3o Bairro Cana\u00e3 Venda Nova",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 19,
+      "tipo": "Casa geminada",
+      "codigotipo2": 1,
+      "tipo2": "Casa",
+      "valor": "R$ 2.400,00",
+      "valorminimo": "R$ 2.400,00",
+      "valormaximo": "R$ 2.400,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 150,00",
+      "codigobairro": 14,
+      "bairro": "Cana\u00e3",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31749-035",
+      "endereco": "Rua Tun\u00edsia",
+      "numero": "**",
+      "complemento": "*******",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "3",
+      "numerosalas": "1",
+      "numerobanhos": "2",
+      "numerovagas": "1",
+      "tipovagas": "",
+      "numerosuites": "1",
+      "areaprincipal": "92,00",
+      "areainterna": "92,00",
+      "areaexterna": "142,00",
+      "arealote": "360,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3312\/uf033j-imovel-3472-2-1786545305.jpg?1786545306",
+      "descricaoFotoPrincipal": "Casa geminada para aluguel no Cana\u00e3: ",
+      "urlpublica": "",
+      "datahoracadastro": "12\/08\/2026 11:28:55",
+      "fotos": [
+        {
+          "descricao": "Casa geminada para aluguel no Cana\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3312\/uf033j-imovel-3472-2-1786545305.jpg?1786545306"
+        },
+        {
+          "descricao": "Casa geminada para aluguel no Cana\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3312\/un925-imovel-3472-1-1786545305.jpg?1786545306"
+        },
+        {
+          "descricao": "Casa geminada para aluguel no Cana\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3312\/yx12y-imovel-3472-13-1786545306.jpg?1786545306"
+        },
+        {
+          "descricao": "Casa geminada para aluguel no Cana\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3312\/1wmzq-imovel-3472-12-1786545306.jpg?1786545306"
+        },
+        {
+          "descricao": "Casa geminada para aluguel no Cana\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3312\/m8x9t-imovel-3472-11-1786545306.jpg?1786545306"
+        },
+        {
+          "descricao": "Casa geminada para aluguel no Cana\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3312\/ubcinl-imovel-3472-10-1786545306.jpg?1786545306"
+        }
+      ],
+      "tempoCadastro": 16,
+      "url_amigavel": "casa-geminada-locacao-bairro-canaa-venda-nova"
+    },
+    {
+      "codigo": 3368,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Loja Comercial Exclusiva para Aluguel em Frente ao Mart Minas",
+      "codigoauxiliar": "INV3051",
+      "finalidade": "Aluguel",
+      "codigotipo": 5,
+      "tipo": "Loja",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 2.400,00",
+      "valorminimo": "R$ 2.400,00",
+      "valormaximo": "R$ 2.400,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 50,00",
+      "codigobairro": 176,
+      "bairro": "Jaqueline",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31748-075",
+      "endereco": "Rua Jos\u00e9 Gomes Domingues",
+      "numero": "***",
+      "complemento": "***********",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "0",
+      "numerovagas": "1",
+      "tipovagas": "na frente da loja",
+      "numerosuites": "0",
+      "areaprincipal": "40,00",
+      "areainterna": "40,00",
+      "areaexterna": "40,00",
+      "arealote": "1200,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3368\/kpxan-20260822-102704-1787408023.jpg?1787408023",
+      "descricaoFotoPrincipal": "Loja para aluguel no Jaqueline: ",
+      "urlpublica": "",
+      "datahoracadastro": "22\/08\/2026 10:49:48",
+      "fotos": [
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3368\/kpxan-20260822-102704-1787408023.jpg?1787408023"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3368\/dsk03-imovel-3051-16-1787408023.jpg?1787408023"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3368\/k88ym-imovel-3051-14-1787408023.jpg?1787408023"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3368\/kygy5-imovel-3051-13-1787408023.jpg?1787408023"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3368\/rw2dp-imovel-3051-12-1787408023.jpg?1787408023"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3368\/2t6qx-imovel-3051-11-1787408023.jpg?1787408023"
+        }
+      ],
+      "tempoCadastro": 6,
+      "url_amigavel": "loja-comercial-exclusiva-para-aluguel-em-frente-ao-mart-minas"
+    },
+    {
+      "codigo": 3335,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "APARTAMENTO 2 QUARTOS JARDIM DOS COMERCI\u00c1RIOS",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": 1,
+      "tipo2": "Casa",
+      "valor": "R$ 800,00",
+      "valorminimo": "R$ 800,00",
+      "valormaximo": "R$ 800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 236,
+      "bairro": "Jardim dos Comerci\u00e1rios",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31640-565",
+      "endereco": "Rua Sete de Outubro",
+      "numero": "***",
+      "complemento": "*****",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "2",
+      "numerosalas": "1",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "35,00",
+      "areainterna": "35,00",
+      "areaexterna": "35,00",
+      "arealote": "35,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3335\/ikqqug-iv65231396u7h79-35206a74ef5278dc2-1786984474.jpg?1786984474",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Jardim dos Comerci\u00e1rios: ",
+      "urlpublica": "",
+      "datahoracadastro": "17\/08\/2026 13:34:02",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Jardim dos Comerci\u00e1rios: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3335\/ikqqug-iv65231396u7h79-35206a74ef5278dc2-1786984474.jpg?1786984474"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Jardim dos Comerci\u00e1rios: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3335\/2j25k-iv65231396u7h79-35206a74ef7697989-1786984474.jpg?1786984474"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Jardim dos Comerci\u00e1rios: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3335\/b5x1t-iv65231396u7h79-35206a74ef6196183-1786984474.jpg?1786984474"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Jardim dos Comerci\u00e1rios: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3335\/x6aehl-iv65231396u7h79-35206a74ef5878101-1786984474.jpg?1786984474"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Jardim dos Comerci\u00e1rios: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3335\/szj9f-iv65231396u7h79-35206a74ef647493b-1786984474.jpg?1786984474"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Jardim dos Comerci\u00e1rios: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3335\/rg0cz-iv65231396u7h79-35206a74ef79793f0-1786984474.jpg?1786984474"
+        }
+      ],
+      "tempoCadastro": 11,
+      "url_amigavel": "apartamento-2-quartos-jardim-dos-comerciarios"
+    },
+    {
+      "codigo": 1847,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Apartamento no Bairro Parque S\u00e3o Pedro Belo Horizonte",
+      "codigoauxiliar": "INV2732",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.000,00",
+      "valorminimo": "R$ 1.000,00",
+      "valormaximo": "R$ 1.000,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 426,00",
+      "codigobairro": 60,
+      "bairro": "Parque S\u00e3o Pedro (Venda Nova)",
+      "codigobairro2": 60,
+      "bairro2": "Parque S\u00e3o Pedro (Venda Nova)",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "31744-605",
+      "endereco": "Rua Rosa Barbosa Pinto",
+      "numero": "**",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "2",
+      "numerosalas": "0",
+      "numerobanhos": "1",
+      "numerovagas": "1",
+      "tipovagas": "Coberta(s) e Descoberta(s)",
+      "numerosuites": "0",
+      "areaprincipal": "58,33",
+      "areainterna": "58,33",
+      "areaexterna": "0,00",
+      "arealote": "58,33",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/1847\/i3hdawf24g27fl2gl3_273267fe824abb84f_jzkndk1mjvmyjy4_o.jpg?1784247966",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+      "urlpublica": "",
+      "datahoracadastro": "16\/07\/2026 13:25:24",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/1847\/i3hdawf24g27fl2gl3_273267fe824abb84f_jzkndk1mjvmyjy4_o.jpg?1784247966"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/1847\/i3hdawf24g27fl2gl3_273267fe826a07904_ja5ztnlmdnmmzvl_o.jpg?1784247966"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/1847\/i3hdawf24g27fl2gl3_273267fe82359a835_wjhyte3mjewzwrj_o.jpg?1784247966"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/1847\/i3hdawf24g27fl2gl3_273267fe823835543_zm5mjhmodu3mwfk_o.jpg?1784247966"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/1847\/i3hdawf24g27fl2gl3_273267fe823af30ba_wzlytk4ntlhnty5_o.jpg?1784247966"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/1847\/i3hdawf24g27fl2gl3_273267fe823edf75e_jjjmta5mmu4yzzl_o.jpg?1784247966"
+        }
+      ],
+      "tempoCadastro": 43,
+      "url_amigavel": "apartamento-no-bairro-parque-sao-pedro-belo-horizonte"
+    },
+    {
+      "codigo": 3289,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Sala Comercial para Alugar (Fundo) | 27m\u00b2 | Minascaixa (Esquina Av. Vilarinho)",
+      "codigoauxiliar": "INV3518",
+      "finalidade": "Aluguel",
+      "codigotipo": 6,
+      "tipo": "Sala",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.150,00",
+      "valorminimo": "R$ 1.150,00",
+      "valormaximo": "R$ 1.150,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 140,00",
+      "codigobairro": 60,
+      "bairro": "Parque S\u00e3o Pedro (Venda Nova)",
+      "codigobairro2": 17,
+      "bairro2": "Minascaixa",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "31610-290",
+      "endereco": "Rua Laura Ign\u00e1cio Pontes",
+      "numero": "**",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "1",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "27,00",
+      "areainterna": "27,00",
+      "areaexterna": "27,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3289\/u4el9-20260722-1306481-1784770862.jpg?1784770862",
+      "descricaoFotoPrincipal": "Sala para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+      "urlpublica": "",
+      "datahoracadastro": "22\/07\/2026 22:13:31",
+      "fotos": [
+        {
+          "descricao": "Sala para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3289\/u4el9-20260722-1306481-1784770862.jpg?1784770862"
+        },
+        {
+          "descricao": "Sala para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3289\/vrhpbi-20260722-124442-1784770862.jpg?1784770862"
+        },
+        {
+          "descricao": "Sala para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3289\/obmvu-20260722-124437-1784770862.jpg?1784770862"
+        },
+        {
+          "descricao": "Sala para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3289\/3vt2b-20260722-124431-1784770862.jpg?1784770862"
+        },
+        {
+          "descricao": "Sala para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3289\/79lzf-20260722-124427-1784770862.jpg?1784770862"
+        },
+        {
+          "descricao": "Sala para aluguel no Parque S\u00e3o Pedro (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3289\/nb83h-20260722-124422-1784770862.jpg?1784770862"
+        }
+      ],
+      "tempoCadastro": 37,
+      "url_amigavel": "sala-comercial-para-alugar-fundo-27m-minascaixa-esquina-av-vilarinho"
+    },
+    {
+      "codigo": 2591,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "LOJA PARA LOCA\u00c7\u00c3O BAIRRO LIBERDADE - BELO HORIZONTE",
+      "codigoauxiliar": "INV3428",
+      "finalidade": "Aluguel",
+      "codigotipo": 5,
+      "tipo": "Loja",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.250,00",
+      "valorminimo": "R$ 1.250,00",
+      "valormaximo": "R$ 1.250,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 500,00",
+      "codigobairro": 240,
+      "bairro": "Liberdade",
+      "codigobairro2": 240,
+      "bairro2": "Liberdade",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "31270-310",
+      "endereco": "Rua Boaventura",
+      "numero": "****",
+      "complemento": "*******",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "50,00",
+      "areainterna": "50,00",
+      "areaexterna": "50,00",
+      "arealote": "50,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2591\/ib2mba73qpxll155km8g_34286a19caf64b555_zg3yjyxogy1mmq2_o.jpg?1784251498",
+      "descricaoFotoPrincipal": "Loja para aluguel no Liberdade: ",
+      "urlpublica": "",
+      "datahoracadastro": "16\/07\/2026 13:28:52",
+      "fotos": [
+        {
+          "descricao": "Loja para aluguel no Liberdade: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2591\/ib2mba73qpxll155km8g_34286a19caf64b555_zg3yjyxogy1mmq2_o.jpg?1784251498"
+        },
+        {
+          "descricao": "Loja para aluguel no Liberdade: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2591\/ib2mba73qpxll155km8g_34286a19cb0a314cc_tvlnda0ngixztvj_o.jpg?1784251498"
+        },
+        {
+          "descricao": "Loja para aluguel no Liberdade: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2591\/ib2mba73qpxll155km8g_34286a19cb074ed4e_tvjzwm3ngezndjh_o.jpg?1784251498"
+        },
+        {
+          "descricao": "Loja para aluguel no Liberdade: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2591\/ib2mba73qpxll155km8g_34286a19caf94a8c4_dy2ognlzgvkn2fm_o.jpg?1784251498"
+        },
+        {
+          "descricao": "Loja para aluguel no Liberdade: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2591\/ib2mba73qpxll155km8g_34286a19cafc300d6_wjjyjy2njgyodi5_o.jpg?1784251498"
+        },
+        {
+          "descricao": "Loja para aluguel no Liberdade: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2591\/ib2mba73qpxll155km8g_34286a19caf290ed4_dewodg0nzfmzty5_o.jpg?1784251498"
+        }
+      ],
+      "tempoCadastro": 43,
+      "url_amigavel": "loja-para-locacao-bairro-liberdade-belo-horizonte"
+    },
+    {
+      "codigo": 2391,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Andar corrido comercial para loca\u00e7\u00e3o na Raja Gabaglia",
+      "codigoauxiliar": "INV3243",
+      "finalidade": "Aluguel",
+      "codigotipo": 5,
+      "tipo": "Loja",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 19.800,00",
+      "valorminimo": "R$ 19.800,00",
+      "valormaximo": "R$ 19.800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 1,
+      "bairro": "Estoril",
+      "codigobairro2": 1,
+      "bairro2": "Estoril",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "30494-085",
+      "endereco": "Avenida Bar\u00e3o Homem de Melo",
+      "numero": "****",
+      "complemento": "*",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "0",
+      "numerovagas": "5",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "500,00",
+      "areainterna": "500,00",
+      "areaexterna": "0,00",
+      "arealote": "500,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2391\/ikuc9_324369a9cc5f5fcae_2jhzdjjotlkztjh_o.jpg?1784251032",
+      "descricaoFotoPrincipal": "Loja para aluguel no Estoril: ",
+      "urlpublica": "",
+      "datahoracadastro": "16\/07\/2026 13:27:59",
+      "fotos": [
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2391\/ikuc9_324369a9cc5f5fcae_2jhzdjjotlkztjh_o.jpg?1784251032"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2391\/ikuc9_324369a9cc47ce2b5_gu5zmuzntzmytdm_o.jpg?1784251032"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2391\/ikuc9_324369a9cc49d95a8_tazndjmmmqxm2vl_o.jpg?1784251032"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2391\/ikuc9_324369a9cc51df218_2uymgrhowu2nme1_o.jpg?1784251032"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2391\/ikuc9_324369a9cc4d61746_deymtqxndqym2qw_o.jpg?1784251032"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2391\/ikuc9_324369a9cc4f871b3_dnmodjhmjm1mza0_o.jpg?1784251032"
+        }
+      ],
+      "tempoCadastro": 43,
+      "url_amigavel": "andar-corrido-comercial-para-locacao-na-raja-gabaglia"
+    },
+    {
+      "codigo": 2517,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Apartamento para loca\u00e7\u00e3o no Bairro Rio Branco Belo Horizonte",
+      "codigoauxiliar": "INV3360",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.800,00",
+      "valorminimo": "R$ 1.800,00",
+      "valormaximo": "R$ 1.800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 558,00",
+      "codigobairro": 51,
+      "bairro": "Rio Branco",
+      "codigobairro2": 51,
+      "bairro2": "Rio Branco",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "31535-502",
+      "endereco": "Rua Tenente Ricardo Guimar\u00e3es",
+      "numero": "**",
+      "complemento": "***",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "3",
+      "numerosalas": "0",
+      "numerobanhos": "1",
+      "numerovagas": "1",
+      "tipovagas": "descoberta",
+      "numerosuites": "0",
+      "areaprincipal": "70,00",
+      "areainterna": "70,00",
+      "areaexterna": "70,00",
+      "arealote": "70,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2517\/iqw7w3_33606a19e664d3d65_me2zjeyzdfmotk5_o.jpg?1784251351",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Rio Branco: ",
+      "urlpublica": "",
+      "datahoracadastro": "16\/07\/2026 13:28:32",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Rio Branco: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2517\/iqw7w3_33606a19e664d3d65_me2zjeyzdfmotk5_o.jpg?1784251351"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Rio Branco: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2517\/iqw7w3_33606a19e61979314_gu2mwuyotq5ntlh_o.jpg?1784251351"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Rio Branco: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2517\/iqw7w3_33606a19e61bd1c47_wyzntgwzwixzwe5_o.jpg?1784251351"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Rio Branco: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2517\/iqw7w3_33606a19e61ef18d5_dm3yjdkowrmodnm_o.jpg?1784251351"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Rio Branco: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2517\/iqw7w3_33606a19e621ce5cb_wmwyjdlnjkzmwq5_o.jpg?1784251351"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Rio Branco: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2517\/iqw7w3_33606a19e623d0d7b_wm0yjrhmziyzddl_o.jpg?1784251351"
+        }
+      ],
+      "tempoCadastro": 43,
+      "url_amigavel": "apartamento-para-locacao-no-bairro-rio-branco-belo-horizonte"
+    },
+    {
+      "codigo": 3320,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Im\u00f3vel para loca\u00e7\u00e3o comercial no bairro Aeroporto Indai\u00e1 aluguel",
+      "codigoauxiliar": "INV3542",
+      "finalidade": "Aluguel",
+      "codigotipo": 1,
+      "tipo": "Casa",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 800,00",
+      "valorminimo": "R$ 800,00",
+      "valormaximo": "R$ 800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 500,00",
+      "codigobairro": 675,
+      "bairro": "Aeroporto",
+      "codigobairro2": 675,
+      "bairro2": "Aeroporto",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "31270-020",
+      "endereco": "Rua Boaventura",
+      "numero": "****",
+      "complemento": "*******************",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "2",
+      "numerosalas": "2",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "100,00",
+      "areainterna": "100,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3320\/czvp7-whatsapp-image-2026-08-13-at-105743-1786633372.jpeg?1786633372",
+      "descricaoFotoPrincipal": "Casa para aluguel no Aeroporto: ",
+      "urlpublica": "",
+      "datahoracadastro": "13\/08\/2026 10:48:48",
+      "fotos": [
+        {
+          "descricao": "Casa para aluguel no Aeroporto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3320\/czvp7-whatsapp-image-2026-08-13-at-105743-1786633372.jpeg?1786633372"
+        },
+        {
+          "descricao": "Casa para aluguel no Aeroporto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3320\/baexj-whatsapp-image-2026-08-13-at-105817-1786633372.jpeg?1786633372"
+        },
+        {
+          "descricao": "Casa para aluguel no Aeroporto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3320\/9edg2-whatsapp-image-2026-08-13-at-105816-1786633372.jpeg?1786633372"
+        },
+        {
+          "descricao": "Casa para aluguel no Aeroporto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3320\/o4hklf-whatsapp-image-2026-08-13-at-105814-1786633372.jpeg?1786633372"
+        },
+        {
+          "descricao": "Casa para aluguel no Aeroporto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3320\/doqz9-whatsapp-image-2026-08-13-at-105812-1786633372.jpeg?1786633372"
+        },
+        {
+          "descricao": "Casa para aluguel no Aeroporto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3320\/3mvl7f-whatsapp-image-2026-08-13-at-105811-1786633372.jpeg?1786633372"
+        }
+      ],
+      "tempoCadastro": 15,
+      "url_amigavel": "imovel-para-locacao-comercial-no-bairro-aeroporto-indaia-aluguel"
+    },
+    {
+      "codigo": 3303,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Apartamento Alto Padr\u00e3o para Loca\u00e7\u00e3o | Elevador ",
+      "codigoauxiliar": "inv3512",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 3.840,00",
+      "valorminimo": "R$ 3.840,00",
+      "valormaximo": "R$ 3.840,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 940,00",
+      "codigobairro": 82,
+      "bairro": "Buritis",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "30575-160",
+      "endereco": "Rua Tereza Mota Valadares",
+      "numero": "***",
+      "complemento": "*****",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "3",
+      "numerosalas": "1",
+      "numerobanhos": "2",
+      "numerovagas": "2",
+      "tipovagas": "",
+      "numerosuites": "1",
+      "areaprincipal": "75,00",
+      "areainterna": "75,00",
+      "areaexterna": "75,00",
+      "arealote": "75,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3303\/g0c3j-i8m31c5il5okv-35126a57c7055e32e-1786464744.jpg?1786464744",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Buritis: ",
+      "urlpublica": "",
+      "datahoracadastro": "11\/08\/2026 13:09:52",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Buritis: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3303\/g0c3j-i8m31c5il5okv-35126a57c7055e32e-1786464744.jpg?1786464744"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Buritis: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3303\/3br5u-i8m31c5il5okv-35126a57c7303429e-1786464744.jpg?1786464744"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Buritis: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3303\/c8bxs-i8m31c5il5okv-35126a57c733545b3-1786464744.jpg?1786464744"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Buritis: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3303\/c0y97-i8m31c5il5okv-35126a57c726823bc-1786464744.jpg?1786464744"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Buritis: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3303\/gl12l-i8m31c5il5okv-35126a57c719543c8-1786464744.jpg?1786464744"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Buritis: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3303\/kqkv1-i8m31c5il5okv-35126a57c708357f9-1786464744.jpg?1786464744"
+        }
+      ],
+      "tempoCadastro": 17,
+      "url_amigavel": "apartamento-alto-padrao-para-locacao-elevador"
+    },
+    {
+      "codigo": 3305,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "KITNET PARA LOCA\u00c7\u00c3O - CONFORTO E PRATICIDADE ",
+      "codigoauxiliar": "INV3530",
+      "finalidade": "Aluguel",
+      "codigotipo": 10,
+      "tipo": "Kitnet",
+      "codigotipo2": 23,
+      "tipo2": "Barrac\u00e3o",
+      "valor": "R$ 850,00",
+      "valorminimo": "R$ 850,00",
+      "valormaximo": "R$ 850,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 169,
+      "bairro": "Frei Leopoldo",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31746-001",
+      "endereco": "Rua S\u00e1lvia",
+      "numero": "***",
+      "complemento": "*****",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "1",
+      "numerosalas": "0",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "40,00",
+      "areainterna": "40,00",
+      "areaexterna": "40,00",
+      "arealote": "40,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3305\/61sm8-iw6v436gxc6w13-35306a6909df594ea-1786465985.jpg?1786465985",
+      "descricaoFotoPrincipal": "Kitnet para aluguel no Frei Leopoldo: ",
+      "urlpublica": "",
+      "datahoracadastro": "11\/08\/2026 13:32:40",
+      "fotos": [
+        {
+          "descricao": "Kitnet para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3305\/61sm8-iw6v436gxc6w13-35306a6909df594ea-1786465985.jpg?1786465985"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3305\/3iqq8-iw6v436gxc6w13-35306a6909f507292-1786465985.jpg?1786465985"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3305\/qd7bh-iw6v436gxc6w13-35306a6909f104d04-1786465985.jpg?1786465985"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3305\/926p3i-iw6v436gxc6w13-35306a6909f8d501a-1786465985.jpg?1786465985"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3305\/5bw01-iw6v436gxc6w13-35306a6909f6da028-1786465985.jpg?1786465985"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3305\/d0vj3-iw6v436gxc6w13-35306a6909f2d5789-1786465985.jpg?1786465985"
+        }
+      ],
+      "tempoCadastro": 17,
+      "url_amigavel": "kitnet-para-locacao-conforto-e-praticidade"
+    },
+    {
+      "codigo": 3304,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "CASA MOBILIADA PARA LOCA\u00c7\u00c3O BAIRRO FREI LEOPOLDO",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 1,
+      "tipo": "Casa",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 2.200,00",
+      "valorminimo": "R$ 2.200,00",
+      "valormaximo": "R$ 2.200,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 169,
+      "bairro": "Frei Leopoldo",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31746-001",
+      "endereco": "Rua S\u00e1lvia",
+      "numero": "***",
+      "complemento": "*****",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "2",
+      "numerosalas": "1",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "50,00",
+      "areainterna": "50,00",
+      "areaexterna": "50,50",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3304\/42orv-ijamv37919m5-35286a67afb3c04b8-1786465382.jpg?1786465383",
+      "descricaoFotoPrincipal": "Casa para aluguel no Frei Leopoldo: ",
+      "urlpublica": "",
+      "datahoracadastro": "11\/08\/2026 13:22:34",
+      "fotos": [
+        {
+          "descricao": "Casa para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3304\/42orv-ijamv37919m5-35286a67afb3c04b8-1786465382.jpg?1786465383"
+        },
+        {
+          "descricao": "Casa para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3304\/irmgyi-ijamv37919m5-35286a67afbd64a61-1786465382.jpg?1786465383"
+        },
+        {
+          "descricao": "Casa para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3304\/qnfdx-ijamv37919m5-35286a67afb1a3459-1786465382.jpg?1786465383"
+        },
+        {
+          "descricao": "Casa para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3304\/biscs-ijamv37919m5-35286a67afaf883c2-1786465382.jpg?1786465383"
+        },
+        {
+          "descricao": "Casa para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3304\/qxro5h-ijamv37919m5-35286a67afad8ddad-1786465382.jpg?1786465383"
+        },
+        {
+          "descricao": "Casa para aluguel no Frei Leopoldo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3304\/vjrpx-ijamv37919m5-35286a67afaa69b2d-1786465383.jpg?1786465383"
+        }
+      ],
+      "tempoCadastro": 17,
+      "url_amigavel": "casa-mobiliada-para-locacao-bairro-frei-leopoldo"
+    },
+    {
+      "codigo": 3322,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Galp\u00e3o para loca\u00e7\u00e3o Bairro Candel\u00e1ria Venda Nova",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 11,
+      "tipo": "Galp\u00e3o",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 18.000,00",
+      "valorminimo": "R$ 18.000,00",
+      "valormaximo": "R$ 18.000,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 67,
+      "bairro": "Copacabana",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31540-550",
+      "endereco": "Rua Universo",
+      "numero": "***",
+      "complemento": "",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "0",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "360,00",
+      "areainterna": "360,00",
+      "areaexterna": "830,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3322\/rqefj-whatsapp-image-2026-08-13-at-164837-1-1786652278.jpeg?1786652438",
+      "descricaoFotoPrincipal": "Galp\u00e3o para aluguel no Copacabana: ",
+      "urlpublica": "",
+      "datahoracadastro": "13\/08\/2026 15:58:31",
+      "fotos": [
+        {
+          "descricao": "Galp\u00e3o para aluguel no Copacabana: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3322\/rqefj-whatsapp-image-2026-08-13-at-164837-1-1786652278.jpeg?1786652438"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Copacabana: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3322\/x5e4w-whatsapp-image-2026-08-13-at-164853-1786652278.jpeg?1786652438"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Copacabana: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3322\/38gii-whatsapp-image-2026-08-13-at-164853-1-1786652278.jpeg?1786652438"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Copacabana: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3322\/h12t9-whatsapp-image-2026-08-13-at-164852-1786652278.jpeg?1786652438"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Copacabana: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3322\/on43m-whatsapp-image-2026-08-13-at-164852-1-1786652278.jpeg?1786652438"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Copacabana: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3322\/p7qzl-whatsapp-image-2026-08-13-at-164850-1786652278.jpeg?1786652438"
+        }
+      ],
+      "tempoCadastro": 15,
+      "url_amigavel": "galpao-para-locacao-bairro-candelaria-venda-nova"
+    },
+    {
+      "codigo": 3314,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Apartamento para loca\u00e7\u00e3o Bairro Ouro Preto Pampulha",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 3.100,00",
+      "valorminimo": "R$ 3.100,00",
+      "valormaximo": "R$ 3.100,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 417,00",
+      "codigobairro": 553,
+      "bairro": "Ouro Preto",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31330-680",
+      "endereco": "Rua Wady Jos\u00e9 Alau",
+      "numero": "***",
+      "complemento": "**************",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "1",
+      "numerosalas": "1",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "1",
+      "areaprincipal": "40,00",
+      "areainterna": "40,00",
+      "areaexterna": "40,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3314\/oea8n-whatsapp-image-2026-08-12-at-120724-1786547806.jpeg?1786547806",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Ouro Preto: ",
+      "urlpublica": "",
+      "datahoracadastro": "12\/08\/2026 12:15:04",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3314\/oea8n-whatsapp-image-2026-08-12-at-120724-1786547806.jpeg?1786547806"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3314\/jrc9n-whatsapp-image-2026-08-12-at-120740-1786547806.jpeg?1786547806"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3314\/pb8g6-whatsapp-image-2026-08-12-at-120747-1786547806.jpeg?1786547806"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3314\/cb4zc-whatsapp-image-2026-08-12-at-120746-1786547806.jpeg?1786547806"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3314\/amlkz-whatsapp-image-2026-08-12-at-120744-1786547806.jpeg?1786547806"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3314\/sx6fu-whatsapp-image-2026-08-12-at-120743-1786547806.jpeg?1786547806"
+        }
+      ],
+      "tempoCadastro": 16,
+      "url_amigavel": "apartamento-para-locacao-bairro-ouro-preto-pampulha"
+    },
+    {
+      "codigo": 2479,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Apartamento para loca\u00e7\u00e3o no Bairro Itapo\u00e3 Pampulha",
+      "codigoauxiliar": "INV3326",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 5.500,00",
+      "valorminimo": "R$ 5.500,00",
+      "valormaximo": "R$ 5.500,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 300,00",
+      "codigobairro": 70,
+      "bairro": "Itapo\u00e3",
+      "codigobairro2": 70,
+      "bairro2": "Itapo\u00e3",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "31710-180",
+      "endereco": "Rua Rua Dona Queridinha",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "3",
+      "numerosalas": "0",
+      "numerobanhos": "2",
+      "numerovagas": "2",
+      "tipovagas": "Coberta(s) e Descoberta(s)",
+      "numerosuites": "1",
+      "areaprincipal": "63,00",
+      "areainterna": "63,00",
+      "areaexterna": "0,00",
+      "arealote": "63,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2479\/i785atb13ej225h6_332669d6b4eccfb84_wfmodljmjvmn2vl_o.jpg?1786472740",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Itapo\u00e3: ",
+      "urlpublica": "",
+      "datahoracadastro": "16\/07\/2026 13:28:22",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Itapo\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2479\/i785atb13ej225h6_332669d6b4eccfb84_wfmodljmjvmn2vl_o.jpg?1786472740"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Itapo\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2479\/i785atb13ej225h6_332669d6b4cfa8d41_duwzde2ymzlntgx_o.jpg?1786472740"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Itapo\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2479\/i785atb13ej225h6_332669d6b4d8d136c_gi3yjm2ztzmy2rm_o.jpg?1786472740"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Itapo\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2479\/i785atb13ej225h6_332669d6b4eaab084_gmyywmxogfiy2zh_o.jpg?1786472740"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Itapo\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2479\/i785atb13ej225h6_332669d6b4ef9f355_2yxmzy3ngqxnjhi_o.jpg?1786472740"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Itapo\u00e3: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2479\/i785atb13ej225h6_332669d6b4d29bb5e_duwnwzhnwe2mzc0_o.jpg?1786472740"
+        }
+      ],
+      "tempoCadastro": 43,
+      "url_amigavel": "apartamento-para-locacao-no-bairro-itapoa-pampulha"
+    },
+    {
+      "codigo": 3310,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Casa para loca\u00e7\u00e3o Bairro Conc\u00f3rdia Belo Horizonte",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 1,
+      "tipo": "Casa",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 5.200,00",
+      "valorminimo": "R$ 5.200,00",
+      "valormaximo": "R$ 5.200,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 387,
+      "bairro": "Conc\u00f3rdia",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31110-600",
+      "endereco": "Rua Igua\u00e7u",
+      "numero": "***",
+      "complemento": "",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "4",
+      "numerosalas": "1",
+      "numerobanhos": "4",
+      "numerovagas": "5",
+      "tipovagas": "",
+      "numerosuites": "3",
+      "areaprincipal": "290,00",
+      "areainterna": "290,00",
+      "areaexterna": "350,00",
+      "arealote": "350,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3310\/vy6b2-imovel-3496-1-1786539506.jpg?1786539506",
+      "descricaoFotoPrincipal": "Casa para aluguel no Conc\u00f3rdia: ",
+      "urlpublica": "",
+      "datahoracadastro": "12\/08\/2026 09:53:40",
+      "fotos": [
+        {
+          "descricao": "Casa para aluguel no Conc\u00f3rdia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3310\/vy6b2-imovel-3496-1-1786539506.jpg?1786539506"
+        },
+        {
+          "descricao": "Casa para aluguel no Conc\u00f3rdia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3310\/mtesz-imovel-3496-16-1786539506.jpg?1786539506"
+        },
+        {
+          "descricao": "Casa para aluguel no Conc\u00f3rdia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3310\/ni7uy-imovel-3496-15-1786539506.jpg?1786539506"
+        },
+        {
+          "descricao": "Casa para aluguel no Conc\u00f3rdia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3310\/joq7og-imovel-3496-14-1786539506.jpg?1786539506"
+        },
+        {
+          "descricao": "Casa para aluguel no Conc\u00f3rdia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3310\/r7i7m-imovel-3496-13-1786539506.jpg?1786539506"
+        },
+        {
+          "descricao": "Casa para aluguel no Conc\u00f3rdia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/3310\/v54g4-imovel-3496-12-1786539506.jpg?1786539506"
+        }
+      ],
+      "tempoCadastro": 16,
+      "url_amigavel": "casa-para-locacao-bairro-concordia-belo-horizonte"
+    },
+    {
+      "codigo": 2189,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Loja Bairro Jaqueline Belo Horizonte comercial aluguel",
+      "codigoauxiliar": "INV3051",
+      "finalidade": "Aluguel",
+      "codigotipo": 5,
+      "tipo": "Loja",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.200,00",
+      "valorminimo": "R$ 1.200,00",
+      "valormaximo": "R$ 1.200,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 176,
+      "bairro": "Jaqueline",
+      "codigobairro2": 176,
+      "bairro2": "Jaqueline",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "31748-075",
+      "endereco": "Rua Jose Gomes Domingues",
+      "numero": "***",
+      "complemento": "******",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "20,00",
+      "areainterna": "20,00",
+      "areaexterna": "0,00",
+      "arealote": "20,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2189\/i5l71x2175n_305168effb0ac92c1_ti5ztk1ywzkmtc3_o.jpg?1784250778",
+      "descricaoFotoPrincipal": "Loja para aluguel no Jaqueline: ",
+      "urlpublica": "",
+      "datahoracadastro": "16\/07\/2026 13:27:05",
+      "fotos": [
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2189\/i5l71x2175n_305168effb0ac92c1_ti5ztk1ywzkmtc3_o.jpg?1784250778"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2189\/i5l71x2175n_305168effb085294c_dbkyzu0nzu4mjay_o.jpg?1784250778"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2189\/i5l71x2175n_305168effb050f0ca_gmyztyymmm3mty4_o.jpg?1784250778"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2189\/i5l71x2175n_305168effb0d775b1_gmxzwfhodjlotzk_o.jpg?1784250778"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2189\/io88h9s1g1v73g792g6_305168f00447750c8_zm3odkzndvhymyw_o.jpg?1784250778"
+        },
+        {
+          "descricao": "Loja para aluguel no Jaqueline: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2189\/io88h9s1g1v73g792g6_305168f00449b6cc9_wjjmtyzyznmmdhh_o.jpg?1784250778"
+        }
+      ],
+      "tempoCadastro": 43,
+      "url_amigavel": "loja-bairro-jaqueline-belo-horizonte-comercial-aluguel"
+    },
+    {
+      "codigo": 2390,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Loja para aluguel, Estoril - Belo Horizonte\/MG",
+      "codigoauxiliar": "INV3242",
+      "finalidade": "Aluguel",
+      "codigotipo": 5,
+      "tipo": "Loja",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 24.800,00",
+      "valorminimo": "R$ 24.800,00",
+      "valormaximo": "R$ 24.800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 1,
+      "bairro": "Estoril",
+      "codigobairro2": 1,
+      "bairro2": "Estoril",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "30494-085",
+      "endereco": "Avenida Bar\u00e3o Homem de Melo",
+      "numero": "****",
+      "complemento": "",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "0",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "500,00",
+      "areainterna": "500,00",
+      "areaexterna": "0,00",
+      "arealote": "500,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2390\/i58w7ogp9q4_324269a9c8329d880_grjnjrimdy5mmqy_o.jpg?1784251023",
+      "descricaoFotoPrincipal": "Loja para aluguel no Estoril: ",
+      "urlpublica": "",
+      "datahoracadastro": "16\/07\/2026 13:27:59",
+      "fotos": [
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2390\/i58w7ogp9q4_324269a9c8329d880_grjnjrimdy5mmqy_o.jpg?1784251023"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2390\/i58w7ogp9q4_324269a9c834bf84b_ddkmta1njjmmtvi_o.jpg?1784251023"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2390\/i58w7ogp9q4_324269a9c8372d6c1_tyyywnhngrkmzyw_o.jpg?1784251023"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2390\/i58w7ogp9q4_324269a9c8397e0f5_guxotc4mgrlogzj_o.jpg?1784251023"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2390\/i58w7ogp9q4_324269a9c83be71be_tazntdinda0nmm2_o.jpg?1784251023"
+        },
+        {
+          "descricao": "Loja para aluguel no Estoril: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2390\/i58w7ogp9q4_324269a9c83edd5f6_gixztgzntjmmze4_o.jpg?1784251023"
+        }
+      ],
+      "tempoCadastro": 43,
+      "url_amigavel": "loja-para-aluguel-estoril-belo-horizonte-mg"
+    },
+    {
+      "codigo": 2434,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Loja loca\u00e7\u00e3o Jardim dos Comerci\u00e1rios",
+      "codigoauxiliar": "INV3284",
+      "finalidade": "Aluguel",
+      "codigotipo": 5,
+      "tipo": "Loja",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 2.550,00",
+      "valorminimo": "R$ 2.550,00",
+      "valormaximo": "R$ 2.550,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 33,
+      "bairro": "Jardim dos Comerci\u00e1rios (Venda Nova)",
+      "codigobairro2": 33,
+      "bairro2": "Jardim dos Comerci\u00e1rios (Venda Nova)",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "31650-550",
+      "endereco": "Rua Benedito Aniceto de Oliveira",
+      "numero": "***",
+      "complemento": "****",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "0",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "118,00",
+      "areainterna": "118,00",
+      "areaexterna": "0,00",
+      "arealote": "118,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2434\/i46174q9pk3_328469bd54d73073a_tayzjlmntvkymi5_o.jpg?1784251155",
+      "descricaoFotoPrincipal": "Loja para aluguel no Jardim dos Comerci\u00e1rios (Venda Nova): ",
+      "urlpublica": "",
+      "datahoracadastro": "16\/07\/2026 13:28:10",
+      "fotos": [
+        {
+          "descricao": "Loja para aluguel no Jardim dos Comerci\u00e1rios (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2434\/i46174q9pk3_328469bd54d73073a_tayzjlmntvkymi5_o.jpg?1784251155"
+        },
+        {
+          "descricao": "Loja para aluguel no Jardim dos Comerci\u00e1rios (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2434\/i46174q9pk3_328469bd54d937152_gi5nwezngi0mzli_o.jpg?1784251155"
+        },
+        {
+          "descricao": "Loja para aluguel no Jardim dos Comerci\u00e1rios (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2434\/i46174q9pk3_328469bd54db91647_dg2ndhjzti1ytcw_o.jpg?1784251155"
+        },
+        {
+          "descricao": "Loja para aluguel no Jardim dos Comerci\u00e1rios (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2434\/i46174q9pk3_328469bd54ddced89_de4otviztrmzgi5_o.jpg?1784251155"
+        },
+        {
+          "descricao": "Loja para aluguel no Jardim dos Comerci\u00e1rios (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2434\/i46174q9pk3_328469bd54e0008e5_wexmmrjn2q3mwm3_o.jpg?1784251155"
+        },
+        {
+          "descricao": "Loja para aluguel no Jardim dos Comerci\u00e1rios (Venda Nova): ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2434\/i46174q9pk3_328469bd54e2367c8_dbhnwq0mwiwmgu1_o.jpg?1784251155"
+        }
+      ],
+      "tempoCadastro": 43,
+      "url_amigavel": "loja-locacao-jardim-dos-comerciarios"
+    },
+    {
+      "codigo": 2488,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Galp\u00e3o para loca\u00e7\u00e3o Bairro Etelvina Carneiro",
+      "codigoauxiliar": "INV3334",
+      "finalidade": "Aluguel",
+      "codigotipo": 11,
+      "tipo": "Galp\u00e3o",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 2.550,00",
+      "valorminimo": "R$ 2.550,00",
+      "valormaximo": "R$ 2.550,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 220,
+      "bairro": "Etelvina Carneiro",
+      "codigobairro2": 220,
+      "bairro2": "Etelvina Carneiro",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "31746-140",
+      "endereco": "Rua Ip\u00ea Claro",
+      "numero": "***",
+      "complemento": "*",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "0",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "260,00",
+      "areainterna": "260,00",
+      "areaexterna": "260,00",
+      "arealote": "260,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2488\/iakx63j4u5ks_333469dfb9246c5aa_trjodmyzmmxmgew_o.jpg?1784251300",
+      "descricaoFotoPrincipal": "Galp\u00e3o para aluguel no Etelvina Carneiro: ",
+      "urlpublica": "",
+      "datahoracadastro": "16\/07\/2026 13:28:25",
+      "fotos": [
+        {
+          "descricao": "Galp\u00e3o para aluguel no Etelvina Carneiro: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2488\/iakx63j4u5ks_333469dfb9246c5aa_trjodmyzmmxmgew_o.jpg?1784251300"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Etelvina Carneiro: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2488\/iakx63j4u5ks_333469dfb8d1614da_jjlnda5yzfhzwq2_o.jpg?1784251300"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Etelvina Carneiro: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2488\/iakx63j4u5ks_333469dfb8cf3fd75_jrinwjjzjdhntew_o.jpg?1784251300"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Etelvina Carneiro: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2488\/iakx63j4u5ks_333469dfb8cc003f6_mu0mme2zwy5nwji_o.jpg?1784251300"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Etelvina Carneiro: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2488\/iakx63j4u5ks_333469dfb8d4408e6_jq3mmvmywmwnjkw_o.jpg?1784251300"
+        },
+        {
+          "descricao": "Galp\u00e3o para aluguel no Etelvina Carneiro: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/iviinvista\/Imoveis\/2488\/iakx63j4u5ks_333469dfb8d63c8fb_zq4mzc4ndi1zdfk_o.jpg?1784251300"
+        }
+      ],
+      "tempoCadastro": 43,
+      "url_amigavel": "galpao-para-locacao-bairro-etelvina-carneiro"
+    }
+  ],
+  "favoritos": []
+}

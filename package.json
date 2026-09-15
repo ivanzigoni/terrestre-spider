@@ -14,7 +14,8 @@
     "pg": "^8.23.0",
     "playwright": "1.62.1",
     "reflect-metadata": "^0.2.2",
-    "typeorm": "^1.1.0"
+    "typeorm": "^1.1.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@apify/tsconfig": "^0.2.0",
@@ -40,6 +41,7 @@
     "start:prod": "node --env-file-if-exists=.env dist/main.js",
     "start:dev": "tsx --env-file-if-exists=.env src/main.ts",
     "analisar:capturas": "tsx --env-file-if-exists=.env src/scripts/analisar-qualidade-capturas.ts",
+    "processar:capturas": "tsx --env-file-if-exists=.env src/processing/main.ts",
     "build": "tsc && node -e \"require('node:fs').cpSync('src/config/search-urls.json','dist/config/search-urls.json')\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

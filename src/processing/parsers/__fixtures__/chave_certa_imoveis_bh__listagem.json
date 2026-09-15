@@ -1,0 +1,2857 @@
+{
+  "data": [
+    {
+      "id": "4f79b2cb-c2ec-4307-a56f-ece81aae09b8",
+      "price": "R$325.000,00",
+      "total_price": "R$325.000,00",
+      "shown_total_price": false,
+      "transaction": "VENDA",
+      "is_previous_price": false,
+      "previous_price": "R$0,00",
+      "reference": "716",
+      "address": { "formatted": "Araguaia - Belo Horizonte\/MG" },
+      "areas": {
+        "built_area": {
+          "name": "built_area",
+          "title": "\u00c1rea Constru\u00edda",
+          "value": "48",
+          "measure": "m\u00b2"
+        }
+      },
+      "rooms": {
+        "garage": {
+          "name": "garage",
+          "extra": {
+            "is_covered": {
+              "name": "is_covered",
+              "title": "Garagem coberta?",
+              "value": true
+            }
+          },
+          "title": "Garagem",
+          "value": 1,
+          "title_formated": "1 Garagem"
+        },
+        "tvroom": {
+          "name": "tvroom",
+          "title": "Sala de TV",
+          "value": 1,
+          "title_formated": "1 Sala de TV"
+        },
+        "bedroom": {
+          "name": "bedroom",
+          "title": "Dormit\u00f3rio",
+          "value": 2,
+          "title_formated": "2 Dormit\u00f3rios"
+        },
+        "kitchen": {
+          "name": "kitchen",
+          "title": "Cozinha",
+          "value": 1,
+          "title_formated": "1 Cozinha"
+        },
+        "bathroom": {
+          "name": "bathroom",
+          "title": "Banheiro",
+          "value": 1,
+          "title_formated": "1 Banheiro"
+        },
+        "diningroom": {
+          "name": "diningroom",
+          "title": "Sala de jantar",
+          "value": 1,
+          "title_formated": "1 Sala de jantar"
+        },
+        "service_area": {
+          "name": "service_area",
+          "title": "\u00c1rea de servi\u00e7o",
+          "value": 1,
+          "title_formated": "1 \u00c1rea de servi\u00e7o"
+        }
+      },
+      "meta_title": "Apartamento \u00e0 venda no bairro Araguaia em Belo Horizonte\/MG",
+      "title_formatted": "Apartamento em Araguaia, Belo Horizonte\/MG",
+      "stripe_text": "Pronto para morar",
+      "stripe_background": "#111BAC",
+      "url": "apartamento-a-venda-no-bairro-araguaia-em-belo-horizonte-mg\/716",
+      "images": [
+        {
+          "id": "26e6aede-6f19-4072-aa34-72fc3e701ec6",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/26e6aede-6f19-4072-aa34-72fc3e701ec61787763297UJkI.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/26e6aede-6f19-4072-aa34-72fc3e701ec61787763297UJkI.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "35877aa5-4b96-4d34-909c-2ac55bb4bbc9",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/35877aa5-4b96-4d34-909c-2ac55bb4bbc91787763298VEfg.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/35877aa5-4b96-4d34-909c-2ac55bb4bbc91787763298VEfg.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "37be7877-67be-491c-ab1b-8f7f41f31abf",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/37be7877-67be-491c-ab1b-8f7f41f31abf17877632880sbi.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/37be7877-67be-491c-ab1b-8f7f41f31abf17877632880sbi.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "eec3dcdd-b932-44e8-bf3f-46af56ba6710",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/eec3dcdd-b932-44e8-bf3f-46af56ba67101787763298R9vA.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/eec3dcdd-b932-44e8-bf3f-46af56ba67101787763298R9vA.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "515e5cb6-ebe2-402c-b3b8-325e99e5989d",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/515e5cb6-ebe2-402c-b3b8-325e99e5989d1787763292vChC.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/515e5cb6-ebe2-402c-b3b8-325e99e5989d1787763292vChC.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "db9b6dd9-710b-4b88-94fc-c8d30c0570c2",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/db9b6dd9-710b-4b88-94fc-c8d30c0570c21787763291pTj7.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/db9b6dd9-710b-4b88-94fc-c8d30c0570c21787763291pTj7.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "99f59328-2771-4f5d-a003-6c03ce86b24f",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/99f59328-2771-4f5d-a003-6c03ce86b24f1787763304UlOn.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/99f59328-2771-4f5d-a003-6c03ce86b24f1787763304UlOn.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "16f400a3-7c4e-4668-9dc7-d85b8fd0447e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/16f400a3-7c4e-4668-9dc7-d85b8fd0447e1787763301SICu.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/16f400a3-7c4e-4668-9dc7-d85b8fd0447e1787763301SICu.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "350850e9-bcd5-454b-9da5-b9a15b42264e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/350850e9-bcd5-454b-9da5-b9a15b42264e17877632889j7M.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/350850e9-bcd5-454b-9da5-b9a15b42264e17877632889j7M.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "798e224c-717f-4018-a79c-7d82d120992a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/798e224c-717f-4018-a79c-7d82d120992a1787763294D4cK.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/798e224c-717f-4018-a79c-7d82d120992a1787763294D4cK.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "2221166c-d035-4eff-bf33-372a0e848266",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/2221166c-d035-4eff-bf33-372a0e8482661787763294k62T.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/2221166c-d035-4eff-bf33-372a0e8482661787763294k62T.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f717ef12-5b9f-403a-89b5-7c2629048f5d",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/f717ef12-5b9f-403a-89b5-7c2629048f5d1787763297cwxM.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/f717ef12-5b9f-403a-89b5-7c2629048f5d1787763297cwxM.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "0eccf655-f5c6-4d8d-ad10-dc3ec26b7f44",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/0eccf655-f5c6-4d8d-ad10-dc3ec26b7f441787763292bg8q.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/0eccf655-f5c6-4d8d-ad10-dc3ec26b7f441787763292bg8q.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "9d1efd51-f023-4f51-8d16-3143f97142c8",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/9d1efd51-f023-4f51-8d16-3143f97142c817877632922gpN.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/9d1efd51-f023-4f51-8d16-3143f97142c817877632922gpN.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "6ad177ba-55ed-4742-80d6-9913542b31dc",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/6ad177ba-55ed-4742-80d6-9913542b31dc1787763294TCza.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/6ad177ba-55ed-4742-80d6-9913542b31dc1787763294TCza.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c42a5c00-c129-4a36-b906-0482ebd7a17f",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/c42a5c00-c129-4a36-b906-0482ebd7a17f1787763301w5wt.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/c42a5c00-c129-4a36-b906-0482ebd7a17f1787763301w5wt.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b279db14-c0a3-449d-aa38-718f32c397d2",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/b279db14-c0a3-449d-aa38-718f32c397d2178776330189i0.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/b279db14-c0a3-449d-aa38-718f32c397d2178776330189i0.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b54ffb68-eb17-4058-a804-862814b265be",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/b54ffb68-eb17-4058-a804-862814b265be1787763295Q6in.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/b54ffb68-eb17-4058-a804-862814b265be1787763295Q6in.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f3be73c3-fecf-490a-8178-4d0b40b6a684",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/f3be73c3-fecf-490a-8178-4d0b40b6a6841787763311jLNI.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/f3be73c3-fecf-490a-8178-4d0b40b6a6841787763311jLNI.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f9fd86af-00b1-4cf6-a47a-b1390d474111",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/f9fd86af-00b1-4cf6-a47a-b1390d4741111787763308oOZT.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/f9fd86af-00b1-4cf6-a47a-b1390d4741111787763308oOZT.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "878bf061-0a3e-419b-b1fc-fc15f543f801",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/878bf061-0a3e-419b-b1fc-fc15f543f8011787763288PEED.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/878bf061-0a3e-419b-b1fc-fc15f543f8011787763288PEED.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f3a0e19f-40dd-433d-8097-6dc061998a32",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/f3a0e19f-40dd-433d-8097-6dc061998a321787763288ezGg.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/f3a0e19f-40dd-433d-8097-6dc061998a321787763288ezGg.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "a340bf45-0f71-4a50-9baf-ce465d3a18b4",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/a340bf45-0f71-4a50-9baf-ce465d3a18b41787763288GLaq.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/a340bf45-0f71-4a50-9baf-ce465d3a18b41787763288GLaq.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "3f2a1b89-8cf7-433c-8f7d-dc0623518c15",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/3f2a1b89-8cf7-433c-8f7d-dc0623518c151787763292dEDQ.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/3f2a1b89-8cf7-433c-8f7d-dc0623518c151787763292dEDQ.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b6d77026-92ab-4317-8c4b-207d095dbc62",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/b6d77026-92ab-4317-8c4b-207d095dbc621787763294rX9v.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/b6d77026-92ab-4317-8c4b-207d095dbc621787763294rX9v.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "8cedc246-ddc0-4f2c-9afe-8bf093c1a7a0",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/8cedc246-ddc0-4f2c-9afe-8bf093c1a7a01787763298wiBL.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/8cedc246-ddc0-4f2c-9afe-8bf093c1a7a01787763298wiBL.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "7009ea0e-49ad-461a-bc70-20d9baf9739a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/7009ea0e-49ad-461a-bc70-20d9baf9739a1787763298s4KQ.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/7009ea0e-49ad-461a-bc70-20d9baf9739a1787763298s4KQ.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "8ffde3ea-81ae-44cf-8bbe-10e2f84b0814",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/8ffde3ea-81ae-44cf-8bbe-10e2f84b08141787763301szH9.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/8ffde3ea-81ae-44cf-8bbe-10e2f84b08141787763301szH9.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "d6522465-03dd-4df9-bbff-29fb7fd8c5b5",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/d6522465-03dd-4df9-bbff-29fb7fd8c5b51787763301lC06.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/d6522465-03dd-4df9-bbff-29fb7fd8c5b51787763301lC06.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "a8f0c1ad-f879-4123-9f8e-cb41f873f042",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/a8f0c1ad-f879-4123-9f8e-cb41f873f04217877633044cSN.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/a8f0c1ad-f879-4123-9f8e-cb41f873f04217877633044cSN.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "d46e134e-e4a4-4485-8086-ceb36dbe3f3e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/d46e134e-e4a4-4485-8086-ceb36dbe3f3e1787763298ynkY.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/d46e134e-e4a4-4485-8086-ceb36dbe3f3e1787763298ynkY.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "a163e9a0-b885-4937-9f6d-13c0501dd977",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/a163e9a0-b885-4937-9f6d-13c0501dd9771787763304qXah.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/a163e9a0-b885-4937-9f6d-13c0501dd9771787763304qXah.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c56aa11b-ae73-4f41-85ae-2760ef94adb3",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/c56aa11b-ae73-4f41-85ae-2760ef94adb31787763305RZ9f.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/c56aa11b-ae73-4f41-85ae-2760ef94adb31787763305RZ9f.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "06631e9f-f9f6-4837-85bd-082fd236e946",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/06631e9f-f9f6-4837-85bd-082fd236e94617877633058ON2.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/06631e9f-f9f6-4837-85bd-082fd236e94617877633058ON2.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "cdb1ddaa-7635-439f-bf3e-5552edbc10e4",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/cdb1ddaa-7635-439f-bf3e-5552edbc10e41787763308j01B.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/cdb1ddaa-7635-439f-bf3e-5552edbc10e41787763308j01B.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "2ca80d59-de1f-40bb-93c8-b684355ac5d1",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/2ca80d59-de1f-40bb-93c8-b684355ac5d11787763308OdDB.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/2ca80d59-de1f-40bb-93c8-b684355ac5d11787763308OdDB.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "76dcd24a-8dc9-4667-8d8d-ff8a6bce9069",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/76dcd24a-8dc9-4667-8d8d-ff8a6bce90691787763308rndE.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/76dcd24a-8dc9-4667-8d8d-ff8a6bce90691787763308rndE.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "0fe056da-7fa7-4cd9-9d51-c034cd32982e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/0fe056da-7fa7-4cd9-9d51-c034cd32982e1787763308EoWI.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/4f79b2cb-c2ec-4307-a56f-ece81aae09b8\/images\/600x450\/outside\/0fe056da-7fa7-4cd9-9d51-c034cd32982e1787763308EoWI.webp"
+          },
+          "is_external": false
+        }
+      ]
+    },
+    {
+      "id": "99273133-120e-4d9c-b561-cca6e22f1a6b",
+      "price": "R$475.000,00",
+      "total_price": "R$475.000,00",
+      "shown_total_price": false,
+      "transaction": "VENDA",
+      "is_previous_price": false,
+      "previous_price": "R$0,00",
+      "reference": "715",
+      "address": {
+        "formatted": "Novo Santa Cec\u00edlia (Barreiro) - Belo Horizonte\/MG"
+      },
+      "areas": {
+        "primary_area": {
+          "name": "built_area",
+          "title": "\u00c1rea Constru\u00edda",
+          "value": "150",
+          "measure": "m\u00b2"
+        },
+        "total_area": {
+          "name": "total_area",
+          "title": "Terreno \u00c1rea Total",
+          "value": "380",
+          "measure": "m\u00b2"
+        }
+      },
+      "rooms": {
+        "garage": {
+          "name": "garage",
+          "extra": {
+            "is_covered": {
+              "name": "is_covered",
+              "title": "Garagem coberta?",
+              "value": true
+            }
+          },
+          "title": "Garagem",
+          "value": 1,
+          "title_formated": "1 Garagem"
+        },
+        "office": {
+          "name": "office",
+          "title": "Escrit\u00f3rio",
+          "value": 1,
+          "title_formated": "1 Escrit\u00f3rio"
+        },
+        "pantry": {
+          "name": "pantry",
+          "title": "Copa",
+          "value": 1,
+          "title_formated": "1 Copa"
+        },
+        "tvroom": {
+          "name": "tvroom",
+          "title": "Sala de TV",
+          "value": 1,
+          "title_formated": "1 Sala de TV"
+        },
+        "bedroom": {
+          "name": "bedroom",
+          "title": "Dormit\u00f3rio",
+          "value": 3,
+          "title_formated": "3 Dormit\u00f3rios"
+        },
+        "kitchen": {
+          "name": "kitchen",
+          "title": "Cozinha",
+          "value": 1,
+          "title_formated": "1 Cozinha"
+        },
+        "bathroom": {
+          "name": "bathroom",
+          "title": "Banheiro",
+          "value": 1,
+          "title_formated": "1 Banheiro"
+        },
+        "diningroom": {
+          "name": "diningroom",
+          "title": "Sala de jantar",
+          "value": 1,
+          "title_formated": "1 Sala de jantar"
+        },
+        "livingroom": {
+          "name": "livingroom",
+          "title": "Sala de estar",
+          "value": 1,
+          "title_formated": "1 Sala de estar"
+        },
+        "service_area": {
+          "name": "service_area",
+          "title": "\u00c1rea de servi\u00e7o",
+          "value": 1,
+          "title_formated": "1 \u00c1rea de servi\u00e7o"
+        }
+      },
+      "meta_title": "Casa \u00e0 venda no bairro Novo Santa Cec\u00edlia (Barreiro) em Belo Horizonte\/MG",
+      "title_formatted": "Casa em Novo Santa Cec\u00edlia (Barreiro), Belo Horizonte\/MG",
+      "stripe_text": "Pronto para morar",
+      "stripe_background": "#111BAC",
+      "url": "casa-a-venda-no-bairro-novo-santa-cecilia-barreiro-em-belo-horizonte-mg\/715",
+      "images": [
+        {
+          "id": "f5cb7a26-375b-456f-8b82-878f41799f87",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/f5cb7a26-375b-456f-8b82-878f41799f871787596002HiXM.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/f5cb7a26-375b-456f-8b82-878f41799f871787596002HiXM.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "bbdeb3e2-7f35-4872-b9be-f9d2e649bb9a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/bbdeb3e2-7f35-4872-b9be-f9d2e649bb9a1787596013TMZw.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/bbdeb3e2-7f35-4872-b9be-f9d2e649bb9a1787596013TMZw.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "5fb21228-05e7-4663-a1a3-fbbc60d5bc20",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/5fb21228-05e7-4663-a1a3-fbbc60d5bc20178759601670bG.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/5fb21228-05e7-4663-a1a3-fbbc60d5bc20178759601670bG.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "374caf3f-53f1-48c3-842f-4c82f6c19c7c",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/374caf3f-53f1-48c3-842f-4c82f6c19c7c178759601015lP.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/374caf3f-53f1-48c3-842f-4c82f6c19c7c178759601015lP.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "5ca39d90-495d-4096-929f-5faeac0f8a3a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/5ca39d90-495d-4096-929f-5faeac0f8a3a1787596006Tkak.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/5ca39d90-495d-4096-929f-5faeac0f8a3a1787596006Tkak.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "32a4a52d-992c-46fb-8c3e-16e324c3fe16",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/32a4a52d-992c-46fb-8c3e-16e324c3fe161787595997u4sa.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/32a4a52d-992c-46fb-8c3e-16e324c3fe161787595997u4sa.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "52dc58b0-72af-4b05-a7fd-d700a84f16e1",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/52dc58b0-72af-4b05-a7fd-d700a84f16e11787595998HMLS.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/52dc58b0-72af-4b05-a7fd-d700a84f16e11787595998HMLS.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f4f8a0a5-e89c-429d-b0f8-972441d490cb",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/f4f8a0a5-e89c-429d-b0f8-972441d490cb1787596013PLHt.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/f4f8a0a5-e89c-429d-b0f8-972441d490cb1787596013PLHt.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "1bf1e63f-db4c-4869-8f21-76a6f14d0614",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/1bf1e63f-db4c-4869-8f21-76a6f14d06141787595997AphC.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/1bf1e63f-db4c-4869-8f21-76a6f14d06141787595997AphC.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "1bb764f1-23c4-4878-afd0-3b8ff1f2c03f",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/1bb764f1-23c4-4878-afd0-3b8ff1f2c03f1787596009T6Ej.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/1bb764f1-23c4-4878-afd0-3b8ff1f2c03f1787596009T6Ej.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "25afed58-adbd-44b0-a5a7-38c3767c95e3",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/25afed58-adbd-44b0-a5a7-38c3767c95e317875960052b9X.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/25afed58-adbd-44b0-a5a7-38c3767c95e317875960052b9X.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "5f126f0d-ce02-4c69-9f28-454e29a42bcb",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/5f126f0d-ce02-4c69-9f28-454e29a42bcb1787596020Ypxo.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/5f126f0d-ce02-4c69-9f28-454e29a42bcb1787596020Ypxo.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b3e58336-1333-4a03-bb54-e5b5b416f03e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/b3e58336-1333-4a03-bb54-e5b5b416f03e1787595985R2Zg.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/b3e58336-1333-4a03-bb54-e5b5b416f03e1787595985R2Zg.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "bd94ac27-81a3-4fb6-b37f-20dbfc683c0b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/bd94ac27-81a3-4fb6-b37f-20dbfc683c0b17875960209CqG.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/bd94ac27-81a3-4fb6-b37f-20dbfc683c0b17875960209CqG.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "901ee1e5-9fd0-4aea-b0cf-9c93b056e5d1",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/901ee1e5-9fd0-4aea-b0cf-9c93b056e5d11787596013ovSk.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/901ee1e5-9fd0-4aea-b0cf-9c93b056e5d11787596013ovSk.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "738f3f13-e10d-4be2-865d-dca43becf3e3",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/738f3f13-e10d-4be2-865d-dca43becf3e31787596009LfNW.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/738f3f13-e10d-4be2-865d-dca43becf3e31787596009LfNW.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f65d0e94-9378-43f8-893e-38914c6cf32d",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/f65d0e94-9378-43f8-893e-38914c6cf32d1787595989sgu6.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/f65d0e94-9378-43f8-893e-38914c6cf32d1787595989sgu6.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c390c22c-c895-4a4b-acda-8580ecf46682",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/c390c22c-c895-4a4b-acda-8580ecf466821787595989mNi5.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/c390c22c-c895-4a4b-acda-8580ecf466821787595989mNi5.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "bd766f66-9a10-4fdd-8474-ba6458513405",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/bd766f66-9a10-4fdd-8474-ba64585134051787595989L2Y1.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/bd766f66-9a10-4fdd-8474-ba64585134051787595989L2Y1.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "6454b55c-6ce9-4e38-8099-0d46108c59a5",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/6454b55c-6ce9-4e38-8099-0d46108c59a5178759599388ZA.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/6454b55c-6ce9-4e38-8099-0d46108c59a5178759599388ZA.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "3054540c-f5e5-4d72-bc2a-97844b06d9b4",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/3054540c-f5e5-4d72-bc2a-97844b06d9b417875959962lgX.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/3054540c-f5e5-4d72-bc2a-97844b06d9b417875959962lgX.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "10528f51-1e99-4e97-aae2-f31b403f45ca",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/10528f51-1e99-4e97-aae2-f31b403f45ca1787596006pkle.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/10528f51-1e99-4e97-aae2-f31b403f45ca1787596006pkle.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "a4e4b5a3-0271-497c-a167-d6d19e2749bc",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/a4e4b5a3-0271-497c-a167-d6d19e2749bc1787596005PdtL.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/a4e4b5a3-0271-497c-a167-d6d19e2749bc1787596005PdtL.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "a1e27501-3820-4e2a-95ce-dcdf45688574",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/a1e27501-3820-4e2a-95ce-dcdf456885741787596009T9F2.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/a1e27501-3820-4e2a-95ce-dcdf456885741787596009T9F2.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "d6a80061-2432-4abb-b450-1607427038f9",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/d6a80061-2432-4abb-b450-1607427038f91787596016SzjE.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/d6a80061-2432-4abb-b450-1607427038f91787596016SzjE.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "3bafbf14-bc46-46a6-beaf-45235d8db4f9",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/3bafbf14-bc46-46a6-beaf-45235d8db4f91787596013ueKR.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/3bafbf14-bc46-46a6-beaf-45235d8db4f91787596013ueKR.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "ba41bbfc-38bb-44d5-bad7-c4b14592f83b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/ba41bbfc-38bb-44d5-bad7-c4b14592f83b1787596009fW7K.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/ba41bbfc-38bb-44d5-bad7-c4b14592f83b1787596009fW7K.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b7de6d23-f0e1-4053-a31a-51f76aebf7c5",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/b7de6d23-f0e1-4053-a31a-51f76aebf7c51787595985S2NE.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/b7de6d23-f0e1-4053-a31a-51f76aebf7c51787595985S2NE.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "172fbf63-5242-43c3-b928-72ba21dbbc77",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/172fbf63-5242-43c3-b928-72ba21dbbc771787595993a9Kh.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/172fbf63-5242-43c3-b928-72ba21dbbc771787595993a9Kh.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "d5f36ffe-b3b0-439d-8d92-56589b652473",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/d5f36ffe-b3b0-439d-8d92-56589b6524731787595986WgaO.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/d5f36ffe-b3b0-439d-8d92-56589b6524731787595986WgaO.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "9b2e8310-b4f2-415b-a6f5-ac0e4027da03",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/9b2e8310-b4f2-415b-a6f5-ac0e4027da031787595993khAw.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/9b2e8310-b4f2-415b-a6f5-ac0e4027da031787595993khAw.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "d3cf8e29-c550-4d38-9308-6c4b926257e4",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/d3cf8e29-c550-4d38-9308-6c4b926257e41787595989e4ek.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/d3cf8e29-c550-4d38-9308-6c4b926257e41787595989e4ek.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "158fcde5-c11d-4b44-9805-d8ebcb3b1b80",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/158fcde5-c11d-4b44-9805-d8ebcb3b1b801787596017OYMO.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/158fcde5-c11d-4b44-9805-d8ebcb3b1b801787596017OYMO.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "4bdb18cb-cc21-4f8e-85fa-d322fcc65aeb",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/4bdb18cb-cc21-4f8e-85fa-d322fcc65aeb1787595989y43Q.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/4bdb18cb-cc21-4f8e-85fa-d322fcc65aeb1787595989y43Q.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "2b6842b6-9a7e-40b3-aa8a-0c3e4e432e2e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/2b6842b6-9a7e-40b3-aa8a-0c3e4e432e2e17875960026duc.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/2b6842b6-9a7e-40b3-aa8a-0c3e4e432e2e17875960026duc.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "e8a3d194-4271-469c-8dfd-6cea74c5f884",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/e8a3d194-4271-469c-8dfd-6cea74c5f8841787595986Oskk.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/e8a3d194-4271-469c-8dfd-6cea74c5f8841787595986Oskk.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "51677275-a251-4852-bd49-73d8ec6ff0df",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/51677275-a251-4852-bd49-73d8ec6ff0df1787596013vN8a.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/51677275-a251-4852-bd49-73d8ec6ff0df1787596013vN8a.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "9d684e24-5fcd-47c6-aed5-0fb34bb5f380",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/9d684e24-5fcd-47c6-aed5-0fb34bb5f3801787595986HyyQ.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/9d684e24-5fcd-47c6-aed5-0fb34bb5f3801787595986HyyQ.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "e9af59ef-bd49-442b-86c5-0424049c7420",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/e9af59ef-bd49-442b-86c5-0424049c74201787596016IfVx.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/e9af59ef-bd49-442b-86c5-0424049c74201787596016IfVx.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "ba775286-d8c3-4922-a472-af63802262e8",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/ba775286-d8c3-4922-a472-af63802262e81787596001dLSB.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/ba775286-d8c3-4922-a472-af63802262e81787596001dLSB.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "fe1ca44d-c23f-4e25-bb15-54589a96b35f",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/fe1ca44d-c23f-4e25-bb15-54589a96b35f1787595997leP8.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/fe1ca44d-c23f-4e25-bb15-54589a96b35f1787595997leP8.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "1e95ab23-84a7-4766-8fc5-7bb02b5e70b3",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/1e95ab23-84a7-4766-8fc5-7bb02b5e70b31787596002lhCK.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/1e95ab23-84a7-4766-8fc5-7bb02b5e70b31787596002lhCK.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "158c9eb2-ccab-4182-9696-67d1546d8c06",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/158c9eb2-ccab-4182-9696-67d1546d8c061787595993VIbk.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/158c9eb2-ccab-4182-9696-67d1546d8c061787595993VIbk.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "a738c395-c7a2-4be3-8e24-10610b4efd08",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/a738c395-c7a2-4be3-8e24-10610b4efd081787596002TnQ8.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/a738c395-c7a2-4be3-8e24-10610b4efd081787596002TnQ8.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "0f2f7027-5875-47d5-accb-958ef357f6dd",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/0f2f7027-5875-47d5-accb-958ef357f6dd17875960068kmJ.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/0f2f7027-5875-47d5-accb-958ef357f6dd17875960068kmJ.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "77715d44-3954-4d9d-9c8a-0f976a0bbfe5",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/77715d44-3954-4d9d-9c8a-0f976a0bbfe51787595993Ov54.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/77715d44-3954-4d9d-9c8a-0f976a0bbfe51787595993Ov54.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "99213f5f-0ceb-46bb-b453-f55a311b25b0",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/99213f5f-0ceb-46bb-b453-f55a311b25b0178759601611S9.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/99273133-120e-4d9c-b561-cca6e22f1a6b\/images\/600x450\/outside\/99213f5f-0ceb-46bb-b453-f55a311b25b0178759601611S9.webp"
+          },
+          "is_external": false
+        }
+      ]
+    },
+    {
+      "id": "161d4af8-43a5-4092-881f-1b5421276f83",
+      "price": "R$177.000,00",
+      "total_price": "R$177.000,00",
+      "shown_total_price": false,
+      "transaction": "VENDA",
+      "is_previous_price": false,
+      "previous_price": "R$0,00",
+      "reference": "711",
+      "address": {
+        "formatted": "Solar do Barreiro (Barreiro) - Belo Horizonte\/MG"
+      },
+      "areas": {
+        "primary_area": {
+          "name": "built_area",
+          "title": "\u00c1rea Constru\u00edda",
+          "value": "52",
+          "measure": "m\u00b2"
+        }
+      },
+      "rooms": {
+        "garage": {
+          "name": "garage",
+          "title": "Garagem",
+          "value": 1,
+          "title_formated": "1 Garagem"
+        },
+        "tvroom": {
+          "name": "tvroom",
+          "title": "Sala de TV",
+          "value": 1,
+          "title_formated": "1 Sala de TV"
+        },
+        "bedroom": {
+          "name": "bedroom",
+          "title": "Dormit\u00f3rio",
+          "value": 2,
+          "title_formated": "2 Dormit\u00f3rios"
+        },
+        "kitchen": {
+          "name": "kitchen",
+          "title": "Cozinha",
+          "value": 1,
+          "title_formated": "1 Cozinha"
+        },
+        "bathroom": {
+          "name": "bathroom",
+          "title": "Banheiro",
+          "value": 1,
+          "title_formated": "1 Banheiro"
+        },
+        "livingroom": {
+          "name": "livingroom",
+          "title": "Sala de estar",
+          "value": 1,
+          "title_formated": "1 Sala de estar"
+        },
+        "service_area": {
+          "name": "service_area",
+          "title": "\u00c1rea de servi\u00e7o",
+          "value": 1,
+          "title_formated": "1 \u00c1rea de servi\u00e7o"
+        }
+      },
+      "meta_title": "Casa \u00e0 venda no bairro Solar do Barreiro (Barreiro) em Belo Horizonte\/MG",
+      "title_formatted": "Casa Geminada em Solar do Barreiro (Barreiro), Belo Horizonte\/MG",
+      "stripe_text": "Pronto para morar",
+      "stripe_background": "#111BAC",
+      "url": "casa-a-venda-no-bairro-solar-do-barreiro-barreiro-em-belo-horizonte-mg\/711",
+      "images": [
+        {
+          "id": "65c5b604-b7cd-4cc5-870e-71c621abee59",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/65c5b604-b7cd-4cc5-870e-71c621abee591787074485Ep9t.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/65c5b604-b7cd-4cc5-870e-71c621abee591787074485Ep9t.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "3573d9cf-abd8-4bba-a603-5cf98e58aede",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/3573d9cf-abd8-4bba-a603-5cf98e58aede1787074485Nf9J.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/3573d9cf-abd8-4bba-a603-5cf98e58aede1787074485Nf9J.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "9d0eac05-c832-4225-8f5f-8007ecc541f9",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/9d0eac05-c832-4225-8f5f-8007ecc541f91787074493XNok.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/9d0eac05-c832-4225-8f5f-8007ecc541f91787074493XNok.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "8f711c6e-ee51-4b4f-b4c1-a30565e9727c",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/8f711c6e-ee51-4b4f-b4c1-a30565e9727c1787074497QY7r.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/8f711c6e-ee51-4b4f-b4c1-a30565e9727c1787074497QY7r.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "1a4e6cf8-84af-4202-8dcc-61d93f3037ca",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/1a4e6cf8-84af-4202-8dcc-61d93f3037ca1787074489VNiY.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/1a4e6cf8-84af-4202-8dcc-61d93f3037ca1787074489VNiY.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "7a13c19f-0c85-4c9b-aa0e-e7ce578b93fd",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/7a13c19f-0c85-4c9b-aa0e-e7ce578b93fd1787074489c3ve.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/7a13c19f-0c85-4c9b-aa0e-e7ce578b93fd1787074489c3ve.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c77235a7-b9be-4c2b-bd3e-0cc29bbc2d50",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/c77235a7-b9be-4c2b-bd3e-0cc29bbc2d501787074493IJxj.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/c77235a7-b9be-4c2b-bd3e-0cc29bbc2d501787074493IJxj.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "62e897d8-c985-420c-84e2-ac0c6e312eaa",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/62e897d8-c985-420c-84e2-ac0c6e312eaa1787074485xrtK.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/62e897d8-c985-420c-84e2-ac0c6e312eaa1787074485xrtK.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "2f398229-74cb-4b77-b45e-d8670ab3b8cb",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/2f398229-74cb-4b77-b45e-d8670ab3b8cb1787074489pdaw.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/2f398229-74cb-4b77-b45e-d8670ab3b8cb1787074489pdaw.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f3758040-1f4e-409b-9c67-1f01af616084",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/f3758040-1f4e-409b-9c67-1f01af6160841787074485SotO.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/f3758040-1f4e-409b-9c67-1f01af6160841787074485SotO.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "480090cf-66b9-4c3c-acfd-8a91ec034545",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/480090cf-66b9-4c3c-acfd-8a91ec0345451787074493snxZ.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/480090cf-66b9-4c3c-acfd-8a91ec0345451787074493snxZ.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b5f6cad2-a73d-44b1-962c-74a191ce7b31",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/b5f6cad2-a73d-44b1-962c-74a191ce7b311787074480wIny.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/b5f6cad2-a73d-44b1-962c-74a191ce7b311787074480wIny.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b8511a44-a4a7-48d7-965b-f6233e873799",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/b8511a44-a4a7-48d7-965b-f6233e87379917870744932c9J.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/b8511a44-a4a7-48d7-965b-f6233e87379917870744932c9J.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "d969f465-e731-4429-8cac-91286c00bfad",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/d969f465-e731-4429-8cac-91286c00bfad1787074482pi38.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/d969f465-e731-4429-8cac-91286c00bfad1787074482pi38.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "d90466c6-7cd4-4b9e-aa7a-c743f728d1dd",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/d90466c6-7cd4-4b9e-aa7a-c743f728d1dd1787074489ifTj.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/d90466c6-7cd4-4b9e-aa7a-c743f728d1dd1787074489ifTj.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "cca46b6e-1536-425a-862d-05d189bf4254",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/cca46b6e-1536-425a-862d-05d189bf42541787074481sUXn.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/cca46b6e-1536-425a-862d-05d189bf42541787074481sUXn.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "02409073-b402-4512-aa02-011e0e9954e0",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/02409073-b402-4512-aa02-011e0e9954e01787074485SWwd.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/02409073-b402-4512-aa02-011e0e9954e01787074485SWwd.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f70aa6ca-247a-4b55-9afe-e494b8a3cc8f",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/f70aa6ca-247a-4b55-9afe-e494b8a3cc8f17870744897rFS.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/f70aa6ca-247a-4b55-9afe-e494b8a3cc8f17870744897rFS.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b2ede5b0-1ed5-4ee9-9046-936b08ef04e1",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/b2ede5b0-1ed5-4ee9-9046-936b08ef04e11787074481stqg.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/b2ede5b0-1ed5-4ee9-9046-936b08ef04e11787074481stqg.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "164eb0e7-d6b1-4e7e-8e80-36bc3ffff48e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/164eb0e7-d6b1-4e7e-8e80-36bc3ffff48e178707449345qv.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/164eb0e7-d6b1-4e7e-8e80-36bc3ffff48e178707449345qv.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "6dff0a80-b0a3-4074-bb21-7e3916ff3c31",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/6dff0a80-b0a3-4074-bb21-7e3916ff3c311787074496na5A.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/6dff0a80-b0a3-4074-bb21-7e3916ff3c311787074496na5A.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b7f69e64-48dc-4047-a8e3-cb5df11ee4b3",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/b7f69e64-48dc-4047-a8e3-cb5df11ee4b31787074496XAuH.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/b7f69e64-48dc-4047-a8e3-cb5df11ee4b31787074496XAuH.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "0ce17553-caae-4377-9e0b-5601fde0f86e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/0ce17553-caae-4377-9e0b-5601fde0f86e1787074481YWS8.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/161d4af8-43a5-4092-881f-1b5421276f83\/images\/600x450\/outside\/0ce17553-caae-4377-9e0b-5601fde0f86e1787074481YWS8.webp"
+          },
+          "is_external": false
+        }
+      ]
+    },
+    {
+      "id": "f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c",
+      "price": "R$620.000,00",
+      "total_price": "R$620.000,00",
+      "shown_total_price": false,
+      "transaction": "VENDA",
+      "is_previous_price": false,
+      "previous_price": "R$0,00",
+      "reference": "714",
+      "address": {
+        "formatted": "Vale do Jatob\u00e1 (Barreiro) - Belo Horizonte\/MG"
+      },
+      "areas": {
+        "primary_area": {
+          "name": "built_area",
+          "title": "\u00c1rea Constru\u00edda",
+          "value": "234",
+          "measure": "m\u00b2"
+        },
+        "total_area": {
+          "name": "total_area",
+          "title": "Terreno \u00c1rea Total",
+          "value": "242",
+          "measure": "m\u00b2"
+        }
+      },
+      "rooms": {
+        "suite": {
+          "name": "suite",
+          "title": "Sendo su\u00edte",
+          "value": 1,
+          "title_formated": "1 Su\u00edte"
+        },
+        "garage": {
+          "name": "garage",
+          "extra": {
+            "is_covered": {
+              "name": "is_covered",
+              "title": "Garagem coberta?",
+              "value": true
+            }
+          },
+          "title": "Garagem",
+          "value": 2,
+          "title_formated": "2 Garagens"
+        },
+        "pantry": {
+          "name": "pantry",
+          "title": "Copa",
+          "value": 1,
+          "title_formated": "1 Copa"
+        },
+        "bedroom": {
+          "name": "bedroom",
+          "title": "Dormit\u00f3rio",
+          "value": 3,
+          "title_formated": "3 Dormit\u00f3rios, sendo 1 su\u00edte"
+        },
+        "kitchen": {
+          "name": "kitchen",
+          "title": "Cozinha",
+          "value": 1,
+          "title_formated": "1 Cozinha"
+        },
+        "bathroom": {
+          "name": "bathroom",
+          "title": "Banheiro",
+          "value": 1,
+          "title_formated": "1 Banheiro"
+        },
+        "diningroom": {
+          "name": "diningroom",
+          "title": "Sala de jantar",
+          "value": 1,
+          "title_formated": "1 Sala de jantar"
+        },
+        "livingroom": {
+          "name": "livingroom",
+          "title": "Sala de estar",
+          "value": 1,
+          "title_formated": "1 Sala de estar"
+        },
+        "service_area": {
+          "name": "service_area",
+          "title": "\u00c1rea de servi\u00e7o",
+          "value": 1,
+          "title_formated": "1 \u00c1rea de servi\u00e7o"
+        }
+      },
+      "meta_title": "Casa \u00e0 venda no bairro Vale do Jatob\u00e1 (Barreiro) em Belo Horizonte\/MG",
+      "title_formatted": "Casa em Vale do Jatob\u00e1 (Barreiro), Belo Horizonte\/MG",
+      "stripe_text": "Pronto para morar",
+      "stripe_background": "#111BAC",
+      "url": "casa-a-venda-no-bairro-vale-do-jatoba-barreiro-em-belo-horizonte-mg\/714",
+      "images": [
+        {
+          "id": "c3be9832-aff0-4203-be10-554f6d3af053",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/c3be9832-aff0-4203-be10-554f6d3af0531787251536ep8D.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/c3be9832-aff0-4203-be10-554f6d3af0531787251536ep8D.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "29d34024-661e-4736-b87e-a91cf9d5a421",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/29d34024-661e-4736-b87e-a91cf9d5a4211787251443ICXK.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/29d34024-661e-4736-b87e-a91cf9d5a4211787251443ICXK.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "44eb428c-0cf8-46e9-9fce-dfa9a1a37a9e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/44eb428c-0cf8-46e9-9fce-dfa9a1a37a9e17872514923H30.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/44eb428c-0cf8-46e9-9fce-dfa9a1a37a9e17872514923H30.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "1353106e-8439-4586-b807-b41c692a3961",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/1353106e-8439-4586-b807-b41c692a39611787251506tfoI.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/1353106e-8439-4586-b807-b41c692a39611787251506tfoI.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "6670e78c-4702-4bf4-aaf4-bcc15a50fd0f",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/6670e78c-4702-4bf4-aaf4-bcc15a50fd0f17872514760EDE.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/6670e78c-4702-4bf4-aaf4-bcc15a50fd0f17872514760EDE.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "779f2eaf-90ed-4d7f-8e9a-70a7504f5391",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/779f2eaf-90ed-4d7f-8e9a-70a7504f53911787251505nCWP.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/779f2eaf-90ed-4d7f-8e9a-70a7504f53911787251505nCWP.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "e66380a7-fd53-4ba9-a4f7-f3de6202e228",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/e66380a7-fd53-4ba9-a4f7-f3de6202e2281787251475fdpq.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/e66380a7-fd53-4ba9-a4f7-f3de6202e2281787251475fdpq.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "8c822ca1-045c-4aaf-bd28-e062f8018421",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/8c822ca1-045c-4aaf-bd28-e062f80184211787251535RkmY.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/8c822ca1-045c-4aaf-bd28-e062f80184211787251535RkmY.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "458b91c1-927f-43a4-883c-053bd5050d2d",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/458b91c1-927f-43a4-883c-053bd5050d2d1787251506eEyK.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/458b91c1-927f-43a4-883c-053bd5050d2d1787251506eEyK.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c76f42d4-f09f-4a87-9d7b-e7883d6f89ed",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/c76f42d4-f09f-4a87-9d7b-e7883d6f89ed1787251431u9PX.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/c76f42d4-f09f-4a87-9d7b-e7883d6f89ed1787251431u9PX.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "8ab38559-6871-4b49-a9d2-86d77a64245b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/8ab38559-6871-4b49-a9d2-86d77a64245b1787251410exDx.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/8ab38559-6871-4b49-a9d2-86d77a64245b1787251410exDx.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "bf251291-8bf3-4e3b-bda5-298d928456f0",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/bf251291-8bf3-4e3b-bda5-298d928456f01787251433iq4r.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/bf251291-8bf3-4e3b-bda5-298d928456f01787251433iq4r.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "6b1e5267-cd67-4b72-9a78-49d161f92c98",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/6b1e5267-cd67-4b72-9a78-49d161f92c981787251463Qtu6.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/6b1e5267-cd67-4b72-9a78-49d161f92c981787251463Qtu6.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "9361eb4a-0a02-4e24-b7b7-83ae13e570fd",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/9361eb4a-0a02-4e24-b7b7-83ae13e570fd1787251490pqSw.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/9361eb4a-0a02-4e24-b7b7-83ae13e570fd1787251490pqSw.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "fae518a6-4410-4647-b70a-67abcf365098",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/fae518a6-4410-4647-b70a-67abcf3650981787251463U9pV.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/fae518a6-4410-4647-b70a-67abcf3650981787251463U9pV.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c27058c1-fc2c-44bd-9df0-0783246704ac",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/c27058c1-fc2c-44bd-9df0-0783246704ac1787251461el9P.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/c27058c1-fc2c-44bd-9df0-0783246704ac1787251461el9P.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "8371d4c6-f2d0-44f2-a3b8-cd083754293b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/8371d4c6-f2d0-44f2-a3b8-cd083754293b1787251490E9mT.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/8371d4c6-f2d0-44f2-a3b8-cd083754293b1787251490E9mT.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "6be542b0-fe12-4a74-af47-6702e2e9ca65",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/6be542b0-fe12-4a74-af47-6702e2e9ca6517872515298uRm.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/6be542b0-fe12-4a74-af47-6702e2e9ca6517872515298uRm.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "2bd7e988-4e2e-4eeb-8080-bd6b3d797d11",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/2bd7e988-4e2e-4eeb-8080-bd6b3d797d111787251476jMhg.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/2bd7e988-4e2e-4eeb-8080-bd6b3d797d111787251476jMhg.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "de02ab1c-e3c4-42c7-97fa-ee1aaf3fc96b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/de02ab1c-e3c4-42c7-97fa-ee1aaf3fc96b1787251437WE4m.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/de02ab1c-e3c4-42c7-97fa-ee1aaf3fc96b1787251437WE4m.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "d4d05b71-0c49-4836-b1c0-05cbee518266",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/d4d05b71-0c49-4836-b1c0-05cbee5182661787251461T85R.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/d4d05b71-0c49-4836-b1c0-05cbee5182661787251461T85R.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "4d943b23-4d85-4b63-905e-301500e40404",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/4d943b23-4d85-4b63-905e-301500e404041787251410yn7Y.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/4d943b23-4d85-4b63-905e-301500e404041787251410yn7Y.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "74030599-3a93-4593-94e1-5204bbb4a68b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/74030599-3a93-4593-94e1-5204bbb4a68b1787251489YHek.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/74030599-3a93-4593-94e1-5204bbb4a68b1787251489YHek.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "01638642-7517-48c3-a1e4-548b1ac716fe",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/01638642-7517-48c3-a1e4-548b1ac716fe1787251488spb2.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/01638642-7517-48c3-a1e4-548b1ac716fe1787251488spb2.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c1d05316-fddf-4446-9a03-927eac24d466",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/c1d05316-fddf-4446-9a03-927eac24d4661787251408NR6U.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/c1d05316-fddf-4446-9a03-927eac24d4661787251408NR6U.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f282daeb-3ea2-4bb2-aff4-6ed6d2ebbaf7",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/f282daeb-3ea2-4bb2-aff4-6ed6d2ebbaf71787251559TFbO.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/f282daeb-3ea2-4bb2-aff4-6ed6d2ebbaf71787251559TFbO.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "caaabeeb-78a4-4875-adfb-43bdbe95d18b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/caaabeeb-78a4-4875-adfb-43bdbe95d18b1787251473S6CE.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/caaabeeb-78a4-4875-adfb-43bdbe95d18b1787251473S6CE.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "e6bd6e7c-127e-48cc-8c60-2679b3ddaf5c",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/e6bd6e7c-127e-48cc-8c60-2679b3ddaf5c1787251506O7hG.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/e6bd6e7c-127e-48cc-8c60-2679b3ddaf5c1787251506O7hG.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "161de450-ed54-432d-90d5-bb4bcf07f53e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/161de450-ed54-432d-90d5-bb4bcf07f53e17872515509IM3.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/161de450-ed54-432d-90d5-bb4bcf07f53e17872515509IM3.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "7e584491-2215-413e-85ad-1b8d9f4a7119",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/7e584491-2215-413e-85ad-1b8d9f4a71191787251505SXmd.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/7e584491-2215-413e-85ad-1b8d9f4a71191787251505SXmd.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "9debf23b-e586-4b7d-8d36-b11b26c23514",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/9debf23b-e586-4b7d-8d36-b11b26c235141787251464HoVM.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/9debf23b-e586-4b7d-8d36-b11b26c235141787251464HoVM.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b4e4eef7-639b-4dab-b957-574dcf393696",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/b4e4eef7-639b-4dab-b957-574dcf3936961787251413oSQG.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/b4e4eef7-639b-4dab-b957-574dcf3936961787251413oSQG.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "a73da605-b1c6-4890-9a7a-81fee0d83358",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/a73da605-b1c6-4890-9a7a-81fee0d833581787251443iZZP.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/a73da605-b1c6-4890-9a7a-81fee0d833581787251443iZZP.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "ffefc17d-3478-47f8-b58e-8c270321e899",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/ffefc17d-3478-47f8-b58e-8c270321e8991787251535wpgJ.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/ffefc17d-3478-47f8-b58e-8c270321e8991787251535wpgJ.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "5df32b34-2996-4871-9bc7-8b820e6cb731",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/5df32b34-2996-4871-9bc7-8b820e6cb73117872514130GJI.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/5df32b34-2996-4871-9bc7-8b820e6cb73117872514130GJI.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "2777e9c4-157d-45eb-aaeb-d0d2e6a7759a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/2777e9c4-157d-45eb-aaeb-d0d2e6a7759a1787251562r1Yl.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/2777e9c4-157d-45eb-aaeb-d0d2e6a7759a1787251562r1Yl.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c871ce0b-4267-40b3-8f6e-018599e9b691",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/c871ce0b-4267-40b3-8f6e-018599e9b69117872514763i9x.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/c871ce0b-4267-40b3-8f6e-018599e9b69117872514763i9x.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "3366bb10-d6b0-4816-8788-ed2974081ac7",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/3366bb10-d6b0-4816-8788-ed2974081ac717872515499VhU.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/3366bb10-d6b0-4816-8788-ed2974081ac717872515499VhU.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "fc1b960f-91ae-4912-8869-27c3f3d3c82c",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/fc1b960f-91ae-4912-8869-27c3f3d3c82c1787251562yzN8.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/fc1b960f-91ae-4912-8869-27c3f3d3c82c1787251562yzN8.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "9074ef76-1059-478b-a30a-2b1937efce45",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/9074ef76-1059-478b-a30a-2b1937efce451787251515TZEy.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/f34ba3d9-730d-46bd-af3a-a2ad1c0c4c2c\/images\/600x450\/outside\/9074ef76-1059-478b-a30a-2b1937efce451787251515TZEy.webp"
+          },
+          "is_external": false
+        }
+      ]
+    },
+    {
+      "id": "03061531-c380-44d0-b81c-5aaa9185d5bb",
+      "price": "R$480.000,00",
+      "total_price": "R$480.000,00",
+      "shown_total_price": false,
+      "transaction": "VENDA",
+      "is_previous_price": false,
+      "previous_price": "R$0,00",
+      "reference": "713",
+      "address": {
+        "formatted": "Teixeira Dias (Barreiro) - Belo Horizonte\/MG"
+      },
+      "areas": {
+        "built_area": {
+          "name": "built_area",
+          "title": "\u00c1rea Constru\u00edda",
+          "value": "150",
+          "measure": "m\u00b2"
+        }
+      },
+      "rooms": {
+        "garage": {
+          "name": "garage",
+          "extra": {
+            "is_covered": {
+              "name": "is_covered",
+              "title": "Garagem coberta?",
+              "value": true
+            }
+          },
+          "title": "Garagem",
+          "value": 2,
+          "title_formated": "2 Garagens"
+        },
+        "pantry": {
+          "name": "pantry",
+          "title": "Copa",
+          "value": 1,
+          "title_formated": "1 Copa"
+        },
+        "tvroom": {
+          "name": "tvroom",
+          "title": "Sala de TV",
+          "value": 1,
+          "title_formated": "1 Sala de TV"
+        },
+        "bedroom": {
+          "name": "bedroom",
+          "title": "Dormit\u00f3rio",
+          "value": 3,
+          "title_formated": "3 Dormit\u00f3rios"
+        },
+        "kitchen": {
+          "name": "kitchen",
+          "title": "Cozinha",
+          "value": 1,
+          "title_formated": "1 Cozinha"
+        },
+        "bathroom": {
+          "name": "bathroom",
+          "title": "Banheiro",
+          "value": 2,
+          "title_formated": "2 Banheiros"
+        },
+        "diningroom": {
+          "name": "diningroom",
+          "title": "Sala de jantar",
+          "value": 1,
+          "title_formated": "1 Sala de jantar"
+        },
+        "livingroom": {
+          "name": "livingroom",
+          "title": "Sala de estar",
+          "value": 1,
+          "title_formated": "1 Sala de estar"
+        },
+        "service_area": {
+          "name": "service_area",
+          "title": "\u00c1rea de servi\u00e7o",
+          "value": 1,
+          "title_formated": "1 \u00c1rea de servi\u00e7o"
+        }
+      },
+      "meta_title": "Apartamento \u00e0 venda no bairro Teixeira Dias (Barreiro) em Belo Horizonte\/MG",
+      "title_formatted": "Apartamento Cobertura Duplex em Teixeira Dias (Barreiro), Belo Horizonte\/MG",
+      "stripe_text": "Pronto para morar",
+      "stripe_background": "#111BAC",
+      "url": "apartamento-a-venda-no-bairro-teixeira-dias-barreiro-em-belo-horizonte-mg\/713",
+      "images": [
+        {
+          "id": "5fecabad-f4a8-4731-9f61-361935bea366",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/5fecabad-f4a8-4731-9f61-361935bea3661787230807C93j.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/5fecabad-f4a8-4731-9f61-361935bea3661787230807C93j.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "7c63d442-e207-4596-b5e3-333f75dc44ef",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/7c63d442-e207-4596-b5e3-333f75dc44ef1787230807CnAA.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/7c63d442-e207-4596-b5e3-333f75dc44ef1787230807CnAA.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c3a9c91a-6efe-4c7a-9180-aa584c385b1d",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/c3a9c91a-6efe-4c7a-9180-aa584c385b1d1787230805yR09.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/c3a9c91a-6efe-4c7a-9180-aa584c385b1d1787230805yR09.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "4c841cc9-5c21-408f-96b2-9cf9517f8532",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/4c841cc9-5c21-408f-96b2-9cf9517f8532178723080454AM.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/4c841cc9-5c21-408f-96b2-9cf9517f8532178723080454AM.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b059e5ec-efba-4692-804f-1d96564f8632",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/b059e5ec-efba-4692-804f-1d96564f86321787230804UY4t.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/b059e5ec-efba-4692-804f-1d96564f86321787230804UY4t.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "aa910c33-1611-42cb-99e6-71f0a46becc9",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/aa910c33-1611-42cb-99e6-71f0a46becc917872308051wox.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/aa910c33-1611-42cb-99e6-71f0a46becc917872308051wox.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "5396097f-cb67-4cc1-a4b0-eb817535328b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/5396097f-cb67-4cc1-a4b0-eb817535328b1787230807DdNq.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/5396097f-cb67-4cc1-a4b0-eb817535328b1787230807DdNq.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "fcfc5e0d-d684-4d4a-913b-dac8757caa58",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/fcfc5e0d-d684-4d4a-913b-dac8757caa581787230810FEg7.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/fcfc5e0d-d684-4d4a-913b-dac8757caa581787230810FEg7.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "60981965-e8d3-4cc4-92f5-29767d4dbcf1",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/60981965-e8d3-4cc4-92f5-29767d4dbcf11787230807WJ8n.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/60981965-e8d3-4cc4-92f5-29767d4dbcf11787230807WJ8n.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "52a7b014-23e2-4ec8-b7e1-ecb69151db03",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/52a7b014-23e2-4ec8-b7e1-ecb69151db031787230807qlGb.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/52a7b014-23e2-4ec8-b7e1-ecb69151db031787230807qlGb.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "97436420-db09-497c-861f-369985240a6c",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/97436420-db09-497c-861f-369985240a6c1787230811kMPM.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/97436420-db09-497c-861f-369985240a6c1787230811kMPM.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "dd4c6bef-bb51-41ef-a1c6-995932d7538a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/dd4c6bef-bb51-41ef-a1c6-995932d7538a1787230811SWXi.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/dd4c6bef-bb51-41ef-a1c6-995932d7538a1787230811SWXi.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "57aed291-ee86-414f-b083-913050b99b78",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/57aed291-ee86-414f-b083-913050b99b781787230811I2Fo.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/57aed291-ee86-414f-b083-913050b99b781787230811I2Fo.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "91d00c4a-9a4c-49dd-8810-d2a50124719e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/91d00c4a-9a4c-49dd-8810-d2a50124719e1787230811dhmC.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/91d00c4a-9a4c-49dd-8810-d2a50124719e1787230811dhmC.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c0d1f1c4-8a59-4904-8ff2-6b178997a90f",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/c0d1f1c4-8a59-4904-8ff2-6b178997a90f1787230804ct6F.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/03061531-c380-44d0-b81c-5aaa9185d5bb\/images\/600x450\/outside\/c0d1f1c4-8a59-4904-8ff2-6b178997a90f1787230804ct6F.webp"
+          },
+          "is_external": false
+        }
+      ]
+    },
+    {
+      "id": "8cbd5efb-416a-4827-a48c-15fdee58fb8d",
+      "price": "R$380.000,00",
+      "total_price": "R$380.000,00",
+      "shown_total_price": false,
+      "transaction": "VENDA",
+      "is_previous_price": false,
+      "previous_price": "R$0,00",
+      "reference": "712",
+      "address": { "formatted": "Novo Horizonte - Ibirit\u00e9\/MG" },
+      "areas": {
+        "primary_area": {
+          "name": "built_area",
+          "title": "\u00c1rea Constru\u00edda",
+          "value": "120",
+          "measure": "m\u00b2"
+        },
+        "total_area": {
+          "name": "total_area",
+          "title": "Terreno \u00c1rea Total",
+          "value": "370,94",
+          "measure": "m\u00b2"
+        }
+      },
+      "rooms": {
+        "garage": {
+          "name": "garage",
+          "title": "Garagem",
+          "value": 4,
+          "title_formated": "4 Garagens"
+        },
+        "pantry": {
+          "name": "pantry",
+          "title": "Copa",
+          "value": 1,
+          "title_formated": "1 Copa"
+        },
+        "bedroom": {
+          "name": "bedroom",
+          "title": "Dormit\u00f3rio",
+          "value": 3,
+          "title_formated": "3 Dormit\u00f3rios"
+        },
+        "kitchen": {
+          "name": "kitchen",
+          "title": "Cozinha",
+          "value": 1,
+          "title_formated": "1 Cozinha"
+        },
+        "bathroom": {
+          "name": "bathroom",
+          "title": "Banheiro",
+          "value": 1,
+          "title_formated": "1 Banheiro"
+        },
+        "livingroom": {
+          "name": "livingroom",
+          "title": "Sala de estar",
+          "value": 1,
+          "title_formated": "1 Sala de estar"
+        },
+        "service_area": {
+          "name": "service_area",
+          "title": "\u00c1rea de servi\u00e7o",
+          "value": 1,
+          "title_formated": "1 \u00c1rea de servi\u00e7o"
+        },
+        "employeeDependency": {
+          "name": "employeeDependency",
+          "title": "Depend\u00eancia de servi\u00e7o",
+          "value": 1,
+          "title_formated": "1 Depend\u00eancia p\/empregada"
+        }
+      },
+      "meta_title": "Casa \u00e0 venda no bairro Novo Horizonte em Ibirit\u00e9\/MG",
+      "title_formatted": "Casa em Novo Horizonte, Ibirit\u00e9\/MG",
+      "stripe_text": "Pronto para morar",
+      "stripe_background": "#111BAC",
+      "url": "casa-a-venda-no-bairro-novo-horizonte-em-ibirite-mg\/712",
+      "images": [
+        {
+          "id": "959102dd-91cb-4ee9-b0a9-7488093ebb60",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/959102dd-91cb-4ee9-b0a9-7488093ebb601787061242aYxg.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/959102dd-91cb-4ee9-b0a9-7488093ebb601787061242aYxg.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "1f0f8016-db7a-41fc-9944-bff6dbbe3e00",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/1f0f8016-db7a-41fc-9944-bff6dbbe3e001787061232oTSg.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/1f0f8016-db7a-41fc-9944-bff6dbbe3e001787061232oTSg.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "0ab138eb-517c-4cbc-9fc7-5f510d1cd35b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/0ab138eb-517c-4cbc-9fc7-5f510d1cd35b1787061246cQri.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/0ab138eb-517c-4cbc-9fc7-5f510d1cd35b1787061246cQri.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "8b45e418-24e4-4048-bf04-82b9de2adbc0",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/8b45e418-24e4-4048-bf04-82b9de2adbc017870612286rMh.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/8b45e418-24e4-4048-bf04-82b9de2adbc017870612286rMh.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "f9b926c9-67cc-4be2-b71d-1d828b87a2d1",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/f9b926c9-67cc-4be2-b71d-1d828b87a2d11787061249geBR.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/f9b926c9-67cc-4be2-b71d-1d828b87a2d11787061249geBR.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "4ed83b15-45a9-455a-837c-fa1c216d9650",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/4ed83b15-45a9-455a-837c-fa1c216d96501787061238VaQO.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/4ed83b15-45a9-455a-837c-fa1c216d96501787061238VaQO.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "e4b110df-93a0-49f3-9e2a-d0030a5fccec",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/e4b110df-93a0-49f3-9e2a-d0030a5fccec1787061228dm16.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/e4b110df-93a0-49f3-9e2a-d0030a5fccec1787061228dm16.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "be103d7a-71d5-4318-b1be-ff3e8afd25b1",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/be103d7a-71d5-4318-b1be-ff3e8afd25b11787061232p4Zy.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/be103d7a-71d5-4318-b1be-ff3e8afd25b11787061232p4Zy.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "6b83444f-4a4a-47ea-968d-28e93b19e427",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/6b83444f-4a4a-47ea-968d-28e93b19e4271787061233L1MV.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/6b83444f-4a4a-47ea-968d-28e93b19e4271787061233L1MV.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "0b4dec83-aa0a-403a-a47b-73af47a07569",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/0b4dec83-aa0a-403a-a47b-73af47a075691787061238A2vy.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/0b4dec83-aa0a-403a-a47b-73af47a075691787061238A2vy.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "e68c675b-33a7-440c-9adf-a7e47a323e9d",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/e68c675b-33a7-440c-9adf-a7e47a323e9d1787061239WjRf.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/e68c675b-33a7-440c-9adf-a7e47a323e9d1787061239WjRf.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c007edf4-6acf-49f9-b3f6-0ffb03b22d36",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/c007edf4-6acf-49f9-b3f6-0ffb03b22d361787061229XN5M.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/c007edf4-6acf-49f9-b3f6-0ffb03b22d361787061229XN5M.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "fa61cb54-b261-4e07-bba1-c889209eba58",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/fa61cb54-b261-4e07-bba1-c889209eba581787061246CXPh.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/fa61cb54-b261-4e07-bba1-c889209eba581787061246CXPh.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "b3f98d96-b5a4-497e-b7fa-218265fa9ee0",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/b3f98d96-b5a4-497e-b7fa-218265fa9ee01787061242SpFm.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/b3f98d96-b5a4-497e-b7fa-218265fa9ee01787061242SpFm.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "6495f556-1099-4722-8b6d-8f1364bac6a4",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/6495f556-1099-4722-8b6d-8f1364bac6a41787061238ATeD.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/6495f556-1099-4722-8b6d-8f1364bac6a41787061238ATeD.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "8674062c-fa8d-432b-816c-d1fd0f4971af",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/8674062c-fa8d-432b-816c-d1fd0f4971af1787061249O7HH.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/8674062c-fa8d-432b-816c-d1fd0f4971af1787061249O7HH.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "fc6edb5f-0242-4b8d-a4cd-4359828224de",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/fc6edb5f-0242-4b8d-a4cd-4359828224de178706122845xV.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/fc6edb5f-0242-4b8d-a4cd-4359828224de178706122845xV.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "a3a967b3-65e1-4f07-9335-9361089f810d",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/a3a967b3-65e1-4f07-9335-9361089f810d1787061249xFK4.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/a3a967b3-65e1-4f07-9335-9361089f810d1787061249xFK4.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "54052f78-8e31-4fb7-8eaa-27611fa511ee",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/54052f78-8e31-4fb7-8eaa-27611fa511ee1787061253lz7q.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/54052f78-8e31-4fb7-8eaa-27611fa511ee1787061253lz7q.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "6a351752-afc8-470e-aee8-35d3c3e87e81",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/6a351752-afc8-470e-aee8-35d3c3e87e811787061234J70m.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/6a351752-afc8-470e-aee8-35d3c3e87e811787061234J70m.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "dcbab27e-6907-4111-9c77-0db616e6aa0e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/dcbab27e-6907-4111-9c77-0db616e6aa0e1787061243co5f.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/dcbab27e-6907-4111-9c77-0db616e6aa0e1787061243co5f.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "ab83d2e8-5a24-41cd-9553-e0130ff2c00a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/ab83d2e8-5a24-41cd-9553-e0130ff2c00a1787061228CTZS.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/ab83d2e8-5a24-41cd-9553-e0130ff2c00a1787061228CTZS.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "bb3f7521-4270-438c-b734-efbd810a45fa",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/bb3f7521-4270-438c-b734-efbd810a45fa1787061253tinR.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/bb3f7521-4270-438c-b734-efbd810a45fa1787061253tinR.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "9ecf21dd-e0f3-4978-976f-25b513b791a5",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/9ecf21dd-e0f3-4978-976f-25b513b791a51787061246B917.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/9ecf21dd-e0f3-4978-976f-25b513b791a51787061246B917.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "90154847-bc41-4d51-a07b-4916bc1addbf",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/90154847-bc41-4d51-a07b-4916bc1addbf1787061246WSzU.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/90154847-bc41-4d51-a07b-4916bc1addbf1787061246WSzU.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "d341c7ef-1184-4554-9c1e-839f93ef93c5",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/d341c7ef-1184-4554-9c1e-839f93ef93c51787061253OiIh.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/d341c7ef-1184-4554-9c1e-839f93ef93c51787061253OiIh.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "23e2a0a5-94c4-47d2-9652-7a50777dd25b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/23e2a0a5-94c4-47d2-9652-7a50777dd25b1787061246EaWh.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/23e2a0a5-94c4-47d2-9652-7a50777dd25b1787061246EaWh.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "a2d59da4-f765-431e-94dc-5be726f3cb97",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/a2d59da4-f765-431e-94dc-5be726f3cb971787061253y8uF.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/a2d59da4-f765-431e-94dc-5be726f3cb971787061253y8uF.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "5a0e7acb-1837-4e42-a0a4-7bbb2221f636",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/5a0e7acb-1837-4e42-a0a4-7bbb2221f6361787061250GklA.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/5a0e7acb-1837-4e42-a0a4-7bbb2221f6361787061250GklA.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "24762dfa-be68-4c68-91ec-f1800b7cb891",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/24762dfa-be68-4c68-91ec-f1800b7cb8911787061250QVqX.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/24762dfa-be68-4c68-91ec-f1800b7cb8911787061250QVqX.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "353ccf27-88cc-44bb-b582-8b9333779f88",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/353ccf27-88cc-44bb-b582-8b9333779f881787061243KOTa.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/353ccf27-88cc-44bb-b582-8b9333779f881787061243KOTa.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "cc52d9a5-a333-4a9c-9a7e-9dd842d29118",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/cc52d9a5-a333-4a9c-9a7e-9dd842d291181787061239zqhS.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/cc52d9a5-a333-4a9c-9a7e-9dd842d291181787061239zqhS.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "c75f87d3-5187-4442-8353-e5a3db1830d9",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/c75f87d3-5187-4442-8353-e5a3db1830d91787061243AdlC.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/c75f87d3-5187-4442-8353-e5a3db1830d91787061243AdlC.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "0487dcfb-2721-428e-9ac2-1b5ca6703846",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/0487dcfb-2721-428e-9ac2-1b5ca67038461787061234rZTz.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/8cbd5efb-416a-4827-a48c-15fdee58fb8d\/images\/600x450\/outside\/0487dcfb-2721-428e-9ac2-1b5ca67038461787061234rZTz.webp"
+          },
+          "is_external": false
+        }
+      ]
+    },
+    {
+      "id": "2d4af435-9981-4514-899c-6f22462b9086",
+      "price": "R$595.000,00",
+      "total_price": "R$595.000,00",
+      "shown_total_price": false,
+      "transaction": "VENDA",
+      "is_previous_price": false,
+      "previous_price": "R$0,00",
+      "reference": "710",
+      "address": {
+        "formatted": "Milion\u00e1rios (Barreiro) - Belo Horizonte\/MG"
+      },
+      "areas": {
+        "built_area": {
+          "name": "built_area",
+          "title": "\u00c1rea Constru\u00edda",
+          "value": "78,82",
+          "measure": "m\u00b2"
+        },
+        "primary_area": {
+          "name": "private_area",
+          "title": "\u00c1rea Privativa",
+          "value": "19,76",
+          "measure": "m\u00b2"
+        }
+      },
+      "rooms": {
+        "suite": {
+          "name": "suite",
+          "title": "Sendo su\u00edte",
+          "value": 1,
+          "title_formated": "1 Su\u00edte"
+        },
+        "garage": {
+          "name": "garage",
+          "extra": {
+            "is_covered": {
+              "name": "is_covered",
+              "title": "Garagem coberta?",
+              "value": true
+            }
+          },
+          "title": "Garagem",
+          "value": 1,
+          "title_formated": "1 Garagem"
+        },
+        "pantry": {
+          "name": "pantry",
+          "title": "Copa",
+          "value": 1,
+          "title_formated": "1 Copa"
+        },
+        "tvroom": {
+          "name": "tvroom",
+          "title": "Sala de TV",
+          "value": 1,
+          "title_formated": "1 Sala de TV"
+        },
+        "bedroom": {
+          "name": "bedroom",
+          "title": "Dormit\u00f3rio",
+          "value": 3,
+          "title_formated": "3 Dormit\u00f3rios, sendo 1 su\u00edte"
+        },
+        "kitchen": {
+          "name": "kitchen",
+          "title": "Cozinha",
+          "value": 1,
+          "title_formated": "1 Cozinha"
+        },
+        "bathroom": {
+          "name": "bathroom",
+          "title": "Banheiro",
+          "value": 1,
+          "title_formated": "1 Banheiro"
+        },
+        "diningroom": {
+          "name": "diningroom",
+          "title": "Sala de jantar",
+          "value": 1,
+          "title_formated": "1 Sala de jantar"
+        },
+        "livingroom": {
+          "name": "livingroom",
+          "title": "Sala de estar",
+          "value": 1,
+          "title_formated": "1 Sala de estar"
+        },
+        "service_area": {
+          "name": "service_area",
+          "title": "\u00c1rea de servi\u00e7o",
+          "value": 1,
+          "title_formated": "1 \u00c1rea de servi\u00e7o"
+        }
+      },
+      "meta_title": "Apartamento \u00e0 venda no bairro Milion\u00e1rios (Barreiro) em Belo Horizonte\/MG",
+      "title_formatted": "Apartamento Cobertura em Milion\u00e1rios (Barreiro), Belo Horizonte\/MG",
+      "stripe_text": "Em constru\u00e7\u00e3o",
+      "stripe_background": "#111BAC",
+      "url": "apartamento-a-venda-no-bairro-milionarios-barreiro-em-belo-horizonte-mg\/710",
+      "images": [
+        {
+          "id": "71503d07-4e7b-4808-a077-095a2e9c6108",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/71503d07-4e7b-4808-a077-095a2e9c61081787003114o7CX.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/600x450\/outside\/71503d07-4e7b-4808-a077-095a2e9c61081787003114o7CX.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "ad4f14b8-4970-46cf-bc49-99c6b7e8427e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/ad4f14b8-4970-46cf-bc49-99c6b7e8427e1787003114VAnL.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/600x450\/outside\/ad4f14b8-4970-46cf-bc49-99c6b7e8427e1787003114VAnL.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "64d7cfb7-7120-426e-8be8-40a66d9db84a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/64d7cfb7-7120-426e-8be8-40a66d9db84a1787003109ei7a.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/600x450\/outside\/64d7cfb7-7120-426e-8be8-40a66d9db84a1787003109ei7a.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "7c0cd5b3-4ccb-4177-a8f0-87e81fb4017c",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/7c0cd5b3-4ccb-4177-a8f0-87e81fb4017c1787003109gYG3.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/600x450\/outside\/7c0cd5b3-4ccb-4177-a8f0-87e81fb4017c1787003109gYG3.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "90275853-539a-489b-ac61-37997b995281",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/90275853-539a-489b-ac61-37997b9952811787003114mS0b.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/600x450\/outside\/90275853-539a-489b-ac61-37997b9952811787003114mS0b.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "973f3592-fdf5-4f59-bebb-b6cd03807f76",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/973f3592-fdf5-4f59-bebb-b6cd03807f761787003110Fay7.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/600x450\/outside\/973f3592-fdf5-4f59-bebb-b6cd03807f761787003110Fay7.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "ebed0bd2-dde1-485c-bb6d-e1040594bb0e",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/ebed0bd2-dde1-485c-bb6d-e1040594bb0e17870031095R9q.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/600x450\/outside\/ebed0bd2-dde1-485c-bb6d-e1040594bb0e17870031095R9q.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "343bba32-8924-4f6a-a3f2-3a7c9a17cbfa",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/343bba32-8924-4f6a-a3f2-3a7c9a17cbfa1787003109hjhs.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/2d4af435-9981-4514-899c-6f22462b9086\/images\/600x450\/outside\/343bba32-8924-4f6a-a3f2-3a7c9a17cbfa1787003109hjhs.webp"
+          },
+          "is_external": false
+        }
+      ]
+    },
+    {
+      "id": "11d62527-a0df-4e8e-b074-0f0f6df03e26",
+      "price": "R$610.000,00",
+      "total_price": "R$610.000,00",
+      "shown_total_price": false,
+      "transaction": "VENDA",
+      "is_previous_price": false,
+      "previous_price": "R$0,00",
+      "reference": "709",
+      "address": {
+        "formatted": "Milion\u00e1rios (Barreiro) - Belo Horizonte\/MG"
+      },
+      "areas": {
+        "built_area": {
+          "name": "built_area",
+          "title": "\u00c1rea Constru\u00edda",
+          "value": "53,41",
+          "measure": "m\u00b2"
+        },
+        "primary_area": {
+          "name": "private_area",
+          "title": "\u00c1rea Privativa",
+          "value": "48,30",
+          "measure": "m\u00b2"
+        }
+      },
+      "rooms": {
+        "suite": {
+          "name": "suite",
+          "title": "Sendo su\u00edte",
+          "value": 1,
+          "title_formated": "1 Su\u00edte"
+        },
+        "garage": {
+          "name": "garage",
+          "title": "Garagem",
+          "value": 1,
+          "title_formated": "1 Garagem"
+        },
+        "pantry": {
+          "name": "pantry",
+          "title": "Copa",
+          "value": 1,
+          "title_formated": "1 Copa"
+        },
+        "bedroom": {
+          "name": "bedroom",
+          "title": "Dormit\u00f3rio",
+          "value": 2,
+          "title_formated": "2 Dormit\u00f3rios, sendo 1 su\u00edte"
+        },
+        "kitchen": {
+          "name": "kitchen",
+          "title": "Cozinha",
+          "value": 1,
+          "title_formated": "1 Cozinha"
+        },
+        "bathroom": {
+          "name": "bathroom",
+          "title": "Banheiro",
+          "value": 1,
+          "title_formated": "1 Banheiro"
+        },
+        "diningroom": {
+          "name": "diningroom",
+          "title": "Sala de jantar",
+          "value": 1,
+          "title_formated": "1 Sala de jantar"
+        },
+        "livingroom": {
+          "name": "livingroom",
+          "title": "Sala de estar",
+          "value": 1,
+          "title_formated": "1 Sala de estar"
+        },
+        "service_area": {
+          "name": "service_area",
+          "title": "\u00c1rea de servi\u00e7o",
+          "value": 1,
+          "title_formated": "1 \u00c1rea de servi\u00e7o"
+        }
+      },
+      "meta_title": "Apartamento \u00e0 venda no bairro Milion\u00e1rios (Barreiro) em Belo Horizonte\/MG",
+      "title_formatted": "Apartamento Com \u00e1rea externa em Milion\u00e1rios (Barreiro), Belo Horizonte\/MG",
+      "stripe_text": "Em constru\u00e7\u00e3o",
+      "stripe_background": "#111BAC",
+      "url": "apartamento-a-venda-no-bairro-milionarios-barreiro-em-belo-horizonte-mg\/709",
+      "images": [
+        {
+          "id": "30b59eae-cb7d-42c9-9f4d-b2a9084d1bdf",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/30b59eae-cb7d-42c9-9f4d-b2a9084d1bdf17870024257RSN.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/600x450\/outside\/30b59eae-cb7d-42c9-9f4d-b2a9084d1bdf17870024257RSN.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "ceee111e-cae2-437e-b59f-96bf6c90f8e5",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/ceee111e-cae2-437e-b59f-96bf6c90f8e51787002429BYLs.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/600x450\/outside\/ceee111e-cae2-437e-b59f-96bf6c90f8e51787002429BYLs.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "ee0abf69-5d3d-4194-a09f-f796e95aee3d",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/ee0abf69-5d3d-4194-a09f-f796e95aee3d17870024259oOS.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/600x450\/outside\/ee0abf69-5d3d-4194-a09f-f796e95aee3d17870024259oOS.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "cae8f0a8-fe88-47d1-b6e8-8e8e677d317b",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/cae8f0a8-fe88-47d1-b6e8-8e8e677d317b1787002424kdha.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/600x450\/outside\/cae8f0a8-fe88-47d1-b6e8-8e8e677d317b1787002424kdha.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "5968e475-9e06-4578-8583-f5460f3163c2",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/5968e475-9e06-4578-8583-f5460f3163c21787002424IkoN.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/600x450\/outside\/5968e475-9e06-4578-8583-f5460f3163c21787002424IkoN.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "76aba572-eaeb-4c24-a6b3-dfc9b2ed39c8",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/76aba572-eaeb-4c24-a6b3-dfc9b2ed39c81787002429VmEC.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/600x450\/outside\/76aba572-eaeb-4c24-a6b3-dfc9b2ed39c81787002429VmEC.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "e11b9721-61b0-4275-97cb-9c64fa92ad1a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/e11b9721-61b0-4275-97cb-9c64fa92ad1a1787002429UZLv.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/600x450\/outside\/e11b9721-61b0-4275-97cb-9c64fa92ad1a1787002429UZLv.webp"
+          },
+          "is_external": false
+        },
+        {
+          "id": "0304bda2-0867-46aa-b519-ffde2b7a0f9a",
+          "gallery": 1,
+          "caption": null,
+          "file_url": {
+            "large": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/0304bda2-0867-46aa-b519-ffde2b7a0f9a1787002425pyld.jpg",
+            "medium": "https:\/\/imagens.tecimob.com.br\/media\/dcda8854-f780-44ae-80b9-d5e274511f85\/properties\/11d62527-a0df-4e8e-b074-0f0f6df03e26\/images\/600x450\/outside\/0304bda2-0867-46aa-b519-ffde2b7a0f9a1787002425pyld.webp"
+          },
+          "is_external": false
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 40,
+      "per_page": 8,
+      "current_page": 1,
+      "total_pages": 5
+    }
+  }
+}

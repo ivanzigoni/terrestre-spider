@@ -1,0 +1,953 @@
+<!DOCTYPE html><html class="no-js" lang="pt-BR"><head><meta charset="UTF-8"><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XVZZXZTY8R&amp;cx=c&amp;gtm=4e68q1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WPLCTFQ"></script><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+        <!-- Analitycs - Início -->
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPLCTFQ');</script>
+<!-- End Google Tag Manager -->    <!-- Analytics - Fim -->
+    
+    <title>Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis - Imobiliária Pampulha</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+            <link rel="shortcut icon" href="https://imobiliariapampulha.com.br/wp-content/uploads/2023/03/favicon.svg">
+        <link rel="icon" href="https://imobiliariapampulha.com.br/wp-content/uploads/2023/03/favicon.svg">
+                                    <script type="rocketlazyloadscript">
+                            /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
+                            if ( typeof WebFontConfig === "undefined" ) {
+                                WebFontConfig = new Object();
+                            }
+                            WebFontConfig['google'] = {families: ['Archivo:500,600']};
+
+                            (function() {
+                                var wf = document.createElement( 'script' );
+                                wf.src = 'https://ajax.go' + 'ogleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
+                                wf.type = 'text/javascript';
+                                wf.async = 'true';
+                                var s = document.getElementsByTagName( 'script' )[0];
+                                s.parentNode.insertBefore( wf, s );
+                            })();
+                        </script>
+                        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.1 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis - Imobiliária Pampulha</title>
+	<link rel="canonical" href="https://imobiliariapampulha.com.br/imovel/apartamento-a-venda-com-85m²-3-quartos-e-2-vagas-buritis/">
+	<meta property="og:locale" content="pt_BR">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis - Imobiliária Pampulha">
+	<meta property="og:description" content="Imóvel aconchegante à venda com 3 quartos, sendo 1 suíte, e 2 banheiros no total. Este imóvel é bem equipado, bom para quem procura conforto e comodidade e fica situado no 15º andar. O condomínio é bem equipado com diversas instalações, apropriado para quem busca lazer sem sair de casa.">
+	<meta property="og:url" content="https://imobiliariapampulha.com.br/imovel/apartamento-a-venda-com-85m²-3-quartos-e-2-vagas-buritis/">
+	<meta property="og:site_name" content="Imobiliária Pampulha">
+	<meta property="article:publisher" content="https://pt-br.facebook.com/">
+	<meta property="article:modified_time" content="2023-03-15T20:24:14+00:00">
+	<meta property="og:image" content="https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/maxresdefault.jpg">
+	<meta property="og:image:width" content="800">
+	<meta property="og:image:height" content="450">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@l">
+	<meta name="twitter:label1" content="Est. tempo de leitura">
+	<meta name="twitter:data1" content="1 minuto">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/imobiliariapampulha.com.br\/imovel\/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis\/","url":"https:\/\/imobiliariapampulha.com.br\/imovel\/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis\/","name":"Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis - Imobiliária Pampulha","isPartOf":{"@id":"https:\/\/imobiliariapampulha.com.br\/#website"},"primaryImageOfPage":{"@id":"https:\/\/imobiliariapampulha.com.br\/imovel\/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis\/#primaryimage"},"image":{"@id":"https:\/\/imobiliariapampulha.com.br\/imovel\/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis\/#primaryimage"},"thumbnailUrl":"https:\/\/imobiliariapampulha.com.br\/wp-content\/uploads\/2023\/01\/maxresdefault.jpg","datePublished":"2023-01-26T18:00:49+00:00","dateModified":"2023-03-15T20:24:14+00:00","breadcrumb":{"@id":"https:\/\/imobiliariapampulha.com.br\/imovel\/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis\/#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/imobiliariapampulha.com.br\/imovel\/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis\/"]}]},{"@type":"ImageObject","inLanguage":"pt-BR","@id":"https:\/\/imobiliariapampulha.com.br\/imovel\/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis\/#primaryimage","url":"https:\/\/imobiliariapampulha.com.br\/wp-content\/uploads\/2023\/01\/maxresdefault.jpg","contentUrl":"https:\/\/imobiliariapampulha.com.br\/wp-content\/uploads\/2023\/01\/maxresdefault.jpg","width":800,"height":450},{"@type":"BreadcrumbList","@id":"https:\/\/imobiliariapampulha.com.br\/imovel\/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https:\/\/imobiliariapampulha.com.br\/"},{"@type":"ListItem","position":2,"name":"Comprar","item":"https:\/\/imobiliariapampulha.com.br\/categoria\/comprar\/"},{"@type":"ListItem","position":3,"name":"Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis"}]},{"@type":"WebSite","@id":"https:\/\/imobiliariapampulha.com.br\/#website","url":"https:\/\/imobiliariapampulha.com.br\/","name":"Imobiliária Pampulha","description":"Imóveis para todos os padrões de exigência","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/imobiliariapampulha.com.br\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pt-BR"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+/**
+ * Colors
+ */
+/**
+ * Typography
+ */
+/**
+ * SCSS Variables.
+ *
+ * Please use variables from this sheet to ensure consistency across the UI.
+ * Don't add to this sheet unless you're pretty sure the value will be reused in many places.
+ * For example, don't add rules to this sheet that affect block visuals. It's purely for UI.
+ */
+/**
+ * Fonts & basic variables.
+ */
+/**
+ * Typography
+ */
+/**
+ * Grid System.
+ * https://make.wordpress.org/design/2019/10/31/proposal-a-consistent-spacing-system-for-wordpress/
+ */
+/**
+ * Radius scale.
+ */
+/**
+ * Elevation scale.
+ */
+/**
+ * Dimensions.
+ */
+/**
+ * Mobile specific styles
+ */
+/**
+ * Editor styles.
+ */
+/**
+ * Block & Editor UI.
+ */
+/**
+ * Block paddings.
+ */
+/**
+ * React Native specific.
+ * These variables do not appear to be used anywhere else.
+ */
+/**
+ * Breakpoints & Media Queries
+ */
+/**
+*  Converts a hex value into the rgb equivalent.
+*
+* @param {string} hex - the hexadecimal value to convert
+* @return {string} comma separated rgb values
+*/
+/**
+ * Long content fade mixin
+ *
+ * Creates a fading overlay to signify that the content is longer
+ * than the space allows.
+ */
+/**
+ * Breakpoint mixins
+ */
+/**
+ * Focus styles.
+ */
+/**
+ * Standard focus rings for the WordPress Design System.
+ *
+ * Apply `outset-ring__focus` inside the relevant pseudo-class at the call site,
+ * e.g. `&:focus { @include outset-ring__focus(); }`.
+ */
+/**
+ * Applies editor left position to the selector passed as argument
+ */
+/**
+ * Styles that are reused verbatim in a few places
+ */
+/**
+ * Allows users to opt-out of animations via OS-level preferences.
+ */
+/**
+ * Reset default styles for JavaScript UI based pages.
+ * This is a WP-admin agnostic reset
+ */
+/**
+ * Reset the WP Admin page styles for Gutenberg-like pages.
+ */
+/**
+ * Creates a checkerboard pattern background to indicate transparency.
+ * @param {String} $size - The size of the squares in the checkerboard pattern. Default is 12px.
+ */
+:root {
+  --wp-block-synced-color: #7a00df;
+  --wp-block-synced-color--rgb: 122, 0, 223;
+  --wp-bound-block-color: var(--wp-block-synced-color);
+  --wp-editor-canvas-background: #ddd;
+  --wp-admin-theme-color: #007cba;
+  --wp-admin-theme-color--rgb: 0, 124, 186;
+  --wp-admin-theme-color-darker-10: rgb(0, 107, 160.5);
+  --wp-admin-theme-color-darker-10--rgb: 0, 107, 160.5;
+  --wp-admin-theme-color-darker-20: #005a87;
+  --wp-admin-theme-color-darker-20--rgb: 0, 90, 135;
+  --wp-admin-border-width-focus: 2px;
+}
+@media (min-resolution: 192dpi) {
+  :root {
+    --wp-admin-border-width-focus: 1.5px;
+  }
+}
+
+/**
+ * Element styles.
+ */
+.wp-element-button {
+  cursor: pointer;
+}
+
+:root .has-very-light-gray-background-color {
+  background-color: #eee;
+}
+:root .has-very-dark-gray-background-color {
+  background-color: #313131;
+}
+:root .has-very-light-gray-color {
+  color: #eee;
+}
+:root .has-very-dark-gray-color {
+  color: #313131;
+}
+:root {
+  /* stylelint-disable @stylistic/function-comma-space-after -- We can not use spacing because of WP multi site kses rule. */
+}
+:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background {
+  background: linear-gradient(135deg, rgb(0, 208, 132) 0%, rgb(6, 147, 227) 100%);
+}
+:root .has-purple-crush-gradient-background {
+  background: linear-gradient(135deg, rgb(52, 226, 228) 0%, rgb(71, 33, 251) 50%, rgb(171, 29, 254) 100%);
+}
+:root .has-hazy-dawn-gradient-background {
+  background: linear-gradient(135deg, rgb(250, 172, 168) 0%, rgb(218, 208, 236) 100%);
+}
+:root .has-subdued-olive-gradient-background {
+  background: linear-gradient(135deg, rgb(250, 250, 225) 0%, rgb(103, 166, 113) 100%);
+}
+:root .has-atomic-cream-gradient-background {
+  background: linear-gradient(135deg, rgb(253, 215, 154) 0%, rgb(0, 74, 89) 100%);
+}
+:root .has-nightshade-gradient-background {
+  background: linear-gradient(135deg, rgb(51, 9, 104) 0%, rgb(49, 205, 207) 100%);
+}
+:root .has-midnight-gradient-background {
+  background: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+}
+:root {
+  /* stylelint-enable @stylistic/function-comma-space-after */
+  --wp--preset--font-size--normal: 16px;
+  --wp--preset--font-size--huge: 42px;
+}
+
+.has-regular-font-size {
+  font-size: 1em;
+}
+
+.has-larger-font-size {
+  font-size: 2.625em;
+}
+
+.has-normal-font-size {
+  font-size: var(--wp--preset--font-size--normal);
+}
+
+.has-huge-font-size {
+  font-size: var(--wp--preset--font-size--huge);
+}
+
+:root .has-text-align-center {
+  text-align: center;
+}
+
+:root .has-text-align-left {
+  /*rtl:ignore*/
+  text-align: left;
+}
+
+:root .has-text-align-right {
+  /*rtl:ignore*/
+  text-align: right;
+}
+
+.has-fit-text {
+  white-space: nowrap !important;
+}
+
+#end-resizable-editor-section {
+  display: none;
+}
+
+.aligncenter {
+  clear: both;
+}
+
+.items-justified-left {
+  justify-content: flex-start;
+}
+
+.items-justified-center {
+  justify-content: center;
+}
+
+.items-justified-right {
+  justify-content: flex-end;
+}
+
+.items-justified-space-between {
+  justify-content: space-between;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+  word-break: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #ddd;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+/**
+ * The following provide a simple means of applying a default border style when
+ * a user first makes a selection in the border block support panel.
+ * This prevents issues such as where the user could set a border width
+ * and see no border due there being no border style set.
+ *
+ * This is intended to be removed once intelligent defaults can be set while
+ * making border selections via the block support.
+ *
+ * See: https://github.com/WordPress/gutenberg/pull/33743
+ */
+html :where(.has-border-color) {
+  border-style: solid;
+}
+
+html :where([style^=border-color],
+[style*=";border-color"],
+[style*="; border-color"]) {
+  border-style: solid;
+}
+
+html :where([style^=border-top-color],
+[style*=";border-top-color"],
+[style*="; border-top-color"]) {
+  border-top-style: solid;
+}
+
+html :where([style^=border-right-color],
+[style*=";border-right-color"],
+[style*="; border-right-color"]) {
+  /*rtl:ignore*/
+  border-right-style: solid;
+}
+
+html :where([style^=border-bottom-color],
+[style*=";border-bottom-color"],
+[style*="; border-bottom-color"]) {
+  border-bottom-style: solid;
+}
+
+html :where([style^=border-left-color],
+[style*=";border-left-color"],
+[style*="; border-left-color"]) {
+  /*rtl:ignore*/
+  border-left-style: solid;
+}
+
+html :where([style^=border-width],
+[style*=";border-width"],
+[style*="; border-width"]) {
+  border-style: solid;
+}
+
+html :where([style^=border-top-width],
+[style*=";border-top-width"],
+[style*="; border-top-width"]) {
+  border-top-style: solid;
+}
+
+html :where([style^=border-right-width],
+[style*=";border-right-width"],
+[style*="; border-right-width"]) {
+  /*rtl:ignore*/
+  border-right-style: solid;
+}
+
+html :where([style^=border-bottom-width],
+[style*=";border-bottom-width"],
+[style*="; border-bottom-width"]) {
+  border-bottom-style: solid;
+}
+
+html :where([style^=border-left-width],
+[style*=";border-left-width"],
+[style*="; border-left-width"]) {
+  /*rtl:ignore*/
+  border-left-style: solid;
+}
+
+/**
+ * Provide baseline responsiveness for images.
+ */
+html :where(img[class*=wp-image-]) {
+  height: auto;
+  max-width: 100%;
+}
+
+/**
+ * Reset user agent styles for figure element margins.
+ */
+:where(figure) {
+  margin: 0 0 1em 0;
+}
+
+html :where(.is-position-sticky) {
+  --wp-admin--admin-bar--position-offset: var(--wp-admin--admin-bar--height, 0px);
+}
+
+@media screen and (max-width: 600px) {
+  html :where(.is-position-sticky) {
+    --wp-admin--admin-bar--position-offset: 0px;
+  }
+}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/**
+ * These rules are needed for backwards compatibility.
+ * They should match the button element rules in the base theme.json file.
+ */
+.wp-block-button__link {
+	color: #ffffff;
+	background-color: #32373c;
+	border-radius: 9999px; /* 100% causes an oval, but any explicit but really high value retains the pill shape. */
+
+	/* This needs a low specificity so it won't override the rules from the button element if defined in theme.json. */
+	box-shadow: none;
+	text-decoration: none;
+
+	/* The extra 2px are added to size solids the same as the outline versions.*/
+	padding: calc(0.667em + 2px) calc(1.333em + 2px);
+
+	font-size: 1.125em;
+}
+
+.wp-block-file__button {
+	background: #32373c;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*# sourceURL=/wp-includes/css/classic-themes.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="fancybox-css" href="https://imobiliariapampulha.com.br/wp-content/themes/cia-imovel/assets/libs/fancybox/jquery.fancybox.min.css?ver=1.2" media="all">
+<link rel="stylesheet" id="animate-css-css" href="https://imobiliariapampulha.com.br/wp-content/themes/cia-imovel/assets/libs/animate-css/animate.min.css?ver=1.2" media="all">
+<link data-minify="1" rel="stylesheet" id="ciathemes-styles-css" href="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/css/style.css?ver=1765682056" media="all">
+<link data-minify="1" rel="stylesheet" id="swiper-css-css" href="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/libs/swiper/css/swiper.css?ver=1765682056" media="all">
+<link data-minify="1" rel="stylesheet" id="custom-swiper-css-css" href="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/libs/swiper/css/custom-swiper.css?ver=1765682056" media="all">
+<link data-minify="1" rel="stylesheet" id="slide-single-css-css" href="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/css/slide-single.css?ver=1765757984" media="all">
+<link data-minify="1" rel="stylesheet" id="simple-favorites-css" href="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/plugins/favorites/assets/css/favorites.css?ver=1765682056" media="all">
+<script type="rocketlazyloadscript" data-minify="1" id="jquery-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/libs/jquery/jquery.js?ver=1765682056" defer=""></script>
+<script type="rocketlazyloadscript" id="maps-google-js" data-rocket-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtcBtcIacaYkyMa2TIsUcgv8VTgYQW0Sw&amp;libraries=places&amp;ver=1" defer=""></script>
+<script id="favorites-js-extra">
+var favorites_data = {"ajaxurl":"https://imobiliariapampulha.com.br/wp-admin/admin-ajax.php","nonce":"855b31bfb9","favorite":"\u003Ci class=\"sf-icon-star-empty\"\u003E\u003C/i\u003E","favorited":"\u003Ci class=\"sf-icon-star-full\"\u003E\u003C/i\u003E","includecount":"1","indicate_loading":"1","loading_text":"Loading","loading_image":"","loading_image_active":"","loading_image_preload":"","cache_enabled":"1","button_options":{"button_type":"custom","custom_colors":true,"box_shadow":false,"include_count":true,"default":{"background_default":"#e5e5e5","border_default":false,"text_default":"#263e52","icon_default":"#263e52","count_default":false},"active":{"background_active":"#263e52","border_active":false,"text_active":"#e5e5e5","icon_active":"#e5e5e5","count_active":false}},"authentication_modal_content":"\u003Cp\u003EPlease login to add favorites.\u003C/p\u003E\n\u003Cp\u003E\u003Ca href=\"#\" data-favorites-modal-close\u003EDismiss this notice\u003C/a\u003E\u003C/p\u003E\n","authentication_redirect":"","dev_mode":"","logged_in":"","user_id":"0","authentication_redirect_url":"https://imobiliariapampulha.com.br/wp-login.php"};
+//# sourceURL=favorites-js-extra
+</script>
+<script type="rocketlazyloadscript" id="favorites-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/plugins/favorites/assets/js/favorites.min.js?ver=2.3.7" defer=""></script>
+
+<!-- Snippet da etiqueta do Google (gtag.js) adicionado pelo Site Kit -->
+<!-- Snippet do Google Análises adicionado pelo Site Kit -->
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=G-XVZZXZTY8R" async=""></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["imobiliariapampulha.com.br"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-XVZZXZTY8R");
+//# sourceURL=google_gtagjs-js-after
+</script>
+<meta name="generator" content="Site Kit by Google 1.172.0"><link rel="icon" href="https://imobiliariapampulha.com.br/wp-content/uploads/2023/03/favicon.svg" sizes="32x32">
+<link rel="icon" href="https://imobiliariapampulha.com.br/wp-content/uploads/2023/03/favicon.svg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://imobiliariapampulha.com.br/wp-content/uploads/2023/03/favicon.svg">
+<meta name="msapplication-TileImage" content="https://imobiliariapampulha.com.br/wp-content/uploads/2023/03/favicon.svg">
+<style type="text/css" title="dynamic-css" class="options-output">body p, .section-heading p, .wpforms-form input, .wpforms-form textarea, .wpforms-form select{font-family:Archivo;line-height:25px;font-weight:500;font-style:normal;color:#1b1b1b;font-size:16px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading body p,.wf-loading  .section-heading p,.wf-loading  .wpforms-form input,.wf-loading  .wpforms-form textarea,.wf-loading  .wpforms-form select{opacity: 0;}.ie.wf-loading body p,.ie.wf-loading  .section-heading p,.ie.wf-loading  .wpforms-form input,.ie.wf-loading  .wpforms-form textarea,.ie.wf-loading  .wpforms-form select{visibility: hidden;}h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .slider-content h2, .project-carousel > h4, label.wpforms-field-label, .wpforms-form button{font-family:Archivo;font-weight:600;font-style:normal;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading h1,.wf-loading  .h1,.wf-loading  h2,.wf-loading  .h2,.wf-loading  h3,.wf-loading  .h3,.wf-loading  h4,.wf-loading  .h4,.wf-loading  h5,.wf-loading  .h5,.wf-loading  h6,.wf-loading  .h6,.wf-loading  .slider-content h2,.wf-loading  .project-carousel > h4,.wf-loading  label.wpforms-field-label,.wf-loading  .wpforms-form button{opacity: 0;}.ie.wf-loading h1,.ie.wf-loading  .h1,.ie.wf-loading  h2,.ie.wf-loading  .h2,.ie.wf-loading  h3,.ie.wf-loading  .h3,.ie.wf-loading  h4,.ie.wf-loading  .h4,.ie.wf-loading  h5,.ie.wf-loading  .h5,.ie.wf-loading  h6,.ie.wf-loading  .h6,.ie.wf-loading  .slider-content h2,.ie.wf-loading  .project-carousel > h4,.ie.wf-loading  label.wpforms-field-label,.ie.wf-loading  .wpforms-form button{visibility: hidden;}header .nav-menu > li > a{height:40px;}.color-bg-menu, .color-bg-menu .navigation-fixed-wrapper.fixed{background-color:#ffffff;}.nav-header{margin-top:25px;margin-bottom:25px;}.nav-menus-wrapper .nav-menu > li{padding-top:40px;}.navigation-fixed-wrapper.fixed .nav-menu > li, .header.color-bg-menu.animated.fixed-top.slideInDown .nav-menus-wrapper ul > li{padding-top:15px;padding-bottom:25px;}.nav-menus-wrapper .nav-menu > li > a, .nav-menus-wrapper .nav-menu > li.focus > a, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > a{color:#1c2d3d;}.nav-menus-wrapper .nav-menu > li > a:hover, .nav-menus-wrapper .nav-menu > li.focus > a:hover, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > a:hover{color:#f39041;}.nav-menus-wrapper .nav-menu > li > a:active, .nav-menus-wrapper .nav-menu > li.focus > a:active, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > a:active{color:#f39041;}.nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li > a, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul.sub-menu > li > a, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover{color:#1c2d3d;}.nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover:hover, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover:hover{color:#efefef;}.nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li > a:active, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover:active, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul.sub-menu > li > a:active, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover:active{color:#efefef;}.nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li > a, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul.sub-menu > li > a{background-color:#eaeaea;}.nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.current-menu-item > a, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover, .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul.sub-menu > li > a:hover{background-color:#1c2d3d;}.navbar-nav > li > .nav-link, .navigation ul.nav-menu > li > a{font-family:Archivo;text-transform:initial;font-weight:500;font-style:normal;font-size:16px;opacity: 1;visibility: visible;-webkit-transition: opacity 0.24s ease-in-out;-moz-transition: opacity 0.24s ease-in-out;transition: opacity 0.24s ease-in-out;}.wf-loading .navbar-nav > li > .nav-link,.wf-loading  .navigation ul.nav-menu > li > a{opacity: 0;}.ie.wf-loading .navbar-nav > li > .nav-link,.ie.wf-loading  .navigation ul.nav-menu > li > a{visibility: hidden;}.banner-busca{background-repeat:no-repeat;background-size:cover;background-attachment:scroll;background-position:center center;background-image:url('https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/modern-house-and-green-grass-with-blue-sky-in-real-estate-sale-or-property-investment-concept.webp');}#top-bar{background-color:#1c2d3d;}#top-bar .top-bar-info li a{color:#ffffff;}#top-bar .top-bar-info li i, #top-bar .social-icons li i, .contact-info-box .contact-info-section i{color:#f39041;}#top-bar .top-bar-info li i, #top-bar .social-icons li a, .contact-info-box .contact-info-section i{background-color:#1c2d3d;}.nav-header .nav-brand img{height:80px;}.navigation-fixed-wrapper.fixed .nav-header, .navigation-fixed-wrapper.fixed .nav-brand > img, .header.color-bg-menu.animated.fixed-top.slideInDown .nav-header .nav-brand.logo-main, .header.color-bg-menu.animated.fixed-top.slideInDown .nav-header .nav-brand.logo-main > img{height:40px;}a.white-button, a.primary-button-border, .classic-shop .price, .text-content-big a, .blog-post-content a, .latest-posts .latest-posts-text > span, .blog-grid h4 > a, .latest-posts .latest-posts-text > a:hover, .widget_categories ul li a:hover, .widget_categories ul li a:hover:before, .contact-info-box ul li a, .contact-info-box p > a, .service-simple-inner h3 > a, .classic-shop-text a > h3, .blog-page-text h4 > a, .navegacao ul.pagination li.page-item > .page-link, .shop-tabs .tabs .tab-menu li > a, #breadcrumbs span a, a.button-icon, .case-grid-text h4 > a, .blog-grid-simple h4 > a, .blog-grid-simple-content a:after, .product-tab-body ul li:before, .text-content a, .text-content-small a, .ciathemes-widget ul li > a, .ciathemes-widget ul li span > a, .text-content-big ul li > a, .text-content-small ul li > a, .text-content ul li > a, .section-block-int ul li > a, .section-block-int ol li > a, .section-block-int a, .posted_in a, .woocommerce-Tabs-panel a, nav.woocommerce-pagination ul li a, .term-description a, .section-block ul li a, .equipe-simple-inner p a, .product-tab-body a, {color:#1c2d3d;}a.primary-button-border, .navegacao ul.pagination li.page-item.active > .page-link, .service-casa.b-0:after, .service-casa.b-1:after, .service-casa.b-2:after, .service-casa.b-3:after, .woocommerce-MyAccount-navigation ul li, .project-item-content > a, .product-images .thumb-nav li.slick-current img, a.white-button{border-color:#1c2d3d;}.favoritos, a.primary-button, .primary-button, .widget_search .search-submit, .testimonial-box-6 > .icone-depoimento, .navegacao ul.pagination li.page-item.active > .page-link, a.add-to-cart-button, .newsletter-form button:hover, .wpforms-container > .wpforms-form > .wpforms-submit-container > .wpforms-submit, a.button-icon:before, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce button.button.alt, .woocommerce .button:hover.wc-backward, .woocommerce button:hover.button, .woocommerce a.button, .project-item-content > a, ul.fixed-menu li > a, .blog-grid-destaque, nav.woocommerce-pagination ul li>span.page-numbers.current, .woocommerce nav.woocommerce-pagination ul li span:hover, .woocommerce nav.woocommerce-pagination ul li > a:hover , #searchsubmit, .places_group, .title_map, .simplefavorites-clear{background:#1c2d3d;}.card-imoveis, .card-imoveis-search{background:#ffffff;}.property-info, h3.card-title > a, .h3.card-title .valor-imovel > span{color:#222222;}.card-title a, .button-theme-default, .text-content-big a.button-md > span, .text-content-big a.button-md:hover > span, .text-content-big a.button-sm > span, .text-content-big a.button-sm:hover > span, .text-content-big a.button-lg > span, .text-content-big a.button-lg:hover > span, .text-content a.button-md > span, .text-content a.button-md:hover > span, .text-content a.button-sm > span, .text-content a.button-sm:hover > span, .text-content a.button-lg > span, .text-content a.button-lg:hover > span, .woocommerce button.button, .woocommerce button:hover.button, .woocommerce button.button:disabled[disabled], .woocommerce button:hover.button:disabled[disabled], .woocommerce .button.wc-backward, .woocommerce .button:hover.wc-backward, .woocommerce a.button, .woocommerce a:hover.button, .blog-grid-simple-content a.primary-button-border:hover, .blog-grid-simple-content a.primary-button-border:hover:after, .woocommerce nav.woocommerce-pagination ul li > a:hover, #searchsubmit, .filter_imob, .simplefavorites-clear{color:#ffffff;}a:hover.white-button, .blog-grid h4 > a:hover, .text-content-big a:hover, .blog-post-content a:hover, .contact-info-box ul li a:hover, .contact-info-box p > a:hover, .service-simple-inner h3 > a:hover, .classic-shop-text a:hover > h3, .blog-page-text h4 > a:hover, .shop-tabs .tabs .tab-menu .active-tab a, .shop-tabs .tabs .tab-menu li:hover a, #breadcrumbs span a:hover, .woocommerce-MyAccount-navigation ul li.is-active > a, .project-item-content > a, .case-grid-text h4 > a:hover, .blog-grid-simple h4 > a:before, .blog-grid-simple h4 > a:hover, .blog-grid-simple-content a:hover:after, .second-posts h6 > a:hover, .text-content a:hover, .text-content-small a:hover, .ciathemes-widget ul li > a:hover, .ciathemes-widget ul li span > a:hover, .text-content-big ul li > a:hover, .text-content-small ul li > a:hover, .text-content ul li > a:hover, .section-block-int ul li > a:hover, .section-block-int ol li > a:hover, .section-block-int a:hover, .posted_in a:hover, .woocommerce-Tabs-panel a:hover, .term-description a:hover, .section-block ul li a:hover, .equipe-simple-inner p a:hover, .product-tab-body a:hover, .newsletter-form label a{color:#f39041;}a:hover.primary-button-border, .woocommerce-MyAccount-navigation ul li:hover, .woocommerce-MyAccount-navigation ul li.is-active, .woocommerce div.product .woocommerce-tabs ul.tabs li.active, .woocommerce div.product .woocommerce-tabs ul.tabs li:hover, a.white-button:hover{border-color:#f39041;}.favoritos > a, .button-theme-default, a:hover.primary-button, a:hover.primary-button-border, #ciathemes_menu ul li.current-menu-item a, #ciathemes_menu ul li a:hover, #ciathemes_menu ul li.current-menu-ancestor .sub-menu li a:hover, #ciathemes_menu ul li a:hover, #ciathemes_menu ul li.current-menu-ancestor .sub-menu li.current-menu-item a, #ciathemes_menu ul li .sub-menu li a:hover, .search-submit:hover, a.add-to-cart-button:hover, .newsletter-form button, .wpforms-container > .wpforms-form > .wpforms-submit-container > .wpforms-submit:hover, .woocommerce-cart .wc-proceed-to-checkout a:hover.checkout-button, .woocommerce button:hover.button.alt, .woocommerce button.button, .woocommerce button:hover.button:disabled[disabled], .woocommerce .button.wc-backward, .woocommerce a:hover.button, .woocommerce div.product .woocommerce-tabs ul.tabs li.active, .woocommerce div.product .woocommerce-tabs ul.tabs li:hover a, ul.fixed-menu li > a:hover, .swiper-slide .slider-content a:hover, .share:hover a:hover, .codigo-imv, .simplefavorites-clear:hover{background:#f39041;}.ch-newsletter{background-color:#1c2d3d;}.title-page, .page-title, .page-title-section{background-color:#1e73be;background-size:cover;background-attachment:scroll;background-position:center center;background-image:url('https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/bg.webp');}.title-page h1, .title-page li > span, .title-page li span > a, .title-page p{color:#ffffff;}.section-heading h2.title, .ciathemes-widget-title h4, .project-carousel > h4{color:#1c2d3d;}.section-heading-line-left, .ciathemes-widget-title h3:after, .ciathemes-widget-title h4:after, .project-carousel > h4:after, .product-tab-body h2:after, .product-tab-body h3:after, .product-tab-body h4:after{background-color:#f39041;}.title-page, .title-page.title-small{padding-top:50px;padding-bottom:50px;}.slider-content h2{color:#ffffff;}.slider-content p{color:#ffffff;}.chamada-1 h2, .chamada-1 h3, .chamada-1 h4, .chamada-1 p, .chamada-1 ul li{color:#FFFFFF;}.chamada-1 a:hover.white-button{color:Array;}.chamada-1 a:hover.primary-button-border{border-color:Array;}.chamada-1 a:hover.primary-button, .chamada-1 a:hover.primary-button-border{background:Array;}.chamada21 h2, .chamada21 p{color:#FFFFFF;}.chamada21 a:hover.white-button{color:Array;}.chamada21 a:hover.primary-button-border{border-color:Array;}.chamada21 a:hover.primary-button, .chamada21 a:hover.primary-button-border{background:Array;}.chamada31 h2, .chamada31 p{color:#FFFFFF;}.chamada31 a:hover.white-button{color:Array;}.chamada31 a:hover.primary-button-border{border-color:Array;}.chamada31 a:hover.primary-button, .chamada31 a:hover.primary-button-border{background:Array;}footer{background-color:#1c2d3d;}footer p, footer span, footer ul li p, footer ul li span, footer ul li, footer h3, footer .footer-bar span, .ciathemes_widget_empresa p{color:#ffffff;}footer .box-footer ul li a, footer .menu li a:before, footer ul.list-group li a, footer ul li a, footer .latest-posts .latest-posts-text a, footer .menu li a, footer .footer-bar a{color:#ffffff;}footer .box-footer ul li a:hover, footer ul li a:hover, footer .latest-posts .latest-posts-text a:hover, footer .menu li a:hover, footer .menu li a:hover:before, footer .footer-bar a:hover{color:#f39041;}footer .footer-social-icons ul li a > i{color:#f39041;}footer .footer-social-icons ul li a > i:hover{color:#efefef;}footer .footer-social-icons ul li{background-color:#1c2d3d;}footer .footer-social-icons ul li:hover{background-color:#1c2d3d;}</style>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+        if (navigator.userAgent.match(/(iPad|iPhone|iPod|Silk)/gi)) {
+            document.write("<link rel=\"stylesheet\" href=\"https://imobiliariapampulha.com.br/wp-content/themes/cia-imovel/assets/css/parallax-fix.css\" />");
+        }
+    </script>
+
+
+<style id="core-block-supports-inline-css">
+/**
+ * Core styles: block-supports
+ */
+
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+<link rel="stylesheet" id="wpforms-classic-full-css" href="https://imobiliariapampulha.com.br/wp-content/plugins/wpforms/assets/css/frontend/classic/wpforms-full.min.css?ver=1.9.0.4" media="all">
+
+</head>
+
+<body class="wp-singular imovel-template-default single single-imovel postid-4404 wp-theme-cia-imovel">
+<div class="d-hidden">
+
+    <!-- Scripts rastreamento  - Início -->
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPLCTFQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->    <!-- Scripts rastreamento - Fim -->
+
+
+<!-- Início Header
+      ================================================== -->
+<!-- active menu - início -->
+
+<style>
+    .nav-menus-wrapper .nav-menu > li.menu-item.current_page_item > a{color: #f39041!important;}
+    .nav-menus-wrapper .nav-menu > li.menu-item-has-children > ul.sub-menu > li.current-menu-item > a{
+        color: #efefef!important;
+    }
+    /* Border radius */
+        .navigation ul.nav-menu > li > a{border-radius:    ;}
+    </style>
+<!-- active menu - fim -->
+<div id="top-bar" class="hidden-sm-down">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-12">
+                <div class="top-bar-info">
+                    <ul>
+                                            <li class="list-inline-item"><a href="mailto:contato@imobiliaria.com.br"><i class="fa fa-envelope"></i>contato@imobiliaria.com.br</a>
+                                    </li><li class="list-inline-item md-mt-1">
+                    <a href=" https://api.whatsapp.com/send?phone=5531999999999  "><i class="fab fa-whatsapp"></i>(31) 99999-9999</a>
+                </li>
+
+                                <li class="list-inline-item md-mt-1">
+                    <a href=" tel:553131313131  "><i class="fa fa-phone"></i>(31) 3131-3131</a>
+                </li>
+
+                                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-12">
+                <ul class="social-icons hidden-md-down">
+                                    <li><a href="" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                                        <li><a data-toggle="modal" href="#modal-busca"><i class="fas fa-search"></i></a></li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Final topbar-->
+
+
+<header class="header color-bg-menu">
+    <nav id="navigation4" class="container navigation header-classico">
+        <div class="nav-header">
+                    <a title="Pampulha-topo" class="nav-brand" href="https://imobiliariapampulha.com.br">
+            <img class="main-logo" id="main_logo" title="Imobiliária BH - Corretor de imóveis em BH" alt="Imobiliária BH - Corretor de imóveis em BH" src="https://imobiliariapampulha.com.br/wp-content/uploads/2023/03/Pampulha-topo.svg">
+                    </a>
+                    <div class="nav-toggle"></div>
+        </div>
+        <div class="nav-menus-wrapper">
+            <ul id="menu-menu-1" class="nav-menu align-to-right"><li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-15"><a href="https://imobiliariapampulha.com.br/">Início</a></li>
+<li id="menu-item-4368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4368"><a href="https://imobiliariapampulha.com.br/sobre/">Sobre</a></li>
+<li id="menu-item-4370" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4370"><a href="https://imobiliariapampulha.com.br/comprar-imoveis/">Comprar</a>
+<ul class="sub-menu">
+	<li id="menu-item-4386" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4386"><a href="https://imobiliariapampulha.com.br/categoria/comprar-casas/">Casas</a></li>
+	<li id="menu-item-4385" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4385"><a href="https://imobiliariapampulha.com.br/categoria/comprar-apartamento/">Apartamento</a></li>
+	<li id="menu-item-4391" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4391"><a href="https://imobiliariapampulha.com.br/categoria/comprar-terrenos/">Terrenos</a></li>
+	<li id="menu-item-4388" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4388"><a href="https://imobiliariapampulha.com.br/categoria/comprar-kitnets/">Kitnets</a></li>
+	<li id="menu-item-4390" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4390"><a href="https://imobiliariapampulha.com.br/categoria/comprar-salas/">Salas</a></li>
+	<li id="menu-item-4389" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4389"><a href="https://imobiliariapampulha.com.br/categoria/comprar-lojas/">Lojas</a></li>
+	<li id="menu-item-4387" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4387"><a href="https://imobiliariapampulha.com.br/categoria/comprar-galpoes/">Galpões</a></li>
+</ul>
+</li>
+<li id="menu-item-4369" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4369"><a href="https://imobiliariapampulha.com.br/aluguel-de-imoveis/">Alugar</a>
+<ul class="sub-menu">
+	<li id="menu-item-4380" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4380"><a href="https://imobiliariapampulha.com.br/categoria/casa-de-aluguel/">Casa</a></li>
+	<li id="menu-item-4379" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4379"><a href="https://imobiliariapampulha.com.br/categoria/aluguel-apartamento/">Apartamento</a></li>
+	<li id="menu-item-4382" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4382"><a href="https://imobiliariapampulha.com.br/categoria/aluguel-de-kitnet/">Kitnets</a></li>
+	<li id="menu-item-4384" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4384"><a href="https://imobiliariapampulha.com.br/categoria/aluguel-salas/">Salas</a></li>
+	<li id="menu-item-4383" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4383"><a href="https://imobiliariapampulha.com.br/categoria/aluguel-lojas/">Lojas</a></li>
+	<li id="menu-item-4381" class="menu-item menu-item-type-taxonomy menu-item-object-categoria menu-item-4381"><a href="https://imobiliariapampulha.com.br/categoria/aluguel-galpoes/">Galpões</a></li>
+</ul>
+</li>
+<li id="menu-item-4371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4371"><a href="https://imobiliariapampulha.com.br/anuncie-seu-imovel/">Anuncie seu imóvel</a></li>
+<li id="menu-item-4372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4372"><a href="https://imobiliariapampulha.com.br/contato/" title="menu-cta">Contato</a></li>
+<li id="menu-item-4373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4373"><a href="https://imobiliariapampulha.com.br/meus-favoritos/">Favoritos</a></li>
+<li id="menu-item-4376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4376"><a href="https://imobiliariapampulha.com.br/noticias/">Notícias</a></li>
+</ul>        </div>
+    </nav>
+</header>
+
+
+<!-- Final  Header
+================================================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Início Main
+      ================================================== -->
+<article class="artigos post-4404 imovel type-imovel status-publish has-post-thumbnail hentry categoria-comprar categoria-comprar-apartamento aluguel-venda-a-venda cidade-belo-horizonte estados-minas-gerais bairros-buritis" id="post-4404" role="main">
+        <style>
+    .section-heading-line, .section-heading-line-right{background-color: #f39041!important;}
+</style>
+
+                            <div class="slide-single-imoveis">
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper swiper-grid">
+                                                        <div class="swiper-slide item-0">
+                                <a data-fancybox="gallery" href="https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/maxresdefault.jpg">
+                                    <img src="https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/maxresdefault.webp" alt="Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis">
+                                </a>
+                            </div>
+
+                                                        <div class="swiper-slide item-1">
+                                <a data-fancybox="gallery" href="https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/ideias-para-decoracao-de-banheiros-pequenos1.jpg">
+                                    <img src="https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/ideias-para-decoracao-de-banheiros-pequenos1.jpg" alt="Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis">
+                                </a>
+                            </div>
+
+                                                        <div class="swiper-slide item-2">
+                                <a data-fancybox="gallery" href="https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/post_thumbnail-a604185952a2859240903c1b2af3cd7c-1170x685-1.jpg">
+                                    <img src="https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/post_thumbnail-a604185952a2859240903c1b2af3cd7c-1170x685-1.webp" alt="Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis">
+                                </a>
+                            </div>
+
+                                                        <div class="swiper-slide item-3">
+                                <a data-fancybox="gallery" href="https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/27440-det-Cozinha-Completa-Henn-Connect-c-8-Pecas-CZ01.jpg">
+                                    <img src="https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/27440-det-Cozinha-Completa-Henn-Connect-c-8-Pecas-CZ01.webp" alt="Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis">
+                                </a>
+                            </div>
+
+                                                    </div>
+                    </div>
+                </div>
+                                        <div class="section-block">
+                    <div class="container">
+                            <div class="row">
+                                        <div class="col-12 col-md-6 p-1 p-md-5">
+                                            <h2>Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis</h2>
+                                                                                        <span class="codigo-imv">COD: 123456</span>
+                                                                                        <div class="btn-fav">
+                                                <button class="simplefavorite-button has-count" data-postid="4404" data-siteid="1" data-groupid="1" data-favoritecount="1" style="box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;background-color:#e5e5e5;color:#263e52;"><i class="sf-icon-star-empty"></i><span class="simplefavorite-button-count" style="">1</span></button>                                            </div>
+                                                                            <div class="property-info-single mt-3">
+                                                                                            <i class="fas fa-expand-arrows-alt"></i> Área total 100m²
+                                                                                                                                                                                    <i class="fas fa-bed"></i> 3 Quartos
+                                                                                                                                        <i class="fas fa-toilet"></i>2 Banheiro
+                                                                                                                                        <i class="fas fa-warehouse"></i> 2 Vaga
+                                                                                    </div>
+                                                                                <div class="text-content-big mt-20">
+                                                <p>Imóvel aconchegante à venda com 3 quartos, sendo 1 suíte, e 2 banheiros no total. Este imóvel é bem equipado, bom para quem procura conforto e comodidade e fica situado no 15º andar. O condomínio é bem equipado com diversas instalações, apropriado para quem busca lazer sem sair de casa.</p>
+                                            </div>
+                                </div>
+
+                                        <div class="col-12 col-md-6 p-1 p-md-5">
+                                            <div class="favoritos p-3">
+                                                                                                    <span>R$ 350.000,00</span>
+                                                                                                                                                    <p class="mt-3 mb-3">CONDOMÍNIO: Não Informado</p>
+                                                                                                                                                   <p class="mb-5">IPTU: R$ 1500</p>
+                                                                                                <a href="#productForm" data-toggle="modal">Fale com a Imobiliária</a>
+                                                                                                <p class="mt-3">Mais de 82 pessoas interessadas neste imóvel nas últimas horas.</p>
+                                            </div>
+                                        </div>
+                                                        </div><!-- row -->
+            </div><!-- container -->
+    </div><!-- section-block -->
+</article>
+<!-- Formulário de contato na single -->
+    <div class="modal fade" id="productForm" tabindex="-1" role="dialog" aria-labelledby="productForm" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Interesse: Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="wpforms-container wpforms-container-full" id="wpforms-4355"><form id="wpforms-form-4355" class="wpforms-validate wpforms-form" data-formid="4355" method="post" enctype="multipart/form-data" action="/imovel/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis/" data-token="5d7ee70bfdfb2e238dd82833b13c6206" data-token-time="1787964638"><noscript class="wpforms-error-noscript">Ative o JavaScript no seu navegador para preencher este formulário.</noscript><div class="wpforms-field-container"><div id="wpforms-4355-field_2-container" class="wpforms-field wpforms-field-text" data-field-id="2"><label class="wpforms-field-label" for="wpforms-4355-field_2">Nome <span class="wpforms-required-label">*</span></label><input type="text" id="wpforms-4355-field_2" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][2]" required=""></div><div id="wpforms-4355-field_4-container" class="wpforms-field wpforms-field-email" data-field-id="4"><label class="wpforms-field-label" for="wpforms-4355-field_4">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-4355-field_4" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][4]" spellcheck="false" required=""></div><div id="wpforms-4355-field_3-container" class="wpforms-field wpforms-field-text" data-field-id="3"><label class="wpforms-field-label" for="wpforms-4355-field_3">Telefone <span class="wpforms-required-label">*</span></label><input type="text" id="wpforms-4355-field_3" class="wpforms-field-large wpforms-field-required wpforms-masked-input" data-rule-inputmask-incomplete="1" data-inputmask-mask="(99) 99999-999[9]" name="wpforms[fields][3]" placeholder="(99) 99999-9999" required=""></div><div id="wpforms-4355-field_1-container" class="wpforms-field wpforms-field-textarea" data-field-id="1"><label class="wpforms-field-label" for="wpforms-4355-field_1">Mensagem</label><textarea id="wpforms-4355-field_1" class="wpforms-field-large" name="wpforms[fields][1]"></textarea></div><div id="wpforms-4355-field_5-container" class="wpforms-field wpforms-field-html" data-field-id="5"><div id="wpforms-4355-field_5"><div>
+  <input type="checkbox" id="privacidade" name="privacidade" required="">
+  <label for="privacidade">Eu concordo com a <a href="https://imobiliariapampulha.com.br/politica-de-privacidade/" target="_blank">Política de Privacidade</a></label>
+</div></div></div><div id="wpforms-4355-field_6-container" class="wpforms-field wpforms-field-hidden" data-field-id="6"><input type="hidden" id="wpforms-4355-field_6" name="wpforms[fields][6]" value="Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis"></div></div><!-- .wpforms-field-container --><div class="wpforms-recaptcha-container wpforms-is-hcaptcha"><div class="g-recaptcha" data-sitekey="2b43477a-ac5e-459b-af43-08c806c4c10b" data-recaptcha-id="0wv1lqowb7ee"><iframe src="https://newassets.hcaptcha.com/captcha/v1/ce9396fa32f5ab87b0a82b60e5313af4da3a3e5b/static/hcaptcha.html#frame=checkbox&amp;id=0wv1lqowb7ee&amp;host=imobiliariapampulha.com.br&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;andint=off&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=2b43477a-ac5e-459b-af43-08c806c4c10b&amp;theme=light&amp;origin=https%3A%2F%2Fimobiliariapampulha.com.br&amp;clientOptions=%7B%22sentry%22%3Atrue%2C%22reportapi%22%3A%22https%3A%2F%2Faccounts.hcaptcha.com%22%2C%22recaptchacompat%22%3A%22true%22%2C%22custom%22%3Afalse%2C%22hl%22%3A%22en-US%22%2C%22tplinks%22%3A%22on%22%2C%22andint%22%3A%22off%22%2C%22pat%22%3A%22on%22%2C%22pstissuer%22%3A%22https%3A%2F%2Fpst-issuer.hcaptcha.com%22%2C%22endpoint%22%3A%22https%3A%2F%2Fapi.hcaptcha.com%22%2C%22theme%22%3A%22light%22%2C%22size%22%3A%22normal%22%2C%22confirm-nav%22%3Afalse%7D" tabindex="0" frameborder="0" scrolling="no" allow="private-state-token-redemption" title="Widget containing checkbox for hCaptcha security challenge" data-hcaptcha-widget-id="0wv1lqowb7ee" data-hcaptcha-response="" style="pointer-events: auto; background-color: rgba(255, 255, 255, 0); border-radius: 4px; width: 302px; height: 76px; overflow: hidden;"></iframe><textarea id="g-recaptcha-response-0wv1lqowb7ee" name="g-recaptcha-response" style="display: none;"></textarea><textarea id="h-captcha-response-0wv1lqowb7ee" name="h-captcha-response" style="display: none;"></textarea></div><input type="text" name="g-recaptcha-hidden" class="wpforms-recaptcha-hidden" style="position:absolute!important;clip:rect(0,0,0,0)!important;height:1px!important;width:1px!important;border:0!important;overflow:hidden!important;padding:0!important;margin:0!important;" data-rule-hcaptcha="1"></div><div class="wpforms-submit-container"><input type="hidden" name="wpforms[id]" value="4355"><input type="hidden" name="page_title" value="Apartamento à venda com 85m², 3 quartos e 2 vagas Buritis"><input type="hidden" name="page_url" value="https://imobiliariapampulha.com.br/imovel/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis/"><input type="hidden" name="page_id" value="4404"><input type="hidden" name="wpforms[post_id]" value="4404"><button type="submit" name="wpforms[submit]" id="wpforms-submit-4355" class="wpforms-submit" data-alt-text="Enviando..." data-submit-text="Enviar" aria-live="assertive" value="wpforms-submit">Enviar</button></div></form></div>  <!-- .wpforms-container -->                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Formulário de busca geral do site -->
+<div class="modal fade" id="modal-busca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog w-100">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Pesquise em todo o site</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="searchform" id="searchform" method="get" action="https://imobiliariapampulha.com.br/">
+    <div class="row p-3">
+        <div class="col-10 col-md-11 p-0">
+            <input type="search" class="form-control" name="s" placeholder="Faça sua busca..." value="">
+        </div>
+        <div class="col-2 col-md-1 p-0">
+            <button type="submit" class="btn primary-button"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+    <input type="hidden" name="post_type" value="any">
+</form>            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Botões fixos na lateral - Início -->
+    <ul class="fixed-menu">
+                    </ul>
+    <script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+        (function($){
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        })(jQuery);
+    });</script>
+    <script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/cache/min/1/ajax/libs/popper.js/1.14.7/umd/popper.min.js?ver=1765682056" defer=""></script>
+    <!-- Botões fixos na lateral - Fim -->
+
+<!-- Newsletter - Início -->
+        <section class="section-block" style="padding: 100px 0">
+            <div class="get-news-letter-mail container">
+                <div class="ch-newsletter">
+                    <div class="row">
+                        <div class="col-12 col-md-6 order-md-0 order-1 p-5 mt-lg-4 position-relative" style="z-index: 2">
+                                                            <span class="h2 mb-30">Se inscreva em nossa newsletter</span>
+                                                                        <form id="form-news-letter" class="newsletter-form form-inline justify-content-center" action="https://imobiliariapampulha.com.br/imovel/apartamento-a-venda-com-85m%c2%b2-3-quartos-e-2-vagas-buritis/#form-news-letter" method="post" enctype="multipart/form-data">
+
+            <div class="row w-100 justify-content-center align-items-center">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-5 text-center text-white">
+                    <div class="form-group">
+                        <input name="news_letter_name" type="text" class="input-form mb-3 mb-lg-0 w-100 rounded" value="" placeholder="Nome">
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-5 text-center text-white">
+                    <div class="form-group">
+                        <input name="news_letter_mail" type="email" class="input-form mb-3 mb-lg-0 w-100 rounded" value="" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 text-white">
+                    <div class="form-group">
+                        <button type="submit" class="input-form-btn btnWhite mb-3 mb-md-0">Enviar </button>
+                        <div class="response"></div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center justify-content-lg-start">
+                    <div class="form-check mt-10">
+                        <input class="form-check-input" type="checkbox" required="" id="aceite">
+                        <label class="form-check-label" for="aceite">
+                            Concordo com a <a href="https://imobiliariapampulha.com.br/politica-de-privacidade">política de privacidade</a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>                        </div>
+                        <div class="col-12 col-md-6 order-md-1 order-0 position-relative" style="z-index: 1">
+                            <img src="https://imobiliariapampulha.com.br/wp-content/webp-express/webp-images/themes/cia-imovel/assets/img/casa-newslleter.png.webp" alt="Assine nossa newsletter">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Newsletter - Fim -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div id="ciathemes_widget_empresa-2" class="ciathemes-widget-footer ciathemes_widget_empresa">
+            <div class="">
+                                <img class="img-fluid d-block w-75" src="https://imobiliariapampulha.com.br/wp-content/uploads/2023/03/Pampulha-footer.svg" alt="">
+                                <p class="mt-25">
+                                    </p>
+                <div class="footer-social-icons mt-25">
+                    <ul>
+                                       <li><a href="" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                    </ul>
+                </div>
+            </div>
+
+            </div>    </div>
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div id="nav_menu-2" class="ciathemes-widget-footer widget_nav_menu"><div class="ciathemes-widget-title"><h3>Institucional</h3></div><div class="menu-footer1-container"><ul id="menu-footer1" class="menu"><li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-193"><a href="https://imobiliariapampulha.com.br/">Início</a></li>
+<li id="menu-item-4547" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4547"><a href="https://imobiliariapampulha.com.br/sobre/">Sobre</a></li>
+<li id="menu-item-4549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4549"><a href="https://imobiliariapampulha.com.br/comprar-imoveis/">Comprar</a></li>
+<li id="menu-item-4548" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4548"><a href="https://imobiliariapampulha.com.br/aluguel-de-imoveis/">Alugar</a></li>
+<li id="menu-item-4550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4550"><a href="https://imobiliariapampulha.com.br/anuncie-seu-imovel/">Anuncie seu imóvel</a></li>
+<li id="menu-item-4551" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4551"><a href="https://imobiliariapampulha.com.br/contato/">Contato</a></li>
+<li id="menu-item-4552" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4552"><a href="https://imobiliariapampulha.com.br/meus-favoritos/">Favoritos</a></li>
+<li id="menu-item-4553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4553"><a href="https://imobiliariapampulha.com.br/noticias/">Notícias</a></li>
+</ul></div></div>    </div>
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div id="nav_menu-3" class="ciathemes-widget-footer widget_nav_menu"><div class="ciathemes-widget-title"><h3>Navegue</h3></div><div class="menu-footer2-container"><ul id="menu-footer2" class="menu"><li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197"><a href="https://imobiliariapampulha.com.br/?page_id=7">Serviços</a></li>
+<li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198"><a href="https://imobiliariapampulha.com.br/servicos/investimento-imobiliario/">Investimento Imobiliário</a></li>
+<li id="menu-item-200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200"><a href="https://imobiliariapampulha.com.br/servicos/documentos-necessarios/">Documentos Necessários</a></li>
+<li id="menu-item-201" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="https://imobiliariapampulha.com.br/servicos/avaliacao-do-imovel/">Avaliação de Imóvel</a></li>
+</ul></div></div>    </div>
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div id="ciathemes_widget_contatos-2" class="ciathemes-widget-footer ciathemes_widget_contatos"><div class="ciathemes-widget-title"><h3>Contato</h3></div>
+            <ul class="list-group">
+                                    <li class="list-inline-item md-mt-1">
+                        <a href=" https://api.whatsapp.com/send?phone=5531999999999  "><i class="fab fa-whatsapp"></i>(31) 99999-9999</a>
+                    </li>
+
+                                    <li class="list-inline-item md-mt-1">
+                        <a href=" tel:553131313131  "><i class="fa fa-phone"></i>(31) 3131-3131</a>
+                    </li>
+
+                                    <li><a href="mailto:contato@imobiliaria.com.br"><i class="fa fa-envelope"></i>contato@imobiliaria.com.br</a></li>
+                            </ul>
+
+            </div>    </div>
+</div>    </div>
+
+    
+
+
+    <div class="container">
+        <div class="footer-bar">
+            <div class="row">
+                <div class="col-sm-6 col-md-10">
+                    <p>
+                        <span class="data">© 2026 </span> <a title="Imobiliária Pampulha" href="https://imobiliariapampulha.com.br/"> Imobiliária Pampulha | Todos os direitos reservados</a>
+                    </p>
+                </div>
+                <div class="col-sm-6 col-md-2">
+                    <div class="cia-copy text-md-right">
+                        <a title="Tenha resultados com marketing digital - entre em contato conosco!" target="_blank" href="https://www.ciawebsites.com.br">
+                            <img alt="Cia Web Sites - Criação e otimização de sites" src="https://www.ciawebsites.com.br/wp-content/uploads/2019/12/criacao-sites.webp">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<a href="#" class="scroll-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+
+<!-- CTA -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/cia-imovel/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="scripts-maps-acf-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/js/js-acf-map.js?ver=1765757984" defer=""></script>
+<script type="rocketlazyloadscript" id="fontawesome-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/themes/cia-imovel/assets/libs/font-awesome/js/all.min.js?ver=1.2" defer=""></script>
+<script type="rocketlazyloadscript" id="fancybox-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/themes/cia-imovel/assets/libs/fancybox/jquery.fancybox.min.js?ver=1.2" defer=""></script>
+<script type="rocketlazyloadscript" id="sticky-sidebar-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/themes/cia-imovel/assets/libs/sticky-sidebar/sticky-sidebar.min.js?ver=1.2" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" id="plugins-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/js/plugins.js?ver=1765682056" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" id="scripts-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/js/scripts.js?ver=1765682056" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" id="swiper-js-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/libs/swiper/swiper.js?ver=1765682056" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" id="initialize-swiper-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/assets/libs/swiper/initialize-swiper.js?ver=1765682057" defer=""></script>
+<script type="rocketlazyloadscript" data-minify="1" id="headerScripts-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/cache/min/1/wp-content/themes/cia-imovel/template-parts/header/functions/header-scripts.js?ver=1765682057" defer=""></script>
+<script type="rocketlazyloadscript" id="scrollNavbar-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/themes/cia-imovel/template-parts/header/functions/scrollnavbar.min.js?ver=1.2" defer=""></script>
+<script id="wpforms-validation-js" src="https://imobiliariapampulha.com.br/wp-content/plugins/wpforms/assets/lib/jquery.validate.min.js?ver=1.20.1" defer=""></script>
+<script type="rocketlazyloadscript" id="wpforms-maskedinput-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/plugins/wpforms/assets/lib/jquery.inputmask.min.js?ver=5.0.9" defer=""></script>
+<script type="rocketlazyloadscript" id="wpforms-mailcheck-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/plugins/wpforms/assets/lib/mailcheck.min.js?ver=1.1.2" defer=""></script>
+<script type="rocketlazyloadscript" id="wpforms-punycode-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/plugins/wpforms/assets/lib/punycode.min.js?ver=1.0.0" defer=""></script>
+<script id="wpforms-generic-utils-js" src="https://imobiliariapampulha.com.br/wp-content/plugins/wpforms/assets/js/share/utils.min.js?ver=1.9.0.4" defer=""></script>
+<script type="rocketlazyloadscript" id="wpforms-js" data-rocket-src="https://imobiliariapampulha.com.br/wp-content/plugins/wpforms/assets/js/frontend/wpforms.min.js?ver=1.9.0.4" defer=""></script>
+<script id="wpforms-recaptcha-js" src="https://hcaptcha.com/1/api.js?onload=wpformsRecaptchaLoad&amp;render=explicit" defer=""></script>
+<script id="wpforms-recaptcha-js-after">
+var wpformsDispatchEvent = function (el, ev, custom) {
+				var e = document.createEvent(custom ? "CustomEvent" : "HTMLEvents");
+				custom ? e.initCustomEvent(ev, true, true, false) : e.initEvent(ev, true, true);
+				el.dispatchEvent(e);
+			};
+		var wpformsRecaptchaCallback = function (el) {
+				var hdn = el.parentNode.querySelector(".wpforms-recaptcha-hidden");
+				var err = el.parentNode.querySelector("#g-recaptcha-hidden-error");
+				hdn.value = "1";
+				wpformsDispatchEvent(hdn, "change", false);
+				hdn.classList.remove("wpforms-error");
+				err && hdn.parentNode.removeChild(err);
+			};
+		var wpformsRecaptchaLoad = function () {
+					Array.prototype.forEach.call(document.querySelectorAll(".g-recaptcha"), function (el) {
+						var captchaID = hcaptcha.render(el, {
+							callback: function () {
+								wpformsRecaptchaCallback(el);
+							}
+						});
+						el.setAttribute("data-recaptcha-id", captchaID);
+					});
+					wpformsDispatchEvent(document, "wpformsRecaptchaLoaded", true);
+				};
+			
+//# sourceURL=wpforms-recaptcha-js-after
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpforms_settings = {"val_required":"Este campo \u00e9 obrigat\u00f3rio.","val_email":"Digite um endere\u00e7o de e-mail v\u00e1lido.","val_email_suggestion":"Voc\u00ea quis dizer {suggestion}?","val_email_suggestion_title":"Clique para aceitar esta sugest\u00e3o.","val_email_restricted":"Este endere\u00e7o de e-mail n\u00e3o \u00e9 permitido.","val_number":"Digite um n\u00famero v\u00e1lido.","val_number_positive":"Digite um n\u00famero de telefone v\u00e1lido.","val_minimum_price":"O valor inserido \u00e9 inferior ao m\u00ednimo obrigat\u00f3rio.","val_confirm":"Valores de campo n\u00e3o correspondem.","val_checklimit":"Voc\u00ea excedeu o n\u00famero de sele\u00e7\u00f5es permitidas: {#}.","val_limit_characters":"{count} de {limit} caracteres no m\u00e1ximo.","val_limit_words":"{count} do m\u00e1ximo de {limit} palavras.","val_recaptcha_fail_msg":"A verifica\u00e7\u00e3o do Google reCAPTCHA falhou. Tente novamente mais tarde.","val_turnstile_fail_msg":"Ocorreu uma falha na verifica\u00e7\u00e3o do Cloudflare\u00a0Turnstile. Tente de novo mais tarde.","val_inputmask_incomplete":"Preencha o campo no formato obrigat\u00f3rio.","uuid_cookie":"1","locale":"pt","country":"","country_list_label":"Lista de pa\u00edses","wpforms_plugin_url":"https:\/\/imobiliariapampulha.com.br\/wp-content\/plugins\/wpforms\/","gdpr":"","ajaxurl":"https:\/\/imobiliariapampulha.com.br\/wp-admin\/admin-ajax.php","mailcheck_enabled":"1","mailcheck_domains":[],"mailcheck_toplevel_domains":["dev"],"is_ssl":"1","currency_code":"USD","currency_thousands":",","currency_decimals":"2","currency_decimal":".","currency_symbol":"$","currency_symbol_pos":"left","val_requiredpayment":"O pagamento \u00e9 necess\u00e1rio.","val_creditcard":"Digite um n\u00famero de cart\u00e3o de cr\u00e9dito v\u00e1lido.","val_post_max_size":"O tamanho total dos arquivos selecionados {totalSize}\u00a0Mb excede o limite permitido de {maxSize}\u00a0Mb.","val_time12h":"Informe a hora no formato de 12 horas (ex: 8:45).","val_time24h":"Informe a hora no formato de 24 horas (por exemplo, 22:45).","val_time_limit":"Insira o tempo entre {minTime} e {maxTime}.","val_url":"Por favor, insira uma URL v\u00e1lida.","val_fileextension":"Este tipo de arquivo n\u00e3o \u00e9 permitido","val_filesize":"O arquivo excede o tamanho m\u00e1ximo permitido. O arquivo n\u00e3o foi carregado.","post_max_size":"134217728","error_updating_token":"Erro ao atualizar o token. Tente novamente ou entre em contato com o suporte se o problema persistir.","network_error":"Erro de rede ou servidor inacess\u00edvel. Verifique sua conex\u00e3o ou tente novamente mais tarde.","token_cache_lifetime":"86400","hn_data":[],"val_password_strength":"\u00c9 necess\u00e1ria uma senha mais forte. Considere o uso de letras mai\u00fasculas e min\u00fasculas, n\u00fameros e s\u00edmbolos.","val_phone":"Digite um n\u00famero de telefone v\u00e1lido.","entry_preview_iframe_styles":["https:\/\/imobiliariapampulha.com.br\/wp-includes\/js\/tinymce\/skins\/lightgray\/content.min.css?ver=7.1","https:\/\/imobiliariapampulha.com.br\/wp-includes\/css\/dashicons.min.css?ver=7.1","https:\/\/imobiliariapampulha.com.br\/wp-includes\/js\/tinymce\/skins\/wordpress\/wp-content.css?ver=7.1","https:\/\/imobiliariapampulha.com.br\/wp-content\/plugins\/wpforms\/assets\/pro\/css\/fields\/richtext\/editor-content.min.css"]}
+/* ]]> */
+</script>
+</div>
+
+
+<div aria-hidden="true" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(215, 215, 215); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px; border-radius: 4px; left: auto; top: -10000px; z-index: -2147483648; position: absolute; pointer-events: auto; transition: opacity 0.15s ease-out; opacity: 0; visibility: hidden;"><div style="position: relative; z-index: 1;"><iframe src="https://newassets.hcaptcha.com/captcha/v1/ce9396fa32f5ab87b0a82b60e5313af4da3a3e5b/static/hcaptcha.html#frame=challenge&amp;id=0wv1lqowb7ee&amp;host=imobiliariapampulha.com.br&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;andint=off&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=2b43477a-ac5e-459b-af43-08c806c4c10b&amp;theme=light&amp;origin=https%3A%2F%2Fimobiliariapampulha.com.br&amp;clientOptions=%7B%22sentry%22%3Atrue%2C%22reportapi%22%3A%22https%3A%2F%2Faccounts.hcaptcha.com%22%2C%22recaptchacompat%22%3A%22true%22%2C%22custom%22%3Afalse%2C%22hl%22%3A%22en-US%22%2C%22tplinks%22%3A%22on%22%2C%22andint%22%3A%22off%22%2C%22pat%22%3A%22on%22%2C%22pstissuer%22%3A%22https%3A%2F%2Fpst-issuer.hcaptcha.com%22%2C%22endpoint%22%3A%22https%3A%2F%2Fapi.hcaptcha.com%22%2C%22theme%22%3A%22light%22%2C%22size%22%3A%22normal%22%2C%22confirm-nav%22%3Afalse%7D" frameborder="0" scrolling="no" allow="private-state-token-redemption" title="hCaptcha challenge" style="border: 0px; z-index: 2000000000; position: relative;"></iframe></div><div style="width: 100%; height: 100%; position: fixed; pointer-events: none; top: 0px; left: 0px; z-index: 0; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div style="border-width: 11px; border-style: none; position: absolute; pointer-events: none; margin-top: -11px; z-index: 1; right: 100%;"><div style="border-width: 10px; border-style: solid; border-color: transparent rgb(255, 255, 255) transparent transparent; position: relative; top: 10px; z-index: 1;"></div><div style="border-width: 11px; border-style: solid; border-color: transparent rgb(215, 215, 215) transparent transparent; position: relative; top: -11px; z-index: 0;"></div></div></div></body></html>

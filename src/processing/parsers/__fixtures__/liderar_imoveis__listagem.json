@@ -1,0 +1,1570 @@
+{
+  "quantidade": 42,
+  "menorvalor": 0,
+  "maiorvalor": 0,
+  "menorarea": 0,
+  "maiorarea": 0,
+  "lista": [
+    {
+      "codigo": 115,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "APARTAMENTO 2 QUARTOS \u2013 BAIRRO SAGRADA FAM\u00cdLIA \u2013 BELO HORIZONTE\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.800,00",
+      "valorminimo": "R$ 1.800,00",
+      "valormaximo": "R$ 1.800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 370,00",
+      "codigobairro": 296,
+      "bairro": "Sagrada Fam\u00edlia",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Leste",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31030-150",
+      "endereco": "Rua Santa Barbara",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "2",
+      "numerosalas": "1",
+      "numerobanhos": "1",
+      "numerovagas": "1",
+      "tipovagas": "descoberta",
+      "numerosuites": "0",
+      "areaprincipal": "60,00",
+      "areainterna": "60,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/115\/0o8pbf-whatsapp-image-2026-08-28-at-121701-1787930560.jpeg?1787930561",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+      "urlpublica": "",
+      "datahoracadastro": "02\/10\/2017 13:58:12",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/115\/0o8pbf-whatsapp-image-2026-08-28-at-121701-1787930560.jpeg?1787930561"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/115\/ixcey-whatsapp-image-2026-08-28-at-121701-1-1787930560.jpeg?1787930561"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/115\/0oohq-whatsapp-image-2026-08-28-at-121702-1787930560.jpeg?1787930561"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/115\/jz85b-whatsapp-image-2026-08-28-at-121702-1-1787930560.jpeg?1787930561"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/115\/wtm0i-whatsapp-image-2026-08-28-at-121703-1787930560.jpeg?1787930561"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/115\/zn7slh-whatsapp-image-2026-08-28-at-121706-1787930560.jpeg?1787930561"
+        }
+      ],
+      "tempoCadastro": 3252,
+      "url_amigavel": "apartamento-2-quartos-bairro-sagrada-familia-belo-horizonte-mg"
+    },
+    {
+      "codigo": 7912,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Apartamento de 3 quartos com su\u00edte no bairro Castelo - Belo Horizonte\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 3.000,00",
+      "valorminimo": "R$ 3.000,00",
+      "valormaximo": "R$ 3.000,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 500,00",
+      "codigobairro": 81,
+      "bairro": "Castelo",
+      "codigobairro2": 212,
+      "bairro2": "Manac\u00e1s",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Pampulha",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "30840-480",
+      "endereco": "Rua Doutor Sylvio Menicucci",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "3",
+      "numerosalas": "1",
+      "numerobanhos": "2",
+      "numerovagas": "2",
+      "tipovagas": "Cobertas",
+      "numerosuites": "1",
+      "areaprincipal": "100,00",
+      "areainterna": "100,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7912\/dcv2l-20230925-085549-1695647953.jpg?1695647953",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Castelo: ",
+      "urlpublica": "",
+      "datahoracadastro": "25\/09\/2023 10:14:46",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7912\/dcv2l-20230925-085549-1695647953.jpg?1695647953"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7912\/ilv2r-20230925-085547-1695647953.jpg?1695647953"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7912\/y74sy-20230925-084737-1695647953.jpg?1695647953"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7912\/rbmx3h-20230925-084747-1695647953.jpg?1695647953"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7912\/20d3r-20230925-084840-1695647953.jpg?1695647953"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7912\/k41ju-20230925-084955-1695647953.jpg?1695647953"
+        }
+      ],
+      "tempoCadastro": 1068,
+      "url_amigavel": "apartamento-de-3-quartos-com-suite-no-bairro-castelo-belo-horizonte-mg"
+    },
+    {
+      "codigo": 378,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "EXCELENTE APARTAMENTO \u2013 3 QUARTOS \u2013 BAIRRO CIDADE JARDIM \u2013 BELO HORIZONTE\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 2.800,00",
+      "valorminimo": "R$ 2.800,00",
+      "valormaximo": "R$ 2.800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 500,00",
+      "codigobairro": 87,
+      "bairro": "Cidade Jardim",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Centro-Sul",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "30380-002",
+      "endereco": "Avenida Prudente de Morais",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "3",
+      "numerosalas": "2",
+      "numerobanhos": "3",
+      "numerovagas": "2",
+      "tipovagas": "cobertas",
+      "numerosuites": "1",
+      "areaprincipal": "100,00",
+      "areainterna": "100,00",
+      "areaexterna": "110,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/378\/flalf-whatsapp-image-2023-10-02-at-095858-1696252753.jpeg?1696354872",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Cidade Jardim: ",
+      "urlpublica": "",
+      "datahoracadastro": "09\/02\/2018 09:38:43",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Cidade Jardim: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/378\/flalf-whatsapp-image-2023-10-02-at-095858-1696252753.jpeg?1696354872"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Cidade Jardim: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/378\/z8gq8f-imovel-5277-68077-1694865773.jpg?1696354872"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Cidade Jardim: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/378\/i60of-whatsapp-image-2023-10-02-at-095901-1696252753.jpeg?1696354872"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Cidade Jardim: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/378\/2lauzi-whatsapp-image-2023-10-02-at-095900-1696252753.jpeg?1696354872"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Cidade Jardim: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/378\/wxhp-whatsapp-image-2023-10-02-at-095901-2-1696252753.jpeg?1696354872"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Cidade Jardim: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/378\/h2f6ag-whatsapp-image-2023-10-02-at-095900-2-1696252753.jpeg?1696354872"
+        }
+      ],
+      "tempoCadastro": 3122.04166666666651508421637117862701416015625,
+      "url_amigavel": "excelente-apartamento-3-quartos-bairro-cidade-jardim-belo-horizonte-mg"
+    },
+    {
+      "codigo": 7253,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Excelente apartamento 3 quartos com su\u00edte. Pr\u00e9dio com lazer completo - Bairro Castelo - Belo Horizonte\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 3.500,00",
+      "valorminimo": "R$ 3.500,00",
+      "valormaximo": "R$ 3.500,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 985,00",
+      "codigobairro": 81,
+      "bairro": "Castelo",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Pampulha",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31330-110",
+      "endereco": "Rua Castelo de Avis",
+      "numero": "**",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "3",
+      "numerosalas": "1",
+      "numerobanhos": "2",
+      "numerovagas": "2",
+      "tipovagas": "Cobertas",
+      "numerosuites": "1",
+      "areaprincipal": "100,00",
+      "areainterna": "100,00",
+      "areaexterna": "100,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7253\/2djwd-whatsapp-image-2025-02-06-at-084939-1738842895.jpeg?1738842895",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Castelo: ",
+      "urlpublica": "",
+      "datahoracadastro": "26\/08\/2021 15:16:39",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7253\/2djwd-whatsapp-image-2025-02-06-at-084939-1738842895.jpeg?1738842895"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7253\/5hu5z-whatsapp-image-2025-02-06-at-084938-1738842895.jpeg?1738842895"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7253\/d4lup-whatsapp-image-2025-02-06-at-084939-1-1738842895.jpeg?1738842895"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7253\/s4net-whatsapp-image-2025-02-06-at-084939-2-1738842895.jpeg?1738842895"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7253\/s5pjh-whatsapp-image-2025-02-06-at-084940-1738842895.jpeg?1738842895"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Castelo: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7253\/i0bl4-whatsapp-image-2025-02-06-at-084940-1-1738842895.jpeg?1738842895"
+        }
+      ],
+      "tempoCadastro": 1828,
+      "url_amigavel": "excelente-apartamento-3-quartos-com-suite-predio-com-lazer-completo-bairro-castelo-belo-horizonte-mg"
+    },
+    {
+      "codigo": 8184,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "EXCELENTE COBERTURA \u2013 2 QUARTOS \u2013 \u00d3TIMA OPORTUNIDADE",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 18,
+      "tipo": "Cobertura",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 3.000,00",
+      "valorminimo": "R$ 3.000,00",
+      "valormaximo": "R$ 3.000,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 410,00",
+      "codigobairro": 272,
+      "bairro": "Paquet\u00e1",
+      "codigobairro2": 178,
+      "bairro2": "Jardim Alvorada",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Pampulha",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "30810-620",
+      "endereco": "Rua Paschoal Costa",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "2",
+      "numerosalas": "2",
+      "numerobanhos": "2",
+      "numerovagas": "2",
+      "tipovagas": "2 vagas cobertas em linha",
+      "numerosuites": "0",
+      "areaprincipal": "100,00",
+      "areainterna": "100,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8184\/cz493k-whatsapp-image-2026-08-19-at-094805-1787146802.jpeg?1787146803",
+      "descricaoFotoPrincipal": "Cobertura para aluguel no Paquet\u00e1: ",
+      "urlpublica": "",
+      "datahoracadastro": "06\/03\/2025 13:55:56",
+      "fotos": [
+        {
+          "descricao": "Cobertura para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8184\/cz493k-whatsapp-image-2026-08-19-at-094805-1787146802.jpeg?1787146803"
+        },
+        {
+          "descricao": "Cobertura para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8184\/5yus1-whatsapp-image-2026-08-19-at-094802-1787146802.jpeg?1787146803"
+        },
+        {
+          "descricao": "Cobertura para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8184\/sq5zh-whatsapp-image-2026-08-19-at-094802-1-1787146802.jpeg?1787146803"
+        },
+        {
+          "descricao": "Cobertura para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8184\/i6dlw-whatsapp-image-2026-08-19-at-094802-2-1787146802.jpeg?1787146803"
+        },
+        {
+          "descricao": "Cobertura para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8184\/ng8czj-whatsapp-image-2026-08-19-at-094803-1787146802.jpeg?1787146803"
+        },
+        {
+          "descricao": "Cobertura para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8184\/zcf3-whatsapp-image-2026-08-19-at-094803-1-1787146803.jpeg?1787146803"
+        }
+      ],
+      "tempoCadastro": 540,
+      "url_amigavel": "excelente-cobertura-2-quartos-otima-oportunidade"
+    },
+    {
+      "codigo": 668,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "EXCELENTE APARTAMENTO \u2013 2 QUARTOS \u2013 BAIRRO CAI\u00c7ARA \u2013 BELO HORIZONTE\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.700,00",
+      "valorminimo": "R$ 1.700,00",
+      "valormaximo": "R$ 1.700,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 300,00",
+      "codigobairro": 12,
+      "bairro": "Alto Cai\u00e7aras",
+      "codigobairro2": 64,
+      "bairro2": "Cai\u00e7aras",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Noroeste",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "30750-220",
+      "endereco": "Rua Ant\u00f4nia Fel\u00edcia do Reis",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "2",
+      "numerosalas": "1",
+      "numerobanhos": "2",
+      "numerovagas": "1",
+      "tipovagas": "Livre e Coberta.",
+      "numerosuites": "0",
+      "areaprincipal": "75,00",
+      "areainterna": "75,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/668\/x5fa6-whatsapp-image-2026-07-28-at-135237-2-1785257711.jpeg?1786475976",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Alto Cai\u00e7aras: ",
+      "urlpublica": "",
+      "datahoracadastro": "26\/03\/2019 14:17:37",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Alto Cai\u00e7aras: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/668\/x5fa6-whatsapp-image-2026-07-28-at-135237-2-1785257711.jpeg?1786475976"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Alto Cai\u00e7aras: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/668\/1vzyq-whatsapp-image-2026-07-28-at-135236-1785257711.jpeg?1786475976"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Alto Cai\u00e7aras: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/668\/51uwn-whatsapp-image-2026-07-28-at-135236-1-1785257711.jpeg?1786475976"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Alto Cai\u00e7aras: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/668\/o3cel-whatsapp-image-2026-07-28-at-135236-2-1785257711.jpeg?1786475976"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Alto Cai\u00e7aras: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/668\/qj3bz-whatsapp-image-2026-07-28-at-135237-1785257711.jpeg?1786475976"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Alto Cai\u00e7aras: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/668\/xpopu-whatsapp-image-2026-07-28-at-135237-1-1785257711.jpeg?1786475976"
+        }
+      ],
+      "tempoCadastro": 2712,
+      "url_amigavel": "excelente-apartamento-2-quartos-bairro-caicara-belo-horizonte-mg"
+    },
+    {
+      "codigo": 403,
+      "codigocondominio": 39,
+      "nomecondominio": "Condom\u00ednio Jardim das Ac\u00e1cias",
+      "nomeempreendimento": "",
+      "titulo": "Kitnet no Bairro Sagrada Fam\u00edlia - Belo Horizonte\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 10,
+      "tipo": "Kitnet",
+      "codigotipo2": 2,
+      "tipo2": "Apartamento",
+      "valor": "R$ 1.000,00",
+      "valorminimo": "R$ 1.000,00",
+      "valormaximo": "R$ 1.000,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 160,00",
+      "codigobairro": 296,
+      "bairro": "Sagrada Fam\u00edlia",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Leste",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31030-050",
+      "endereco": "Rua M\u00e1rio de Andrade Gomes",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "1",
+      "numerosalas": "0",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "21,00",
+      "areainterna": "21,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/403\/meiit-whatsapp-image-2026-07-31-at-141255-1-1785518221.jpeg?1785518221",
+      "descricaoFotoPrincipal": "Kitnet para aluguel no Sagrada Fam\u00edlia: ",
+      "urlpublica": "",
+      "datahoracadastro": "06\/03\/2018 10:48:18",
+      "fotos": [
+        {
+          "descricao": "Kitnet para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/403\/meiit-whatsapp-image-2026-07-31-at-141255-1-1785518221.jpeg?1785518221"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/403\/bt6iy-whatsapp-image-2026-07-31-at-141256-1785518221.jpeg?1785518221"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/403\/7jdjr-whatsapp-image-2026-07-31-at-141255-3-1785518221.jpeg?1785518221"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/403\/auhr9-whatsapp-image-2026-07-31-at-141255-2-1785518221.jpeg?1785518221"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/403\/dg64p-whatsapp-image-2026-07-31-at-141253-1785518221.jpeg?1785518221"
+        },
+        {
+          "descricao": "Kitnet para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/403\/a5ecrf-whatsapp-image-2026-07-31-at-141253-1-1785518221.jpeg?1785518221"
+        }
+      ],
+      "tempoCadastro": 3097,
+      "url_amigavel": "kitnet-no-bairro-sagrada-familia-belo-horizonte-mg"
+    },
+    {
+      "codigo": 10502,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Amplo 3 quartos, su\u00edte, 2 vagas, uma quadra da pra\u00e7a!",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 3.800,00",
+      "valorminimo": "R$ 3.800,00",
+      "valormaximo": "R$ 3.800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 565,00",
+      "codigobairro": 314,
+      "bairro": "Santa Tereza",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Leste",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31010-280",
+      "endereco": "Rua Tenente Vit\u00f3rino",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "3",
+      "numerosalas": "1",
+      "numerobanhos": "3",
+      "numerovagas": "2",
+      "tipovagas": "cobertas e paralelas",
+      "numerosuites": "1",
+      "areaprincipal": "95,00",
+      "areainterna": "95,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10502\/ln8zz-fernando-ferraz-corretor-apresenta-esta-linda-opcao-no-coracao-do-bairro-santa-tereza-com-3-quartos-suite-duas-vagas-amplo-36-1785769997.jpeg?1785770321",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Santa Tereza: ",
+      "urlpublica": "",
+      "datahoracadastro": "03\/08\/2026 12:07:13",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10502\/ln8zz-fernando-ferraz-corretor-apresenta-esta-linda-opcao-no-coracao-do-bairro-santa-tereza-com-3-quartos-suite-duas-vagas-amplo-36-1785769997.jpeg?1785770321"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10502\/0qhpzl-fernando-ferraz-corretor-apresenta-esta-linda-opcao-no-coracao-do-bairro-santa-tereza-com-3-quartos-suite-duas-vagas-amplo-10-1785769997.jpeg?1785770321"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10502\/oo4sj-fernando-ferraz-corretor-apresenta-esta-linda-opcao-no-coracao-do-bairro-santa-tereza-com-3-quartos-suite-duas-vagas-amplo-11-1785769997.jpeg?1785770321"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10502\/pax7x-fernando-ferraz-corretor-apresenta-esta-linda-opcao-no-coracao-do-bairro-santa-tereza-com-3-quartos-suite-duas-vagas-amplo-12-1785769997.jpeg?1785770321"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10502\/vptsk-fernando-ferraz-corretor-apresenta-esta-linda-opcao-no-coracao-do-bairro-santa-tereza-com-3-quartos-suite-duas-vagas-amplo-31-1785769997.jpeg?1785770321"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10502\/wd8rc-fernando-ferraz-corretor-apresenta-esta-linda-opcao-no-coracao-do-bairro-santa-tereza-com-3-quartos-suite-duas-vagas-amplo-32-1785769997.jpeg?1785770321"
+        }
+      ],
+      "tempoCadastro": 25,
+      "url_amigavel": "amplo-3-quartos-suite-2-vagas-uma-quadra-da-praca"
+    },
+    {
+      "codigo": 5478,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "LINDO APARTAMENTO! Apartamento de 3 Quartos, com 1 su\u00edte, no Bairro Sagrada Familia",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 3.600,00",
+      "valorminimo": "R$ 3.600,00",
+      "valormaximo": "R$ 3.600,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 500,00",
+      "codigobairro": 296,
+      "bairro": "Sagrada Fam\u00edlia",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Leste",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31030-110",
+      "endereco": "Rua El\u00f3i Mendes",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "3",
+      "numerosalas": "1",
+      "numerobanhos": "3",
+      "numerovagas": "2",
+      "tipovagas": "Cobertas",
+      "numerosuites": "1",
+      "areaprincipal": "80,00",
+      "areainterna": "80,00",
+      "areaexterna": "80,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/5478\/jzl2v-img-6140-1785945532.jpeg?1787582141",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+      "urlpublica": "",
+      "datahoracadastro": "08\/06\/2017 00:00:00",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/5478\/jzl2v-img-6140-1785945532.jpeg?1787582141"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/5478\/6wqk3-img-6146-1785945532.jpeg?1787582141"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/5478\/22gcp-img-6147-1785945532.jpeg?1787582141"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/5478\/b0yuh-img-6138-1785945531.jpeg?1787582141"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/5478\/1lbqx-img-6137-1785945531.jpeg?1787582141"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Sagrada Fam\u00edlia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/5478\/xedya-img-6139-1785945531.jpeg?1787582141"
+        }
+      ],
+      "tempoCadastro": 3368,
+      "url_amigavel": "lindo-apartamento-apartamento-de-3-quartos-com-1-suite-no-bairro-sagrada-familia"
+    },
+    {
+      "codigo": 10544,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "SALA COMERCIAL PARA LOCA\u00c7\u00c3O \u2013 DENVER BUSINESS CENTER \u2013 CENTRO",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 6,
+      "tipo": "Sala",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.400,00",
+      "valorminimo": "R$ 1.400,00",
+      "valormaximo": "R$ 1.400,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 239,00",
+      "codigobairro": 37,
+      "bairro": "Barro Preto",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Centro-Sul",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "30190-003",
+      "endereco": "Avenida Augusto de Lima",
+      "numero": "****",
+      "complemento": "**************",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "2",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "48,00",
+      "areainterna": "48,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10544\/r64pa-img-6247-1787143802.jpeg?1787149633",
+      "descricaoFotoPrincipal": "Sala para aluguel no Barro Preto: ",
+      "urlpublica": "",
+      "datahoracadastro": "18\/08\/2026 18:09:37",
+      "fotos": [
+        {
+          "descricao": "Sala para aluguel no Barro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10544\/r64pa-img-6247-1787143802.jpeg?1787149633"
+        },
+        {
+          "descricao": "Sala para aluguel no Barro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10544\/28irb-img-6255-1787143802.jpeg?1787149633"
+        },
+        {
+          "descricao": "Sala para aluguel no Barro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10544\/fi8rg-img-6256-1787143802.jpeg?1787149633"
+        },
+        {
+          "descricao": "Sala para aluguel no Barro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10544\/jwa8rf-img-6251-1787143802.jpeg?1787149633"
+        },
+        {
+          "descricao": "Sala para aluguel no Barro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10544\/g1gt7-img-6248-1787143802.jpeg?1787149633"
+        },
+        {
+          "descricao": "Sala para aluguel no Barro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10544\/vhrnz-img-6252-1787143802.jpeg?1787149633"
+        }
+      ],
+      "tempoCadastro": 10,
+      "url_amigavel": "sala-comercial-para-locacao-denver-business-center-centro"
+    },
+    {
+      "codigo": 8454,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Casa comercial para aluguel, 12 quartos, Lourdes - Belo Horizonte\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 22,
+      "tipo": "Casa comercial",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 8.000,00",
+      "valorminimo": "R$ 8.000,00",
+      "valormaximo": "R$ 8.000,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 207,
+      "bairro": "Lourdes",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Centro-Sul",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "30140-092",
+      "endereco": "Rua Gon\u00e7alves Dias",
+      "numero": "****",
+      "complemento": "*****",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "12",
+      "numerosalas": "0",
+      "numerobanhos": "5",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "150,00",
+      "areainterna": "150,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8454\/h4boe-w6fkq-img-20251028-141749-1761677701-1770735316.jpg?1770735318",
+      "descricaoFotoPrincipal": "Casa comercial para aluguel no Lourdes: ",
+      "urlpublica": "",
+      "datahoracadastro": "10\/02\/2026 09:18:55",
+      "fotos": [
+        {
+          "descricao": "Casa comercial para aluguel no Lourdes: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8454\/h4boe-w6fkq-img-20251028-141749-1761677701-1770735316.jpg?1770735318"
+        },
+        {
+          "descricao": "Casa comercial para aluguel no Lourdes: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8454\/elbjc-90pqb-img-20251028-141741-1761677701-photoroom-1770735316.png?1770735318"
+        },
+        {
+          "descricao": "Casa comercial para aluguel no Lourdes: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8454\/0gjgch-zamkh-img-20251028-141900-1761677701-photoroom-1770735316.png?1770735318"
+        },
+        {
+          "descricao": "Casa comercial para aluguel no Lourdes: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8454\/q3kp-y3dq-img-20251028-141700-1761677701-photoroom-1770735316.png?1770735318"
+        },
+        {
+          "descricao": "Casa comercial para aluguel no Lourdes: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8454\/yg1ah-wcvit-img-20251028-144439-1761677701-photoroom-1770735316.png?1770735318"
+        },
+        {
+          "descricao": "Casa comercial para aluguel no Lourdes: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/8454\/nitqk-v0im3j-img-20251028-141823-1761677701-photoroom-1770735316.png?1770735318"
+        }
+      ],
+      "tempoCadastro": 199,
+      "url_amigavel": "casa-comercial-para-aluguel-12-quartos-lourdes-belo-horizonte-mg"
+    },
+    {
+      "codigo": 10420,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Sala Comercial de Alto Padr\u00e3o na Savassi \u2013 Shopping 5\u00aa Avenida",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 6,
+      "tipo": "Sala",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 2.800,00",
+      "valorminimo": "R$ 2.800,00",
+      "valormaximo": "R$ 2.800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 385,00",
+      "codigobairro": 347,
+      "bairro": "Savassi",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Centro-Sul",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "30130-913",
+      "endereco": "Rua Alagoas",
+      "numero": "****",
+      "complemento": "***",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "30,00",
+      "areainterna": "30,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10420\/ifktuj-whatsapp-image-2026-07-06-at-092120-1783343778.jpeg?1783343779",
+      "descricaoFotoPrincipal": "Sala para aluguel no Savassi: ",
+      "urlpublica": "",
+      "datahoracadastro": "06\/07\/2026 10:12:23",
+      "fotos": [
+        {
+          "descricao": "Sala para aluguel no Savassi: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10420\/ifktuj-whatsapp-image-2026-07-06-at-092120-1783343778.jpeg?1783343779"
+        },
+        {
+          "descricao": "Sala para aluguel no Savassi: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10420\/h3bsk-whatsapp-image-2026-07-06-at-092117-1783343778.jpeg?1783343779"
+        },
+        {
+          "descricao": "Sala para aluguel no Savassi: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10420\/yb1o4-whatsapp-image-2026-07-06-at-0921172-1783343778.jpeg?1783343779"
+        },
+        {
+          "descricao": "Sala para aluguel no Savassi: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10420\/fevws-whatsapp-image-2026-07-06-at-092116-1783343778.jpeg?1783343779"
+        },
+        {
+          "descricao": "Sala para aluguel no Savassi: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10420\/gmbdn-whatsapp-image-2026-07-06-at-092118-1783343778.jpeg?1783343779"
+        },
+        {
+          "descricao": "Sala para aluguel no Savassi: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10420\/skoi2j-whatsapp-image-2026-07-06-at-0921212-1783343779.jpeg?1783343779"
+        }
+      ],
+      "tempoCadastro": 53,
+      "url_amigavel": "sala-comercial-de-alto-padrao-na-savassi-shopping-5-avenida"
+    },
+    {
+      "codigo": 10428,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Maravilhoso apartamento 3 quartos, su\u00edte, 2 vagas!",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 3.950,00",
+      "valorminimo": "R$ 3.950,00",
+      "valormaximo": "R$ 3.950,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 600,00",
+      "codigobairro": 314,
+      "bairro": "Santa Tereza",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Leste",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31010-390",
+      "endereco": "Rua Bom Despacho",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "3",
+      "numerosalas": "1",
+      "numerobanhos": "3",
+      "numerovagas": "2",
+      "tipovagas": "Cobertas e em linha",
+      "numerosuites": "1",
+      "areaprincipal": "85,00",
+      "areainterna": "85,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10428\/0icdg-fernando-ferraz-corretor-liderar-imoveis-oferecem-esse-lindo-apartamento-no-santa-tereza-de-tres-quartos-duas-vagas-suite-monta-1783607893.jpeg?1783607894",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Santa Tereza: ",
+      "urlpublica": "",
+      "datahoracadastro": "09\/07\/2026 11:32:37",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10428\/0icdg-fernando-ferraz-corretor-liderar-imoveis-oferecem-esse-lindo-apartamento-no-santa-tereza-de-tres-quartos-duas-vagas-suite-monta-1783607893.jpeg?1783607894"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10428\/96yuqh-fernando-ferraz-corretor-liderar-imoveis-oferecem-esse-lindo-apartamento-no-santa-tereza-de-tres-quartos-duas-vagas-suite-mont-1783607893.jpeg?1783607894"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10428\/hpi28i-fernando-ferraz-corretor-liderar-imoveis-oferecem-esse-lindo-apartamento-no-santa-tereza-de-tres-quartos-duas-vagas-suite-mont-1783607893.jpeg?1783607894"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10428\/zm666-fernando-ferraz-corretor-liderar-imoveis-oferecem-esse-lindo-apartamento-no-santa-tereza-de-tres-quartos-duas-vagas-suite-monta-1783607893.jpeg?1783607894"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10428\/01g2d-fernando-ferraz-corretor-liderar-imoveis-oferecem-esse-lindo-apartamento-no-santa-tereza-de-tres-quartos-duas-vagas-suite-monta-1783607894.jpeg?1783607894"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Tereza: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10428\/mu0k1-fernando-ferraz-corretor-liderar-imoveis-oferecem-esse-lindo-apartamento-no-santa-tereza-de-tres-quartos-duas-vagas-suite-monta-1783607894.jpeg?1783607894"
+        }
+      ],
+      "tempoCadastro": 50,
+      "url_amigavel": "maravilhoso-apartamento-3-quartos-suite-2-vagas"
+    },
+    {
+      "codigo": 9584,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Apartamento 1 Quarto (1 Su\u00edte) Mobiliado no Barro Preto \u2013 40m\u00b2 | 1 Vaga",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 4.400,00",
+      "valorminimo": "R$ 4.400,00",
+      "valormaximo": "R$ 4.400,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 480,00",
+      "codigobairro": 317,
+      "bairro": "Santo Agostinho",
+      "codigobairro2": 37,
+      "bairro2": "Barro Preto",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Centro-Sul",
+      "codigocidade2": 1,
+      "cidade2": "Belo Horizonte",
+      "estado2": "MG",
+      "cep": "30190-062",
+      "endereco": "Rua dos Tupis",
+      "numero": "****",
+      "complemento": "*********",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "1",
+      "numerosalas": "1",
+      "numerobanhos": "1",
+      "numerovagas": "1",
+      "tipovagas": "Livre e demarcada",
+      "numerosuites": "1",
+      "areaprincipal": "40,00",
+      "areainterna": "40,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/9584\/fq6ng-whatsapp-image-2026-05-09-at-102013-1778596190.jpeg?1784656822",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Santo Agostinho: ",
+      "urlpublica": "",
+      "datahoracadastro": "12\/05\/2026 11:28:13",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/9584\/fq6ng-whatsapp-image-2026-05-09-at-102013-1778596190.jpeg?1784656822"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/9584\/n5pe-whatsapp-image-2026-05-09-at-102007-1-1778596190.jpeg?1784656822"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/9584\/vjdj8-whatsapp-image-2026-05-09-at-102004-1778596190.jpeg?1784656822"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/9584\/h1t2xl-whatsapp-image-2026-05-09-at-102005-1778596190.jpeg?1784656822"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/9584\/88l4th-whatsapp-image-2026-05-15-at-113240-1778855853.jpeg?1784656822"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/9584\/wnbxsf-whatsapp-image-2026-05-15-at-113239-2-1778855853.jpeg?1784656822"
+        }
+      ],
+      "tempoCadastro": 108,
+      "url_amigavel": "apartamento-1-quarto-1-suite-mobiliado-no-barro-preto-40m-1-vaga"
+    },
+    {
+      "codigo": 7327,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Excelente barrac\u00e3o de dois pavimentos para loca\u00e7\u00e3o \u2013 Bairro Ip\u00ea \u2013 Belo Horizonte\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 19,
+      "tipo": "Barrac\u00e3o",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 1.100,00",
+      "valorminimo": "R$ 1.100,00",
+      "valormaximo": "R$ 1.100,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 171,
+      "bairro": "Ip\u00ea",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Nordeste",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31930-270",
+      "endereco": "Rua Jos\u00e9 Gon\u00e7alves Ferreira",
+      "numero": "**",
+      "complemento": "",
+      "aceitapermuta": false,
+      "exclusivo": true,
+      "numeroquartos": "1",
+      "numerosalas": "1",
+      "numerobanhos": "1",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "55,00",
+      "areainterna": "55,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7327\/tetmz-whatsapp-image-2025-01-27-at-102824-1737985968.jpeg?1738165724",
+      "descricaoFotoPrincipal": "Barrac\u00e3o para aluguel no Ip\u00ea: ",
+      "urlpublica": "",
+      "datahoracadastro": "10\/03\/2022 12:02:54",
+      "fotos": [
+        {
+          "descricao": "Barrac\u00e3o para aluguel no Ip\u00ea: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7327\/tetmz-whatsapp-image-2025-01-27-at-102824-1737985968.jpeg?1738165724"
+        },
+        {
+          "descricao": "Barrac\u00e3o para aluguel no Ip\u00ea: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7327\/1c9ty-whatsapp-image-2025-01-27-at-102828-2-1737985969.jpeg?1738165724"
+        },
+        {
+          "descricao": "Barrac\u00e3o para aluguel no Ip\u00ea: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7327\/3l5hj-whatsapp-image-2025-01-27-at-102828-1-1737985969.jpeg?1738165724"
+        },
+        {
+          "descricao": "Barrac\u00e3o para aluguel no Ip\u00ea: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7327\/s1j2x-whatsapp-image-2025-01-27-at-102827-1737985968.jpeg?1738165724"
+        },
+        {
+          "descricao": "Barrac\u00e3o para aluguel no Ip\u00ea: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7327\/bdzj7l-whatsapp-image-2025-01-27-at-102825-1737985968.jpeg?1738165724"
+        },
+        {
+          "descricao": "Barrac\u00e3o para aluguel no Ip\u00ea: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/7327\/abpuui-whatsapp-image-2025-01-27-at-102826-1737985968.jpeg?1738165724"
+        }
+      ],
+      "tempoCadastro": 1632,
+      "url_amigavel": "excelente-barracao-de-dois-pavimentos-para-locacao-bairro-ipe-belo-horizonte-mg"
+    },
+    {
+      "codigo": 10437,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Apartamento de 3 Quartos com Su\u00edte no Bairro Paquet\u00e1",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 2.490,00",
+      "valorminimo": "R$ 2.490,00",
+      "valormaximo": "R$ 2.490,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 520,00",
+      "codigobairro": 272,
+      "bairro": "Paquet\u00e1",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Pampulha",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31330-660",
+      "endereco": "Rua Nilton Baldo",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "3",
+      "numerosalas": "0",
+      "numerobanhos": "2",
+      "numerovagas": "1",
+      "tipovagas": "Carro Pequeno.",
+      "numerosuites": "1",
+      "areaprincipal": "90,00",
+      "areainterna": "90,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10437\/2viqk-54c292a1-f76b-4322-9742-ad89d603692b-1783954823.jpg?1783954824",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Paquet\u00e1: ",
+      "urlpublica": "",
+      "datahoracadastro": "13\/07\/2026 11:51:58",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10437\/2viqk-54c292a1-f76b-4322-9742-ad89d603692b-1783954823.jpg?1783954824"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10437\/9yyzq-87f3bd4d-70a9-4558-9140-f771bb25a6bb-1783954823.jpg?1783954824"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10437\/vj399l-6ae148da-45a9-4d52-af2c-6ec225abcd0d-1783954823.jpg?1783954824"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10437\/6ndobg-e738cc2c-7f88-4656-bdaa-6d8dd4275e33-1783954823.jpg?1783954824"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10437\/v9tb4g-d4496bf4-2fb2-46d6-8d83-510273fd9b52-1783954823.jpg?1783954824"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Paquet\u00e1: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10437\/0qhyo-e4444d84-527f-48a7-845f-7dd0f8703ad0-1783954823.jpg?1783954824"
+        }
+      ],
+      "tempoCadastro": 46,
+      "url_amigavel": "apartamento-de-3-quartos-com-suite-no-bairro-paqueta"
+    },
+    {
+      "codigo": 10526,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "TERRENO DE ESQUINA, 736,00 NO MELHOR PONTO DO BAIRRO!",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 27,
+      "tipo": "Terreno \/ \u00c1rea",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 10.800,00",
+      "valorminimo": "R$ 10.800,00",
+      "valormaximo": "R$ 10.800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 298,
+      "bairro": "Santa Am\u00e9lia",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Pampulha",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31560-230",
+      "endereco": "Rua Doutor Jefferson de Oliveira",
+      "numero": "**",
+      "complemento": "",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "0",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "736,00",
+      "areainterna": "736,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10526\/45b15g-fernando-ferraz-corretor-apresenta-este-maravilhoso-terreno-no-melhor-ponto-do-bairro-santa-amelia-13-1786454459.jpeg?1786454460",
+      "descricaoFotoPrincipal": "Terreno \/ \u00c1rea para aluguel no Santa Am\u00e9lia: ",
+      "urlpublica": "",
+      "datahoracadastro": "11\/08\/2026 10:16:18",
+      "fotos": [
+        {
+          "descricao": "Terreno \/ \u00c1rea para aluguel no Santa Am\u00e9lia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10526\/45b15g-fernando-ferraz-corretor-apresenta-este-maravilhoso-terreno-no-melhor-ponto-do-bairro-santa-amelia-13-1786454459.jpeg?1786454460"
+        },
+        {
+          "descricao": "Terreno \/ \u00c1rea para aluguel no Santa Am\u00e9lia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10526\/5em6f-fernando-ferraz-corretor-apresenta-este-maravilhoso-terreno-no-melhor-ponto-do-bairro-santa-amelia-12-1786454459.jpeg?1786454460"
+        },
+        {
+          "descricao": "Terreno \/ \u00c1rea para aluguel no Santa Am\u00e9lia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10526\/g729m-fernando-ferraz-corretor-apresenta-este-maravilhoso-terreno-no-melhor-ponto-do-bairro-santa-amelia-10-1786454459.jpeg?1786454460"
+        },
+        {
+          "descricao": "Terreno \/ \u00c1rea para aluguel no Santa Am\u00e9lia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10526\/wrri-fernando-ferraz-corretor-apresenta-este-maravilhoso-terreno-no-melhor-ponto-do-bairro-santa-amelia-9-1786454459.jpeg?1786454460"
+        },
+        {
+          "descricao": "Terreno \/ \u00c1rea para aluguel no Santa Am\u00e9lia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10526\/u1ovqh-fernando-ferraz-corretor-apresenta-este-maravilhoso-terreno-no-melhor-ponto-do-bairro-santa-amelia-8-1786454459.jpeg?1786454460"
+        },
+        {
+          "descricao": "Terreno \/ \u00c1rea para aluguel no Santa Am\u00e9lia: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10526\/xnb9o-fernando-ferraz-corretor-apresenta-este-maravilhoso-terreno-no-melhor-ponto-do-bairro-santa-amelia-7-1786454460.jpeg?1786454460"
+        }
+      ],
+      "tempoCadastro": 17,
+      "url_amigavel": "terreno-de-esquina-73600-no-melhor-ponto-do-bairro"
+    },
+    {
+      "codigo": 10426,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Loja para aluguel, Santo Agostinho - Belo Horizonte\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 5,
+      "tipo": "Loja",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 12.800,00",
+      "valorminimo": "R$ 12.800,00",
+      "valormaximo": "R$ 12.800,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 0,00",
+      "codigobairro": 317,
+      "bairro": "Santo Agostinho",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Centro-Sul",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "30170-115",
+      "endereco": "Rua Rio Grande do Sul",
+      "numero": "****",
+      "complemento": "******",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "0",
+      "numerosalas": "0",
+      "numerobanhos": "0",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "0",
+      "areaprincipal": "265,05",
+      "areainterna": "265,05",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10426\/f5zulk-whatsapp-image-2026-07-08-at-105049-3-1783526816.jpeg?1783526817",
+      "descricaoFotoPrincipal": "Loja para aluguel no Santo Agostinho: ",
+      "urlpublica": "",
+      "datahoracadastro": "08\/07\/2026 13:03:17",
+      "fotos": [
+        {
+          "descricao": "Loja para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10426\/f5zulk-whatsapp-image-2026-07-08-at-105049-3-1783526816.jpeg?1783526817"
+        },
+        {
+          "descricao": "Loja para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10426\/ont08-whatsapp-image-2026-07-08-at-104952-1783526816.jpeg?1783526817"
+        },
+        {
+          "descricao": "Loja para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10426\/3dooz-whatsapp-image-2026-07-08-at-104952-1-1783526816.jpeg?1783526817"
+        },
+        {
+          "descricao": "Loja para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10426\/fy9kqf-whatsapp-image-2026-07-08-at-104953-1783526816.jpeg?1783526817"
+        },
+        {
+          "descricao": "Loja para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10426\/b3prg-whatsapp-image-2026-07-08-at-104953-1-1783526816.jpeg?1783526817"
+        },
+        {
+          "descricao": "Loja para aluguel no Santo Agostinho: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10426\/p1rlo-whatsapp-image-2026-07-08-at-104953-2-1783526816.jpeg?1783526817"
+        }
+      ],
+      "tempoCadastro": 51,
+      "url_amigavel": "loja-para-aluguel-santo-agostinho-belo-horizonte-mg"
+    },
+    {
+      "codigo": 10481,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Apartamento para aluguel, 2 quartos, 1 su\u00edte, 2 vagas, Santa Rosa - Belo Horizonte\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 2.500,00",
+      "valorminimo": "R$ 2.500,00",
+      "valormaximo": "R$ 2.500,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 350,00",
+      "codigobairro": 312,
+      "bairro": "Santa Rosa",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Pampulha",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31255-510",
+      "endereco": "Rua Flor de orqu\u00eddea",
+      "numero": "**",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "2",
+      "numerosalas": "1",
+      "numerobanhos": "2",
+      "numerovagas": "2",
+      "tipovagas": "Cobertas em linha",
+      "numerosuites": "1",
+      "areaprincipal": "60,00",
+      "areainterna": "60,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10481\/y519-img-5902-1785265569.jpeg?1785265706",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Santa Rosa: ",
+      "urlpublica": "",
+      "datahoracadastro": "28\/07\/2026 16:00:26",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Santa Rosa: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10481\/y519-img-5902-1785265569.jpeg?1785265706"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Rosa: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10481\/wt2fr-img-5903-1785265569.jpeg?1785265706"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Rosa: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10481\/tqarkh-img-5904-1785265569.jpeg?1785265706"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Rosa: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10481\/suuan-img-5901-1785265569.jpeg?1785265706"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Rosa: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10481\/fl9dh-img-5905-1785265569.jpeg?1785265706"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Santa Rosa: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10481\/uypwm-img-5906-1785265569.jpeg?1785265706"
+        }
+      ],
+      "tempoCadastro": 31,
+      "url_amigavel": "apartamento-para-aluguel-2-quartos-1-suite-2-vagas-santa-rosa-belo-horizonte-mg"
+    },
+    {
+      "codigo": 10472,
+      "codigocondominio": 0,
+      "nomecondominio": "",
+      "nomeempreendimento": "",
+      "titulo": "Excelente apartamento 3 quartos com su\u00edte, DCE completo - Bairro Ouro Preto - Belo Horizonte\/MG",
+      "codigoauxiliar": "",
+      "finalidade": "Aluguel",
+      "codigotipo": 2,
+      "tipo": "Apartamento",
+      "codigotipo2": null,
+      "tipo2": "",
+      "valor": "R$ 4.500,00",
+      "valorminimo": "R$ 4.500,00",
+      "valormaximo": "R$ 4.500,00",
+      "valoranterior": "R$ 0,00",
+      "valorcondominio": "R$ 470,00",
+      "codigobairro": 267,
+      "bairro": "Ouro Preto",
+      "codigobairro2": null,
+      "bairro2": "",
+      "codigocidade": 1,
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "regiao": "Pampulha",
+      "codigocidade2": null,
+      "cidade2": "",
+      "estado2": "",
+      "cep": "31310-580",
+      "endereco": "Rua Chahade Nasser",
+      "numero": "***",
+      "complemento": "********",
+      "aceitapermuta": false,
+      "exclusivo": false,
+      "numeroquartos": "3",
+      "numerosalas": "1",
+      "numerobanhos": "2",
+      "numerovagas": "0",
+      "tipovagas": "",
+      "numerosuites": "1",
+      "areaprincipal": "95,00",
+      "areainterna": "95,00",
+      "areaexterna": "0,00",
+      "arealote": "0,00",
+      "tipomedida": "m\u00b2",
+      "urlfotoprincipalp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10472\/ic5vb-whatsapp-image-2026-07-24-at-163720-1-1784922662.jpeg?1784922663",
+      "descricaoFotoPrincipal": "Apartamento para aluguel no Ouro Preto: ",
+      "urlpublica": "",
+      "datahoracadastro": "24\/07\/2026 16:50:07",
+      "fotos": [
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10472\/ic5vb-whatsapp-image-2026-07-24-at-163720-1-1784922662.jpeg?1784922663"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10472\/0ty6h-whatsapp-image-2026-07-24-at-163717-1784922662.jpeg?1784922663"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10472\/2hcuo-whatsapp-image-2026-07-24-at-163717-1-1784922662.jpeg?1784922663"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10472\/sx8cy-whatsapp-image-2026-07-24-at-163717-2-1784922662.jpeg?1784922663"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10472\/ztciyf-whatsapp-image-2026-07-24-at-163717-3-1784922662.jpeg?1784922663"
+        },
+        {
+          "descricao": "Apartamento para aluguel no Ouro Preto: ",
+          "urlp": "https:\/\/cdn.imoview.com.br\/liderar\/Imoveis\/10472\/bo7by-whatsapp-image-2026-07-24-at-163718-1784922662.jpeg?1784922663"
+        }
+      ],
+      "tempoCadastro": 35,
+      "url_amigavel": "excelente-apartamento-3-quartos-com-suite-dce-completo-bairro-ouro-preto-belo-horizonte-mg"
+    }
+  ],
+  "favoritos": []
+}
