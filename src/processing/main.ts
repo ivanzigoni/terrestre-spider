@@ -59,9 +59,21 @@ async function processarCaptura(
       }
       const anuncio = await anuncioRepo.save(existente);
 
+      const {
+        precoVenda,
+        precoAluguel,
+        condominio,
+        iptu,
+        ...restoNormalizado
+      } = normalizado;
+
       await manager.getRepository(Avistamento).save(
         manager.getRepository(Avistamento).create({
-          ...normalizado,
+          ...restoNormalizado,
+          precoVendaCentavos: precoVenda,
+          precoAluguelCentavos: precoAluguel,
+          condominioCentavos: condominio,
+          iptuCentavos: iptu,
           anuncioId: anuncio.id,
           capturaBrutaId: captura.id,
           observadoEm: captura.capturadoEm,
