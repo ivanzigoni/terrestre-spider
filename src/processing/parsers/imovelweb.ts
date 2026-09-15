@@ -73,6 +73,8 @@ function extractApartmentLdJson($: CheerioAPI): ApartmentLdJson | null {
 interface PrecoTransacao {
   precoVenda: number | null;
   precoAluguel: number | null;
+  disponivelAluguel: boolean;
+  disponivelVenda: boolean;
 }
 
 function extractPreco($: CheerioAPI): PrecoTransacao {
@@ -82,6 +84,8 @@ function extractPreco($: CheerioAPI): PrecoTransacao {
   return {
     precoVenda: isAluguel ? null : centavos,
     precoAluguel: isAluguel ? centavos : null,
+    disponivelAluguel: isAluguel,
+    disponivelVenda: !isAluguel,
   };
 }
 
@@ -175,7 +179,8 @@ export function parseImovelwebTemplate(
     throw new Error(`${fonte}: bloco ld+json do imóvel não encontrado no HTML`);
   }
 
-  const { precoVenda, precoAluguel } = extractPreco($);
+  const { precoVenda, precoAluguel, disponivelAluguel, disponivelVenda } =
+    extractPreco($);
   const { condominio, iptu } = extractCondominioEIptu($);
   const vagas = extractIconNumero($, 'icon-cochera');
   const suites = extractIconNumero($, 'icon-toilete');
@@ -196,6 +201,8 @@ export function parseImovelwebTemplate(
     codigoExterno,
     precoVenda,
     precoAluguel,
+    disponivelAluguel,
+    disponivelVenda,
     condominio,
     iptu,
     area: apartment.floorSize?.value ?? null,

@@ -90,6 +90,8 @@ export const parseImobiliariaPampulha: Parser = (
     codigoExterno,
     precoVenda: isAluguel ? null : precoCentavos,
     precoAluguel: isAluguel ? precoCentavos : null,
+    disponivelAluguel: isAluguel,
+    disponivelVenda: !isAluguel,
     condominio,
     iptu,
     area,

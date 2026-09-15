@@ -16,6 +16,8 @@ describe('parseImobiliariaPampulha', () => {
     expect(anuncio.codigoExterno).toBe('123456');
     expect(anuncio.precoVenda).toBe(35_000_000);
     expect(anuncio.precoAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.tipoImovelBruto).toBe('Apartamento');
   });
 

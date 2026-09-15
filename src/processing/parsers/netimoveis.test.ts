@@ -16,6 +16,8 @@ describe('parseNetimoveis', () => {
     expect(anuncio.codigoExterno).toBe('1186502');
     expect(anuncio.precoAluguel).toBe(120000);
     expect(anuncio.precoVenda).toBeNull();
+    expect(anuncio.disponivelAluguel).toBe(true);
+    expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.area).toBeCloseTo(26.88);
     expect(anuncio.quartos).toBe(0);
   });

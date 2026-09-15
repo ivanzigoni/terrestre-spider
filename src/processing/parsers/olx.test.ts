@@ -16,6 +16,8 @@ describe('parseOlx', () => {
     expect(anuncio.codigoExterno).toBe('1530395909');
     expect(anuncio.precoAluguel).toBe(110000);
     expect(anuncio.precoVenda).toBeNull();
+    expect(anuncio.disponivelAluguel).toBe(true);
+    expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.area).toBe(68);
     expect(anuncio.quartos).toBe(2);
     expect(anuncio.banheiros).toBe(1);

@@ -142,6 +142,8 @@ export const parseStiloNetimoveis: Parser = (
     codigoExterno,
     precoVenda,
     precoAluguel,
+    disponivelVenda: precoVenda !== null,
+    disponivelAluguel: precoAluguel !== null,
     condominio,
     iptu,
     area: areaMatch?.[1] !== undefined ? parseFirstDecimal(areaMatch[1]) : null,

@@ -81,17 +81,45 @@ function resolveMoneyOrNull(value: string | undefined): number | null {
   return isZeroOrEmptyMoneyString(value) ? null : parseMoneyToCents(value);
 }
 
+function resolveDisponibilidade(
+  status: string | undefined,
+  statusDestaModalidade: string,
+  statusDaOutraModalidade: string,
+  precoDestaModalidade: number | null,
+): boolean {
+  if (status === statusDaOutraModalidade) return false;
+  if (status === statusDestaModalidade) return true;
+  return precoDestaModalidade !== null;
+}
+
 function resolvePrecos(property: VistaProperty): {
   precoVenda: number | null;
   precoAluguel: number | null;
+  disponivelAluguel: boolean;
+  disponivelVenda: boolean;
 } {
   const valorVenda = resolveMoneyOrNull(property.ValorVenda);
   const valorLocacao = resolveMoneyOrNull(property.ValorLocacao);
   const status = property.Status?.trim().toLowerCase();
 
+  const precoVenda = status === 'aluguel' ? null : valorVenda;
+  const precoAluguel = status === 'venda' ? null : valorLocacao;
+
   return {
-    precoVenda: status === 'aluguel' ? null : valorVenda,
-    precoAluguel: status === 'venda' ? null : valorLocacao,
+    precoVenda,
+    precoAluguel,
+    disponivelAluguel: resolveDisponibilidade(
+      status,
+      'aluguel',
+      'venda',
+      precoAluguel,
+    ),
+    disponivelVenda: resolveDisponibilidade(
+      status,
+      'venda',
+      'aluguel',
+      precoVenda,
+    ),
   };
 }
 
@@ -130,13 +158,16 @@ export const parseLoftSites: Parser = (
   conteudo: string,
 ): AnuncioNormalizado => {
   const property = extractVistaProperty(conteudo);
-  const { precoVenda, precoAluguel } = resolvePrecos(property);
+  const { precoVenda, precoAluguel, disponivelAluguel, disponivelVenda } =
+    resolvePrecos(property);
   const { anuncianteNome, codigoCreci } = resolveCorretor(property.Corretor);
 
   return {
     codigoExterno: property.Codigo,
     precoVenda,
     precoAluguel,
+    disponivelAluguel,
+    disponivelVenda,
     condominio: resolveMoneyOrNull(property.ValorCondominio),
     iptu: resolveMoneyOrNull(property.ValorIptu),
     area: resolveArea(property),

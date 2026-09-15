@@ -128,6 +128,8 @@ export const parseNetimoveis: Parser = (
     codigoExterno,
     precoVenda: isAluguel ? null : valorCents,
     precoAluguel: isAluguel ? valorCents : null,
+    disponivelAluguel: isAluguel,
+    disponivelVenda: !isAluguel,
     condominio: parseMoneyToCents(extractDetailValue('Condomínio')),
     iptu: parseMoneyToCents(extractDetailValue('Iptu')),
     area: parseFirstDecimal(extractCaracteristica('area')),

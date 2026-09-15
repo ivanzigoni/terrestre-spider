@@ -19,6 +19,8 @@ describe('parseLoftSites', () => {
     expect(anuncio.codigoExterno).toBe('3919');
     expect(anuncio.precoVenda).toBe(110_000_000);
     expect(anuncio.precoAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.quartos).toBe(3);
     expect(anuncio.vagas).toBe(1);
     expect(anuncio.bairro).toBe('Planalto');
@@ -33,6 +35,8 @@ describe('parseLoftSites', () => {
     expect(anuncio.codigoExterno).toBe('10660');
     expect(anuncio.precoVenda).toBe(98_000_000);
     expect(anuncio.precoAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.tipoImovelBruto).toBe('Casa em Condomínio');
     expect(anuncio.vagas).toBe(2);
     expect(anuncio.bairro).toBe('Santa Amélia');
@@ -43,6 +47,8 @@ describe('parseLoftSites', () => {
 
     expect(anuncio.codigoExterno).toBe('MO1802');
     expect(anuncio.precoVenda).toBe(83_000_000);
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.quartos).toBe(1);
     expect(anuncio.vagas).toBe(2);
     expect(anuncio.condominio).toBeNull();
@@ -54,6 +60,8 @@ describe('parseLoftSites', () => {
 
     expect(anuncio.codigoExterno).toBe('GPI12300');
     expect(anuncio.precoVenda).toBe(63_000_000);
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.quartos).toBe(3);
     expect(anuncio.vagas).toBe(6);
     expect(anuncio.condominio).toBe(2);
@@ -67,6 +75,8 @@ describe('parseLoftSites', () => {
 
     expect(anuncio.codigoExterno).toBe('4045');
     expect(anuncio.precoVenda).toBe(56_000_000);
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.quartos).toBe(3);
     expect(anuncio.vagas).toBe(3);
     expect(anuncio.bairro).toBe('Rio Branco');
@@ -77,6 +87,8 @@ describe('parseLoftSites', () => {
 
     expect(anuncio.codigoExterno).toBe('428');
     expect(anuncio.precoVenda).toBe(79_693_600);
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.vagas).toBe(1);
     expect(anuncio.latitude).toBeNull();
     expect(anuncio.longitude).toBeNull();
@@ -88,6 +100,8 @@ describe('parseLoftSites', () => {
 
     expect(anuncio.codigoExterno).toBe('2368');
     expect(anuncio.precoVenda).toBe(110_000_000);
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.quartos).toBeNull();
     expect(anuncio.suites).toBeNull();
     expect(anuncio.vagas).toBeNull();
@@ -102,6 +116,8 @@ describe('parseLoftSites', () => {
     expect(anuncio.codigoExterno).toBe('6041');
     expect(anuncio.precoVenda).toBeNull();
     expect(anuncio.precoAluguel).toBe(190_000);
+    expect(anuncio.disponivelVenda).toBe(false);
+    expect(anuncio.disponivelAluguel).toBe(true);
     expect(anuncio.quartos).toBe(2);
     expect(anuncio.vagas).toBe(1);
     expect(anuncio.anuncianteNome).toBe('Welvis Mota');

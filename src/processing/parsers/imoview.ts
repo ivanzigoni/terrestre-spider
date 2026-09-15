@@ -197,6 +197,8 @@ export const parseImoview: Parser = (conteudo) => {
     codigoExterno,
     precoVenda: tipoTransacao === 'venda' ? precoCentavos : null,
     precoAluguel: tipoTransacao === 'aluguel' ? precoCentavos : null,
+    disponivelAluguel: tipoTransacao === 'aluguel',
+    disponivelVenda: tipoTransacao === 'venda',
     condominio,
     iptu,
     area,

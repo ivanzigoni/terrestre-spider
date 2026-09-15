@@ -16,6 +16,9 @@ describe('parseKenlo', () => {
 
     expect(anuncio.codigoExterno).toBe('CA0641');
     expect(anuncio.precoAluguel).toBe(380_000);
+    expect(anuncio.precoVenda).toBeNull();
+    expect(anuncio.disponivelAluguel).toBe(true);
+    expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.iptu).toBe(12_000);
     expect(anuncio.condominio).toBeNull();
     expect(anuncio.quartos).toBe(3);
@@ -36,6 +39,9 @@ describe('parseKenlo', () => {
 
     expect(anuncio.codigoExterno).toBe('CO0746');
     expect(anuncio.precoAluguel).toBe(2_400_000);
+    expect(anuncio.precoVenda).toBeNull();
+    expect(anuncio.disponivelAluguel).toBe(true);
+    expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.iptu).toBe(108_400);
     expect(anuncio.condominio).toBe(300_000);
     expect(anuncio.quartos).toBe(5);

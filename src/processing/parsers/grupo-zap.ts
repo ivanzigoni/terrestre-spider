@@ -80,6 +80,8 @@ function parseListingRsc(html: string): AnuncioNormalizado {
     codigoExterno: String(listing.id),
     precoVenda: isAluguel ? null : precoCents,
     precoAluguel: isAluguel ? precoCents : null,
+    disponivelAluguel: isAluguel,
+    disponivelVenda: !isAluguel,
     condominio: condominioCents,
     iptu: iptuCents,
     area: firstOrNull(listing.amenities.usableAreas),

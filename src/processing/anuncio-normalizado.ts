@@ -1,9 +1,13 @@
 import { z } from 'zod';
 
+import type { TipoTransacao } from '../persistence/enums/tipo-transacao.enum.js';
+
 export const anuncioNormalizadoSchema = z.object({
   codigoExterno: z.string().min(1),
   precoVenda: z.number().int().nonnegative().nullable(),
   precoAluguel: z.number().int().nonnegative().nullable(),
+  disponivelAluguel: z.boolean().nullable(),
+  disponivelVenda: z.boolean().nullable(),
   condominio: z.number().int().nonnegative().nullable(),
   iptu: z.number().int().nonnegative().nullable(),
   area: z.number().nonnegative().nullable(),
@@ -29,4 +33,11 @@ export const anuncioNormalizadoSchema = z.object({
 
 export type AnuncioNormalizado = z.infer<typeof anuncioNormalizadoSchema>;
 
-export type Parser = (conteudo: string) => AnuncioNormalizado;
+export interface ContextoCaptura {
+  tipoTransacao: TipoTransacao | null;
+}
+
+export type Parser = (
+  conteudo: string,
+  contexto?: ContextoCaptura,
+) => AnuncioNormalizado;

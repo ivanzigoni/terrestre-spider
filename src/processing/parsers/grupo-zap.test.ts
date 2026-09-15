@@ -20,6 +20,8 @@ describe('parseVivaReal', () => {
     expect(anuncio.codigoExterno).toBe('2908097823');
     expect(anuncio.precoAluguel).toBe(440000);
     expect(anuncio.precoVenda).toBeNull();
+    expect(anuncio.disponivelAluguel).toBe(true);
+    expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.area).toBe(113);
     expect(anuncio.quartos).toBe(2);
   });
@@ -57,6 +59,8 @@ describe('parseZapImoveis', () => {
     expect(anuncio.codigoExterno).toBe('2900803807');
     expect(anuncio.precoAluguel).toBe(1657000);
     expect(anuncio.precoVenda).toBeNull();
+    expect(anuncio.disponivelAluguel).toBe(true);
+    expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.area).toBe(220);
     expect(anuncio.quartos).toBe(4);
   });

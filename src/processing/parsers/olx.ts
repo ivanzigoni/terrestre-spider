@@ -172,6 +172,8 @@ export const parseOlx: Parser = (conteudo: string): AnuncioNormalizado => {
     codigoExterno: String(ad.listId),
     precoVenda: isAluguel ? null : priceCents,
     precoAluguel: isAluguel ? priceCents : null,
+    disponivelAluguel: isAluguel,
+    disponivelVenda: !isAluguel,
     condominio: moneyOrNull(
       findPriceInfoValue(ad.realEstatePriceInfo, 'condominio'),
     ),

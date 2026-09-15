@@ -19,6 +19,8 @@ describe('parseGsaAtivos', () => {
     expect(anuncio.bairro).toBe('Venda Nova');
     expect(anuncio.precoAluguel).toBe(600_000);
     expect(anuncio.precoVenda).toBeNull();
+    expect(anuncio.disponivelAluguel).toBe(true);
+    expect(anuncio.disponivelVenda).toBe(false);
   });
 
   it('extrai área, banheiros, condomínio e IPTU do bloco de informações adicionais', () => {

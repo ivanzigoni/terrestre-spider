@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 
 import { describe, expect, it } from 'vitest';
 
+import { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
 import { parseMyBroker } from './my-broker.js';
 
 const html = readFileSync(
@@ -36,6 +37,29 @@ describe('parseMyBroker', () => {
     expect(anuncio.suites).toBeNull();
     expect(anuncio.banheiros).toBeNull();
     expect(anuncio.vagas).toBeNull();
+  });
+
+  it('deixa disponibilidade como null sem contexto de captura (sem sinal de página nem de crawl)', () => {
+    const anuncio = parseMyBroker(html);
+
+    expect(anuncio.disponivelAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBeNull();
+  });
+
+  it('resolve disponibilidade a partir do tipoTransacao do contexto de captura', () => {
+    const aluguel = parseMyBroker(html, {
+      tipoTransacao: TipoTransacao.ALUGUEL,
+    });
+    expect(aluguel.disponivelAluguel).toBe(true);
+    expect(aluguel.disponivelVenda).toBe(false);
+
+    const venda = parseMyBroker(html, { tipoTransacao: TipoTransacao.VENDA });
+    expect(venda.disponivelAluguel).toBe(false);
+    expect(venda.disponivelVenda).toBe(true);
+
+    const semSinal = parseMyBroker(html, { tipoTransacao: null });
+    expect(semSinal.disponivelAluguel).toBeNull();
+    expect(semSinal.disponivelVenda).toBeNull();
   });
 
   it('extrai a descrição a partir do texto "Sobre o imóvel"', () => {

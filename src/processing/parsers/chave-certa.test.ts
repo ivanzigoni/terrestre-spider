@@ -16,6 +16,8 @@ describe('parseChaveCerta', () => {
     expect(anuncio.codigoExterno).toBe('716');
     expect(anuncio.precoVenda).toBe(32_500_000);
     expect(anuncio.precoAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.bairro).toBe('Araguaia');
     expect(anuncio.cidade).toBe('Belo Horizonte');
     expect(anuncio.estado).toBe('MG');

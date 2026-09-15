@@ -127,11 +127,19 @@ function resolveCodigoCreci(brokers: KenloListing['brokers']): string | null {
 
 export const parseKenlo: Parser = (conteudo: string): AnuncioNormalizado => {
   const listing = extractKenloListing(conteudo);
+  const precoVenda = resolvePriceOrNull(
+    firstDecimalElement(listing.sale_price),
+  );
+  const precoAluguel = resolvePriceOrNull(
+    firstDecimalElement(listing.rent_price),
+  );
 
   return {
     codigoExterno: listing.property_reference,
-    precoVenda: resolvePriceOrNull(firstDecimalElement(listing.sale_price)),
-    precoAluguel: resolvePriceOrNull(firstDecimalElement(listing.rent_price)),
+    precoVenda,
+    precoAluguel,
+    disponivelVenda: precoVenda !== null,
+    disponivelAluguel: precoAluguel !== null,
     condominio: resolveMoneyOrNull(listing.condo_fees),
     iptu: resolveMoneyOrNull(listing.property_tax),
     area: firstDecimalElement(listing.area),

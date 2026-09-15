@@ -43,6 +43,12 @@ export class Avistamento {
   @Column({ type: 'int', name: 'preco_aluguel', nullable: true })
   declare precoAluguel: number | null;
 
+  @Column({ type: 'boolean', name: 'disponivel_aluguel', nullable: true })
+  declare disponivelAluguel: boolean | null;
+
+  @Column({ type: 'boolean', name: 'disponivel_venda', nullable: true })
+  declare disponivelVenda: boolean | null;
+
   @Column({ type: 'int', nullable: true })
   declare condominio: number | null;
 

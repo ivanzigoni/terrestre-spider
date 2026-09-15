@@ -108,6 +108,8 @@ export const parseQuintoAndar: Parser = (
     precoAluguel: houseInfo.forRent
       ? parseMoneyToCents(houseInfo.rentPrice ?? null)
       : null,
+    disponivelAluguel: houseInfo.forRent,
+    disponivelVenda: houseInfo.forSale,
     condominio: parseMoneyToCents(houseInfo.condoPrice ?? null),
     iptu: parseMoneyToCents(houseInfo.iptu ?? null),
     area: houseInfo.area ?? null,

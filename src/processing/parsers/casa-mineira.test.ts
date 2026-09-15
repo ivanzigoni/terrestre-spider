@@ -16,6 +16,8 @@ describe('parseCasaMineira', () => {
     expect(anuncio.codigoExterno).toBe('3021741726');
     expect(anuncio.precoAluguel).toBe(463_000);
     expect(anuncio.precoVenda).toBeNull();
+    expect(anuncio.disponivelAluguel).toBe(true);
+    expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.condominio).toBe(45_000);
     expect(anuncio.iptu).toBe(26_800);
   });

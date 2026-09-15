@@ -315,6 +315,8 @@ export const parseImobiBrasil: Parser = (
     codigoExterno: resolveCodigoExterno(descTags, product),
     precoVenda: aluguel ? null : precoCents,
     precoAluguel: aluguel ? precoCents : null,
+    disponivelAluguel: aluguel,
+    disponivelVenda: !aluguel,
     condominio: parseMoneyEntryOrNull(findEntryByPrefix(infoTags, ['condom'])),
     iptu: parseMoneyEntryOrNull(infoTags.get('iptu')),
     area: resolveArea(descTags),

@@ -2,6 +2,7 @@ import { load } from 'cheerio';
 import type { CheerioAPI } from 'cheerio';
 
 import type { AnuncioNormalizado, Parser } from '../anuncio-normalizado.js';
+import { TipoTransacao } from '../../persistence/enums/tipo-transacao.enum.js';
 import { parseMoneyToCents } from './shared/money.js';
 
 function nonEmptyOrNull(value: string | null | undefined): string | null {
@@ -57,8 +58,12 @@ function extractLocalizacao($: CheerioAPI): LocalizacaoEmpreendimento {
   };
 }
 
-export const parseMyBroker: Parser = (conteudo: string): AnuncioNormalizado => {
+export const parseMyBroker: Parser = (
+  conteudo: string,
+  contexto,
+): AnuncioNormalizado => {
   const $ = load(conteudo);
+  const tipoTransacao = contexto?.tipoTransacao ?? null;
 
   const codigoExterno = extractCodigoExterno($);
   const sobreImovelTexto = extractSobreImovelTexto($);
@@ -82,6 +87,10 @@ export const parseMyBroker: Parser = (conteudo: string): AnuncioNormalizado => {
     // my-broker.test.ts::'documenta a limitação de nível de empreendimento'.
     precoVenda: null,
     precoAluguel: null,
+    disponivelAluguel:
+      tipoTransacao === null ? null : tipoTransacao === TipoTransacao.ALUGUEL,
+    disponivelVenda:
+      tipoTransacao === null ? null : tipoTransacao === TipoTransacao.VENDA,
     condominio:
       condominioMatch?.[1] !== undefined
         ? parseMoneyToCents(condominioMatch[1])

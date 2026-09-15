@@ -19,6 +19,8 @@ describe('parseImobiBrasil', () => {
     expect(anuncio.codigoExterno).toBe('APTO008');
     expect(anuncio.precoVenda).toBe(61_950_000);
     expect(anuncio.precoAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.quartos).toBe(3);
     expect(anuncio.suites).toBe(1);
     expect(anuncio.banheiros).toBe(2);
@@ -39,6 +41,8 @@ describe('parseImobiBrasil', () => {
     expect(anuncio.codigoExterno).toBe('1');
     expect(anuncio.precoVenda).toBe(168_000_000);
     expect(anuncio.precoAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.quartos).toBe(4);
     expect(anuncio.suites).toBe(2);
     expect(anuncio.banheiros).toBe(4);

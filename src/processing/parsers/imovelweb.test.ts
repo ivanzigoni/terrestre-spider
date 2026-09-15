@@ -16,6 +16,8 @@ describe('parseImovelweb', () => {
     expect(anuncio.codigoExterno).toBe('3035234998');
     expect(anuncio.precoAluguel).toBe(673_000);
     expect(anuncio.precoVenda).toBeNull();
+    expect(anuncio.disponivelAluguel).toBe(true);
+    expect(anuncio.disponivelVenda).toBe(false);
   });
 
   it('separa condomínio e IPTU do mesmo bloco de texto', () => {

@@ -17,6 +17,8 @@ describe('parseImoview', () => {
     expect(resultado.codigoExterno).toBe('30237');
     expect(resultado.precoAluguel).toBe(330_000);
     expect(resultado.precoVenda).toBeNull();
+    expect(resultado.disponivelAluguel).toBe(true);
+    expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(3);
     expect(resultado.area).toBe(100);
   });
@@ -29,6 +31,8 @@ describe('parseImoview', () => {
     expect(resultado.codigoExterno).toBe('3312');
     expect(resultado.precoAluguel).toBe(240_000);
     expect(resultado.precoVenda).toBeNull();
+    expect(resultado.disponivelAluguel).toBe(true);
+    expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(3);
     expect(resultado.area).toBe(92);
   });
@@ -41,6 +45,8 @@ describe('parseImoview', () => {
     expect(resultado.codigoExterno).toBe('1940');
     expect(resultado.precoAluguel).toBe(150_000);
     expect(resultado.precoVenda).toBeNull();
+    expect(resultado.disponivelAluguel).toBe(true);
+    expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(1);
     expect(resultado.area).toBe(20);
   });
@@ -51,6 +57,8 @@ describe('parseImoview', () => {
     expect(resultado.codigoExterno).toBe('1278');
     expect(resultado.precoAluguel).toBe(130_000);
     expect(resultado.precoVenda).toBeNull();
+    expect(resultado.disponivelAluguel).toBe(true);
+    expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(2);
     expect(resultado.area).toBe(40);
   });
@@ -63,6 +71,8 @@ describe('parseImoview', () => {
     expect(resultado.codigoExterno).toBe('21584');
     expect(resultado.precoAluguel).toBe(680_000);
     expect(resultado.precoVenda).toBeNull();
+    expect(resultado.disponivelAluguel).toBe(true);
+    expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(0);
     expect(resultado.area).toBe(112);
   });
@@ -73,6 +83,8 @@ describe('parseImoview', () => {
     expect(resultado.codigoExterno).toBe('115');
     expect(resultado.precoAluguel).toBe(180_000);
     expect(resultado.precoVenda).toBeNull();
+    expect(resultado.disponivelAluguel).toBe(true);
+    expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(2);
     expect(resultado.area).toBe(60);
   });
@@ -83,6 +95,8 @@ describe('parseImoview', () => {
     expect(resultado.codigoExterno).toBe('39815');
     expect(resultado.precoAluguel).toBe(400_000);
     expect(resultado.precoVenda).toBeNull();
+    expect(resultado.disponivelAluguel).toBe(true);
+    expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(3);
     expect(resultado.area).toBe(95);
   });

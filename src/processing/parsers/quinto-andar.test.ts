@@ -16,6 +16,8 @@ describe('parseQuintoAndar', () => {
     expect(anuncio.codigoExterno).toBe('895254660');
     expect(anuncio.precoVenda).toBe(149_900_000);
     expect(anuncio.precoAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.condominio).toBe(0);
     expect(anuncio.iptu).toBe(51_800);
     expect(anuncio.area).toBe(420);

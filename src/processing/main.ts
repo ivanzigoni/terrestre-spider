@@ -30,7 +30,7 @@ async function processarCaptura(
       captura.bucket,
       captura.chaveObjeto,
     );
-    const bruto = parser(conteudo);
+    const bruto = parser(conteudo, { tipoTransacao: captura.tipoTransacao });
     const normalizado = anuncioNormalizadoSchema.parse(bruto);
 
     await dataSource.transaction(async (manager) => {

@@ -16,6 +16,8 @@ describe('parseStiloNetimoveis', () => {
     expect(anuncio.codigoExterno).toBe('1158944');
     expect(anuncio.precoVenda).toBe(31_050_000);
     expect(anuncio.precoAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.condominio).toBe(39_200);
     expect(anuncio.iptu).toBeNull();
   });
