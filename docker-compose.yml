@@ -14,11 +14,11 @@ services:
       APIFY_LOG_FORMAT: JSON
     # "default" continua obrigatória (ver comentário na seção networks: sem ela o
     # container não resolve o host do Supabase). "terrestre-local" é a rede do MinIO
-    # (projeto separado, ver ../terrestre-minio) — hoje o spider fala com ele só pela
-    # porta publicada no host (127.0.0.1:9000, ver .env.example), então esta segunda
-    # rede ainda não é usada de fato; é preparação pra quando precisar resolver o
-    # MinIO por hostname de container. Como é `external`, `docker compose up` aqui
-    # falha se terrestre-minio nunca tiver subido antes (a rede não existiria).
+    # (projeto separado, ver ../terrestre-minio) — o spider resolve o MinIO pelo nome
+    # do serviço nessa rede (S3_ENDPOINT=http://minio:9000, ver .env.example); 127.0.0.1
+    # não alcançaria a porta publicada no host a partir de dentro deste container. Como
+    # é `external`, `docker compose up` aqui falha se terrestre-minio nunca tiver subido
+    # antes (a rede não existiria).
     networks:
       - default
       - terrestre-local
