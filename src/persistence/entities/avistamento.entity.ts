@@ -37,11 +37,11 @@ export class Avistamento {
   @Column({ type: 'text' })
   declare url: string;
 
-  @Column({ type: 'int', name: 'preco_venda', nullable: true })
-  declare precoVenda: number | null;
+  @Column({ type: 'int', name: 'preco_venda_centavos', nullable: true })
+  declare precoVendaCentavos: number | null;
 
-  @Column({ type: 'int', name: 'preco_aluguel', nullable: true })
-  declare precoAluguel: number | null;
+  @Column({ type: 'int', name: 'preco_aluguel_centavos', nullable: true })
+  declare precoAluguelCentavos: number | null;
 
   @Column({ type: 'boolean', name: 'disponivel_aluguel', nullable: true })
   declare disponivelAluguel: boolean | null;
@@ -49,11 +49,11 @@ export class Avistamento {
   @Column({ type: 'boolean', name: 'disponivel_venda', nullable: true })
   declare disponivelVenda: boolean | null;
 
-  @Column({ type: 'int', nullable: true })
-  declare condominio: number | null;
+  @Column({ type: 'int', name: 'condominio_centavos', nullable: true })
+  declare condominioCentavos: number | null;
 
-  @Column({ type: 'int', nullable: true })
-  declare iptu: number | null;
+  @Column({ type: 'int', name: 'iptu_centavos', nullable: true })
+  declare iptuCentavos: number | null;
 
   @Column({ type: 'double precision', nullable: true })
   declare area: number | null;
