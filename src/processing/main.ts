@@ -10,18 +10,29 @@ import { ExecucaoProcessamento } from '../persistence/entities/execucao-processa
 import { StatusCapturaBruta } from '../persistence/enums/status-captura-bruta.enum.js';
 import { StatusExecucao } from '../persistence/enums/status-execucao.enum.js';
 import { TipoPaginaCaptura } from '../persistence/enums/tipo-pagina-captura.enum.js';
+import { AvistamentoEndereco } from '../persistence/entities/avistamento-endereco.entity.js';
 import { downloadObject, getS3Client } from '../persistence/s3-client.js';
 import { anuncioNormalizadoSchema } from './anuncio-normalizado.js';
+import { criarCacheBairroLlm } from './geografia/cache-bairro-llm.js';
+import { criarInferidorBairroDeepseek } from './geografia/inferidor-bairro-deepseek.js';
+import type { NormalizacaoGeoContext } from './geografia/normalizar-bairro.js';
+import { normalizarBairro } from './geografia/normalizar-bairro.js';
+import { carregarReferenciaBairros } from './geografia/normalizar-bairro-deterministico.js';
+import {
+  encontrarOuCriarEnderecoOriginal,
+  encontrarOuCriarEnderecoProcessado,
+} from './geografia/persistir-endereco.js';
 import { getParser } from './parsers/index.js';
 
 Sentry.init({ dsn: process.env.SENTRY_DSN, tracesSampleRate: 0 });
 
-const BATCH_SIZE = 100;
+const BATCH_SIZE = 300;
 
 async function processarCaptura(
   dataSource: DataSource,
   s3: ReturnType<typeof getS3Client>,
   captura: CapturaBruta,
+  geo: NormalizacaoGeoContext,
 ): Promise<'processada' | 'erro'> {
   try {
     const parser = getParser(captura.origem);
@@ -32,6 +43,10 @@ async function processarCaptura(
     );
     const bruto = parser(conteudo, { tipoTransacao: captura.tipoTransacao });
     const normalizado = anuncioNormalizadoSchema.parse(bruto);
+    // Chamada de rede (pode envolver LLM) fica fora da transação de propósito —
+    // uma transação de banco não deve ficar aberta esperando I/O externo.
+    // normalizarBairro nunca lança: erro na inferência vira resultado "não resolvido".
+    const bairroGeo = await normalizarBairro(normalizado.bairro, geo);
 
     await dataSource.transaction(async (manager) => {
       const anuncioRepo = manager.getRepository(Anuncio);
@@ -64,22 +79,70 @@ async function processarCaptura(
         precoAluguel,
         condominio,
         iptu,
+        endereco,
+        numero,
+        bairro,
+        cidade,
+        estado,
+        cep,
+        latitude,
+        longitude,
         ...restoNormalizado
       } = normalizado;
 
-      await manager.getRepository(Avistamento).save(
+      const camposEndereco = {
+        endereco,
+        numero,
+        cidade,
+        estado,
+        cep,
+        latitude,
+        longitude,
+      };
+
+      const avistamentoSalvo = await manager.getRepository(Avistamento).save(
         manager.getRepository(Avistamento).create({
           ...restoNormalizado,
           precoVendaCentavos: precoVenda,
           precoAluguelCentavos: precoAluguel,
           condominioCentavos: condominio,
           iptuCentavos: iptu,
+          regionalId: bairroGeo.regionalId,
           anuncioId: anuncio.id,
           capturaBrutaId: captura.id,
           observadoEm: captura.capturadoEm,
           url: captura.url,
         }),
       );
+
+      const enderecoOriginalId = await encontrarOuCriarEnderecoOriginal(
+        manager,
+        { ...camposEndereco, bairro },
+      );
+      if (enderecoOriginalId !== null) {
+        await manager.getRepository(AvistamentoEndereco).save(
+          manager.getRepository(AvistamentoEndereco).create({
+            avistamentoId: avistamentoSalvo.id,
+            enderecoId: enderecoOriginalId,
+            tipo: 'original',
+          }),
+        );
+      }
+
+      if (bairroGeo.bairroId !== null) {
+        const enderecoProcessadoId = await encontrarOuCriarEnderecoProcessado(
+          manager,
+          bairroGeo.bairroId,
+          camposEndereco,
+        );
+        await manager.getRepository(AvistamentoEndereco).save(
+          manager.getRepository(AvistamentoEndereco).create({
+            avistamentoId: avistamentoSalvo.id,
+            enderecoId: enderecoProcessadoId,
+            tipo: 'processado',
+          }),
+        );
+      }
 
       await manager.getRepository(CapturaBruta).update(captura.id, {
         status: StatusCapturaBruta.PROCESSADA,
@@ -119,6 +182,18 @@ async function main(): Promise<void> {
   try {
     const s3 = getS3Client();
 
+    // Montado uma vez por execução do processo, não por captura: a referência de
+    // bairros é pequena e estável, e o inferidor mantém seu próprio limitador de
+    // concorrência entre chamadas.
+    const referencia = await carregarReferenciaBairros(dataSource);
+    const geo: NormalizacaoGeoContext = {
+      referencia,
+      cache: criarCacheBairroLlm(dataSource),
+      inferidor: criarInferidorBairroDeepseek(
+        [...referencia.values()].map((r) => r.bairro),
+      ),
+    };
+
     for (;;) {
       const lote = await dataSource.getRepository(CapturaBruta).find({
         where: {
@@ -129,10 +204,18 @@ async function main(): Promise<void> {
       });
       if (lote.length === 0) break;
 
-      for (const captura of lote) {
-        const resultado = await processarCaptura(dataSource, s3, captura);
-        if (resultado === 'processada') processadas++;
-        else comErro++;
+      const resultados = await Promise.allSettled(
+        lote.map((captura) => processarCaptura(dataSource, s3, captura, geo)),
+      );
+      for (const resultado of resultados) {
+        if (
+          resultado.status === 'fulfilled' &&
+          resultado.value === 'processada'
+        ) {
+          processadas++;
+        } else {
+          comErro++;
+        }
       }
 
       log.info(

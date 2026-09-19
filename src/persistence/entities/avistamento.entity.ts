@@ -10,6 +10,7 @@ import {
 
 import { Anuncio } from './anuncio.entity.js';
 import { CapturaBruta } from './captura-bruta.entity.js';
+import { Regional } from './regional.entity.js';
 
 @Entity('avistamentos')
 @Index(['anuncioId'])
@@ -73,29 +74,12 @@ export class Avistamento {
   @Column({ type: 'text', name: 'tipo_imovel_bruto', nullable: true })
   declare tipoImovelBruto: string | null;
 
-  @Column({ type: 'text', nullable: true })
-  declare bairro: string | null;
+  @Column({ type: 'int', name: 'regional_id', nullable: true })
+  declare regionalId: number | null;
 
-  @Column({ type: 'text', nullable: true })
-  declare cidade: string | null;
-
-  @Column({ type: 'text', nullable: true })
-  declare estado: string | null;
-
-  @Column({ type: 'text', nullable: true })
-  declare cep: string | null;
-
-  @Column({ type: 'text', nullable: true })
-  declare endereco: string | null;
-
-  @Column({ type: 'text', nullable: true })
-  declare numero: string | null;
-
-  @Column({ type: 'double precision', nullable: true })
-  declare latitude: number | null;
-
-  @Column({ type: 'double precision', nullable: true })
-  declare longitude: number | null;
+  @ManyToOne(() => Regional)
+  @JoinColumn({ name: 'regional_id' })
+  declare regionalEntity: Regional | null;
 
   @Column({ type: 'text', nullable: true })
   declare descricao: string | null;

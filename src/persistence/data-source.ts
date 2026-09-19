@@ -5,10 +5,15 @@ import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
 import { Anuncio } from './entities/anuncio.entity.js';
+import { AvistamentoEndereco } from './entities/avistamento-endereco.entity.js';
 import { Avistamento } from './entities/avistamento.entity.js';
+import { BairroLlmCache } from './entities/bairro-llm-cache.entity.js';
+import { BairroRegional } from './entities/bairro-regional.entity.js';
 import { CapturaBruta } from './entities/captura-bruta.entity.js';
+import { Endereco } from './entities/endereco.entity.js';
 import { ExecucaoProcessamento } from './entities/execucao-processamento.entity.js';
 import { Execucao } from './entities/execucao.entity.js';
+import { Regional } from './entities/regional.entity.js';
 import { requireEnv } from './require-env.js';
 
 const currentFilePath = fileURLToPath(import.meta.url);
@@ -73,6 +78,11 @@ export function createDataSource(): DataSource {
       Anuncio,
       Avistamento,
       ExecucaoProcessamento,
+      BairroRegional,
+      BairroLlmCache,
+      Regional,
+      Endereco,
+      AvistamentoEndereco,
     ],
     migrations: [
       path.join(currentDirPath, 'migrations', `*.${migrationExtension}`),
