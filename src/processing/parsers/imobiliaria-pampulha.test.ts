@@ -13,7 +13,7 @@ describe('parseImobiliariaPampulha', () => {
   it('extrai código, preço e tipo de transação a partir do título', () => {
     const anuncio = parseImobiliariaPampulha(html);
 
-    expect(anuncio.codigoExterno).toBe('123456');
+    expect(anuncio.codigoExterno).toBe('4404');
     expect(anuncio.precoVenda).toBe(35_000_000);
     expect(anuncio.precoAluguel).toBeNull();
     expect(anuncio.disponivelVenda).toBe(true);
@@ -47,7 +47,7 @@ describe('parseImobiliariaPampulha', () => {
     expect(anuncio.descricao).toMatch(/^Imóvel aconchegante/);
   });
 
-  it('lança erro para um HTML sem span.codigo-imv', () => {
+  it('lança erro para um HTML sem postid-<n> na classe do body', () => {
     expect(() =>
       parseImobiliariaPampulha('<html><body>sem dados</body></html>'),
     ).toThrow();

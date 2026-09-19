@@ -27,15 +27,19 @@ function extractContagem(texto: string, singular: string): number | null {
 }
 
 function extractCodigoExterno($: CheerioAPI): string {
-  const texto = $('span.codigo-imv').first().text();
-  const match = /COD:\s*(\S+)/i.exec(texto);
-  const codigo = match?.[1];
-  if (codigo === undefined) {
+  // span.codigo-imv (antigo "COD: NNNNNN") não existe mais no HTML — confirmado ao
+  // vivo contra duas URLs reais, sobrou só a regra CSS no <style>. Site é WordPress
+  // (mesma plataforma do GSA Ativos); usamos o postid injetado via body_class() como
+  // identificador estável por imóvel.
+  const bodyClass = $('body').attr('class') ?? '';
+  const match = /\bpostid-(\d+)\b/.exec(bodyClass);
+  const postid = match?.[1];
+  if (postid === undefined) {
     throw new Error(
-      'Imobiliária Pampulha: span.codigo-imv com "COD: ..." não encontrado no HTML',
+      'Imobiliária Pampulha: postid-<n> não encontrado na classe do <body>',
     );
   }
-  return codigo;
+  return postid;
 }
 
 function extractBairroDoTitulo(titulo: string): string | null {
@@ -59,7 +63,9 @@ export const parseImobiliariaPampulha: Parser = (
   const $ = load(conteudo);
 
   const codigoExterno = extractCodigoExterno($);
-  const titulo = $('span.codigo-imv').prev('h2').first().text().trim();
+  // span.codigo-imv sumiu (ver extractCodigoExterno acima) — o <h2> do título é único
+  // na página nas amostras confirmadas.
+  const titulo = $('h2').first().text().trim();
   const isAluguel = /alug/i.test(titulo);
 
   const precoTexto = $('div.favoritos span').first().text();
