@@ -12,6 +12,13 @@ const zapImoveisHtml = readFileSync(
   'src/processing/parsers/__fixtures__/zap_imoveis__detalhe.html',
   'utf-8',
 );
+// Cópia da fixture acima com o valor de "streetNumber" no payload RSC trocado por
+// "$undefined" — o sentinel literal que o protocolo de streaming do Next.js usa para
+// serializar um campo cujo valor real é `undefined` (ex.: imóvel sem número de rua).
+const zapImoveisSemNumeroHtml = readFileSync(
+  'src/processing/parsers/__fixtures__/zap_imoveis__detalhe-numero-nao-informado.html',
+  'utf-8',
+);
 
 describe('parseVivaReal', () => {
   it('extrai os campos principais do anúncio', () => {
@@ -86,5 +93,13 @@ describe('parseZapImoveis', () => {
 
     expect(anuncio.anuncianteNome).toBe('Wellington Batista');
     expect(anuncio.codigoCreci).toBeNull();
+  });
+
+  it('trata o sentinel RSC "$undefined" em streetNumber como null, não como texto literal', () => {
+    const anuncio = parseZapImoveis(zapImoveisSemNumeroHtml);
+
+    expect(anuncio.numero).toBeNull();
+    expect(anuncio.endereco).toBe('Rua Zodíaco');
+    expect(anuncio.bairro).toBe('Santa Lúcia');
   });
 });

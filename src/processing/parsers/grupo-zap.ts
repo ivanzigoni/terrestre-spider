@@ -5,13 +5,19 @@ import type { AnuncioNormalizado, Parser } from '../anuncio-normalizado.js';
 import { extractRscObject } from './shared/rsc-next.js';
 import { parseMoneyToCents } from './shared/money.js';
 
+// .nullish() (não só .nullable()) em cada campo descritivo abaixo: extractRscObject
+// resolve o sentinel "$undefined" do protocolo RSC para `undefined` (ver rsc-next.ts),
+// então qualquer um desses campos — ausente na fonte para aquele imóvel específico —
+// pode chegar como `undefined`, não só como `null`. `id`/`business` ficam de fora de
+// propósito: são a identidade e o tipo de negócio do anúncio, e devem seguir
+// obrigatórios — um "$undefined" ali é falha real, não ausência de dado descritivo.
 const priceBlockSchema = z
   .object({
-    value: z.number().nullable(),
-    condominium: z.number().nullable(),
-    iptu: z.number().nullable(),
+    value: z.number().nullish(),
+    condominium: z.number().nullish(),
+    iptu: z.number().nullish(),
   })
-  .nullable();
+  .nullish();
 
 const listingSchema = z.object({
   id: z.union([z.string(), z.number()]),
@@ -21,32 +27,32 @@ const listingSchema = z.object({
     sale: priceBlockSchema,
   }),
   address: z.object({
-    street: z.string().nullable(),
-    streetNumber: z.string().nullable(),
-    neighborhood: z.string().nullable(),
-    city: z.string().nullable(),
-    stateAcronym: z.string().nullable(),
+    street: z.string().nullish(),
+    streetNumber: z.string().nullish(),
+    neighborhood: z.string().nullish(),
+    city: z.string().nullish(),
+    stateAcronym: z.string().nullish(),
     coordinates: z
       .object({
-        latitude: z.number().nullable(),
-        longitude: z.number().nullable(),
+        latitude: z.number().nullish(),
+        longitude: z.number().nullish(),
       })
-      .nullable(),
+      .nullish(),
   }),
   amenities: z.object({
-    usableAreas: z.array(z.number()).nullable(),
-    bedrooms: z.array(z.number()).nullable(),
-    bathrooms: z.array(z.number()).nullable(),
-    suites: z.array(z.number()).nullable(),
-    parkingSpaces: z.array(z.number()).nullable(),
+    usableAreas: z.array(z.number()).nullish(),
+    bedrooms: z.array(z.number()).nullish(),
+    bathrooms: z.array(z.number()).nullish(),
+    suites: z.array(z.number()).nullish(),
+    parkingSpaces: z.array(z.number()).nullish(),
   }),
-  description: z.string().nullable(),
+  description: z.string().nullish(),
   advertiser: z
     .object({
-      name: z.string().nullable(),
-      license: z.string().nullable(),
+      name: z.string().nullish(),
+      license: z.string().nullish(),
     })
-    .nullable(),
+    .nullish(),
 });
 
 function nonEmptyOrNull(value: string | null | undefined): string | null {
@@ -55,8 +61,12 @@ function nonEmptyOrNull(value: string | null | undefined): string | null {
   return trimmed === '' ? null : trimmed;
 }
 
-function firstOrNull(values: readonly number[] | null): number | null {
-  if (values === null || values.length === 0) return null;
+function firstOrNull(
+  values: readonly number[] | null | undefined,
+): number | null {
+  if (values === null || values === undefined || values.length === 0) {
+    return null;
+  }
   return values[0] ?? null;
 }
 

@@ -34,6 +34,31 @@ function extractPushedStrings(html: string): string[] {
   return results;
 }
 
+const RSC_UNDEFINED_SENTINEL = '$undefined';
+
+/**
+ * O protocolo de streaming RSC (React Flight) serializa uma propriedade cujo valor real
+ * é `undefined` como a string literal "$undefined", não como ausência da chave — o
+ * decoder do lado do cliente resolve isso de volta a `undefined` antes do código da
+ * aplicação ver o dado. Como `extractRscObject` lê o payload como texto/JSON puro, sem
+ * passar pelo decoder do Flight, esse sentinel chega intacto a quem chama esta função.
+ * Sem este passo, um campo ausente na fonte (ex.: imóvel sem número de rua) vira a
+ * string "$undefined" no dado normalizado, em vez de `null`/ausente.
+ */
+function resolveRscSentinels(value: unknown): unknown {
+  if (value === RSC_UNDEFINED_SENTINEL) return undefined;
+  if (Array.isArray(value)) return value.map(resolveRscSentinels);
+  if (value !== null && typeof value === 'object') {
+    return Object.fromEntries(
+      Object.entries(value as Record<string, unknown>).map(([key, val]) => [
+        key,
+        resolveRscSentinels(val),
+      ]),
+    );
+  }
+  return value;
+}
+
 function findBalancedObject(text: string, objectStart: number): string {
   let depth = 0;
   let inString = false;
@@ -94,7 +119,9 @@ export function extractRscObject(html: string, key: string): unknown {
     }
 
     if (combined.charAt(objectStart) === '{') {
-      return JSON.parse(findBalancedObject(combined, objectStart));
+      return resolveRscSentinels(
+        JSON.parse(findBalancedObject(combined, objectStart)),
+      );
     }
 
     searchFrom = markerStart + marker.length;
