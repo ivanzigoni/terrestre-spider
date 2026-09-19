@@ -147,6 +147,7 @@ export const parseNetimoveis: Parser = (
     latitude: null,
     longitude: null,
     descricao: null,
+    imagemUrl: nonEmptyOrNull($('#fotoDestaque').first().attr('src')),
     anuncianteNome: nonEmptyOrNull($('#h4-nomeAgencia').first().text()),
     codigoCreci: extractCreci(conteudo),
     publicadoEm: null,

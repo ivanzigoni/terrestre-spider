@@ -1,3 +1,4 @@
+import { load } from 'cheerio';
 import { z } from 'zod';
 
 import type { AnuncioNormalizado, Parser } from '../anuncio-normalizado.js';
@@ -154,6 +155,15 @@ function nonEmptyOrNull(value: string | undefined): string | null {
   return trimmed === '' ? null : trimmed;
 }
 
+// A galeria de fotos não vem no objeto RSC "property" (API Vista) — fica fora dele, como
+// <img> comum já com o src resolvido (não é lazy-load).
+function extractCapaFotoUrl(html: string): string | null {
+  const $ = load(html);
+  return nonEmptyOrNull(
+    $('img[alt^="Imagem da propriedade"]').first().attr('src'),
+  );
+}
+
 export const parseLoftSites: Parser = (
   conteudo: string,
 ): AnuncioNormalizado => {
@@ -185,6 +195,7 @@ export const parseLoftSites: Parser = (
     latitude: parseDecimalField(property.Latitude),
     longitude: parseDecimalField(property.Longitude),
     descricao: resolveDescricao(property.DescricaoWeb),
+    imagemUrl: extractCapaFotoUrl(conteudo),
     anuncianteNome,
     codigoCreci,
     publicadoEm: null,

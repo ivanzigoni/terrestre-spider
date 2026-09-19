@@ -21,6 +21,9 @@ describe('parseImoview', () => {
     expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(3);
     expect(resultado.area).toBe(100);
+    expect(resultado.imagemUrl).toBe(
+      'https://cdn.imoview.com.br/buritis/Imoveis/30237/0k1v7-whatsapp-image-2025-01-13-at-124401-1736784419.jpeg?1737145680',
+    );
   });
 
   it('extrai ivi_invista_imoveis__detalhe.html', () => {
@@ -35,6 +38,9 @@ describe('parseImoview', () => {
     expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(3);
     expect(resultado.area).toBe(92);
+    expect(resultado.imagemUrl).toBe(
+      'https://cdn.imoview.com.br/iviinvista/Imoveis/3312/uf033j-imovel-3472-2-1786545305.jpg?1786545306',
+    );
   });
 
   it('extrai diego_garcia_imoveis__detalhe.html', () => {
@@ -49,6 +55,9 @@ describe('parseImoview', () => {
     expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(1);
     expect(resultado.area).toBe(20);
+    expect(resultado.imagemUrl).toBe(
+      'https://cdn.imoview.com.br/saimobiliaria/Imoveis/1940/abgur-original895242693-409023172698938943-1782172878.jpeg?1782172878',
+    );
   });
 
   it('extrai adimoveis_bh__detalhe.html', () => {
@@ -61,6 +70,9 @@ describe('parseImoview', () => {
     expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(2);
     expect(resultado.area).toBe(40);
+    expect(resultado.imagemUrl).toBe(
+      'https://cdn.imoview.com.br/adimoveis/Imoveis/1278/k9czw-img-0076-1787945202.jpg?1787945202',
+    );
   });
 
   it('extrai casa_grande_imoveis__detalhe.html', () => {
@@ -75,6 +87,9 @@ describe('parseImoview', () => {
     expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(0);
     expect(resultado.area).toBe(112);
+    expect(resultado.imagemUrl).toBe(
+      'https://cdn.imoview.com.br/casagrande/Imoveis/21584/lw04gh-whatsapp-image-2026-03-10-at-172521-1775064732.jpeg?1775162511',
+    );
   });
 
   it('extrai liderar_imoveis__detalhe.html', () => {
@@ -87,6 +102,9 @@ describe('parseImoview', () => {
     expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(2);
     expect(resultado.area).toBe(60);
+    expect(resultado.imagemUrl).toBe(
+      'https://cdn.imoview.com.br/liderar/Imoveis/115/0o8pbf-whatsapp-image-2026-08-28-at-121701-1787930560.jpeg?1787930561',
+    );
   });
 
   it('extrai valore_imoveis__detalhe.html', () => {
@@ -99,5 +117,8 @@ describe('parseImoview', () => {
     expect(resultado.disponivelVenda).toBe(false);
     expect(resultado.quartos).toBe(3);
     expect(resultado.area).toBe(95);
+    expect(resultado.imagemUrl).toBe(
+      'https://cdn.imoview.com.br/valore/Imoveis/39815/ymywv-whatsapp-image-2026-08-28-at-170830-1787949395.jpeg?1787949396',
+    );
   });
 });

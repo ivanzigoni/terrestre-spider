@@ -38,6 +38,9 @@ describe('parseImovelweb', () => {
     expect(anuncio.numero).toBe('750');
     expect(anuncio.cidade).toBe('Belo Horizonte');
     expect(anuncio.estado).toBe('Minas Gerais');
+    expect(anuncio.imagemUrl).toBe(
+      'https://imgbr.imovelwebcdn.com/avisos/2/30/35/23/49/98/720x532/6688473390.jpg?isFirstImage=true',
+    );
   });
 
   it('extrai vagas e suítes dos ícones de característica', () => {

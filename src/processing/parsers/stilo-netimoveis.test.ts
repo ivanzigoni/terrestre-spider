@@ -20,6 +20,9 @@ describe('parseStiloNetimoveis', () => {
     expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.condominio).toBe(39_200);
     expect(anuncio.iptu).toBeNull();
+    expect(anuncio.imagemUrl).toBe(
+      'https://fotosimoveis.blob.core.windows.net/fotos-imoveis/2/109/1158944/3f4c6238-fd6b-4c6f-93f7-2e504370d0e1.webp',
+    );
   });
 
   it('extrai área, quartos, banheiros e vagas via regex sobre o texto visível', () => {

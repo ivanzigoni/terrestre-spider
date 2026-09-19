@@ -111,6 +111,7 @@ export const parseMyBroker: Parser = (
     latitude: null,
     longitude: null,
     descricao: sobreImovelTexto,
+    imagemUrl: nonEmptyOrNull($('meta[property="og:image"]').attr('content')),
     anuncianteNome: null,
     codigoCreci: null,
     publicadoEm: null,

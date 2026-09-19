@@ -100,6 +100,9 @@ export class Avistamento {
   @Column({ type: 'text', nullable: true })
   declare descricao: string | null;
 
+  @Column({ type: 'text', name: 'imagem_url', nullable: true })
+  declare imagemUrl: string | null;
+
   @Column({ type: 'text', name: 'anunciante_nome', nullable: true })
   declare anuncianteNome: string | null;
 

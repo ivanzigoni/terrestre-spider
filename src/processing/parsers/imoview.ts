@@ -27,6 +27,12 @@ interface InfoBreadcrumb {
   bairro: string | null;
 }
 
+function nonEmptyOrNull(value: string | undefined): string | null {
+  if (value === undefined) return null;
+  const trimmed = value.trim();
+  return trimmed === '' ? null : trimmed;
+}
+
 function extractCodigoExterno($: CheerioAPI): string {
   const texto = $('#cod-principal').first().text();
   const match = /\d+/.exec(texto);
@@ -216,6 +222,7 @@ export const parseImoview: Parser = (conteudo) => {
     latitude: null,
     longitude: null,
     descricao,
+    imagemUrl: nonEmptyOrNull($('meta[property="og:image"]').attr('content')),
     anuncianteNome: null,
     codigoCreci: null,
     publicadoEm: null,

@@ -25,6 +25,7 @@ export const anuncioNormalizadoSchema = z.object({
   latitude: z.number().nullable(),
   longitude: z.number().nullable(),
   descricao: z.string().nullable(),
+  imagemUrl: z.string().nullable(),
   anuncianteNome: z.string().nullable(),
   codigoCreci: z.string().nullable(),
   publicadoEm: z.date().nullable(),

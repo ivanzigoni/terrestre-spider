@@ -19,6 +19,9 @@ describe('parseImobiliariaPampulha', () => {
     expect(anuncio.disponivelVenda).toBe(true);
     expect(anuncio.disponivelAluguel).toBe(false);
     expect(anuncio.tipoImovelBruto).toBe('Apartamento');
+    expect(anuncio.imagemUrl).toBe(
+      'https://imobiliariapampulha.com.br/wp-content/uploads/2023/01/maxresdefault.jpg',
+    );
   });
 
   it('trata "Não Informado" em condomínio como null e extrai o IPTU informado', () => {

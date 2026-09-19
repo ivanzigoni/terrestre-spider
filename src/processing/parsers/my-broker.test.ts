@@ -18,6 +18,9 @@ describe('parseMyBroker', () => {
     expect(anuncio.bairro).toBe('Sion');
     expect(anuncio.cidade).toBe('Belo Horizonte');
     expect(anuncio.estado).toBe('MG');
+    expect(anuncio.imagemUrl).toBe(
+      'https://blow-app.s3.us-east-2.amazonaws.com/empreendimento/99b91249-f267-458e-a198-448afe6e8585/339257ee-c14d-48c8-8653-3a1996080100',
+    );
   });
 
   it('extrai condomínio e IPTU do texto livre "Sobre o imóvel"', () => {

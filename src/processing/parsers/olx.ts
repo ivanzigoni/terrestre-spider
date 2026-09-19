@@ -27,6 +27,12 @@ const olxUserSchema = z.object({
   name: z.string().nullable(),
 });
 
+const olxImageSchema = z.object({
+  // Opcional: alguns itens do array (vídeos, placeholders) não trazem esse campo — a
+  // extração usa o primeiro item que tiver, não necessariamente o índice 0.
+  original: z.string().optional(),
+});
+
 const olxAdSchema = z.object({
   adId: z.union([z.string(), z.number()]),
   listId: z.union([z.string(), z.number()]),
@@ -39,6 +45,7 @@ const olxAdSchema = z.object({
   location: olxLocationSchema,
   listTime: z.string().nullable(),
   user: olxUserSchema.nullable(),
+  images: z.array(olxImageSchema).nullable(),
 });
 
 const olxInitialDataSchema = z.object({
@@ -195,6 +202,9 @@ export const parseOlx: Parser = (conteudo: string): AnuncioNormalizado => {
     latitude: ad.location.mapLati,
     longitude: ad.location.mapLong,
     descricao: descricaoPartes.length > 0 ? descricaoPartes.join('\n\n') : null,
+    imagemUrl:
+      ad.images?.find((imagem) => imagem.original !== undefined)?.original ??
+      null,
     anuncianteNome: nonEmptyOrNull(ad.user?.name),
     codigoCreci: null,
     publicadoEm: parseDate(ad.listTime),

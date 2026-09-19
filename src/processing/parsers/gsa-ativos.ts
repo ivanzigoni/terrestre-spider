@@ -142,6 +142,11 @@ export const parseGsaAtivos: Parser = (
     latitude: null,
     longitude: null,
     descricao: null,
+    imagemUrl: nonEmptyOrNull(
+      $('.elementor-widget-image-carousel a[data-elementor-open-lightbox]')
+        .first()
+        .attr('href'),
+    ),
     anuncianteNome: null,
     codigoCreci: null,
     publicadoEm: null,

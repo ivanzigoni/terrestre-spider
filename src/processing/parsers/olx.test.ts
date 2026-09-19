@@ -22,6 +22,9 @@ describe('parseOlx', () => {
     expect(anuncio.quartos).toBe(2);
     expect(anuncio.banheiros).toBe(1);
     expect(anuncio.vagas).toBe(1);
+    expect(anuncio.imagemUrl).toBe(
+      'https://img.olx.com.br/images/33/335627679803201.jpg',
+    );
   });
 
   it('trata "Não informado" em condomínio e IPTU como null', () => {

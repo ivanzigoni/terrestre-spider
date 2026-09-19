@@ -30,6 +30,7 @@ describe('parseKenlo', () => {
     expect(anuncio.anuncianteNome).toBe('Jmc Imóveis');
     expect(anuncio.codigoCreci).toBeNull();
     expect(anuncio.atualizadoEm).toEqual(new Date('2026-08-27T13:07:24.657'));
+    expect(anuncio.imagemUrl).toMatch(/^https:\/\/img\.kenlo\.io\//);
   });
 
   it('extrai luxus_imoveis_premium (aluguel, com condomínio e corretor)', () => {
@@ -52,5 +53,6 @@ describe('parseKenlo', () => {
     expect(anuncio.bairro).toBe('Funcionários');
     expect(anuncio.anuncianteNome).toBe('Luxus Imóveis Premium');
     expect(anuncio.codigoCreci).toBe('58153');
+    expect(anuncio.imagemUrl).toMatch(/^https:\/\/img\.kenlo\.io\//);
   });
 });

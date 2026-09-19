@@ -21,6 +21,9 @@ describe('parseGsaAtivos', () => {
     expect(anuncio.precoVenda).toBeNull();
     expect(anuncio.disponivelAluguel).toBe(true);
     expect(anuncio.disponivelVenda).toBe(false);
+    expect(anuncio.imagemUrl).toBe(
+      'https://gsaativos.com.br/wp-content/uploads/2025/08/EDIT_lunafachada.png',
+    );
   });
 
   it('extrai área, banheiros, condomínio e IPTU do bloco de informações adicionais', () => {

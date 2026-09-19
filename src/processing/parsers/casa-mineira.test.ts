@@ -34,6 +34,9 @@ describe('parseCasaMineira', () => {
     expect(anuncio.endereco).toBe('Rua Maura');
     expect(anuncio.numero).toBeNull();
     expect(anuncio.cidade).toBe('Belo Horizonte');
+    expect(anuncio.imagemUrl).toBe(
+      'https://imgbr.imovelwebcdn.com/avisos/22/30/21/74/17/26/720x532/5713303645.jpg?isFirstImage=true',
+    );
   });
 
   it('não encontra anunciante, CRECI ou descrição nesta fonte (não republica esses blocos)', () => {

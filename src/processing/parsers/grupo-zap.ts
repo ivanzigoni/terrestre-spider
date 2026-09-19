@@ -1,3 +1,4 @@
+import { load } from 'cheerio';
 import { z } from 'zod';
 
 import type { AnuncioNormalizado, Parser } from '../anuncio-normalizado.js';
@@ -59,6 +60,14 @@ function firstOrNull(values: readonly number[] | null): number | null {
   return values[0] ?? null;
 }
 
+// og:image aponta pra mesma foto de capa do RSC (listing.images[0].dangerousSrc), mas
+// já resolvida — o RSC vem com placeholders literais ({width}, {height} etc.) que
+// exigiriam um passo extra de substituição.
+function extractOgImage(html: string): string | null {
+  const $ = load(html);
+  return nonEmptyOrNull($('meta[name="og:image"]').attr('content'));
+}
+
 function parseListingRsc(html: string): AnuncioNormalizado {
   const rawListing = extractRscObject(html, 'listing');
   const result = listingSchema.safeParse(rawListing);
@@ -99,6 +108,7 @@ function parseListingRsc(html: string): AnuncioNormalizado {
     latitude: listing.address.coordinates?.latitude ?? null,
     longitude: listing.address.coordinates?.longitude ?? null,
     descricao: nonEmptyOrNull(listing.description),
+    imagemUrl: extractOgImage(html),
     anuncianteNome: nonEmptyOrNull(listing.advertiser?.name),
     codigoCreci: nonEmptyOrNull(listing.advertiser?.license),
     publicadoEm: null,

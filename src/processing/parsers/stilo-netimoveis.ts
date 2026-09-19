@@ -161,6 +161,7 @@ export const parseStiloNetimoveis: Parser = (
     latitude: null,
     longitude: null,
     descricao: extractDescricao($),
+    imagemUrl: nonEmptyOrNull($('#fotoDestaque').first().attr('src')),
     anuncianteNome: null,
     codigoCreci: null,
     publicadoEm: null,

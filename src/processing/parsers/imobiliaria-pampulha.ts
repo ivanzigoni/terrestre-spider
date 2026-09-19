@@ -109,6 +109,7 @@ export const parseImobiliariaPampulha: Parser = (
     latitude: null,
     longitude: null,
     descricao: nonEmptyOrNull($('div.text-content-big p').first().text()),
+    imagemUrl: nonEmptyOrNull($('meta[property="og:image"]').attr('content')),
     anuncianteNome: null,
     codigoCreci: null,
     publicadoEm: null,

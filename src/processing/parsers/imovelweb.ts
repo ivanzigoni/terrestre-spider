@@ -23,6 +23,7 @@ const apartmentLdJsonSchema = z.object({
     .nullable()
     .optional(),
   address: apartmentAddressSchema.nullable().optional(),
+  image: z.string().nullable().optional(),
 });
 
 type ApartmentLdJson = z.infer<typeof apartmentLdJsonSchema>;
@@ -220,6 +221,7 @@ export function parseImovelwebTemplate(
     latitude: null,
     longitude: null,
     descricao: nonEmptyOrNull($('#longDescription').first().text()),
+    imagemUrl: nonEmptyOrNull(apartment.image),
     anuncianteNome: nonEmptyOrNull(
       $('[data-qa="linkMicrositioAnunciante"]').first().text(),
     ),

@@ -30,6 +30,7 @@ const kenloListingSchema = z
     updated_at: z.string().optional(),
     listing_owner_name: z.string().optional(),
     brokers: z.array(kenloBrokerSchema).optional(),
+    picture_full: z.string().optional(),
   })
   .loose();
 
@@ -157,6 +158,7 @@ export const parseKenlo: Parser = (conteudo: string): AnuncioNormalizado => {
     latitude: null,
     longitude: null,
     descricao: nonEmptyOrNull(listing.listing_description),
+    imagemUrl: nonEmptyOrNull(listing.picture_full),
     anuncianteNome: nonEmptyOrNull(listing.listing_owner_name),
     codigoCreci: resolveCodigoCreci(listing.brokers),
     publicadoEm: null,

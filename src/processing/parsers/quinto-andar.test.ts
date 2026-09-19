@@ -26,6 +26,9 @@ describe('parseQuintoAndar', () => {
     expect(anuncio.banheiros).toBe(4);
     expect(anuncio.vagas).toBe(6);
     expect(anuncio.tipoImovelBruto).toBe('Casa');
+    expect(anuncio.imagemUrl).toBe(
+      'https://www.quintoandar.com.br/img/xlg/original895254660-565.6663642344112aIMG7508.jpg',
+    );
   });
 
   it('extrai localização de houseInfo.address', () => {

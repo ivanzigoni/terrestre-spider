@@ -35,6 +35,7 @@ const productSchema = z
     sku: z.string().optional(),
     mpn: z.string().optional(),
     name: z.string().optional(),
+    image: z.array(z.string()).optional(),
     offers: z
       .object({
         price: z.string().optional(),
@@ -334,6 +335,7 @@ export const parseImobiBrasil: Parser = (
     latitude: null,
     longitude: null,
     descricao: resolveDescricao($),
+    imagemUrl: nonEmptyOrNull(product.image?.[0]),
     anuncianteNome: null,
     codigoCreci: null,
     publicadoEm: null,

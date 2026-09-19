@@ -21,6 +21,9 @@ describe('parseChaveCerta', () => {
     expect(anuncio.bairro).toBe('Araguaia');
     expect(anuncio.cidade).toBe('Belo Horizonte');
     expect(anuncio.estado).toBe('MG');
+    expect(anuncio.imagemUrl).toBe(
+      'https://imagens.tecimob.com.br/media/dcda8854-f780-44ae-80b9-d5e274511f85/properties/4f79b2cb-c2ec-4307-a56f-ece81aae09b8/images/26e6aede-6f19-4072-aa34-72fc3e701ec61787763297UJkI.jpg',
+    );
   });
 
   it('extrai quartos e banheiros do ld+json e área do par Line_title/Line_value no DOM', () => {

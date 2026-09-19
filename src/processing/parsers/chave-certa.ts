@@ -33,6 +33,7 @@ const realEstateListingSchema = z.object({
   identifier: z.string().nullable().optional(),
   datePosted: z.string().nullable().optional(),
   offers: realEstateOffersSchema.nullable().optional(),
+  image: z.array(z.string()).nullable().optional(),
 });
 
 type RealEstateListing = z.infer<typeof realEstateListingSchema>;
@@ -174,6 +175,7 @@ export const parseChaveCerta: Parser = (
     latitude: null,
     longitude: null,
     descricao: null,
+    imagemUrl: nonEmptyOrNull(listing.image?.[0]),
     anuncianteNome: nonEmptyOrNull(offers?.seller?.name),
     codigoCreci: nonEmptyOrNull(offers?.seller?.identifier),
     publicadoEm: parseDate(listing.datePosted),

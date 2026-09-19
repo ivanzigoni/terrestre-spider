@@ -24,6 +24,9 @@ describe('parseVivaReal', () => {
     expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.area).toBe(113);
     expect(anuncio.quartos).toBe(2);
+    expect(anuncio.imagemUrl).toBe(
+      'https://resizedimgs.vivareal.com/img/vr-listing/e98d5b04032189e0fc4a80c33d99a06a/cobertura-com-2-quartos-para-alugar-113m-no-buritis-belo-horizonte.webp?action=fit-in&dimension=614x297',
+    );
   });
 
   it('extrai condomínio, IPTU, características e localização', () => {
@@ -63,6 +66,9 @@ describe('parseZapImoveis', () => {
     expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.area).toBe(220);
     expect(anuncio.quartos).toBe(4);
+    expect(anuncio.imagemUrl).toBe(
+      'https://resizedimgs.zapimoveis.com.br/img/vr-listing/3332f96fefe9088d9b09426ad63c6a6d/apartamento-com-4-quartos-para-alugar-220m-no-santa-lucia-belo-horizonte.webp?action=fit-in&dimension=614x297',
+    );
   });
 
   it('trata IPTU ausente como null e extrai condomínio', () => {

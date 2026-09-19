@@ -31,6 +31,9 @@ describe('parseImobiBrasil', () => {
     expect(anuncio.bairro).toBe('Barreiro');
     expect(anuncio.cidade).toBe('Belo Horizonte');
     expect(anuncio.estado).toBe('MG');
+    expect(anuncio.imagemUrl).toBe(
+      'https://www.limaimoveisbarreiro.com.br/imagens/imoveis/20231003143116818.jpg',
+    );
   });
 
   it('extrai strutural_imobiliaria (venda, código numérico curto do DOM)', () => {
@@ -51,5 +54,8 @@ describe('parseImobiBrasil', () => {
     expect(anuncio.iptu).toBe(50_000);
     expect(anuncio.area).toBe(280);
     expect(anuncio.bairro).toBe('Santo Antônio');
+    expect(anuncio.imagemUrl).toBe(
+      'https://www.struturalimoveis.com.br/imagens/imoveis/20260619134808_141309.jpg',
+    );
   });
 });

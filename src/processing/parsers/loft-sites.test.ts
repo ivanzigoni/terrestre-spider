@@ -25,6 +25,9 @@ describe('parseLoftSites', () => {
     expect(anuncio.vagas).toBe(1);
     expect(anuncio.bairro).toBe('Planalto');
     expect(anuncio.cidade).toBe('Belo Horizonte');
+    expect(anuncio.imagemUrl).toBe(
+      'https://cdn.vistahost.com.br/cli35793/vista.imobi/fotos/3919/i24wb7Dhp531ib7437A_39196a918f3f59cb6.jpg',
+    );
   });
 
   it('extrai habitar_pampulha (venda)', () => {
@@ -40,6 +43,9 @@ describe('parseLoftSites', () => {
     expect(anuncio.tipoImovelBruto).toBe('Casa em Condomínio');
     expect(anuncio.vagas).toBe(2);
     expect(anuncio.bairro).toBe('Santa Amélia');
+    expect(anuncio.imagemUrl).toBe(
+      'https://cdn.vistahost.com.br/habitarc/vista.imobi/fotos/10661/i4946uyPy113yV6g76_106616a91edc00b1da.jpg',
+    );
   });
 
   it('extrai modelo_imovel (venda, código alfanumérico)', () => {
@@ -53,6 +59,9 @@ describe('parseLoftSites', () => {
     expect(anuncio.vagas).toBe(2);
     expect(anuncio.condominio).toBeNull();
     expect(anuncio.iptu).toBeNull();
+    expect(anuncio.imagemUrl).toBe(
+      'https://cdn.vistahost.com.br/modelo25529/vista.imobi/fotos/3859/i16Olw8I8E2N_38596363d82e6bda5.jpg',
+    );
   });
 
   it('extrai primer_imoveis (venda, condomínio com valor suspeito extraído como está)', () => {
@@ -66,6 +75,9 @@ describe('parseLoftSites', () => {
     expect(anuncio.vagas).toBe(6);
     expect(anuncio.condominio).toBe(2);
     expect(anuncio.bairro).toBe('Vale do Sol');
+    expect(anuncio.imagemUrl).toBe(
+      'https://cdn.vistahost.com.br/primer24837/vista.imobi/fotos/12300/i013B_123006548e09be331f.jpg',
+    );
   });
 
   it('extrai real_imoveis_pampulha (venda)', () => {
@@ -80,6 +92,9 @@ describe('parseLoftSites', () => {
     expect(anuncio.quartos).toBe(3);
     expect(anuncio.vagas).toBe(3);
     expect(anuncio.bairro).toBe('Rio Branco');
+    expect(anuncio.imagemUrl).toBe(
+      'https://cdn.vistahost.com.br/cli29574/vista.imobi/fotos/3217/iZe6u5mgEONWp3_32176a918db643b27.jpg',
+    );
   });
 
   it('extrai seven_imoveis (venda, sem latitude/longitude e sem descrição legível)', () => {
@@ -93,6 +108,9 @@ describe('parseLoftSites', () => {
     expect(anuncio.latitude).toBeNull();
     expect(anuncio.longitude).toBeNull();
     expect(anuncio.descricao).toBeNull();
+    expect(anuncio.imagemUrl).toBe(
+      'https://cdn.vistahost.com.br/clie26659/vista.imobi/fotos/273/io3h3g_27368d568d5859aa.jpg',
+    );
   });
 
   it('extrai topmig_imoveis (venda, lote com campos de característica vazios)', () => {
@@ -106,6 +124,9 @@ describe('parseLoftSites', () => {
     expect(anuncio.suites).toBeNull();
     expect(anuncio.vagas).toBeNull();
     expect(anuncio.tipoImovelBruto).toBe('Casa comercial');
+    expect(anuncio.imagemUrl).toBe(
+      'https://cdn.vistahost.com.br/topmig25592/vista.imobi/fotos/2368/id8OXF4uXH915i3341_23686a5502b942885.jpg',
+    );
   });
 
   it('extrai venda_nova_imoveis (aluguel, com corretor preenchido)', () => {
@@ -122,5 +143,8 @@ describe('parseLoftSites', () => {
     expect(anuncio.vagas).toBe(1);
     expect(anuncio.anuncianteNome).toBe('Welvis Mota');
     expect(anuncio.codigoCreci).toBe('61218');
+    expect(anuncio.imagemUrl).toBe(
+      'https://cdn.vistahost.com.br/venda25586/vista.imobi/fotos/6041/i9894Ratz4d1cNc7_60416a91dd8c21640.jpg',
+    );
   });
 });

@@ -20,6 +20,9 @@ describe('parseNetimoveis', () => {
     expect(anuncio.disponivelVenda).toBe(false);
     expect(anuncio.area).toBeCloseTo(26.88);
     expect(anuncio.quartos).toBe(0);
+    expect(anuncio.imagemUrl).toBe(
+      'https://fotosimoveis.blob.core.windows.net/fotos-imoveis/2/561/1186502/2938a36c-938e-4f8c-94b5-a99a023e8696.webp',
+    );
   });
 
   it('extrai condomínio, IPTU e demais características', () => {

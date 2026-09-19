@@ -17,6 +17,11 @@ const generatedDescriptionSchema = z.object({
   longDescription: z.string().nullable().optional(),
 });
 
+const housePhotoSchema = z.object({
+  url: z.string(),
+  cover: z.boolean().nullable().optional(),
+});
+
 const houseInfoSchema = z.object({
   id: z.union([z.string(), z.number()]),
   bedrooms: z.coerce.number().nullable().optional(),
@@ -34,6 +39,7 @@ const houseInfoSchema = z.object({
   lastPublishedDate: z.string().nullable().optional(),
   address: houseAddressSchema.nullable().optional(),
   generatedDescription: generatedDescriptionSchema.nullable().optional(),
+  photos: z.array(housePhotoSchema).nullable().optional(),
 });
 
 const nextDataSchema = z.object({
@@ -86,6 +92,18 @@ function parseDate(value: string | null | undefined): Date | null {
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 }
 
+function extractCoverPhotoUrl(
+  photos: z.infer<typeof housePhotoSchema>[] | null | undefined,
+): string | null {
+  if (photos === null || photos === undefined || photos.length === 0) {
+    return null;
+  }
+  const capa = photos.find((foto) => foto.cover === true) ?? photos[0];
+  return capa === undefined
+    ? null
+    : `https://www.quintoandar.com.br/img/xlg/${capa.url}`;
+}
+
 export const parseQuintoAndar: Parser = (
   conteudo: string,
 ): AnuncioNormalizado => {
@@ -127,6 +145,7 @@ export const parseQuintoAndar: Parser = (
     latitude: endereco?.lat ?? null,
     longitude: endereco?.lng ?? null,
     descricao: nonEmptyOrNull(houseInfo.generatedDescription?.longDescription),
+    imagemUrl: extractCoverPhotoUrl(houseInfo.photos),
     anuncianteNome: null,
     codigoCreci: null,
     publicadoEm: parseDate(houseInfo.lastPublishedDate),
