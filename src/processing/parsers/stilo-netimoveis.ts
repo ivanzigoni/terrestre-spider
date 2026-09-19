@@ -48,15 +48,14 @@ interface EnderecoStilo {
 function parseEndereco(texto: string): EnderecoStilo {
   const partes = texto.trim().split(',');
   const rua = partes[0]?.trim();
-  const numero = partes[1]?.trim();
-  const restante = partes.slice(2).join(',').trim();
+  const possivelNumero = partes[1]?.trim();
+  const temNumero = possivelNumero !== undefined && /^\d/.test(possivelNumero);
+  const numero = temNumero ? possivelNumero : null;
+  const restante = (temNumero ? partes.slice(2) : partes.slice(1))
+    .join(',')
+    .trim();
 
-  if (
-    rua === undefined ||
-    numero === undefined ||
-    !/^\d/.test(numero) ||
-    restante === ''
-  ) {
+  if (rua === undefined || restante === '') {
     return {
       endereco: nonEmptyOrNull(texto),
       numero: null,

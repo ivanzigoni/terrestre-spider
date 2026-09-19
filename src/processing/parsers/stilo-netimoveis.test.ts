@@ -57,4 +57,23 @@ describe('parseStiloNetimoveis', () => {
       parseStiloNetimoveis('<html><body>sem dados</body></html>'),
     ).toThrow();
   });
+
+  it('separa bairro e cidade mesmo quando o endereço não tem número de lote', () => {
+    const htmlSemNumero = `
+      <html>
+        <body>
+          <div id="titulo">Galpão à venda</div>
+          <div class="mb-1 text-gray">Avenida Frei Orlando, Caiçaras Belo Horizonte</div>
+          <div id="codigoImovel"><span>1234567</span></div>
+        </body>
+      </html>
+    `;
+
+    const anuncio = parseStiloNetimoveis(htmlSemNumero);
+
+    expect(anuncio.endereco).toBe('Avenida Frei Orlando');
+    expect(anuncio.numero).toBeNull();
+    expect(anuncio.bairro).toBe('Caiçaras');
+    expect(anuncio.cidade).toBe('Belo Horizonte');
+  });
 });
