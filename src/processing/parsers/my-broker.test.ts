@@ -10,6 +10,11 @@ const html = readFileSync(
   'utf-8',
 );
 
+const htmlImovelIndividual = readFileSync(
+  'src/processing/parsers/__fixtures__/my_broker_belo_horizonte__detalhe-imovel-individual.html',
+  'utf-8',
+);
+
 describe('parseMyBroker', () => {
   it('extrai código do imóvel e localização do empreendimento', () => {
     const anuncio = parseMyBroker(html);
@@ -75,5 +80,16 @@ describe('parseMyBroker', () => {
     expect(() =>
       parseMyBroker('<html><body>sem dados</body></html>'),
     ).toThrow();
+  });
+});
+
+describe('parseMyBroker (imóvel individual, fora do layout de empreendimento)', () => {
+  it('extrai bairro, cidade e estado mesmo quando "text-lg.text-tertiary-400" casa primeiro com o rótulo de preço, não com a localização', () => {
+    const anuncio = parseMyBroker(htmlImovelIndividual);
+
+    expect(anuncio.codigoExterno).toBe('154198');
+    expect(anuncio.bairro).toBe('Santa Efigênia');
+    expect(anuncio.cidade).toBe('Belo Horizonte');
+    expect(anuncio.estado).toBe('MG');
   });
 });

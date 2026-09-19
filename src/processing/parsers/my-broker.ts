@@ -39,22 +39,52 @@ interface LocalizacaoEmpreendimento {
   estado: string | null;
 }
 
+// A localização não vem de um parágrafo com classe própria: no layout de empreendimento
+// (fixture __detalhe.html), "text-lg.text-tertiary-400" casa com o parágrafo de
+// localização; no layout de imóvel individual (fixture
+// __detalhe-imovel-individual.html), essa mesma classe casa primeiro com o rótulo de
+// preço ("Valor do imóvel"), e o parágrafo de localização daquele imóvel específico é
+// indistinguível, por classe, dos parágrafos de bairro dos cards de "imóveis
+// semelhantes" mais abaixo na página. O meta "description" (SEO, sempre presente, gerado
+// pelo backend a partir do mesmo texto em ambos os layouts, sempre no formato "... no
+// bairro {bairro} em {cidade}, {estado}: ...") é o único texto da página com
+// bairro/cidade/estado específicos deste imóvel de forma inequívoca.
+const PREFIXO_LOCALIZACAO = 'no bairro ';
+const SEPARADOR_CIDADE = ' em ';
+
 function extractLocalizacao($: CheerioAPI): LocalizacaoEmpreendimento {
-  const texto = $('p.text-lg.text-tertiary-400').first().text().trim();
-  const [bairroParte, restante] = texto.split(',');
-  if (bairroParte === undefined || restante === undefined) {
-    return { bairro: null, cidade: null, estado: null };
+  const descricaoMeta = $('meta[name="description"]').attr('content') ?? '';
+  const indiceInicio = descricaoMeta.toLowerCase().indexOf(PREFIXO_LOCALIZACAO);
+  if (indiceInicio === -1) return { bairro: null, cidade: null, estado: null };
+
+  const inicioTrecho = indiceInicio + PREFIXO_LOCALIZACAO.length;
+  const fimTrecho = descricaoMeta.indexOf(':', inicioTrecho);
+  const trecho = (
+    fimTrecho === -1
+      ? descricaoMeta.slice(inicioTrecho)
+      : descricaoMeta.slice(inicioTrecho, fimTrecho)
+  ).trim();
+
+  const indiceCidade = trecho.indexOf(SEPARADOR_CIDADE);
+  if (indiceCidade === -1) {
+    return { bairro: nonEmptyOrNull(trecho), cidade: null, estado: null };
   }
 
-  const [cidadeParte, estadoParte] = restante.split('-');
-  if (cidadeParte === undefined || estadoParte === undefined) {
-    return { bairro: nonEmptyOrNull(bairroParte), cidade: null, estado: null };
+  const bairroParte = trecho.slice(0, indiceCidade);
+  const restante = trecho.slice(indiceCidade + SEPARADOR_CIDADE.length);
+  const indiceVirgula = restante.lastIndexOf(',');
+  if (indiceVirgula === -1) {
+    return {
+      bairro: nonEmptyOrNull(bairroParte),
+      cidade: nonEmptyOrNull(restante),
+      estado: null,
+    };
   }
 
   return {
     bairro: nonEmptyOrNull(bairroParte),
-    cidade: nonEmptyOrNull(cidadeParte),
-    estado: nonEmptyOrNull(estadoParte),
+    cidade: nonEmptyOrNull(restante.slice(0, indiceVirgula)),
+    estado: nonEmptyOrNull(restante.slice(indiceVirgula + 1)),
   };
 }
 
