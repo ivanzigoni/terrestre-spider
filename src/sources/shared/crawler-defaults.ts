@@ -86,15 +86,39 @@ function parseBatchSize(): number {
 }
 
 /**
- * Quantas fontes o orquestrador (src/main.ts) roda ao mesmo tempo. Piso 1
- * (sequencial, igual hoje) porque a instância de produção (EC2) roda
- * Postgres + API + crawler juntos, com RAM limitada pra vários browsers
- * headless simultâneos — subir isso é decisão deliberada por execução, via
- * env var, não um novo padrão silencioso. A ordem de `FONTES` em src/main.ts
- * já é pareada (1 fonte sem browser + 1 com Playwright por lote) para que
- * `SPIDER_BATCH_SIZE=2` nunca ligue 2 browsers ao mesmo tempo.
+ * Quantas fontes com PlaywrightCrawler o orquestrador (src/main.ts) roda ao
+ * mesmo tempo. Piso 1 (sequencial, igual hoje) porque a instância de
+ * produção (EC2) roda Postgres + API + crawler juntos, com RAM limitada pra
+ * vários browsers headless simultâneos — subir isso é decisão deliberada por
+ * execução, via env var, não um novo padrão silencioso.
  */
 export const BATCH_SIZE = parseBatchSize();
+
+const DEFAULT_NO_BROWSER_BATCH_SIZE = 1;
+
+function parseNoBrowserBatchSize(): number {
+  const raw = process.env.SPIDER_NO_BROWSER_BATCH_SIZE;
+  if (raw === undefined || raw === '') {
+    return DEFAULT_NO_BROWSER_BATCH_SIZE;
+  }
+  const parsed = Number(raw);
+  if (!Number.isInteger(parsed) || parsed <= 0) {
+    throw new Error(
+      `SPIDER_NO_BROWSER_BATCH_SIZE inválido: "${raw}" (esperado inteiro positivo)`,
+    );
+  }
+  return parsed;
+}
+
+/**
+ * Quantas fontes sem browser (CheerioCrawler/HttpCrawler puros) o
+ * orquestrador roda ao mesmo tempo. Piso 1 pela mesma disciplina de
+ * `BATCH_SIZE` — nada muda em produção até essa env var ser setada
+ * deliberadamente —, mas sem a restrição de RAM de browser headless: essas
+ * fontes não sobem browser, então o teto real de concorrência aqui é
+ * downstream (Postgres, S3), não a memória local da EC2.
+ */
+export const NO_BROWSER_BATCH_SIZE = parseNoBrowserBatchSize();
 
 const DEFAULT_MAX_DETAIL_PAGES_PER_CRAWL = 200;
 

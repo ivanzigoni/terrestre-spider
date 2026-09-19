@@ -31,7 +31,10 @@ import { runQuintoAndar } from './sources/quinto-andar/main.js';
 import { runRealImobiliaria } from './sources/real-imobiliaria/main.js';
 import { runRealImoveisPampulha } from './sources/real-imoveis-pampulha/main.js';
 import { runSevenImoveis } from './sources/seven-imoveis/main.js';
-import { BATCH_SIZE } from './sources/shared/crawler-defaults.js';
+import {
+  BATCH_SIZE,
+  NO_BROWSER_BATCH_SIZE,
+} from './sources/shared/crawler-defaults.js';
 import { runStiloNetimoveis } from './sources/stilo-netimoveis/main.js';
 import { runStruturalImobiliaria } from './sources/strutural-imobiliaria/main.js';
 import { runTopmigImoveis } from './sources/topmig-imoveis/main.js';
@@ -50,190 +53,196 @@ Sentry.init({ dsn: process.env.SENTRY_DSN, tracesSampleRate: 0 });
 interface Fonte {
   nome: string;
   origem: OrigemAnuncio;
+  usaBrowser: boolean;
   run: (uploadMutex: Mutex) => Promise<ExecucaoStats>;
 }
 
-// Ordem pareada — uma fonte sem browser (CheerioCrawler/HttpCrawler) seguida
-// de uma com PlaywrightCrawler — não alfabética nem por origem. Com
-// BATCH_SIZE=2 (ver crawler-defaults.ts), cada lote de 2 processados juntos
-// nunca sobe 2 browsers Chromium headless ao mesmo tempo: o par pesado fica
-// isolado, o leve roda ao lado dele. Exceção documentada no final da lista:
-// a expansão do cluster Imoview (lote 1 de
-// `.claude/__workdir/integracao-lote/lotes.md`) trouxe 4 fontes que precisam
-// da variante navegador (bloqueio confirmado contra cliente HTTP direto) e
-// só 1 nova fonte HTTP (AdimóveisBH) para parear — sem fonte HTTP sobrando
-// para a quarta, IVI Invista e Real Imobiliária ficam adjacentes como
-// PlaywrightCrawler+PlaywrightCrawler. Sob BATCH_SIZE=2, esse par específico
-// sobe 2 browsers ao mesmo tempo; SPIDER_BATCH_SIZE=1 (piso/default) não é
-// afetado.
 const FONTES: Fonte[] = [
-  { nome: 'OLX', origem: OrigemAnuncio.OLX, run: runOlx },
+  { nome: 'OLX', origem: OrigemAnuncio.OLX, usaBrowser: false, run: runOlx },
   {
     nome: 'ZAP Imóveis',
     origem: OrigemAnuncio.ZAP_IMOVEIS,
+    usaBrowser: true,
     run: runZapImoveis,
   },
-  { nome: 'Viva Real', origem: OrigemAnuncio.VIVA_REAL, run: runVivaReal },
-  { nome: 'Netimóveis', origem: OrigemAnuncio.NETIMOVEIS, run: runNetimoveis },
+  {
+    nome: 'Viva Real',
+    origem: OrigemAnuncio.VIVA_REAL,
+    usaBrowser: false,
+    run: runVivaReal,
+  },
+  {
+    nome: 'Netimóveis',
+    origem: OrigemAnuncio.NETIMOVEIS,
+    usaBrowser: true,
+    run: runNetimoveis,
+  },
   {
     nome: 'Quinto Andar',
     origem: OrigemAnuncio.QUINTO_ANDAR,
+    usaBrowser: false,
     run: runQuintoAndar,
   },
-  { nome: 'Imovelweb', origem: OrigemAnuncio.IMOVELWEB, run: runImovelweb },
+  {
+    nome: 'Imovelweb',
+    origem: OrigemAnuncio.IMOVELWEB,
+    usaBrowser: true,
+    run: runImovelweb,
+  },
   {
     nome: 'Imobiliária Buritis',
     origem: OrigemAnuncio.IMOBILIARIA_BURITIS,
+    usaBrowser: false,
     run: runImobiliariaBuritis,
   },
   {
     nome: 'Liderar Imóveis',
     origem: OrigemAnuncio.LIDERAR_IMOVEIS,
+    usaBrowser: true,
     run: runLiderarImoveis,
   },
   {
     nome: 'Casa Grande Imóveis',
     origem: OrigemAnuncio.CASA_GRANDE_IMOVEIS,
+    usaBrowser: false,
     run: runCasaGrandeImoveis,
   },
   {
     nome: 'Diego Garcia Imóveis',
     origem: OrigemAnuncio.DIEGO_GARCIA_IMOVEIS,
+    usaBrowser: true,
     run: runDiegoGarciaImoveis,
   },
   {
     nome: 'AdimóveisBH',
     origem: OrigemAnuncio.ADIMOVEIS_BH,
+    usaBrowser: false,
     run: runAdimoveisBh,
   },
   {
     nome: 'Valore Imóveis',
     origem: OrigemAnuncio.VALORE_IMOVEIS,
+    usaBrowser: true,
     run: runValoreImoveis,
   },
   {
     nome: 'IVI Invista Imóveis',
     origem: OrigemAnuncio.IVI_INVISTA_IMOVEIS,
+    usaBrowser: true,
     run: runIviInvistaImoveis,
   },
   {
     nome: 'Real Imobiliária',
     origem: OrigemAnuncio.REAL_IMOBILIARIA,
+    usaBrowser: true,
     run: runRealImobiliaria,
   },
-  // Cluster Kenlo (lote 2 de .claude/__workdir/integracao-lote/lotes.md) — as duas
-  // usam HttpCrawler, sem browser, então não quebram o pareamento leve/pesado acima.
   {
     nome: 'JMC Imóveis',
     origem: OrigemAnuncio.JMC_IMOVEIS,
+    usaBrowser: false,
     run: runJmcImoveis,
   },
   {
     nome: 'Luxus Imóveis Premium',
     origem: OrigemAnuncio.LUXUS_IMOVEIS_PREMIUM,
+    usaBrowser: false,
     run: runLuxusImoveisPremium,
   },
-  // Cluster GTM Capital/Loft Sites (lote 3 de .claude/__workdir/integracao-lote/lotes.md)
-  // — as 8 usam CheerioCrawler, sem browser, mesmo raciocínio do cluster Kenlo acima.
   {
     nome: 'Casa Pampulha Imóveis',
     origem: OrigemAnuncio.CASA_PAMPULHA_IMOVEIS,
+    usaBrowser: true,
     run: runCasaPampulhaImoveis,
   },
   {
     nome: 'Habitar Pampulha',
     origem: OrigemAnuncio.HABITAR_PAMPULHA,
+    usaBrowser: true,
     run: runHabitarPampulha,
   },
   {
     nome: 'Modelo Imóvel',
     origem: OrigemAnuncio.MODELO_IMOVEL,
+    usaBrowser: true,
     run: runModeloImovel,
   },
   {
     nome: 'Primer Imóveis',
     origem: OrigemAnuncio.PRIMER_IMOVEIS,
+    usaBrowser: true,
     run: runPrimerImoveis,
   },
   {
     nome: 'Real Imóveis Pampulha',
     origem: OrigemAnuncio.REAL_IMOVEIS_PAMPULHA,
+    usaBrowser: true,
     run: runRealImoveisPampulha,
   },
-  // Cluster ImobiBrasil (lote 4 de .claude/__workdir/integracao-lote/lotes.md) — as 2
-  // usam PlaywrightCrawler na fase de DETALHE (conteúdo real só existe pós-JS,
-  // diferente do Loft Sites), mas ficam intercaladas neste trecho sem-browser em vez
-  // de adjacentes uma à outra, preservando o pareamento leve/pesado sem precisar de
-  // nova exceção.
   {
     nome: 'Lima Imóveis Barreiro',
     origem: OrigemAnuncio.LIMA_IMOVEIS_BARREIRO,
+    usaBrowser: true,
     run: runLimaImoveisBarreiro,
   },
   {
     nome: 'Seven Imóveis',
     origem: OrigemAnuncio.SEVEN_IMOVEIS,
+    usaBrowser: true,
     run: runSevenImoveis,
   },
   {
     nome: 'TOPMIG Imóveis',
     origem: OrigemAnuncio.TOPMIG_IMOVEIS,
+    usaBrowser: true,
     run: runTopmigImoveis,
   },
   {
     nome: 'Venda Nova Imóveis',
     origem: OrigemAnuncio.VENDA_NOVA_IMOVEIS,
+    usaBrowser: true,
     run: runVendaNovaImoveis,
   },
   {
     nome: 'Strutural Imobiliária',
     origem: OrigemAnuncio.STRUTURAL_IMOBILIARIA,
+    usaBrowser: true,
     run: runStruturalImobiliaria,
   },
-  // Lote 5 de .claude/__workdir/integracao-lote/lotes.md (diagnóstico individual, sem
-  // arquitetura compartilhada entre as 3): Chave Certa usa HttpCrawler (API Tecimob,
-  // sem browser); GSA Ativos usa CheerioCrawler (WordPress renderizado no servidor,
-  // sem browser); Imobiliária Pampulha usa PlaywrightCrawler na fase de detalhe (mesmo
-  // motivo do ImobiBrasil, lote 4) — fica entre as duas fontes sem-browser acima e
-  // abaixo dela, preservando o pareamento leve/pesado sem exceção nova.
   {
     nome: 'Chave Certa Imóveis BH',
     origem: OrigemAnuncio.CHAVE_CERTA_IMOVEIS_BH,
+    usaBrowser: false,
     run: runChaveCertaImoveisBh,
   },
   {
     nome: 'GSA Ativos',
     origem: OrigemAnuncio.GSA_ATIVOS,
+    usaBrowser: false,
     run: runGsaAtivos,
   },
   {
     nome: 'Imobiliária Pampulha',
     origem: OrigemAnuncio.IMOBILIARIA_PAMPULHA,
+    usaBrowser: true,
     run: runImobiliariaPampulha,
   },
-  // Portal regional do Grupo QuintoAndar (plataforma Navent) — mesmo padrão dos
-  // portais grandes (OLX/ZAP/Viva Real/Imovelweb), CheerioCrawler sem browser, não
-  // afeta o pareamento leve/pesado acima. Investigação registrada em
-  // .claude/__workdir/integracao-lote/lotes.md (29-08-2026).
   {
     nome: 'Casa Mineira',
     origem: OrigemAnuncio.CASA_MINEIRA,
+    usaBrowser: false,
     run: runCasaMineira,
   },
-  // Fecha o lote 5 (.claude/__workdir/integracao-lote/lotes.md). HttpCrawler sem
-  // browser (busca via wp-admin/admin-ajax.php, ver client.ts), não afeta o
-  // pareamento leve/pesado acima.
   {
     nome: 'Stilo Netimóveis',
     origem: OrigemAnuncio.STILO_NETIMOVEIS,
+    usaBrowser: false,
     run: runStiloNetimoveis,
   },
-  // Lote 6 (.claude/__workdir/integracao-lote/lotes.md, casos especiais). HttpCrawler
-  // sem browser (busca via /api/properties do site, ver client.ts), não afeta o
-  // pareamento leve/pesado acima.
   {
     nome: 'My Broker Belo Horizonte',
     origem: OrigemAnuncio.MY_BROKER_BELO_HORIZONTE,
+    usaBrowser: false,
     run: runMyBrokerBeloHorizonte,
   },
 ];
@@ -322,10 +331,29 @@ async function runFonte(fonte: Fonte, uploadMutex: Mutex): Promise<void> {
 }
 
 /**
- * Lotes de BATCH_SIZE fontes por vez (default 1 — sequencial, idêntico ao
- * comportamento anterior). `runFonte` nunca relança (qualquer erro de fonte
- * é capturado e vira FALHA na própria Execucao), então `Promise.all` num
- * lote nunca aborta por causa de uma fonte com problema.
+ * Roda um grupo de fontes em lotes de `tamanhoLote` por vez (default 1 —
+ * sequencial). `runFonte` nunca relança (qualquer erro de fonte é capturado
+ * e vira FALHA na própria Execucao), então `Promise.all` num lote nunca
+ * aborta por causa de uma fonte com problema.
+ */
+async function runGrupo(
+  fontes: Fonte[],
+  tamanhoLote: number,
+  uploadMutex: Mutex,
+): Promise<void> {
+  for (let i = 0; i < fontes.length; i += tamanhoLote) {
+    const lote = fontes.slice(i, i + tamanhoLote);
+    await Promise.all(lote.map((fonte) => runFonte(fonte, uploadMutex)));
+  }
+}
+
+/**
+ * Dois grupos com concorrência independente: fontes sem browser
+ * (CheerioCrawler/HttpCrawler, sem custo de RAM de browser headless) via
+ * SPIDER_NO_BROWSER_BATCH_SIZE, fontes com PlaywrightCrawler via
+ * SPIDER_BATCH_SIZE — ver crawler-defaults.ts para o piso/disciplina de cada
+ * uma. SPIDER_SKIP_BROWSER_FONTES=true pula o segundo grupo inteiro, útil
+ * para testar ou operar isoladamente o grupo sem browser.
  */
 async function main(): Promise<void> {
   // Compartilhado por toda a run (não só por lote): serializa o upload de
@@ -335,9 +363,13 @@ async function main(): Promise<void> {
   // fonte de cada vez.
   const uploadMutex = new Mutex();
 
-  for (let i = 0; i < FONTES.length; i += BATCH_SIZE) {
-    const lote = FONTES.slice(i, i + BATCH_SIZE);
-    await Promise.all(lote.map((fonte) => runFonte(fonte, uploadMutex)));
+  const semBrowser = FONTES.filter((fonte) => !fonte.usaBrowser);
+  const comBrowser = FONTES.filter((fonte) => fonte.usaBrowser);
+
+  await runGrupo(semBrowser, NO_BROWSER_BATCH_SIZE, uploadMutex);
+
+  if (process.env.SPIDER_SKIP_BROWSER_FONTES !== 'true') {
+    await runGrupo(comBrowser, BATCH_SIZE, uploadMutex);
   }
 
   await Sentry.close(2000);
