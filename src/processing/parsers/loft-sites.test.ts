@@ -48,6 +48,27 @@ describe('parseLoftSites', () => {
     );
   });
 
+  it('extrai habitar_pampulha quando a API Vista devolve campos numéricos (Dormitorios, ValorVenda, Latitude etc. como number, não string)', () => {
+    const anuncio = parseLoftSites(
+      readFixture('habitar_pampulha__detalhe-campos-numericos.html'),
+    );
+
+    expect(anuncio.codigoExterno).toBe('10485');
+    expect(anuncio.precoVenda).toBe(45_900_000);
+    expect(anuncio.precoAluguel).toBeNull();
+    expect(anuncio.disponivelVenda).toBe(true);
+    expect(anuncio.disponivelAluguel).toBe(false);
+    expect(anuncio.quartos).toBe(2);
+    expect(anuncio.suites).toBe(1);
+    expect(anuncio.banheiros).toBe(3);
+    expect(anuncio.vagas).toBe(1);
+    expect(anuncio.area).toBe(64);
+    expect(anuncio.bairro).toBe('São João Batista');
+    expect(anuncio.cidade).toBe('Belo Horizonte');
+    expect(anuncio.latitude).toBe(-19.8259461);
+    expect(anuncio.longitude).toBe(-43.963963);
+  });
+
   it('extrai modelo_imovel (venda, código alfanumérico)', () => {
     const anuncio = parseLoftSites(readFixture('modelo_imovel__detalhe.html'));
 

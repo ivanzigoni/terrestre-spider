@@ -16,14 +16,18 @@ const vistaPropertySchema = z
   .object({
     Codigo: z.string().min(1),
     Categoria: z.string().optional(),
-    Dormitorios: z.string().optional(),
-    Suites: z.string().optional(),
-    TotalBanheiros: z.string().optional(),
-    Vagas: z.string().optional(),
-    AreaTotal: z.string().optional(),
-    AreaPrivativa: z.string().optional(),
-    ValorVenda: z.string().optional(),
-    ValorLocacao: z.string().optional(),
+    // A API Vista devolve estes campos como `number` em parte das respostas (ex.:
+    // "Dormitorios":2, "Latitude":-19.8259461) e como `string` em outras (fixtures
+    // originais do cluster). z.coerce.string() aceita as duas formas: um number vira
+    // String(number); uma string que já é string passa sem alteração.
+    Dormitorios: z.coerce.string().optional(),
+    Suites: z.coerce.string().optional(),
+    TotalBanheiros: z.coerce.string().optional(),
+    Vagas: z.coerce.string().optional(),
+    AreaTotal: z.coerce.string().optional(),
+    AreaPrivativa: z.coerce.string().optional(),
+    ValorVenda: z.coerce.string().optional(),
+    ValorLocacao: z.coerce.string().optional(),
     ValorIptu: z.string().optional(),
     ValorCondominio: z.string().optional(),
     Endereco: z.string().optional(),
@@ -32,8 +36,8 @@ const vistaPropertySchema = z
     Cidade: z.string().optional(),
     UF: z.string().optional(),
     Status: z.string().optional(),
-    Latitude: z.string().optional(),
-    Longitude: z.string().optional(),
+    Latitude: z.coerce.string().optional(),
+    Longitude: z.coerce.string().optional(),
     DescricaoWeb: z.string().optional(),
     Corretor: z.array(vistaCorretorSchema).optional(),
   })
