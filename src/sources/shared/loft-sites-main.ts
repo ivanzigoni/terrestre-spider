@@ -1,6 +1,6 @@
 import { Browser, ImpitHttpClient } from '@crawlee/impit-client';
 import * as Sentry from '@sentry/node';
-import { CheerioCrawler, log } from 'crawlee';
+import { CheerioCrawler, log, PlaywrightCrawler } from 'crawlee';
 
 import { createDataSource } from '../../persistence/data-source.js';
 import type { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
@@ -113,10 +113,21 @@ export function createLoftSitesRun(
     if (cortados.length > 0) {
       const detalheQueue = await openFreshRequestQueue(`${origem}-detalhe`);
       await detalheQueue.addRequests(cortados.map(([url]) => ({ url })));
-      const detalheCrawler = new CheerioCrawler({
+      // PlaywrightCrawler, não CheerioCrawler — o HTML servido antes do JS rodar não
+      // contém o objeto de negócio da Vista para parte dos imóveis deste cluster
+      // (confirmado ao vivo, ver comentário em loft-sites-router.ts); precisa
+      // renderizar de verdade, mesmo padrão já usado no cluster Imoview-navegador
+      // (imoview-browser-main.ts).
+      const detalheCrawler = new PlaywrightCrawler({
         httpClient: new ImpitHttpClient({ browser: Browser.Chrome }),
         requestHandler: createLoftSitesDetalheRouter(capturaDataset, origem),
         requestQueue: detalheQueue,
+        headless: true,
+        // Sem isso, o AutoscaledPool escala sozinho até 200 (default) se a máquina
+        // parecer ter folga — cada tarefa concorrente aqui é uma página headless
+        // inteira renderizando JS. Mesma disciplina de imoview-browser-main.ts: a EC2
+        // de produção roda Postgres+API+crawler juntos, RAM limitada.
+        maxConcurrency: 1,
         sameDomainDelaySecs: SAME_DOMAIN_DELAY_SECS,
         maxRequestsPerCrawl: maxDetailPages,
         // Mesmo id do crawler de descoberta acima — nunca rodam ao mesmo tempo dentro

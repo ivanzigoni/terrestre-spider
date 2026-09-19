@@ -1,5 +1,9 @@
 import type { CheerioAPI } from 'cheerio';
-import { createCheerioRouter, type Dataset } from 'crawlee';
+import {
+  createCheerioRouter,
+  createPlaywrightRouter,
+  type Dataset,
+} from 'crawlee';
 
 import { FormatoCaptura } from '../../persistence/enums/formato-captura.enum.js';
 import type { OrigemAnuncio } from '../../persistence/enums/origem-anuncio.enum.js';
@@ -28,6 +32,15 @@ import {
  * estrutura mais dado de anúncio, ver refactor que remove `RawListingItem`).
  * `tipoTransacao` é sempre `null`: o sitemap não distingue venda/aluguel, e nenhuma
  * extração de conteúdo é feita aqui pra descobrir.
+ *
+ * `PlaywrightCrawler`, não `CheerioCrawler` — confirmado ao vivo que o HTML servido
+ * antes do JS rodar não contém o objeto de negócio da API Vista (nem os campos, nem
+ * uma referência simples resolvível) para parte dos imóveis deste cluster; o dado só
+ * existe no DOM depois da hidratação client-side. `page.waitForSelector('text=Cód:')`
+ * espera por esse marcador antes de capturar — "Cód: <código>" é o chip de código do
+ * imóvel, confirmado presente (mesma classe de template) em pelo menos duas fontes
+ * independentes do cluster (Habitar Pampulha, Casa Pampulha Imóveis) via inspeção
+ * ao vivo do DOM renderizado.
  */
 
 /**
@@ -67,22 +80,35 @@ export function createLoftSitesDescobertaRouter(coletados: SitemapUrlEntry[]) {
   return router;
 }
 
+const HIDRATACAO_TIMEOUT_MS = 15_000;
+
 export function createLoftSitesDetalheRouter(
   capturaDataset: Dataset<RawCaptureItem>,
   origem: OrigemAnuncio,
 ) {
-  const router = createCheerioRouter();
+  const router = createPlaywrightRouter();
 
-  router.addDefaultHandler(async ({ $, request, log }) => {
+  router.addDefaultHandler(async ({ page, request, log }) => {
     const url = request.loadedUrl;
+
+    const hidratou = await page
+      .waitForSelector('text=Cód:', { timeout: HIDRATACAO_TIMEOUT_MS })
+      .then(() => true)
+      .catch(() => false);
+    if (!hidratou) {
+      log.warning(
+        `${origem}: marcador de hidratação ("Cód:") não apareceu em ${String(HIDRATACAO_TIMEOUT_MS / 1000)}s, capturando página assim mesmo`,
+        { url },
+      );
+    }
 
     await capturaDataset.pushData({
       origem,
       tipoTransacao: null,
       tipoPagina: TipoPaginaCaptura.DETALHE,
-      url,
+      url: page.url(),
       formato: FormatoCaptura.HTML,
-      conteudo: $.html(),
+      conteudo: await page.content(),
       capturadoEm: new Date().toISOString(),
     });
     log.info(`${origem}: detalhe capturado em ${url}`);
