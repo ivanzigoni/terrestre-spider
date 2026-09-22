@@ -9,6 +9,7 @@ import {
 } from 'typeorm';
 
 import { Anuncio } from './anuncio.entity.js';
+import { Bairro } from './bairro.entity.js';
 import { CapturaBruta } from './captura-bruta.entity.js';
 import { Regional } from './regional.entity.js';
 
@@ -80,6 +81,13 @@ export class Avistamento {
   @ManyToOne(() => Regional)
   @JoinColumn({ name: 'regional_id' })
   declare regionalEntity: Regional | null;
+
+  @Column({ type: 'int', name: 'bairro_id', nullable: true })
+  declare bairroId: number | null;
+
+  @ManyToOne(() => Bairro)
+  @JoinColumn({ name: 'bairro_id' })
+  declare bairroEntity: Bairro | null;
 
   @Column({ type: 'text', nullable: true })
   declare descricao: string | null;

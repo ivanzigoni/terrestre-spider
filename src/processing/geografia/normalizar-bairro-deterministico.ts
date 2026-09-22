@@ -67,12 +67,14 @@ export function normalizarBairroDeterministico(
 export async function carregarReferenciaBairros(
   dataSource: DataSource,
 ): Promise<Map<string, ReferenciaBairro>> {
-  const linhas = await dataSource.getRepository(BairroRegional).find();
+  const linhas = await dataSource
+    .getRepository(BairroRegional)
+    .find({ relations: { bairro: true } });
   const referencia = new Map<string, ReferenciaBairro>();
   for (const linha of linhas) {
-    referencia.set(normalizarChave(linha.bairro), {
-      bairroId: linha.id,
-      bairro: linha.bairro,
+    referencia.set(normalizarChave(linha.bairro.nome), {
+      bairroId: linha.bairroId,
+      bairro: linha.bairro.nome,
       regionalId: linha.regionalId,
     });
   }

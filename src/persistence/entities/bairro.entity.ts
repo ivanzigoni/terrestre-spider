@@ -1,15 +1,12 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('regionais')
-export class Regional {
+@Entity('bairros')
+export class Bairro {
   @PrimaryGeneratedColumn()
   declare id: number;
 
   @Column({ type: 'text', unique: true })
   declare nome: string;
-
-  @Column({ type: 'text', unique: true, nullable: true })
-  declare sigla: string | null;
 
   @Column({ type: 'text', unique: true, nullable: true })
   declare codigo: string | null;

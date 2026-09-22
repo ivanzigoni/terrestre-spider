@@ -7,6 +7,7 @@ import { DataSource } from 'typeorm';
 import { Anuncio } from './entities/anuncio.entity.js';
 import { AvistamentoEndereco } from './entities/avistamento-endereco.entity.js';
 import { Avistamento } from './entities/avistamento.entity.js';
+import { Bairro } from './entities/bairro.entity.js';
 import { BairroLlmCache } from './entities/bairro-llm-cache.entity.js';
 import { BairroRegional } from './entities/bairro-regional.entity.js';
 import { CapturaBruta } from './entities/captura-bruta.entity.js';
@@ -78,6 +79,7 @@ export function createDataSource(): DataSource {
       Anuncio,
       Avistamento,
       ExecucaoProcessamento,
+      Bairro,
       BairroRegional,
       BairroLlmCache,
       Regional,

@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-import { BairroRegional } from './bairro-regional.entity.js';
+import { Bairro } from './bairro.entity.js';
 
 @Entity('enderecos')
 export class Endereco {
@@ -28,9 +28,9 @@ export class Endereco {
   @Column({ type: 'int', name: 'bairro_id', nullable: true })
   declare bairroId: number | null;
 
-  @ManyToOne(() => BairroRegional)
+  @ManyToOne(() => Bairro)
   @JoinColumn({ name: 'bairro_id' })
-  declare bairroRegional: BairroRegional | null;
+  declare bairroEntity: Bairro | null;
 
   @Column({ type: 'text', nullable: true })
   declare cidade: string | null;
