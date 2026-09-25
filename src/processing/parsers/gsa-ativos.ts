@@ -2,6 +2,7 @@ import { load } from 'cheerio';
 import type { CheerioAPI } from 'cheerio';
 
 import type { AnuncioNormalizado, Parser } from '../anuncio-normalizado.js';
+import { parseEnderecoGsa } from './gsa-ativos-endereco.js';
 import { parseMoneyToCents } from './shared/money.js';
 
 const ENDERECO_FIELD_INDEX = 1;
@@ -36,43 +37,6 @@ function extractCodigoExterno($: CheerioAPI): string {
   return codigo;
 }
 
-interface EnderecoGsa {
-  endereco: string | null;
-  numero: string | null;
-  bairro: string | null;
-}
-
-function parseEndereco(texto: string): EnderecoGsa {
-  const trimmed = texto.trim();
-  const dashIndex = Math.max(
-    trimmed.lastIndexOf('–'),
-    trimmed.lastIndexOf('-'),
-  );
-  if (dashIndex === -1) {
-    return { endereco: nonEmptyOrNull(trimmed), numero: null, bairro: null };
-  }
-
-  const antesDash = trimmed.slice(0, dashIndex).trim();
-  const bairro = trimmed.slice(dashIndex + 1).trim();
-
-  const numeroMatch = /(\d{1,6}[\w-]{0,10})$/.exec(antesDash);
-  const numero = numeroMatch?.[1];
-  if (numero === undefined) {
-    return {
-      endereco: nonEmptyOrNull(antesDash),
-      numero: null,
-      bairro: nonEmptyOrNull(bairro),
-    };
-  }
-
-  const endereco = antesDash.slice(0, antesDash.length - numero.length).trim();
-  return {
-    endereco: nonEmptyOrNull(endereco),
-    numero: nonEmptyOrNull(numero),
-    bairro: nonEmptyOrNull(bairro),
-  };
-}
-
 export const parseGsaAtivos: Parser = (
   conteudo: string,
 ): AnuncioNormalizado => {
@@ -81,7 +45,7 @@ export const parseGsaAtivos: Parser = (
   const codigoExterno = extractCodigoExterno($);
   const campos = $('.jet-listing-dynamic-field__content');
 
-  const { endereco, numero, bairro } = parseEndereco(
+  const { endereco, numero, bairro, cidade, estado, cep } = parseEnderecoGsa(
     campos.eq(ENDERECO_FIELD_INDEX).text(),
   );
   const precoTexto = campos.eq(PRECO_FIELD_INDEX).text();
@@ -134,9 +98,9 @@ export const parseGsaAtivos: Parser = (
     vagas: null,
     tipoImovelBruto: null,
     bairro,
-    cidade: null,
-    estado: null,
-    cep: null,
+    cidade,
+    estado,
+    cep,
     endereco,
     numero,
     latitude: null,
