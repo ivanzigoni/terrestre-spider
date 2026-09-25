@@ -352,8 +352,9 @@ async function runGrupo(
  * (CheerioCrawler/HttpCrawler, sem custo de RAM de browser headless) via
  * SPIDER_NO_BROWSER_BATCH_SIZE, fontes com PlaywrightCrawler via
  * SPIDER_BATCH_SIZE — ver crawler-defaults.ts para o piso/disciplina de cada
- * uma. SPIDER_SKIP_BROWSER_FONTES=true pula o segundo grupo inteiro, útil
- * para testar ou operar isoladamente o grupo sem browser.
+ * uma. SPIDER_SKIP_BROWSER_FONTES=true pula o segundo grupo inteiro,
+ * SPIDER_SKIP_NO_BROWSER_FONTES=true pula o primeiro — úteis para testar ou
+ * operar isoladamente cada grupo.
  */
 async function main(): Promise<void> {
   // Compartilhado por toda a run (não só por lote): serializa o upload de
@@ -366,7 +367,9 @@ async function main(): Promise<void> {
   const semBrowser = FONTES.filter((fonte) => !fonte.usaBrowser);
   const comBrowser = FONTES.filter((fonte) => fonte.usaBrowser);
 
-  await runGrupo(semBrowser, NO_BROWSER_BATCH_SIZE, uploadMutex);
+  if (process.env.SPIDER_SKIP_NO_BROWSER_FONTES !== 'true') {
+    await runGrupo(semBrowser, NO_BROWSER_BATCH_SIZE, uploadMutex);
+  }
 
   if (process.env.SPIDER_SKIP_BROWSER_FONTES !== 'true') {
     await runGrupo(comBrowser, BATCH_SIZE, uploadMutex);
