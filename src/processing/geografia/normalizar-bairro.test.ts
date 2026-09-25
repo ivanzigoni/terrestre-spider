@@ -161,3 +161,33 @@ describe('normalizarBairro', () => {
     expect(resultado).toEqual({ bairroId: null, regionalId: null });
   });
 });
+
+describe('normalizarBairro: cidade do anúncio', () => {
+  it('não resolve bairro de anúncio de outro município, mesmo com nome igual ao de um bairro de BH', async () => {
+    const inferidor = criarInferidorFake({ bairro: null, confianca: 0 });
+    const resultado = await normalizarBairro(
+      'Savassi',
+      criarContexto({ inferidor }),
+      'Contagem',
+    );
+
+    expect(resultado).toEqual({ bairroId: null, regionalId: null });
+    expect(inferidor.inferir).not.toHaveBeenCalled();
+  });
+
+  it.each(['Belo Horizonte', 'belo horizonte', 'BH', 'Minas Gerais', null, ''])(
+    'resolve normalmente quando a cidade é %j',
+    async (cidade) => {
+      const resultado = await normalizarBairro(
+        'Savassi',
+        criarContexto(),
+        cidade,
+      );
+
+      expect(resultado).toEqual({
+        bairroId: SAVASSI_ID,
+        regionalId: CENTRO_SUL_ID,
+      });
+    },
+  );
+});
