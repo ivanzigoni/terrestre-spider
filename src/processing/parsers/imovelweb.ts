@@ -49,7 +49,36 @@ function extractCodigoExterno($: CheerioAPI, fonte: string): string {
 // Blocos institucionais (site inteiro, não o anúncio) presentes em toda página
 // desta plataforma — o tipo do imóvel em si varia (Apartment, House, etc.) e
 // não vale a pena enumerar, então filtra pelo que não é imóvel, não pelo que é.
-const TIPOS_NAO_IMOVEL = new Set(['WebSite', 'Organization', 'BreadcrumbList']);
+const TIPOS_NAO_IMOVEL = new Set([
+  'WebSite',
+  'Organization',
+  'BreadcrumbList',
+  'VideoObject',
+]);
+
+const SUFIXO_CIDADE_NO_TITULO = ', Belo Horizonte - R$';
+const PADRAO_BAIRRO_SLUG = /-no-(.+?)-belo-horizonte-mg(?:[/?]|$)/;
+
+function extractBairroDoTitulo(titulo: string): string | null {
+  const indiceCidade = titulo.indexOf(SUFIXO_CIDADE_NO_TITULO);
+  if (indiceCidade === -1) return null;
+
+  const antesDaCidade = titulo.slice(0, indiceCidade);
+  const indiceVirgula = antesDaCidade.lastIndexOf(',');
+  if (indiceVirgula === -1) return null;
+  return nonEmptyOrNull(antesDaCidade.slice(indiceVirgula + 1));
+}
+
+function extractBairroFallback($: CheerioAPI): string | null {
+  const doTitulo = extractBairroDoTitulo($('title').first().text());
+  if (doTitulo !== null) return doTitulo;
+
+  const ogUrl = $('meta[property="og:url"]').attr('content') ?? '';
+  const doSlug = PADRAO_BAIRRO_SLUG.exec(ogUrl)?.[1];
+  return doSlug === undefined
+    ? null
+    : nonEmptyOrNull(doSlug.replace(/-/g, ' '));
+}
 
 function extractApartmentLdJson($: CheerioAPI): ApartmentLdJson | null {
   for (const script of $('script[type="application/ld+json"]').toArray()) {
@@ -212,7 +241,9 @@ export function parseImovelwebTemplate(
     banheiros: apartment.numberOfBathroomsTotal ?? null,
     vagas,
     tipoImovelBruto: null,
-    bairro: nonEmptyOrNull(apartment.address?.addressRegion),
+    bairro:
+      nonEmptyOrNull(apartment.address?.addressRegion) ??
+      extractBairroFallback($),
     cidade,
     estado,
     cep: null,
