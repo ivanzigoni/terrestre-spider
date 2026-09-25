@@ -3,6 +3,7 @@ import type { CheerioAPI } from 'cheerio';
 
 import type { AnuncioNormalizado, Parser } from '../anuncio-normalizado.js';
 import { parseMoneyToCents } from './shared/money.js';
+import { aparar, normalizarEspacos } from './shared/texto.js';
 
 function nonEmptyOrNull(value: string | null | undefined): string | null {
   if (value === null || value === undefined) return null;
@@ -42,7 +43,51 @@ function extractCodigoExterno($: CheerioAPI): string {
   return postid;
 }
 
-function extractBairroDoTitulo(titulo: string): string | null {
+const UNIDADES_AREA = ['m²', 'm2', 'metros quadrados'];
+const MARCADORES_TRANSACAO = [
+  'à venda',
+  'a venda',
+  'para alugar',
+  'para venda',
+];
+const PADRAO_NAO_BAIRRO = /\d|quarto|banheiro|vaga|su[ií]te/i;
+const PREPOSICOES_DE_LUGAR = new Set(['no', 'na', 'em']);
+const CONECTORES_DE_NOME = new Set(['da', 'do', 'de', 'das', 'dos']);
+
+function limparBairro(texto: string): string | null {
+  let tokens = normalizarEspacos(texto).split(' ');
+  if (PREPOSICOES_DE_LUGAR.has((tokens[0] ?? '').toLowerCase())) {
+    tokens = tokens.slice(1);
+  }
+  if ((tokens[0] ?? '').toLowerCase() === 'bairro') {
+    tokens = tokens.slice(1);
+    if (CONECTORES_DE_NOME.has((tokens[0] ?? '').toLowerCase())) {
+      tokens = tokens.slice(1);
+    }
+  }
+  if (
+    tokens.length > 1 &&
+    (tokens[tokens.length - 1] ?? '').toLowerCase() === 'bh'
+  ) {
+    tokens = tokens.slice(0, -1);
+  }
+  return nonEmptyOrNull(tokens.join(' '));
+}
+
+function fimDaUltimaArea(titulo: string): number {
+  const minusculo = titulo.toLowerCase();
+  let fim = -1;
+  for (const unidade of UNIDADES_AREA) {
+    const indice = minusculo.lastIndexOf(unidade);
+    if (indice === -1) continue;
+    const ultimoCaractere = minusculo.slice(0, indice).trimEnd().slice(-1);
+    if (ultimoCaractere < '0' || ultimoCaractere > '9') continue;
+    fim = Math.max(fim, indice + unidade.length);
+  }
+  return fim;
+}
+
+function extractBairroAposVaga(titulo: string): string | null {
   const normalizado = titulo.toLowerCase();
   const vagaIndex = normalizado.lastIndexOf('vaga');
   if (vagaIndex === -1) return null;
@@ -50,6 +95,43 @@ function extractBairroDoTitulo(titulo: string): string | null {
   const temPlural = normalizado.startsWith('s', vagaIndex + 'vaga'.length);
   const fimPalavra = vagaIndex + 'vaga'.length + (temPlural ? 1 : 0);
   return nonEmptyOrNull(titulo.slice(fimPalavra));
+}
+
+function extractBairroAposArea(titulo: string): string | null {
+  const fim = fimDaUltimaArea(titulo);
+  if (fim === -1) return null;
+
+  const resto = aparar(titulo.slice(fim)).split('–').join('-');
+  const segmentos = resto.split(' - ');
+  const ultimoSegmento = segmentos[segmentos.length - 1] ?? '';
+  const bairro = limparBairro(aparar(ultimoSegmento));
+  if (bairro === null || PADRAO_NAO_BAIRRO.test(bairro)) return null;
+  return bairro;
+}
+
+function extractBairroEntreTransacaoEArea(titulo: string): string | null {
+  const minusculo = titulo.toLowerCase();
+  for (const marcador of MARCADORES_TRANSACAO) {
+    const inicio = minusculo.indexOf(marcador);
+    if (inicio === -1) continue;
+
+    const depoisDoMarcador = inicio + marcador.length;
+    const fim = minusculo.indexOf(' com ', depoisDoMarcador);
+    if (fim === -1) continue;
+
+    const primeiroDigito = minusculo.charAt(fim + ' com '.length);
+    if (primeiroDigito < '0' || primeiroDigito > '9') continue;
+    return limparBairro(titulo.slice(depoisDoMarcador, fim));
+  }
+  return null;
+}
+
+function extractBairroDoTitulo(titulo: string): string | null {
+  return (
+    extractBairroAposVaga(titulo) ??
+    extractBairroAposArea(titulo) ??
+    extractBairroEntreTransacaoEArea(titulo)
+  );
 }
 
 function extractTipoImovelBruto(titulo: string): string | null {
