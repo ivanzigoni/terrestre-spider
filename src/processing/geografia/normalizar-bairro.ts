@@ -36,11 +36,20 @@ function resultadoDeReferencia(
   };
 }
 
+const CIDADES_COMPATIVEIS = new Set(['BELO HORIZONTE', 'BH', 'MINAS GERAIS']);
+
+function cidadeForaDeBeloHorizonte(cidadeBruta: string | null): boolean {
+  if (cidadeBruta === null || cidadeBruta.trim() === '') return false;
+  return !CIDADES_COMPATIVEIS.has(normalizarChave(cidadeBruta));
+}
+
 export async function normalizarBairro(
   bairroBruto: string | null,
   ctx: NormalizacaoGeoContext,
+  cidadeBruta: string | null = null,
 ): Promise<ResultadoNormalizacaoBairro> {
   if (bairroBruto === null || bairroBruto.trim() === '') return SEM_RESULTADO;
+  if (cidadeForaDeBeloHorizonte(cidadeBruta)) return SEM_RESULTADO;
 
   const determinado = normalizarBairroDeterministico(
     bairroBruto,
