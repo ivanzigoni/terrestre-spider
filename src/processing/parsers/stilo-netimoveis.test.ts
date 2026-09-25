@@ -77,3 +77,35 @@ describe('parseStiloNetimoveis', () => {
     expect(anuncio.cidade).toBe('Belo Horizonte');
   });
 });
+
+function htmlComEndereco(endereco: string): string {
+  return `<html><body><div id="codigoImovel"><span>1</span></div><h1 id="titulo">Apartamento 3 quartos</h1><div class="mb-1 text-gray">${endereco}</div></body></html>`;
+}
+
+describe('parseStiloNetimoveis: endereço sem vírgula', () => {
+  it('extrai o bairro quando o texto é só "bairro cidade"', () => {
+    const anuncio = parseStiloNetimoveis(
+      htmlComEndereco('Padre Eustáquio Belo Horizonte'),
+    );
+
+    expect(anuncio.endereco).toBeNull();
+    expect(anuncio.bairro).toBe('Padre Eustáquio');
+    expect(anuncio.cidade).toBe('Belo Horizonte');
+  });
+
+  it('mantém rua e bairro quando o texto traz "rua, bairro cidade"', () => {
+    const anuncio = parseStiloNetimoveis(
+      htmlComEndereco('Rua Wady José Alau, Ouro Preto Belo Horizonte'),
+    );
+
+    expect(anuncio.endereco).toBe('Rua Wady José Alau');
+    expect(anuncio.bairro).toBe('Ouro Preto');
+    expect(anuncio.cidade).toBe('Belo Horizonte');
+  });
+
+  it('retorna bairro nulo quando o texto é só a cidade', () => {
+    const anuncio = parseStiloNetimoveis(htmlComEndereco('Belo Horizonte'));
+
+    expect(anuncio.bairro).toBeNull();
+  });
+});

@@ -45,6 +45,10 @@ interface EnderecoStilo {
   cidade: string | null;
 }
 
+function terminaComCidade(texto: string): boolean {
+  return texto.toLowerCase().endsWith(CIDADE_CONHECIDA.toLowerCase());
+}
+
 function parseEndereco(texto: string): EnderecoStilo {
   const partes = texto.trim().split(',');
   const rua = partes[0]?.trim();
@@ -56,6 +60,18 @@ function parseEndereco(texto: string): EnderecoStilo {
     .trim();
 
   if (rua === undefined || restante === '') {
+    const semVirgula = texto.trim();
+    const bairroSemRua = terminaComCidade(semVirgula)
+      ? semVirgula.slice(0, semVirgula.length - CIDADE_CONHECIDA.length).trim()
+      : '';
+    if (!semVirgula.includes(',') && bairroSemRua !== '') {
+      return {
+        endereco: null,
+        numero: null,
+        bairro: nonEmptyOrNull(bairroSemRua.replace(/\([^()]*\)/g, '').trim()),
+        cidade: CIDADE_CONHECIDA,
+      };
+    }
     return {
       endereco: nonEmptyOrNull(texto),
       numero: null,
