@@ -53,3 +53,46 @@ describe('parseImobiliariaPampulha', () => {
     ).toThrow();
   });
 });
+
+function htmlComTitulo(titulo: string): string {
+  return `<html><body class="postid-1"><h2>${titulo}</h2></body></html>`;
+}
+
+describe('parseImobiliariaPampulha: bairro em títulos de formatos variados', () => {
+  it.each([
+    ['Casa à venda Barroca com 70m², 2 quartos e com vaga', 'Barroca'],
+    ['Galpão / Depósito / Armazém à venda, 1747m² no Centro', 'Centro'],
+    [
+      'Galpão / Depósito / Armazém para alugar, 400m² – Bairro Vale do Jatobá',
+      'Vale do Jatobá',
+    ],
+    ['Lote/Terreno à Venda, 420 m² Bom Retiro', 'Bom Retiro'],
+    [
+      'Kitnet com 1 Quarto e 1 banheiro à Venda, 22 m² no Dona Clara',
+      'Dona Clara',
+    ],
+    ['Loja / Salão / Ponto Comercial para alugar, 25m² – Serrano', 'Serrano'],
+    [
+      'Loja / Salão / Ponto Comercial para alugar, 59m² – Pampulha – Bairro Ouro Preto',
+      'Ouro Preto',
+    ],
+    ['Loja / 4 banheiros à Venda, 390 m² no Centro BH', 'Centro'],
+    [
+      'Loja/Conjunto para venda possui 27 metros quadrados em Liberdade',
+      'Liberdade',
+    ],
+    ['Casa com 3 Quartos para alugar, 248m² – Bairro da Graça', 'Graça'],
+    ['Sala Comercial e 1 banheiro à Venda, 45 m² bairro Estoril', 'Estoril'],
+    ['Casa com 3 Quartos para alugar, 80m² – Jardim Leblon', 'Jardim Leblon'],
+  ])('extrai o bairro de "%s"', (titulo, bairroEsperado) => {
+    expect(parseImobiliariaPampulha(htmlComTitulo(titulo)).bairro).toBe(
+      bairroEsperado,
+    );
+  });
+
+  it('retorna bairro nulo quando o título não traz localização', () => {
+    expect(
+      parseImobiliariaPampulha(htmlComTitulo('Apartamento para alugar')).bairro,
+    ).toBeNull();
+  });
+});
